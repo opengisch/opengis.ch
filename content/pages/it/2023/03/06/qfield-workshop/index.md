@@ -1,0 +1,32 @@
+---
+title: "QField Workshop – OPENGIS.ch"
+author: "Marco Bernasocchi"
+date: "2023-03-06T10:00:00+01:00"
+lastmod: "2025-06-19T10:53:42+02:00"
+categories:
+  - "Corsi QField"
+source: "www.opengis.ch/it/2023/03/06/qfield-workshop/index.html"
+---
+
+**How to become a superuser in QField**
+_You’ll not only be able to handle the app perfectly but also know how to set up a project to explore all the possibilities that QField offers. Prepare the optimal conditions for your field work and distribute the project to your team with QFieldCloud._
+The course lasts 1 day (9:00 am – 5:00 pm) and costs 660 CHF per person. Lunch is included.
+Participants bring their own computer and mobile phone or tablet.
+1 instructor for a maximum of 8 people and 2 instructors for up to 14 people. The course takes place with a minimum of 5 participants.
+[Register now](<../../../../calendario-corsi/index.html>)
+### **_Topics_**
+  - About QField, QGIS, QFieldSync, and QFieldCloud
+  - QField basics and advanced functionalities
+  - Creating a project in QGIS including tips and tricks
+  - Synchronization QGIS -> QField -> QGIS
+  - QFieldCloud
+
+
+### **_Prerequisites_**
+Basic knowledge of QGIS.
+### **_Software_**
+Install QField on your mobile phone or tablet, available for Android, iOS, or Windows via Google Play Store, App Store, or Windows Store.
+QGIS installation for Windows, macOS, or Linux[ ___https://download.qgis.org_](<https://download.qgis.org/>) _._ We use the latest LTR version. No extensions need to be pre-installed.
+### **_Further Information_**
+Approximately two weeks before the course starts, all participants will receive an email with further information.
+### _Related_

@@ -1,0 +1,189 @@
+[[main]]
+name = "Warum uns?"
+url = "#features"
+weight = 10
+
+[[main]]
+identifier = "angebot"
+name = "Angebot"
+url = "#testimonials"
+weight = 20
+
+[[main]]
+name = "Individuelle Entwicklung"
+url = "entwicklung/"
+weight = 10
+parent = "angebot"
+params.icon = "bi bi-code-slash"
+
+[[main]]
+identifier = "angebot-support-wartung"
+name = "Support & Wartung"
+url = "qgis-support-wartung/"
+weight = 20
+parent = "angebot"
+params.icon = "bi bi-tools"
+
+[[main]]
+name = "QGIS Supportverträge"
+url = "qgis-support-wartung/"
+weight = 30
+parent = "angebot-support-wartung"
+params.icon = "bi bi-headset"
+
+[[main]]
+name = "Our QGIS Sustainability initiative #sustainQGIS"
+url = "qgis-sustainability-initiative/"
+weight = 40
+parent = "angebot-support-wartung"
+params.icon = "bi bi-emoji-smile"
+
+[[main]]
+identifier = "angebot-beratung"
+name = "Beratung"
+url = "beratung/"
+weight = 50
+parent = "angebot"
+params.icon = "bi bi-rocket"
+
+[[main]]
+name = "Beratungsdienstleistungen"
+url = "beratung/"
+weight = 55
+parent = "angebot-beratung"
+params.icon = "obfx-menu-icon fa fa-handshake-o"
+
+[[main]]
+name = "QField Starthilfepakete"
+url = "qfield-jump-start-packages/"
+weight = 60
+parent = "angebot-beratung"
+params.icon = "bi bi-phone"
+
+[[main]]
+identifier = "angebot-kurse"
+name = "Kurse"
+url = "category/kurse/"
+weight = 70
+parent = "angebot"
+params.icon = "bi bi-mortarboard"
+
+[[main]]
+name = "Kurskalender"
+url = "kurskalender/"
+weight = 80
+parent = "angebot-kurse"
+params.icon = "bi bi-calendar3"
+
+[[main]]
+name = "Kursanmeldung"
+url = "kursanmeldung/"
+weight = 90
+parent = "angebot-kurse"
+params.icon = "bi bi-pencil-square"
+
+[[main]]
+name = "QGIS Kurse"
+url = "category/kurse/qgis-kurse/"
+weight = 100
+parent = "angebot-kurse"
+params.icon = "bi bi-display"
+
+[[main]]
+name = "QField Kurse"
+url = "category/kurse/qfield-kurse/"
+weight = 110
+parent = "angebot-kurse"
+params.icon = "bi bi-phone"
+
+[[main]]
+name = "INTERLIS & Model Baker Kurse"
+url = "category/kurse/interlis-model-baker-kurse/"
+weight = 120
+parent = "angebot-kurse"
+params.icon = "bi bi-diagram-3"
+
+[[main]]
+name = "PostGIS Kurse"
+url = "category/kurse/postgis-kurse/"
+weight = 130
+parent = "angebot-kurse"
+params.icon = "bi bi-database"
+
+[[main]]
+name = "PyQGIS Kurse"
+url = "category/kurse/pyqgis-kurse/"
+weight = 140
+parent = "angebot-kurse"
+params.icon = "bi bi-file-earmark-code"
+
+[[main]]
+identifier = "ueber"
+name = "Über uns"
+url = "#team"
+weight = 30
+
+[[main]]
+name = "Team"
+url = "#team"
+weight = 10
+parent = "ueber"
+params.icon = "bi bi-people"
+
+[[main]]
+name = "Jobs"
+url = "jobs/"
+weight = 20
+parent = "ueber"
+params.icon = "bi bi-rocket"
+
+[[main]]
+name = "Unsere Werte"
+url = "unsere-werte/"
+weight = 30
+parent = "ueber"
+params.icon = "bi bi-heart"
+
+[[main]]
+identifier = "qfield"
+name = "QField"
+url = "https://qfield.org/"
+weight = 40
+
+[[main]]
+name = "qfield.org"
+url = "https://qfield.org/"
+weight = 10
+parent = "qfield"
+params.icon = "bi bi-phone"
+
+[[main]]
+name = "QFieldCloud"
+url = "https://qfield.cloud/"
+weight = 20
+parent = "qfield"
+params.icon = "bi bi-cloud"
+
+[[main]]
+name = "QField Starthilfepakete"
+url = "qfield-jump-start-packages/"
+weight = 30
+parent = "qfield"
+params.icon = "bi bi-mortarboard"
+
+[[main]]
+name = "Highlights"
+url = "category/qfield-de/highlights/"
+weight = 40
+parent = "qfield"
+params.icon = "bi bi-star-fill"
+
+[[main]]
+name = "Kontakt"
+url = "#contact"
+weight = 50
+
+[[main]]
+name = "Blog"
+url = "blog/"
+weight = 60

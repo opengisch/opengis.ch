@@ -1,0 +1,23 @@
+{{ define "main" }}
+<main class="opg-home">
+  <section class="opg-hero" style="--opg-hero-image: url('{{ .Params.hero.image | default "https://opengis.ch/wp-content/uploads/2020/04/theteam_2.png" }}');">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1 class="opg-hero-title">{{ .Params.hero.heading | default .Title }}</h1>
+          <p class="opg-hero-subtitle">{{ .Params.hero.lead | default "Swiss quality in your language - from the experts." }}</p>
+          <a class="btn btn-primary btn-lg" href="{{ .Params.hero.cta_secondary_url | default "/#testimonials" }}">
+            {{ .Params.hero.cta_secondary_text | default "What do we do" }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="opg-content">
+    <div class="container">
+      {{ .Content }}
+    </div>
+  </section>
+</main>
+{{ end }}

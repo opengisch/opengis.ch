@@ -1,0 +1,6 @@
+---
+title: "Newsletter 2025 March – OPENGIS.ch"
+source: "www.opengis.ch/it/category/newsletter/newsletter-2025-march/feed/index.html"
+---
+
+Newsletter 2025 March - OPENGIS.ch https://www.opengis.ch/it/ OPEN-SOURCE GEONINJAS Mon, 04 Aug 2025 13:18:00 +0000 it-IT hourly  1  https://wordpress.org/?v=6.9 https://i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/cropped-logo-round.png?fit=32%2C32&ssl=1 Newsletter 2025 March - OPENGIS.ch https://www.opengis.ch/it/ 32 32 165782030 ­OPENGIS.ch March's Newsletter – Celebrating 10 years of success! 🎉 https://www.opengis.ch/it/2025/03/25/opengis-ch-newsletter-2025-03-celebrating-10-years-of-success-%f0%9f%8e%89/ Tue, 25 Mar 2025 09:19:45 +0000 https://www.opengis.ch/?p=15210 15210 Unpacking key insights from our QField Workshop https://www.opengis.ch/it/2025/03/25/unpacking-key-insights-from-our-qfield-workshop/ Tue, 25 Mar 2025 09:00:53 +0000 https://www.opengis.ch/?p=15209 15209 A brief look into our QGIS Processing Workshop https://www.opengis.ch/it/2025/03/25/a-brief-look-into-our-qgis-processing-workshop/ Tue, 25 Mar 2025 08:58:05 +0000 https://www.opengis.ch/?p=15321 15321 Georama Workshop: Pioneering the Future of Geodata Infrastructure https://www.opengis.ch/it/2025/03/25/georama-workshop-pioneering-the-future-of-geodata-infrastructure/ Tue, 25 Mar 2025 08:55:20 +0000 https://www.opengis.ch/?p=15211 15211

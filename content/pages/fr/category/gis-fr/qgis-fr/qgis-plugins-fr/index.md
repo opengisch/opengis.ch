@@ -1,0 +1,47 @@
+---
+title: "QGIS Plugins – OPENGIS.ch"
+date: "2025-06-02T06:57:00+02:00"
+lastmod: "2025-08-07T18:20:57+02:00"
+source: "www.opengis.ch/fr/category/gis-fr/qgis-fr/qgis-plugins-fr/index.html"
+---
+
+[![](../../../../../../i0.wp.com/www.opengis.ch/wp-content/uploads/2025/05/xlsformconverter-qgis-qfielda86e.jpg?resize=360%2C240&ssl=1)](<../../../../2025/06/02/xlsform-converter-unlock-a-world-of-surveys-with-our-brand-new-qgis-plugin/index.html> "XLSForm Converter: unlock a world of surveys with our brand new QGIS plugin")
+## [XLSForm Converter: unlock a world of surveys with our brand new QGIS plugin](<../../../../2025/06/02/xlsform-converter-unlock-a-world-of-surveys-with-our-brand-new-qgis-plugin/index.html> "XLSForm Converter: unlock a world of surveys with our brand new QGIS plugin")
+Easily bring your XLSForm surveys into the QGIS and QField ecosystem. The plugin converts spreadsheets into fully prepared QGIS projects—with media support, automatic form configuration, and one-click upload to QFieldCloud.  
+Migrating to QField was never easier!
+By [**Mathieu**](<../../../../author/mathieuopengisch/index.html> "Mathieu"), [7 mois ago](<../../../../2025/06/02/xlsform-converter-unlock-a-world-of-surveys-with-our-brand-new-qgis-plugin/index.html>) 2025-08-07
+[![](../../../../../../i0.wp.com/www.opengis.ch/wp-content/uploads/2024/05/pgserviceparser-1a86e.png?resize=360%2C240&ssl=1)](<../../../../2024/05/28/the-postgresql-connection-service-file-and-why-we-love-it/index.html> "The PostgreSQL Connection Service File and Why We Love It")
+## [The PostgreSQL Connection Service File and Why We Love It](<../../../../2024/05/28/the-postgresql-connection-service-file-and-why-we-love-it/index.html> "The PostgreSQL Connection Service File and Why We Love It")
+The PostgreSQL Connection Service File pg_service.conf has existed for quite some time and maybe you have already used it sometimes. We love it, and that is why we built the new QGIS plugin PG service parser hashtag#QGIS plugin.
+Read more about pg_service usages and the new plugin on our latest blogpost
+By [**Dave Signer**](<../../../../author/signedav/index.html> "Dave Signer"), [2 ans ago](<../../../../2024/05/28/the-postgresql-connection-service-file-and-why-we-love-it/index.html>) 2025-08-04
+[![](../../../../../../i0.wp.com/www.opengis.ch/wp-content/uploads/2023/06/unnameda86e.png?resize=360%2C240&ssl=1)](<../../../../2023/06/20/prise-en-charge-de-wmts-dans-le-plugin-de-localisation-suisse-de-qgis/index.html> "Prise en charge de WMTS dans le plugin de localisation suisse de QGIS")
+## [Prise en charge de WMTS dans le plugin de localisation suisse de QGIS](<../../../../2023/06/20/prise-en-charge-de-wmts-dans-le-plugin-de-localisation-suisse-de-qgis/index.html> "Prise en charge de WMTS dans le plugin de localisation suisse de QGIS")
+Le plugin QGIS Swiss Locator facilite la vie de nombreux utilisateurs en Suisse en rendant accessibles les nombreuses géodonnées de swisstopo et opendata.swiss. Cela inclut un large éventail de couches de données, mais également des informations sur les objets et une recherche de noms de lieux. Grâce à un projet[ Read more](<../../../../2023/06/20/prise-en-charge-de-wmts-dans-le-plugin-de-localisation-suisse-de-qgis/index.html>)
+By [**Matthias Kuhn**](<../../../../author/mkuhn/index.html> "Matthias Kuhn"), [3 ans ago](<../../../../2023/06/20/prise-en-charge-de-wmts-dans-le-plugin-de-localisation-suisse-de-qgis/index.html>) 2023-06-20
+[![](../../../../../../i0.wp.com/www.opengis.ch/wp-content/uploads/2022/11/featurea86e.png?resize=360%2C240&ssl=1)](<../../../../2022/11/29/qgis-relations-their-widgets-and-the-plugins-of-them/index.html> "QGIS Relations, their Widgets and the Plugins of them")
+## [QGIS Relations, their Widgets and the Plugins of them](<../../../../2022/11/29/qgis-relations-their-widgets-and-the-plugins-of-them/index.html> "QGIS Relations, their Widgets and the Plugins of them")
+This blog post is about QGIS relations and how they are edited in the attribute form with widgets in general, as well as some plugins that override the relations editor widget to improve usability and solve specific use cases. The start is quite basic. If you are already a relation[ Read more](<../../../../2022/11/29/qgis-relations-their-widgets-and-the-plugins-of-them/index.html>)
+By [**Damiano**](<../../../../author/damiano/index.html> "Damiano"), [3 ans ago](<../../../../2022/11/29/qgis-relations-their-widgets-and-the-plugins-of-them/index.html>) 2022-11-28
+[![](../../../../../../i0.wp.com/www.opengis.ch/wp-content/uploads/2022/11/8a86e.png?resize=360%2C240&ssl=1)](<../../../../2022/11/15/model-baker-interlis-data-validator/index.html> "Model Baker INTERLIS Data Validator")
+## [Model Baker INTERLIS Data Validator](<../../../../2022/11/15/model-baker-interlis-data-validator/index.html> "Model Baker INTERLIS Data Validator")
+The fully integrated Data Validator, which allows validating your data directly in QGIS against their INTERLIS model, exists for almost a year now. After lots of user feedback and some investments, it’s now shinier than ever. Time for an update and a little step-by-step guide. Why is it so awesome?[ Read more](<../../../../2022/11/15/model-baker-interlis-data-validator/index.html>)
+By [**Dave Signer**](<../../../../author/signedav/index.html> "Dave Signer"), [3 ans ago](<../../../../2022/11/15/model-baker-interlis-data-validator/index.html>) 2024-08-13
+[![](../../../../../../i0.wp.com/www.opengis.ch/wp-content/uploads/2021/11/modelbaker_schema_configurationa86e.png?resize=360%2C240&ssl=1)](<../../../../2021/12/08/model-baker-6-7-cela-na-jamais-ete-aussi-simple/index.html> "Model Baker 6.7 – Cela n’a jamais été aussi simple")
+## [Model Baker 6.7 – Cela n’a jamais été aussi simple](<../../../../2021/12/08/model-baker-6-7-cela-na-jamais-ete-aussi-simple/index.html> "Model Baker 6.7 – Cela n’a jamais été aussi simple")
+Le plugin QGIS Model Baker existe depuis longtemps. La version 1.0.0 est sortie il y a plus de quatre ans, à l’époque sous le nom de QGIS Project Generator. Depuis, il s’est passé beaucoup de choses. Et cette année en particulier, beaucoup de choses ont changé en ce qui concerne[ Read more](<../../../../2021/12/08/model-baker-6-7-cela-na-jamais-ete-aussi-simple/index.html>)
+By [**Dave Signer**](<../../../../author/signedav/index.html> "Dave Signer"), [4 ans ago](<../../../../2021/12/08/model-baker-6-7-cela-na-jamais-ete-aussi-simple/index.html>) 2021-12-08
+## [QGIS2 compatibility plugin](<../../../../2016/09/19/qgis2-compatibility-plugin/index.html> "QGIS2 compatibility plugin")
+Lately I’ve been spending time porting a bigger plugin from QGIS 2.8 to 3 while maintaining 2.8 compatibility. You can find it at https://github.com/opengisch/qgis2compat/ and https://plugins.qgis.org/plugins/qgis2compat/ One code to rule them all. My target was to have to edit the source code as little as possible to simulate a lazy[ Read more](<../../../../2016/09/19/qgis2-compatibility-plugin/index.html>)
+By [**Marco Bernasocchi**](<../../../../author/mbernasocchi/index.html> "Marco Bernasocchi"), [9 ans ago](<../../../../2016/09/19/qgis2-compatibility-plugin/index.html>) 2020-04-29
+## [Updating PyQt signals that use lambda in QGIS with 2to3](<../../../../2016/09/11/updating-pyqt-signals-that-use-lambda-in-qgis-with-2to3/index.html> "Updating PyQt signals that use lambda in QGIS with 2to3")
+Just for the sake of documenting things, when running qgis 2to3 on a plugin I encountered a tricky situation regarding signals. MYQGISDIR/scripts/2to3 -f signals -w my/plugin/path The original code: extra_arg = « my test argument » QObject.connect( action, SIGNAL( « triggered() »), lambda extra_arg=my_arg: show_extra_arg(extra_arg)) def do_load_project(extra_arg): print extra_arg # « my test argument » The[ Read more](<../../../../2016/09/11/updating-pyqt-signals-that-use-lambda-in-qgis-with-2to3/index.html>)
+By [**Marco Bernasocchi**](<../../../../author/mbernasocchi/index.html> "Marco Bernasocchi"), [9 ans ago](<../../../../2016/09/11/updating-pyqt-signals-that-use-lambda-in-qgis-with-2to3/index.html>) 2020-04-29
+## [Using threads in QGIS python plugins](<../../../../2016/09/07/using-threads-in-qgis-python-plugins/index.html> "Using threads in QGIS python plugins")
+Here an example on how to work with threads in a consistent and clean manner in QGIS python plugins
+By [**Marco Bernasocchi**](<../../../../author/mbernasocchi/index.html> "Marco Bernasocchi"), [9 ans ago](<../../../../2016/09/07/using-threads-in-qgis-python-plugins/index.html>) 2020-04-29
+## [Increasing the stability of processing algorithms](<../../../../2016/02/04/increasing-the-stability-of-processing-algorithms/index.html> "Increasing the stability of processing algorithms")
+Processing just got a new testing framework to improve the long-term stability of this important plugin. And you can help to improve it, even if you are not a software developer! This is yet another piece in our never-stopping crusade to improve the stability and quality of the best desktop GIS on[ Read more](<../../../../2016/02/04/increasing-the-stability-of-processing-algorithms/index.html>)
+By [**Matthias Kuhn**](<../../../../author/mkuhn/index.html> "Matthias Kuhn"), [10 ans ago](<../../../../2016/02/04/increasing-the-stability-of-processing-algorithms/index.html>) 2020-04-29
+## Pagination des publications
+1 [2](<page/2/index.html>) [Suivant](<page/2/index.html>)

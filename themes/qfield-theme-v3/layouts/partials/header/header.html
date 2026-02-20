@@ -1,0 +1,151 @@
+{{ if .Site.Params.alert -}}
+{{ partial "header/alert.html" . }}
+{{ end -}}
+
+<header class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-default navbar-color-on-scroll navbar-transparent hestia_left shadow-sm fixed-top og-navbar">
+    <div class="container">
+
+      <!-- Brand + toggle -->
+      <a class="navbar-brand d-flex align-items-center" href="{{ .Site.Home.RelPermalink }}">
+        {{ $logo := .Site.Params.mainMenuLogo | default "images/opengis-logo.png" }}
+        <img src="{{ $logo | relURL }}" alt="{{ .Site.Title }}" class="navbar-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="main-navigation">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {{- $current := . -}}
+          {{- $section := $current.Section -}}
+          {{ range .Site.Menus.main -}}
+          {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
+          {{- $active = or $active (eq .Name $current.LinkTitle) -}}
+          {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
+          {{- $active = or $active (and (eq .Name "Blog") (in (slice "blog" "contributors") $current.Section)) -}}
+          {{ if .HasChildren }}
+          <li class="nav-item dropdown{{ if $active }} active{{ end }}">
+            <a class="nav-link dropdown-toggle{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}" id="nav-{{ .Name | urlize }}" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              {{ with .Params.icon }}<i class="{{ . }} me-1" aria-hidden="true"></i>{{ end }}
+              {{ .Name }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nav-{{ .Name | urlize }}">
+              {{ range .Children -}}
+              {{- $childActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
+              {{ if .HasChildren }}
+              <li class="dropdown dropend dropdown-submenu{{ if $childActive }} active{{ end }}">
+                <a class="dropdown-item dropdown-toggle{{ if $childActive }} active{{ end }}" href="{{ .URL | relLangURL }}" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                  {{ with .Params.icon }}
+                    {{ $iconClass := . }}
+                    {{ if not (in $iconClass "obfx-menu-icon") }}
+                      {{ $iconClass = printf "%s dropdown-item-icon" $iconClass }}
+                    {{ end }}
+                    <i class="{{ $iconClass }}" aria-hidden="true"></i>
+                  {{ end }}
+                  {{ .Name }}
+                </a>
+                <ul class="dropdown-menu">
+                  {{ range .Children }}
+                  {{ $grandActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
+                  <li>
+                    <a class="dropdown-item{{ if $grandActive }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $grandActive }} aria-current="true"{{ end }}>
+                      {{ with .Params.icon }}
+                        {{ $iconClass := . }}
+                        {{ if not (in $iconClass "obfx-menu-icon") }}
+                          {{ $iconClass = printf "%s dropdown-item-icon" $iconClass }}
+                        {{ end }}
+                        <i class="{{ $iconClass }}" aria-hidden="true"></i>
+                      {{ end }}
+                      {{ .Name }}
+                    </a>
+                  </li>
+                  {{ end }}
+                </ul>
+              </li>
+              {{ else }}
+              <li>
+                <a class="dropdown-item{{ if $childActive }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $childActive }} aria-current="true"{{ end }}>
+                  {{ with .Params.icon }}
+                    {{ $iconClass := . }}
+                    {{ if not (in $iconClass "obfx-menu-icon") }}
+                      {{ $iconClass = printf "%s dropdown-item-icon" $iconClass }}
+                    {{ end }}
+                    <i class="{{ $iconClass }}" aria-hidden="true"></i>
+                  {{ end }}
+                  {{ .Name }}
+                </a>
+              </li>
+              {{ end }}
+              {{ end -}}
+            </ul>
+          </li>
+          {{ else }}
+          <li class="nav-item">
+            <a class="nav-link{{ if $active }} active{{ end }}" aria-current="page" href="{{ .URL | relLangURL }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+              {{ with .Params.icon }}<i class="{{ . }} me-1" aria-hidden="true"></i>{{ end }}
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+          {{ end -}}
+        </ul>
+
+        <ul class="navbar-nav ms-lg-auto align-items-lg-center">
+          {{ if hugo.IsMultilingual -}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarLanguageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ with .Site.Language.Params.languageISO }}{{ . }}{{ else }}{{ .Site.Language.LanguageName }}{{ end }}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarLanguageDropdown">
+              <li>
+                <a class="dropdown-item active" aria-current="true" href="{{ .RelPermalink }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                  {{ .Site.Language.LanguageName }}
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              {{ if .IsTranslated -}}
+              {{ range .Translations }}
+              <li>
+                <a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                  {{ with .Params.languageISO }}{{ . }}{{ else }}{{ .Language.LanguageName }}{{ end }}
+                </a>
+              </li>
+              {{ end -}}
+              {{ else -}}
+              {{ range .Site.Home.AllTranslations -}}
+              {{ if ne $.Site.Language.Lang .Language.Lang }}
+              <li>
+                <a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                  {{ with .Params.languageISO }}{{ . }}{{ else }}{{ .Language.LanguageName }}{{ end }}
+                </a>
+              </li>
+              {{ end -}}
+              {{ end -}}
+              {{ end -}}
+            </ul>
+          </li>
+          {{ end -}}
+          {{ if eq .Site.Params.enableDarkMode true -}}
+          <li class="nav-item d-flex align-items-center me-2">
+            <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+              <i id="themeIcon" class="bi"></i>
+            </button>
+          </li>
+          {{ end -}}
+          <li class="nav-item">
+            <form class="search-form d-flex align-items-center" role="search" method="get" action="{{ "/" | relLangURL }}">
+              <label class="visually-hidden" for="navbarSearch">Search</label>
+              <input id="navbarSearch" class="form-control form-control-sm" type="search" name="s" placeholder="Search" aria-label="Search site">
+              <button class="btn btn-sm btn-secondary ms-2" type="submit" aria-label="Submit search">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

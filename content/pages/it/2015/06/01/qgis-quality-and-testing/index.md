@@ -1,0 +1,22 @@
+---
+title: "QGIS Quality and Testing – OPENGIS.ch"
+author: "Matthias Kuhn"
+date: "2015-06-01T18:26:56+02:00"
+lastmod: "2020-04-29T16:05:41+02:00"
+categories:
+  - "Uncategorised"
+tags:
+  - "qgis.org"
+source: "www.opengis.ch/it/2015/06/01/qgis-quality-and-testing/index.html"
+---
+
+I promised that I will write a bit about what I’ve been up to at the last QGIS developer meeting – apart from the social part we also got some work done there.  
+So let me start with something that really matters to me and I think can make a big impact.
+## Unit Testing
+At the start of the developer conference Alessandro Pasotti asked me to do a workshop on unit tests. We quickly squatted a room with a couple of other people where we discussed the general system of unit testing in QGIS and a small unit test has been implemented. The idea definitely got some traction as a couple of hours later a pull request with a similar test was ready for merge. Thank you very much Tobias Reber!  
+It should turn out, that unit testing should keep me busy at this place for some more time. It was very interesting to see that **the unit tests which we have really do their job**. And their job is to fail (You can see what’s going on here https://travis-ci.org/qgis/QGIS/builds). More than once tests failed for pull requests and some code could be brought into good shape before being integrated.  
+Another interesting thing to see was, that sometimes a pull request got merged even though it failed. I assume this is due to the fact that some of our unit tests sometimes fail (mainly the ones which require external services) and therefore condition developers not to look too close at the result of the tests. Bottomline for me: prefer to disable unstable tests. It’s easier to interpret the testing result if the noise is removed.  
+And finally another work I did on the unit testing was related to the Postgres Expression Compiler (more about it in a future post). This is a new implementation which allows some requests to be filtered on the database server instead of the client itself. I didn’t want to leave it alone from unit tests, so I wrote some tests that check if a bunch of sample requests filter the same set of features on the database as they do locally. This requires a postgres/postgis server which we didn’t have to test before. Fortunately we can run that directly on the travis-ci infrastructure (that’s where QGIS gets tested after every change in the code). But then I thought that if we already have a running postgres/postgis server, why only test some expressions. And I started to add further tests for basic functionality like querying the extent, getting default values, filtering by spatial extent and some others.  
+While doing that I realized, that it’s not only postgres/postgis that should pass these basic tests, but basically any provider. So the code was refactored out into a more generic base class to be able to implement this for various providers and keep adding more tests at one single point. Now the same code tests also SpatiaLite and Shapefiles. That’s really nice because this way we can check if all providers act the same and discover inconsistencies. For instance, when introducing the Shapefile tests it turned out that when selecting features in a given spatial extent not only the features in there but also features without a geometry have been returned. A rather odd behavior that none of the other two providers showed. It’s fixed now.  
+I am looking forward to seeing the suite of unit tests grow even more and helping QGIS to become more stable.
+### _Related_

@@ -1,0 +1,62 @@
+<footer class="opg-footer">
+  <div class="container">
+    {{ $recent := first 4 (sort (where .Site.RegularPages "Section" "blog") "Date" "desc") }}
+    <div class="opg-footer-content">
+      <h3>Recent Posts</h3>
+      <ul class="opg-footer-posts">
+        {{ if gt (len $recent) 0 }}
+          {{ range $recent }}
+            <li>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              <span class="opg-footer-post-date">{{ .Date.Format "2006-01-02" }}</span>
+            </li>
+          {{ end }}
+        {{ else }}
+          <li>No recent posts yet.</li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="opg-footer-social">
+      {{ with $.Site.Data.social.social }}
+        {{ range . }}
+          <a href="{{ .url }}" title="{{ .title }}" target="_blank" rel="noreferrer noopener">
+            <i class="bi {{ .icon }}" aria-hidden="true"></i>
+            <span class="visually-hidden">{{ .name }}</span>
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+    <p class="opg-footer-detail">
+      Open-source geospatial specialists with a Swiss attitude toward quality.
+    </p>
+    <div class="opg-footer-meta">
+      <a
+        class="swiss-made-logo-link"
+        href="https://www.swissmadesoftware.org/en/home/about/companies~O~.html"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <img
+          class="swiss-made-logo"
+          src="{{ "/wp-content/uploads/2020/04/SMS-Logo-1h-72dpi_RGB.png" | relURL }}"
+          alt="Swiss Made Software"
+          loading="lazy"
+          decoding="async"
+        >
+      </a>
+      <p>{{ .Site.Copyright | safeHTML }} 2022</p>
+      {{ if eq .Site.Params.enableScrollToTop true }}
+        <div>
+          <button
+            id="scrollTopBtn"
+            class="btn btn-danger rounded-circle shadow position-fixed"
+            type="button"
+            style="bottom: 1.5rem; right: 2rem; display: none; z-index: 999;"
+          >
+            <i class="bi bi-arrow-up"></i>
+          </button>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</footer>
