@@ -5,6 +5,11 @@ Hugo site for the OPENGIS.ch marketing website, using the `qfield-theme-v3` boot
 ## Recent updates (February 20, 2026)
 - Removed 17 markdown files in `content/**` containing the placeholder text `Page has moved` and pruned 9 newly empty directories left behind after the cleanup.
 - Restored missing `content/pages/**` files and subfolders from `/mnt/xtreme/DV/DEVTMP/opengis_hugo/converted-md` (no overwrite mode), recovering 4,880 files and 4,718 directories after accidental deletion.
+- Ran a targeted post-restore cleanup pass removing 685 placeholder markdown files (`Page not found`, `Page has moved`, `Seite nicht gefunden`, `Page non trouvée`, `Pagina non trovata`) and pruned 45 empty directories.
+- Flattened multilingual page structure by moving all files from `content/pages/de|fr|it/**` into shared page folders under `content/pages/**` and renaming them as language-specific files (`*.de.md`, `*.fr.md`, `*.it.md`), removing the separate `de`, `fr`, and `it` subtree roots.
+- Consolidated translated top-level page slug folders into canonical shared page folders (for example `support-qgis` + `supporto-qgis` + `qgis-support-wartung` into `qgis-support`), moving 21 localized files and removing the redundant source folders.
+- Ran a recursive `content/pages` language-folder audit and merged all remaining `*-de`/`*-fr`/`*-it` split folders into canonical siblings (309 files moved in this pass), leaving no language-suffixed split directories and no empty folders.
+- Restored missing `content/pages/**` content again from `/mnt/xtreme/DV/DEVTMP/opengis_hugo/converted-md` after accidental over-pruning (`4,877` files, `4,718` directories), then reapplied only language-folder normalization (`3,055` moves from `de|fr|it` trees and `309` recursive suffix-folder merges) while keeping non-language slugs such as `...-it` untouched.
 
 ## Recent updates (February 19, 2026)
 - Deduplicated `content/pages` by removing 751 hash-suffixed `index<hash>.md` files that matched canonical `index.md`/`index.<lang>.md` content (ignoring `source:`), while keeping referenced, content-different, and no-canonical edge-case files.

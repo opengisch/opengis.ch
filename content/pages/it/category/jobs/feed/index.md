@@ -1,6 +1,0 @@
----
-title: "Job Postings Archive – OPENGIS.ch"
-source: "www.opengis.ch/it/category/jobs/feed/index.html"
----
-
-Job Postings Archive - OPENGIS.ch https://www.opengis.ch/it/ OPEN-SOURCE GEONINJAS Thu, 25 Sep 2025 13:51:31 +0000 it-IT hourly  1  https://wordpress.org/?v=6.9 https://i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/cropped-logo-round.png?fit=32%2C32&ssl=1 Job Postings Archive - OPENGIS.ch https://www.opengis.ch/it/ 32 32 165782030 QGIS & Industry Solutions Developer | 80 – 100% (Remote) https://www.opengis.ch/it/2025/05/28/qgis-industry-solutions-developer/ Tue, 27 May 2025 23:58:57 +0000 https://www.opengis.ch/?p=15596 15596 Senior Django Full-Stack Engineer with DevOps Affinity | 80 - 100% (Remote) https://www.opengis.ch/it/2025/03/21/django-full-stack-engineer-with-devops-affinity-80-100-remote/ https://www.opengis.ch/it/2025/03/21/django-full-stack-engineer-with-devops-affinity-80-100-remote/#respond Fri, 21 Mar 2025 16:06:26 +0000 https://www.opengis.ch/?p=14450 https://www.opengis.ch/it/2025/03/21/django-full-stack-engineer-with-devops-affinity-80-100-remote/feed/ 0 14450 DevOps Engineer/Sysadmin 60 - 100% (Remote in Switzerland) https://www.opengis.ch/it/2023/02/19/devops-engineer/ Sun, 19 Feb 2023 15:01:49 +0000 https://www.opengis.ch/?p=11651 11651

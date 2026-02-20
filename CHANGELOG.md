@@ -5,6 +5,11 @@
 - Checked for DE/FR/IT moved-page variants and found no additional localized matches to remove.
 - Removed 9 empty directories under `content/` after deleting moved-page placeholder files.
 - Restored missing content pages and nested folders from `/mnt/xtreme/DV/DEVTMP/opengis_hugo/converted-md` into `content/pages` using non-overwriting sync (`--ignore-existing`), recovering 4,880 files and 4,718 directories after accidental deletion.
+- Removed 685 placeholder markdown files in `content/**` containing `Page not found`, `Page has moved`, `Seite nicht gefunden`, `Page non trouvée`, or `Pagina non trovata`, then deleted 45 empty directories created by that cleanup.
+- Flattened localized page trees by moving 2,409 markdown files from `content/pages/de/**`, `content/pages/fr/**`, and `content/pages/it/**` into canonical page folders under `content/pages/**` and renaming them to `*.de.md`, `*.fr.md`, and `*.it.md`; removed the now-empty `de`, `fr`, and `it` root directories.
+- Merged 21 localized files from translated top-level slug folders into canonical shared page folders in `content/pages` (including support, consulting, development, values, course registration/calendar, sustainability initiative, crowdfunding, and QField training), then removed the redundant translated source directories.
+- Audited `content/pages` recursively for remaining language-split directory names and merged all `*-de`/`*-fr`/`*-it` folders into canonical siblings (`309` files moved and `8` source-only-duplicate files removed); no language-suffixed split directories or empty directories remain.
+- Restored `content/pages` from `/mnt/xtreme/DV/DEVTMP/opengis_hugo/converted-md` in non-overwrite mode after accidental over-pruning (`4,877` files and `4,718` directories added), then reapplied language normalization only: moved `3,055` files from `content/pages/de|fr|it/**`, removed `30` source-only duplicates, merged `309` additional recursive `*-de`/`*-fr`/`*-it` split-folder files, and removed `8` more source-only duplicates.
 
 ## [Unreleased] - 2026-02-19
 - Deduplicated `content/pages` by removing 751 hash-suffixed `index<hash>.md` files where content matched canonical siblings (`index.md` / `index.<lang>.md`) after excluding `source:` front-matter differences.

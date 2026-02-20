@@ -1,6 +1,0 @@
----
-title: "Newsletter 2024 June – OPENGIS.ch"
-source: "www.opengis.ch/fr/category/newsletter/newsletter-2024-june/feed/index.html"
----
-
-Newsletter 2024 June - OPENGIS.ch https://www.opengis.ch/fr/ OPEN-SOURCE GEONINJAS Mon, 04 Aug 2025 13:19:03 +0000 fr-FR hourly  1  https://wordpress.org/?v=6.9 https://i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/cropped-logo-round.png?fit=32%2C32&ssl=1 Newsletter 2024 June - OPENGIS.ch https://www.opengis.ch/fr/ 32 32 165782030 ­OPENGIS.ch NEWSLETTER 2024.06 - Dive into our Company's Latest Geo-Innovations & Projects! https://www.opengis.ch/fr/2024/06/27/qfield-3-dedicated-to-forests-with-exceptional-features-2/ Thu, 27 Jun 2024 03:35:36 +0000 https://www.opengis.ch/?p=14772 14772 Behind the Scenes: Our Latest Projects and Company News https://www.opengis.ch/fr/2024/06/27/behind-the-scenes-our-latest-projects-and-company-news/ Thu, 27 Jun 2024 01:12:00 +0000 https://www.opengis.ch/?p=14711 14711 QField 3 - Dedicated to Forests with exceptional Features https://www.opengis.ch/fr/2024/06/27/qfield-3-dedicated-to-forests-with-exceptional-features/ Thu, 27 Jun 2024 01:11:00 +0000 https://www.opengis.ch/?p=14702 14702 We Live & Love Open-source https://www.opengis.ch/fr/2024/06/27/we-live-love-open-source/ Thu, 27 Jun 2024 01:10:00 +0000 https://www.opengis.ch/?p=14650 14650
