@@ -7,5 +7,17 @@ source: "www.opengis.ch/de/2012/01/31/qgis-on-android-gets-gps-support/index.htm
 ---
 Lately I’ve been working on adding native GPS support to QGIS on Android, here is a short video showing how it works. A big thanks goes to the municipality of Schoten in Belgium which sponsored the development. This functionality is included in the latest nightly builds as of yesterday.  
 
+<div class="blog-embed-video">
+  <iframe
+    src="https://player.vimeo.com/video/35799842"
+    title="Vimeo video 35799842"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://vimeo.com/35799842](<https://vimeo.com/35799842>)
+
 [GPS tracking on QGIS for android](<https://vimeo.com/35799842>) from [Marco Bernasocchi](<https://vimeo.com/mbernasocchi>) on [Vimeo](<https://vimeo.com/>).
 ### _Related_

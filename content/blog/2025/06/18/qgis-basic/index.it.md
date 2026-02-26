@@ -4,6 +4,7 @@ date: 2025-06-18
 slug: "qgis-basic"
 url: "/it/2025/06/18/qgis-basic/"
 source: "www.opengis.ch/it/2025/06/18/qgis-basic/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2024/06/vt_basemapa86e.png"
 ---
 ### Descrizione
 Alla fine di questo corso, i partecipanti conosceranno le principali funzioni di QGIS Desktop (software GIS open source) e saranno in grado di importare e analizzare dati, creare una mappa con layout professionale ed inserire oggetti con attributi e geometrie vettoriali.

@@ -24,4 +24,17 @@ Other noteworthy improvements include shipping **Quick3D QML modules, which allo
 ![](./configuration3801.png)
   
 Users and plugin authors can expect an exciting year ahead as the QField plugin framework continues to grow with new functionalities and improvements. Watch this space!
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://videopress.com/embed/RqiQKWXY"
+    title="VideoPress video"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://videopress.com/embed/RqiQKWXY](<https://videopress.com/embed/RqiQKWXY>)
+
 ### _Related_

@@ -4,6 +4,7 @@ date: 2020-04-02
 slug: "cours-qgis-de-base-online-06-07-05-2020"
 url: "/fr/2020/04/02/cours-qgis-de-base-online-06-07-05-2020/"
 source: "www.opengis.ch/fr/2020/04/02/cours-qgis-de-base-online-06-07-05-2020/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Inscription](<https://app.hive.com/forms/egaQRNBihWymbiSZJ>)
 Le cours est sur 2 jours (9:00 – 17:00) via [Zoom](<https://zoom.us/>) et coûte 850 CHF par personne. Un enseignant pour un maximum de 6 personnes et 2 enseignants pour 7 à 12 personnes. 

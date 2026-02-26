@@ -4,6 +4,7 @@ date: 2019-09-17
 slug: "qfield-day-2019"
 url: "/it/2019/09/17/qfield-day-2019/"
 source: "www.opengis.ch/it/2019/09/17/qfield-day-2019/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/09/qfield_love_10_bannera86e.jpg"
 ---
 _**12 November 2019** 13:40_ in Bern, free event
 _QField_ is a highly configurable _mobile data collection_ app. It integrates perfectly with _the leading open source solution QGIS_.

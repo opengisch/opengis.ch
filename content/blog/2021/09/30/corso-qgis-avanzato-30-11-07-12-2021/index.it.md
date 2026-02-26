@@ -4,6 +4,7 @@ date: 2021-09-30
 slug: "corso-qgis-avanzato-30-11-07-12-2021"
 url: "/it/2021/09/30/corso-qgis-avanzato-30-11-07-12-2021/"
 source: "www.opengis.ch/it/2021/09/30/corso-qgis-avanzato-30-11-07-12-2021/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Iscrizione](</iscrizione-corsi/index.html>)
 Il corso dura 2 giorni (9:00 – 17:00) a Bellinzona o tramite Google Il corso della durata di 2 giorni 9:00 – 17:00, si terrà a Bellinzona ad un costo di 990 CHF a persona. Questo prezzo include la registrazione, il materiale di formazione, la certificazione ufficiale e due pasti. Il corso sarà tenuto da un insegnante per un massimo di 6 partecipanti e 2 insegnanti da 7 a 12 partecipanti. 

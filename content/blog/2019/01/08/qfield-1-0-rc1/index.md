@@ -4,6 +4,7 @@ date: 2019-01-08
 slug: "qfield-1-0-rc1"
 url: "/2019/01/08/qfield-1-0-rc1/"
 source: "www.opengis.ch/2019/01/08/qfield-1-0-rc1/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/01/QField_RCa86e.png"
 ---
 It was a long and winding road but we are very excited to announce the general availability of QField 1.0 Release Candidate 1.
 Packed with loads of useful features like online and offline features digitizing, geometry and attributes editing, attribute search, powerful forms, theme switching, GPS support, camera integration and much more, QField is the powerful tool for those who need to edit on the go and would like to avoid standing in the swamp with a laptop or paper charts.

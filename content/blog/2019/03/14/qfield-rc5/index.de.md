@@ -33,4 +33,17 @@ List of improvements since RC3
 You can easily install QField using the Playstore (<https://qfield.org/get>), find out more on the documentation site ([https://qfield.org](<https://qfield.org/>)), watch some demo videos on our channel (<https://qfield.org/demo>) and report problems to our issues tracking system (<https://qfield.org/issues>). Please note that the Playstore update can take some hours to roll out and if you had installed a version directly from [GitHub](<https://github.com/opengisch/QField/releases>), you might have to uninstall it to get the latest playstore update.
 QField, like QGIS, is an open source project. Everyone is welcome to contribute making the product even better – whether it is with financial support, [enthusiastic programming](<https://github.com/opengisch/QField>), [translation](<https://www.transifex.com/opengisch/qfield-for-qgis/>) and [documentation work](<https://www.qfield.org/docs/index.html>) or [visionary ideas](<https://github.com/opengisch/QField/issues>).
 If you want to help us build a better QField or QGIS, or need any services related to the whole QGIS stack don’t hesitate to [contact us](</%23contact.html>).
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://player.vimeo.com/video/323697787"
+    title="Vimeo video 323697787"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://vimeo.com/323697787](<https://vimeo.com/323697787>)
+
 ### _Related_

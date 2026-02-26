@@ -4,6 +4,7 @@ date: 2023-03-06
 slug: "qgis-graphical-modeler"
 url: "/it/2023/03/06/qgis-graphical-modeler/"
 source: "www.opengis.ch/it/2023/03/06/qgis-graphical-modeler/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2023/03/models_modela86e.png"
 ---
 **Description**
 Mit der graphischen Modellierung in QGIS lassen sich mehrere QGIS-Werkzeuge in einem logischen Ablauf kombinieren. Dank der visuellen Gestaltung können Anwender:innen ohne Programmierkenntnisse Automatisierungen in QGIS realisieren. Wiederkehrende Arbeitsabläufe können so effizient ausgeführt und reproduziert werden. 

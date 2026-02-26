@@ -8,7 +8,20 @@ Theme for a blazing fast static website and/or blog using bootstrap 5.
 
 ## Local customizations
 
-- Set the site default theme to light via `config/_default/params.toml` (`defaultTheme = "light"`), while keeping dark mode available as a user toggle.
+- Restructured OPENGIS site config to mirror `qfield_hugo_v2`: single `config/_default/hugo.yaml` plus `config/{development,staging,production}/hugo.yaml` environment overrides.
+- Migrated OPENGIS and `exampleSite` config/data files from TOML to YAML and removed the corresponding TOML files.
+- Kept `theme.toml` unchanged because Hugo expects theme metadata in TOML format.
+- Set the site default theme to light in `config/_default/hugo.yaml` (`params.defaultTheme: light`), while keeping dark mode available as a user toggle.
+- Backfilled missing blog `image` front matter for posts that had recoverable local mirror assets, including the Ticino rapid-mapping post (`2024/07/07/qfield-rapid-mapping-ticino`).
+- Updated `layouts/blog/single.html` to render a featured image block when a post defines `cover.image` or `image`.
+- Restored the missing RSI embed video in the Ticino rapid-mapping post variants (EN/DE/FR/IT) and added responsive `.blog-embed-video` styling in the site Sass.
+- Kept the RSI embed URL visible below the restored video as a clickable external link in all Ticino post language variants.
+- Fixed markdown separation around the Ticino embed/link block so the following heading/content (`## Empowering Response with Advanced Technology`, participation list) is parsed and rendered correctly instead of appearing as raw text.
+- Restored the missing featured image + two VideoPress embeds for the Amazonia post variants (EN/DE/FR/IT) using the live source embed IDs.
+- Added inline Vimeo embed blocks to legacy posts that only contained plain Vimeo links, while keeping the source link visible below each embed.
+- Extended `layouts/blog/single.html` with a featured-image fallback that pulls the first image from rendered post content when front matter does not define `cover.image`/`image`.
+- Added `scripts/sync_blog_media_from_offline.py` to reconcile blog markdown media against the offline mirror at `/mnt/xtreme/DV/DEVTMP/opengis_hugo/opengis-offline`.
+- Applied that offline sync across all localized blog files, restoring 116 missing embedded videos in 72 files and keeping direct clickable source links under each inserted embed.
 - Hardened service-page layout detection in `_default/single.html` by matching normalized permalink/url paths in addition to trailing slug checks, so `qfield-training` and `qgis-support` consistently use their dedicated hero/header layouts.
 - Added an OPENGIS blog layout that mirrors the QField v2 list and single post presentation, including list/card toggles, share buttons, and related posts with dark-mode adjustments.
 - Limited blog share icon artwork to a maximum of 50px to match the requested sizing.

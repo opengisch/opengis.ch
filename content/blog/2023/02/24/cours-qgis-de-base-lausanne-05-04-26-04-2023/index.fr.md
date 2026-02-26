@@ -4,6 +4,7 @@ date: 2023-02-24
 slug: "cours-qgis-de-base-lausanne-05-04-26-04-2023"
 url: "/fr/2023/02/24/cours-qgis-de-base-lausanne-05-04-26-04-2023/"
 source: "www.opengis.ch/fr/2023/02/24/cours-qgis-de-base-lausanne-05-04-26-04-2023/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 Le cours se déroule sur 2 jours (9:00 – 17:00) et coûte 990 CHF par personne (dîner et certificat inclus). Un enseignant sera prévu pour un maximum de 6 personnes et 2 enseignants pour 7 à 12 personnes. 
 ## Description

@@ -16,4 +16,17 @@ Here some screenshots from my Samsung galaxy 9000 with 4″ screen and a video d
 [![](./P20120330131311465b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2012/02/P20120330131311eb45.png?ssl=1>) [![](./P20120330123638465b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2012/02/P20120330123638eb45.png?ssl=1>)  
 
 This video shows QGIS on a Samsung I9000 Galaxy S Android smartphone with 4.0″ screen. the point size in settings->option->general is set to 4
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://player.vimeo.com/video/39473397"
+    title="Vimeo video 39473397"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://vimeo.com/39473397](<https://vimeo.com/39473397>)
+
 ### _Related_

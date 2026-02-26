@@ -4,6 +4,7 @@ date: 2023-03-06
 slug: "qgis-advanced"
 url: "/it/2023/03/06/qgis-advanced/"
 source: "www.opengis.ch/it/2023/03/06/qgis-advanced/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2021/11/modelbaker_baked_project_with_form_wide2a86e.png"
 ---
 ## Descrizione
 Dopo aver seguito questa formazione, i partecipanti saranno in grado di realizzare progetti complessi con QGIS. Conosceranno le caratteristiche di diversi formati di dati come PostGIS e GeoPackage, saranno capaci di configurare flussi di lavoro per l’elaborazione dei geodati con strumenti di processing, creare stampe tramite layout, importare/esportare dati Interlis e utilizzare strumenti di disegno per la costruzione. Inoltre, potranno scrivere espressioni e conosceranno le loro applicazioni in QGIS.

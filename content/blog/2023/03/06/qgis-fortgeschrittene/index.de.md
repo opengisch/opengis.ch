@@ -4,6 +4,7 @@ date: 2023-03-06
 slug: "qgis-fortgeschrittene"
 url: "/de/2023/03/06/qgis-fortgeschrittene/"
 source: "www.opengis.ch/de/2023/03/06/qgis-fortgeschrittene/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2021/11/modelbaker_baked_project_with_form_wide2a86e.png"
 ---
 ### Beschreibung
 Nach Abschluss dieses Kurses kannst du komplexe Projekte mit QGIS umsetzen. Du kennst Werkzeuge für die effiziente Sichtung, Bearbeitung, Erfassung und Darstellung von geographischen Daten. Du kennst Eigenschaften von verschiedenen Datenformaten wie PostGIS und GeoPackage und weisst, wie man die Daten im Projekt verwaltet. Du bist fähig, Workflows zur Geodatenverarbeitung mit Verarbeitungswerkzeugen zu erstellen, Drucklayouts zu kreieren und INTERLIS-Daten zu importieren. Weiter kannst du Ausdrücke schreiben und kennst deren Einsatzorte in QGIS.

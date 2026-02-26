@@ -4,6 +4,7 @@ date: 2022-09-09
 slug: "corso-qgis-di-base-bellinzona-19-10-26-10-2022"
 url: "/2022/09/09/corso-qgis-di-base-bellinzona-19-10-26-10-2022/"
 source: "www.opengis.ch/2022/09/09/corso-qgis-di-base-bellinzona-19-10-26-10-2022/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Iscrizione](</course-registration/index.html>)
 Il corso dura 2 giorni (9:00 – 17:00) e costa 990 CHF a persona (compreso il pranzo e il certificato). Un insegnante per un massimo di 6 partecipanti e 2 insegnanti da 7 a 12 partecipanti. 

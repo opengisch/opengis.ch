@@ -4,6 +4,7 @@ date: 2021-08-31
 slug: "cours-qgis-avance-online-24-30-11-2021"
 url: "/fr/2021/08/31/cours-qgis-avance-online-24-30-11-2021/"
 source: "www.opengis.ch/fr/2021/08/31/cours-qgis-avance-online-24-30-11-2021/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Inscription](</inscriptions-aux-cours/index.html>)
 Le cours est sur 2 jours (9:00 – 17:00) à Lausanne, si les conditions sanitaires le permettent, ou via Google Meet (aucun compte google nécessaire) coûte 990 CHF par personne. Ce prix comprend l’inscription, le support de formation, la certification officielle ainsi que les deux repas. Un enseignant pour un maximum de 6 personnes et 2 enseignants pour 7 à 12 personnes.

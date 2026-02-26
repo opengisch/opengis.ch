@@ -4,6 +4,7 @@ date: 2020-04-02
 slug: "qgis-einsteigerkurs-online-22-23-04-2020"
 url: "/de/2020/04/02/qgis-einsteigerkurs-online-22-23-04-2020/"
 source: "www.opengis.ch/de/2020/04/02/qgis-einsteigerkurs-online-22-23-04-2020/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Anmelden](<https://app.hive.com/forms/egaQRNBihWymbiSZJ>)
 Der Kurs dauert 2 Tage (9:00 – 17:00 Uhr) via [Zoom](<https://zoom.us/>) und kostet 850 CHF pro Person. Ein Lehrer für maximal 6 Personen und 2 Lehrer für 7 bis 12 Personen.

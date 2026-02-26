@@ -54,4 +54,17 @@ Please note that on older AMRv7 architectures, some devices are suffering from a
 Also, since November 2021, Google has enforced new storage access limitations for apps published on its Play store which prohibits direct storage access on Android 11 and above forcing QField to adapt and rely on importing projects and datasets to access those. As part of the enforcement of these new policies, Google came up with an arbitrary mechanism to whitelist some apps which allows those to retain full storage access given the user explicitly allowed for it. We here at OPENGIS.ch believe QField had ample justifications to be whitelisted, however, Google’s appeal process judged otherwise after a series of email exchanges detailing our reasoning. While we have so far lost this argument with Google, we will continue fighting for our users and for their freedom to choose. If you are interested in more details, read our blog post[ about it.](</2022/03/05/qfield-users-sit-down-we-need-to-talk-about-storage-access-on-android%ef%bf%bc/index.html>)
 ## Join the effort
 QField is an open-source project. It is free to share, use and modify and it will stay like that. We are very happy if this app helps you in whatever creative way you may use it. If you found it useful, we will be even happier if you could give something back. You can easily [sponsor QField](<https://docs.qfield.org/get-started/sponsor/>), [contribute some help](<https://docs.qfield.org/get-started/contribute/>) or ask us to [develop a new feature](<https://docs.qfield.org/get-started/sponsor/#feature-sponsoring>).
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://player.vimeo.com/video/695452246"
+    title="Vimeo video 695452246"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://vimeo.com/695452246](<https://vimeo.com/695452246>)
+
 ### _Related_

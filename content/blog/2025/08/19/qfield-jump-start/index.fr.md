@@ -4,6 +4,7 @@ date: 2025-08-19
 slug: "qfield-jump-start"
 url: "/fr/2025/08/19/qfield-jump-start/"
 source: "www.opengis.ch/fr/2025/08/19/qfield-jump-start/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/04/tim-gouw-73926-unsplasha86e.jpg"
 ---
 Vous souhaitez collecter des données sur le terrain, mais n’avez **jamais utilisé de SIG** auparavent ?
 Vous êtes un **utilisateur averti de QGIS** , et souhaitez vous préparer pour le terrain ?

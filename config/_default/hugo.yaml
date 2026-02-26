@@ -1,0 +1,741 @@
+baseURL: https://www.opengis.ch/
+title: OPENGIS.ch
+author: OPENGIS.ch
+copyright: OPENGIS.ch
+timeZone: Europe/Zurich
+pagination:
+  pagerSize: 12
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+theme: qfield-theme-v3
+disableHugoGeneratorInject: true
+enableRobotsTXT: true
+enableEmoji: true
+frontmatter:
+  date:
+  - date
+  - publishDate
+  - lastmod
+  lastmod:
+  - lastmod
+  - :fileModTime
+  - :default
+taxonomies:
+  tag: tags
+  category: categories
+  series: series
+  author: authors
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+permalinks:
+  blog: /:year/:month/:day/:slug/
+module:
+  hugoVersion:
+    extended: true
+    min: 0.99.1
+    max: ''
+  mounts:
+  - source: assets
+    target: assets
+  - source: static
+    target: static
+mediaTypes:
+  text/css:
+    suffixes:
+    - css
+params:
+  description: OPENGIS.ch - Open Source GIS services, products, and training.
+  images:
+  - images/opengis-logo.png
+  - images/site-feature-image.png
+  mainMenuLogo: images/opengis-logo.png
+  enableDarkMode: true
+  defaultTheme: light
+  themeColorLight: '#ffffff'
+  themeColorDark: '#05060b'
+  themeColor: '#fff'
+  alert: false
+  alertDismissable: true
+  alertText: Introducing this new service! <a class="alert-link stretched-link" href="https://salvus.site/">Check
+    out Total Security</a>
+  footerAbout: true
+  footerAboutTitle: About OPENGIS.ch
+  footerAboutText: We build open-source geospatial solutions and provide services,
+    support, and training.
+  options:
+    bootStrapJs: true
+    breadCrumb: true
+    listCategoryFilter: true
+    listTagFilter: true
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      autoHeadingID: true
+      wrapStandAloneImageWithinParagraph: false
+      attribute:
+        block: true
+        title: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+languages:
+  en:
+    languageName: English
+    languageCode: en-US
+    weight: 10
+    params:
+      languageISO: EN
+    menu:
+      main:
+      - name: Why us?
+        url: '#features'
+        weight: 10
+      - identifier: services
+        name: Services
+        url: '#testimonials'
+        weight: 20
+      - name: Custom Development
+        url: custom-development/
+        weight: 10
+        parent: services
+        params:
+          icon: bi bi-code-slash
+      - identifier: services-support-maintenance
+        name: Support & maintenance
+        url: qgis-support/
+        weight: 20
+        parent: services
+        params:
+          icon: bi bi-tools
+      - name: Support contracts
+        url: qgis-support/
+        weight: 30
+        parent: services-support-maintenance
+        params:
+          icon: bi bi-headset
+      - name: QGIS Sustainability initiative
+        url: qgis-sustainability-initiative/
+        weight: 40
+        parent: services-support-maintenance
+        params:
+          icon: bi bi-emoji-smile
+      - identifier: services-consulting
+        name: Consulting
+        url: training-consulting/
+        weight: 50
+        parent: services
+        params:
+          icon: bi bi-rocket
+      - name: Consulting services
+        url: training-consulting/
+        weight: 55
+        parent: services-consulting
+        params:
+          icon: obfx-menu-icon fa fa-handshake-o
+      - name: QField Jump-start packages
+        url: qfield-training/
+        weight: 60
+        parent: services-consulting
+        params:
+          icon: bi bi-phone
+      - identifier: services-courses
+        name: Courses
+        url: category/courses/
+        weight: 70
+        parent: services
+        params:
+          icon: bi bi-mortarboard
+      - name: Courses calendar
+        url: courses-calendar/
+        weight: 80
+        parent: services-courses
+        params:
+          icon: bi bi-calendar3
+      - name: Course registration
+        url: course-registration/
+        weight: 90
+        parent: services-courses
+        params:
+          icon: bi bi-pencil-square
+      - name: QGIS courses
+        url: category/courses/qgis-courses/
+        weight: 100
+        parent: services-courses
+        params:
+          icon: bi bi-display
+      - name: QField courses
+        url: category/courses/qfield-courses/
+        weight: 110
+        parent: services-courses
+        params:
+          icon: bi bi-phone
+      - name: INTERLIS & Model Baker courses
+        url: category/courses/interlis-model-baker-courses/
+        weight: 120
+        parent: services-courses
+        params:
+          icon: bi bi-diagram-3
+      - name: PostGIS courses
+        url: category/courses/postgis-courses/
+        weight: 130
+        parent: services-courses
+        params:
+          icon: bi bi-database
+      - name: PyQGIS courses
+        url: category/courses/pyqgis-courses/
+        weight: 140
+        parent: services-courses
+        params:
+          icon: bi bi-file-earmark-code
+      - identifier: about
+        name: About
+        url: '#team'
+        weight: 30
+      - name: Team
+        url: '#team'
+        weight: 10
+        parent: about
+        params:
+          icon: bi bi-people
+      - name: Our core values
+        url: core-values/
+        weight: 20
+        parent: about
+        params:
+          icon: bi bi-heart
+      - name: Join Us
+        url: jobs/
+        weight: 30
+        parent: about
+        params:
+          icon: bi bi-rocket
+      - identifier: qfield
+        name: QField
+        url: https://qfield.org/
+        weight: 40
+      - name: qfield.org
+        url: https://qfield.org/
+        weight: 10
+        parent: qfield
+        params:
+          icon: bi bi-phone
+      - name: QFieldCloud
+        url: https://qfield.cloud/
+        weight: 20
+        parent: qfield
+        params:
+          icon: bi bi-cloud
+      - name: Jump-start packages
+        url: qfield-training/
+        weight: 30
+        parent: qfield
+        params:
+          icon: bi bi-mortarboard
+      - name: Highlights
+        url: category/qfield/highlights/
+        weight: 40
+        parent: qfield
+        params:
+          icon: bi bi-star-fill
+      - name: Blog
+        url: blog/
+        weight: 50
+      - name: Contact
+        url: '#contact'
+        weight: 60
+  de:
+    languageName: German
+    languageCode: de-CH
+    weight: 20
+    params:
+      languageISO: DE
+    menu:
+      main:
+      - name: Warum uns?
+        url: '#features'
+        weight: 10
+      - identifier: angebot
+        name: Angebot
+        url: '#testimonials'
+        weight: 20
+      - name: Individuelle Entwicklung
+        url: entwicklung/
+        weight: 10
+        parent: angebot
+        params:
+          icon: bi bi-code-slash
+      - identifier: angebot-support-wartung
+        name: Support & Wartung
+        url: qgis-support-wartung/
+        weight: 20
+        parent: angebot
+        params:
+          icon: bi bi-tools
+      - name: QGIS Supportverträge
+        url: qgis-support-wartung/
+        weight: 30
+        parent: angebot-support-wartung
+        params:
+          icon: bi bi-headset
+      - name: 'Our QGIS Sustainability initiative #sustainQGIS'
+        url: qgis-sustainability-initiative/
+        weight: 40
+        parent: angebot-support-wartung
+        params:
+          icon: bi bi-emoji-smile
+      - identifier: angebot-beratung
+        name: Beratung
+        url: beratung/
+        weight: 50
+        parent: angebot
+        params:
+          icon: bi bi-rocket
+      - name: Beratungsdienstleistungen
+        url: beratung/
+        weight: 55
+        parent: angebot-beratung
+        params:
+          icon: obfx-menu-icon fa fa-handshake-o
+      - name: QField Starthilfepakete
+        url: qfield-jump-start-packages/
+        weight: 60
+        parent: angebot-beratung
+        params:
+          icon: bi bi-phone
+      - identifier: angebot-kurse
+        name: Kurse
+        url: category/kurse/
+        weight: 70
+        parent: angebot
+        params:
+          icon: bi bi-mortarboard
+      - name: Kurskalender
+        url: kurskalender/
+        weight: 80
+        parent: angebot-kurse
+        params:
+          icon: bi bi-calendar3
+      - name: Kursanmeldung
+        url: kursanmeldung/
+        weight: 90
+        parent: angebot-kurse
+        params:
+          icon: bi bi-pencil-square
+      - name: QGIS Kurse
+        url: category/kurse/qgis-kurse/
+        weight: 100
+        parent: angebot-kurse
+        params:
+          icon: bi bi-display
+      - name: QField Kurse
+        url: category/kurse/qfield-kurse/
+        weight: 110
+        parent: angebot-kurse
+        params:
+          icon: bi bi-phone
+      - name: INTERLIS & Model Baker Kurse
+        url: category/kurse/interlis-model-baker-kurse/
+        weight: 120
+        parent: angebot-kurse
+        params:
+          icon: bi bi-diagram-3
+      - name: PostGIS Kurse
+        url: category/kurse/postgis-kurse/
+        weight: 130
+        parent: angebot-kurse
+        params:
+          icon: bi bi-database
+      - name: PyQGIS Kurse
+        url: category/kurse/pyqgis-kurse/
+        weight: 140
+        parent: angebot-kurse
+        params:
+          icon: bi bi-file-earmark-code
+      - identifier: ueber
+        name: Über uns
+        url: '#team'
+        weight: 30
+      - name: Team
+        url: '#team'
+        weight: 10
+        parent: ueber
+        params:
+          icon: bi bi-people
+      - name: Jobs
+        url: jobs/
+        weight: 20
+        parent: ueber
+        params:
+          icon: bi bi-rocket
+      - name: Unsere Werte
+        url: unsere-werte/
+        weight: 30
+        parent: ueber
+        params:
+          icon: bi bi-heart
+      - identifier: qfield
+        name: QField
+        url: https://qfield.org/
+        weight: 40
+      - name: qfield.org
+        url: https://qfield.org/
+        weight: 10
+        parent: qfield
+        params:
+          icon: bi bi-phone
+      - name: QFieldCloud
+        url: https://qfield.cloud/
+        weight: 20
+        parent: qfield
+        params:
+          icon: bi bi-cloud
+      - name: QField Starthilfepakete
+        url: qfield-jump-start-packages/
+        weight: 30
+        parent: qfield
+        params:
+          icon: bi bi-mortarboard
+      - name: Highlights
+        url: category/qfield-de/highlights/
+        weight: 40
+        parent: qfield
+        params:
+          icon: bi bi-star-fill
+      - name: Kontakt
+        url: '#contact'
+        weight: 50
+      - name: Blog
+        url: blog/
+        weight: 60
+  fr:
+    languageName: French
+    languageCode: fr-CH
+    weight: 30
+    params:
+      languageISO: FR
+    menu:
+      main:
+      - name: Pourquoi nous?
+        url: '#features'
+        weight: 10
+      - identifier: services
+        name: Services
+        url: '#testimonials'
+        weight: 20
+      - name: Développement
+        url: developpement/
+        weight: 10
+        parent: services
+        params:
+          icon: bi bi-code-slash
+      - identifier: services-support-maintenance
+        name: Support et maintenance QGIS
+        url: support-qgis/
+        weight: 20
+        parent: services
+        params:
+          icon: bi bi-tools
+      - name: 'Our QGIS Sustainability initiative #sustainQGIS'
+        url: qgis-sustainability-initiative/
+        weight: 30
+        parent: services-support-maintenance
+        params:
+          icon: bi bi-emoji-smile
+      - identifier: services-conseil
+        name: Conseil
+        url: conseil/
+        weight: 40
+        parent: services
+        params:
+          icon: bi bi-rocket
+      - name: Services de conseil
+        url: conseil/
+        weight: 45
+        parent: services-conseil
+        params:
+          icon: obfx-menu-icon fa fa-handshake-o
+      - name: Formations rapide à QField
+        url: qfield-training/
+        weight: 50
+        parent: services-conseil
+        params:
+          icon: bi bi-phone
+      - identifier: services-cours
+        name: Cours
+        url: category/cours/
+        weight: 60
+        parent: services
+        params:
+          icon: bi bi-mortarboard
+      - name: Calendrier des cours
+        url: calendrier-des-cours/
+        weight: 70
+        parent: services-cours
+        params:
+          icon: bi bi-calendar3
+      - name: Inscriptions aux cours
+        url: inscriptions-aux-cours/
+        weight: 80
+        parent: services-cours
+        params:
+          icon: bi bi-pencil-square
+      - name: Cours QGIS
+        url: category/cours/cours-qgis/
+        weight: 90
+        parent: services-cours
+        params:
+          icon: bi bi-display
+      - name: Cours QField
+        url: category/cours/cours-qfield/
+        weight: 100
+        parent: services-cours
+        params:
+          icon: bi bi-phone
+      - name: Cours INTERLIS & Model Baker
+        url: category/cours/cours-interlis-model-baker/
+        weight: 110
+        parent: services-cours
+        params:
+          icon: bi bi-diagram-3
+      - name: Cours PostGIS
+        url: category/cours/cours-postgis/
+        weight: 120
+        parent: services-cours
+        params:
+          icon: bi bi-database
+      - name: Cours PyQGIS
+        url: category/cours/cours-pyqgis/
+        weight: 130
+        parent: services-cours
+        params:
+          icon: bi bi-file-earmark-code
+      - identifier: about
+        name: À propos
+        url: '#team'
+        weight: 30
+      - name: Team
+        url: '#team'
+        weight: 10
+        parent: about
+        params:
+          icon: bi bi-people
+      - name: Jobs
+        url: jobs/
+        weight: 20
+        parent: about
+        params:
+          icon: bi bi-rocket
+      - name: Nos valeurs
+        url: nos-valeurs/
+        weight: 30
+        parent: about
+        params:
+          icon: bi bi-heart
+      - identifier: qfield
+        name: QField
+        url: https://qfield.org/
+        weight: 40
+      - name: qfield.org
+        url: https://qfield.org/
+        weight: 10
+        parent: qfield
+        params:
+          icon: bi bi-phone
+      - name: QFieldCloud
+        url: https://qfield.cloud/
+        weight: 20
+        parent: qfield
+        params:
+          icon: bi bi-cloud
+      - name: Formations rapide à QField
+        url: qfield-training/
+        weight: 30
+        parent: qfield
+        params:
+          icon: bi bi-mortarboard
+      - name: Points forts
+        url: category/qfield/highlights/
+        weight: 40
+        parent: qfield
+        params:
+          icon: bi bi-star-fill
+      - name: Contact
+        url: '#contact'
+        weight: 50
+      - name: Blog
+        url: blog/
+        weight: 60
+  it:
+    languageName: Italian
+    languageCode: it-CH
+    weight: 40
+    params:
+      languageISO: IT
+    menu:
+      main:
+      - name: Perché noi?
+        url: '#features'
+        weight: 10
+      - identifier: servizi
+        name: Servizi
+        url: '#testimonials'
+        weight: 20
+      - name: Sviluppo su misura
+        url: sviluppo/
+        weight: 10
+        parent: servizi
+        params:
+          icon: bi bi-code-slash
+      - identifier: servizi-supporto-manutenzione
+        name: Supporto e manutenzione QGIS
+        url: supporto-qgis/
+        weight: 20
+        parent: servizi
+        params:
+          icon: bi bi-tools
+      - name: La nostra iniziativa di sostenibilità QGIS
+        url: la-nostra-iniziativa-di-sostenibilita-qgis/
+        weight: 30
+        parent: servizi-supporto-manutenzione
+        params:
+          icon: bi bi-emoji-smile
+      - identifier: servizi-consulenza
+        name: Consulenza
+        url: consulenza/
+        weight: 40
+        parent: servizi
+        params:
+          icon: bi bi-rocket
+      - name: Servizi di consulenza
+        url: consulenza/
+        weight: 45
+        parent: servizi-consulenza
+        params:
+          icon: obfx-menu-icon fa fa-handshake-o
+      - name: Pacchetti di avvio a QField
+        url: qfield-training/
+        weight: 50
+        parent: servizi-consulenza
+        params:
+          icon: bi bi-phone
+      - identifier: servizi-corsi
+        name: Corsi
+        url: category/corsi/
+        weight: 60
+        parent: servizi
+        params:
+          icon: bi bi-mortarboard
+      - name: Calendario dei corsi
+        url: calendario-corsi/
+        weight: 70
+        parent: servizi-corsi
+        params:
+          icon: bi bi-calendar3
+      - name: Iscrizione corsi
+        url: iscrizione-corsi/
+        weight: 80
+        parent: servizi-corsi
+        params:
+          icon: bi bi-pencil-square
+      - name: Corsi QGIS
+        url: category/corsi/corsi-qgis/
+        weight: 90
+        parent: servizi-corsi
+        params:
+          icon: bi bi-display
+      - name: Corsi QField
+        url: category/corsi/corsi-qfield/
+        weight: 100
+        parent: servizi-corsi
+        params:
+          icon: bi bi-phone
+      - name: Corsi INTERLIS & Model Baker
+        url: category/corsi/corsi-interlis-model-baker/
+        weight: 110
+        parent: servizi-corsi
+        params:
+          icon: bi bi-diagram-3
+      - name: corsi PostGIS
+        url: category/corsi/corsi-postgis/
+        weight: 120
+        parent: servizi-corsi
+        params:
+          icon: bi bi-database
+      - name: Corsi PyQGIS
+        url: category/corsi/corsi-pyqgis/
+        weight: 130
+        parent: servizi-corsi
+        params:
+          icon: bi bi-file-earmark-code
+      - identifier: noi
+        name: Noi
+        url: '#team'
+        weight: 30
+      - name: Team
+        url: '#team'
+        weight: 10
+        parent: noi
+        params:
+          icon: bi bi-people
+      - name: Jobs
+        url: jobs/
+        weight: 20
+        parent: noi
+        params:
+          icon: bi bi-rocket
+      - name: I nostri valori
+        url: i-nostri-valori/
+        weight: 30
+        parent: noi
+        params:
+          icon: bi bi-heart
+      - identifier: qfield
+        name: QField
+        url: https://qfield.org/
+        weight: 40
+      - name: qfield.org
+        url: https://qfield.org/
+        weight: 10
+        parent: qfield
+        params:
+          icon: bi bi-phone
+      - name: QFieldCloud
+        url: https://qfield.cloud/
+        weight: 20
+        parent: qfield
+        params:
+          icon: bi bi-cloud
+      - name: Pacchetti di avvio a QField
+        url: qfield-training/
+        weight: 30
+        parent: qfield
+        params:
+          icon: bi bi-mortarboard
+      - name: Novità
+        url: category/qfield-it/highlights/
+        weight: 40
+        parent: qfield
+        params:
+          icon: bi bi-star-fill
+      - name: Contatto
+        url: '#contact'
+        weight: 50
+      - name: Blog
+        url: blog/
+        weight: 60

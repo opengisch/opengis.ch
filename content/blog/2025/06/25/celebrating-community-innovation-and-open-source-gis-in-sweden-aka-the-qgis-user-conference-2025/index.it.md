@@ -45,4 +45,53 @@ We were proud to support QGIS UC25 in Norrköping, Sweden, as **Platinum Sponsor
 We’re already looking forward to the next gathering — **QGIS UC26 will take place in Switzerland** 🇨🇭!
 After the conference, I joined the contributor meeting along with four QGIS developers from OPENGIS.ch. It was a fantastic chance to collaborate in person, help shape the future of QGIS, and reconnect with old friends from the community.
 ![](./20250603_150639-11179.jpg) ![](./20250604_19253515bf.jpg) ![](./20250606_10180815bf.jpg)
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://www.youtube.com/embed/HtE3mUE-R2o"
+    title="YouTube video"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://www.youtube.com/watch?v=HtE3mUE-R2o](<https://www.youtube.com/watch?v=HtE3mUE-R2o>)
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://www.youtube.com/embed/wAA0RpR7Pfw"
+    title="YouTube video"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://www.youtube.com/watch?v=wAA0RpR7Pfw](<https://www.youtube.com/watch?v=wAA0RpR7Pfw>)
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://www.youtube.com/embed/yQxa3n1ZZ9s"
+    title="YouTube video"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://www.youtube.com/watch?v=yQxa3n1ZZ9s](<https://www.youtube.com/watch?v=yQxa3n1ZZ9s>)
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://www.youtube.com/embed/aP9uXzB8Or0"
+    title="YouTube video"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://www.youtube.com/watch?v=aP9uXzB8Or0](<https://www.youtube.com/watch?v=aP9uXzB8Or0>)
+
 ### _Related_

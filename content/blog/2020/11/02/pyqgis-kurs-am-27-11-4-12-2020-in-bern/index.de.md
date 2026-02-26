@@ -4,6 +4,7 @@ date: 2020-11-02
 slug: "pyqgis-kurs-am-27-11-4-12-2020-in-bern"
 url: "/de/2020/11/02/pyqgis-kurs-am-27-11-4-12-2020-in-bern/"
 source: "www.opengis.ch/de/2020/11/02/pyqgis-kurs-am-27-11-4-12-2020-in-bern/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/11/AdobeStock_251268362.resizeda86e.jpg"
 ---
 Der Kurs richtet sich an fortgeschrittene QGIS Anwender, die ihre Fähigkeiten durch die Benutzung von Python verbessern wollen . In diesem Kurs werden verschiedene Möglichkeiten erörtert, mit Hilfe der Python API mit QGIS zu interagieren sowie einfache graphische Oberflächen mit PyQt zu implementieren.  
 Die folgenden Themen werden behandelt: 

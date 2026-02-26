@@ -1,0 +1,25 @@
+social:
+  - name: GitHub
+    url: https://github.com/opengisch
+    icon: bi-github
+    title: Follow OPENGIS on GitHub
+
+  - name: Twitter
+    url: https://twitter.com/OPENGISch
+    icon: bi-twitter
+    title: Follow OPENGIS on Twitter
+
+  - name: Mastodon
+    url: https://fosstodon.org/@opengisch
+    icon: bi-mastodon
+    title: Follow OPENGIS on Mastodon
+
+  - name: Vimeo
+    url: https://vimeo.com/user36168865
+    icon: bi-vimeo
+    title: Watch OPENGIS on Vimeo
+
+  - name: LinkedIn
+    url: https://www.linkedin.com/company/opengisch
+    icon: bi-linkedin
+    title: Connect on LinkedIn

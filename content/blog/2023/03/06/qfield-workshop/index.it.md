@@ -4,6 +4,7 @@ date: 2023-03-06
 slug: "qfield-workshop"
 url: "/it/2023/03/06/qfield-workshop/"
 source: "www.opengis.ch/it/2023/03/06/qfield-workshop/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2023/12/287987844-8d7c6540-c32c-4d62-bf6e-1636a011567fa86e.png"
 ---
 **How to become a superuser in QField**
 _You’ll not only be able to handle the app perfectly but also know how to set up a project to explore all the possibilities that QField offers. Prepare the optimal conditions for your field work and distribute the project to your team with QFieldCloud._

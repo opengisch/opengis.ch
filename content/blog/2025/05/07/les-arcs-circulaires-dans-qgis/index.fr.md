@@ -52,4 +52,17 @@ Maintenant, nous avons besoin de ton aide pour réussir. Chaque soutien, qu’il
 ### **Ensemble, nous pouvons y arriver!**
 Le monde de l’open-source vit du fait que les gens travaillent ensemble sur quelque chose de grand. Avec une véritable prise en charge des arcs circulaires, QGIS deviendra non seulement plus précis et plus rapide, mais aussi un outil encore plus puissant pour la pratique.
 **Aide-nous – pour de meilleures données géographiques, de meilleures analyses, de meilleurs résultats!**
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://videopress.com/embed/ZzDfFdzJ"
+    title="VideoPress video"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://videopress.com/embed/ZzDfFdzJ](<https://videopress.com/embed/ZzDfFdzJ>)
+
 ### _Related_

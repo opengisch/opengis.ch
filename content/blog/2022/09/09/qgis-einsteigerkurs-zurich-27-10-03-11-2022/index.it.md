@@ -4,6 +4,7 @@ date: 2022-09-09
 slug: "qgis-einsteigerkurs-zurich-27-10-03-11-2022"
 url: "/it/2022/09/09/qgis-einsteigerkurs-zurich-27-10-03-11-2022/"
 source: "www.opengis.ch/it/2022/09/09/qgis-einsteigerkurs-zurich-27-10-03-11-2022/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Anmelden](<https://opengis.ch/de/kursanmeldung>)
 Der Kurs dauert 2 Tage (9:00 – 17:00 Uhr) und kostet 990 CHF pro Person (inkl. Mittagessen und Zertifikat). Ein Lehrer für maximal 6 Personen und 2 Lehrer für 7 bis 12 Personen.

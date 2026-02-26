@@ -4,6 +4,7 @@ date: 2019-04-18
 slug: "qgis-on-the-road"
 url: "/2019/04/18/qgis-on-the-road/"
 source: "www.opengis.ch/2019/04/18/qgis-on-the-road/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/04/beetruck_banner_1800x530@2xa86e.jpg"
 ---
 All videos can be [viewed online](</category/events/qgis-on-the-road/index.html>).
 We are extremely pleased to announce the QGIS on the road tour with three **free events** this spring all over Switzerland. Limited places available so act fast reserve your place for the location you want.

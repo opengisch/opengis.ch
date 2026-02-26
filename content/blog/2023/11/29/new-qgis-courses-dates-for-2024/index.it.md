@@ -4,6 +4,7 @@ date: 2023-11-29
 slug: "new-qgis-courses-dates-for-2024"
 url: "/it/2023/11/29/new-qgis-courses-dates-for-2024/"
 source: "www.opengis.ch/it/2023/11/29/new-qgis-courses-dates-for-2024/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2023/11/AdobeStock_490731056-scaleda86e.jpg"
 ---
 Are you ready to dive into the world of GIS? We’re thrilled to announce that our latest course dates for QGIS Basic and Advanced, Modelbaker, and Interlis are now open for registration!
 ### **QGIS Basic Course**

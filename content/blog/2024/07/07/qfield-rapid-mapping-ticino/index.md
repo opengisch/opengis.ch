@@ -4,13 +4,25 @@ date: 2024-07-07
 slug: "qfield-rapid-mapping-ticino"
 url: "/2024/07/07/qfield-rapid-mapping-ticino/"
 source: "www.opengis.ch/2024/07/07/qfield-rapid-mapping-ticino/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2024/07/qfield-rapidmappera86e.jpg"
 ---
 **QField Rapid Mapper** is a project for the [QField mobile app](<https://qfield.app/>), which allows emergency responders, civil protection, military, and citizens to **assess and report damages from natural catastrophes by quickly sharing geolocated images, videos and audio**. QField Rapid Mapper offers real-time data collection, mapping and sharing to **help enhance disaster response and coordination**.  
 QField and QFieldCloud are **open-source** , and OPENGIS.ch is donating the needed QFieldCloud infrastructure and expertise to help map the floods in Ticino in 2024
 [Join the effort](<https://forms.gle/dkjZsSWdmCzr9xic8>)
 ## OPENGIS.ch Supports Flood Mapping Efforts in Ticino
 After discussing with the [Protezione Civile Locarno e Valle Maggia](<https://pcilocarno.ch/>) and the [Centro di Competenza per la geoinformazione (CCGEO)](<https://www4.ti.ch/dt/sg/sai/ugeo/chi-siamo/presentazione/>), we are proud to announce that OPENGIS.ch is donating the necessary QFieldCloud infrastructure and dedicated projects for a rapid crowdsourcing POC to aid in mapping the 2024 floods in Ticino. This crowdsourcing initiative aims to provide essential support to professionals and volunteers working on flood and landslide assessment and recovery.
+<div class="blog-embed-video">
+  <iframe
+    src="https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false"
+    title="RSI video about rapid mapping in Ticino"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
 [https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false](<https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false>)
+
 ## Empowering Response with Advanced Technology
 ### What is needed?
 Photographing **damaged houses and infrastructure** is the most critical aspect of this mapping initiative. These images provide crucial information for assessing the extent of the damage, planning rescue and reconstruction operations, and ensuring that resources are allocated effectively. It’s also important to document any **submerged or damaged vehicles** , as they offer additional insights into the disaster’s impact. During these activities, it’s essential to be careful and respect the privacy and property of others, **avoiding capturing license plate numbers or entering destroyed buildings** without permission. Using QField Rapid Mapper can contribute to a faster and more coordinated emergency response while ensuring respect for those affected.
@@ -26,4 +38,17 @@ Using QField and QFieldCloud, you can help create detailed maps crucial for unde
 [Join the effort](<https://forms.gle/dkjZsSWdmCzr9xic8>)
 Visit our [QField Rapid Mapper](</qfield-rapidmapper/index.html>) project page for more information on how QField and QFieldCloud can assist in flood mapping and other field data collection projects.
 Together, we can make a difference. Join us in mapping the floods in Ticino and support the community’s recovery efforts.
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://videopress.com/embed/jsrjp0NU"
+    title="VideoPress video"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://videopress.com/embed/jsrjp0NU](<https://videopress.com/embed/jsrjp0NU>)
+
 ### _Related_

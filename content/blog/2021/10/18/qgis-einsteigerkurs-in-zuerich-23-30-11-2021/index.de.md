@@ -4,6 +4,7 @@ date: 2021-10-18
 slug: "qgis-einsteigerkurs-in-zuerich-23-30-11-2021"
 url: "/de/2021/10/18/qgis-einsteigerkurs-in-zuerich-23-30-11-2021/"
 source: "www.opengis.ch/de/2021/10/18/qgis-einsteigerkurs-in-zuerich-23-30-11-2021/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Anmelden](<https://opengis.ch/de/kursanmeldung>)
 ## Nächste Kurse April/ Mai 2022

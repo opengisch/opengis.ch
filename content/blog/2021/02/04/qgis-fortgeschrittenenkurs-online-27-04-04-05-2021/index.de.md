@@ -4,6 +4,7 @@ date: 2021-02-04
 slug: "qgis-fortgeschrittenenkurs-online-27-04-04-05-2021"
 url: "/de/2021/02/04/qgis-fortgeschrittenenkurs-online-27-04-04-05-2021/"
 source: "www.opengis.ch/de/2021/02/04/qgis-fortgeschrittenenkurs-online-27-04-04-05-2021/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Anmelden](</kursanmeldung/index.html>)
 ## KURS AUSGEBUCHT – Nächster Kurs im September 2021

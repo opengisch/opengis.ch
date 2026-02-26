@@ -1,5 +1,27 @@
 # Changelog
 
+## [Unreleased] - 2026-02-25
+- Backfilled missing blog `image` front matter in `110` localized `content/blog/**/index*.md` files by reusing verified local mirror assets (`static/i0.wp.com/...`) recovered from legacy rendered pages.
+- Added a featured-image renderer to `themes/qfield-theme-v3/layouts/blog/single.html` that displays post artwork when `cover.image` or `image` is present.
+- Restored missing artwork for `2024/07/07/qfield-rapid-mapping-ticino` (EN/DE/FR/IT) via `image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2024/07/qfield-rapidmappera86e.jpg"`.
+- Restored the embedded RSI video player in `content/blog/2024/07/07/qfield-rapid-mapping-ticino/index*.md` (EN/DE/FR/IT) by replacing the plain embed URL link with an iframe block, plus responsive video embed styling in `assets/sass/styles.scss`.
+- Added the RSI embed URL back below the restored iframe in all Ticino post language variants as a clickable link.
+- Fixed markdown parsing in the same Ticino post variants by separating the embed/link block from following headings with proper blank lines, preventing `## Empowering Response with Advanced Technology` and subsequent content from rendering as raw text.
+- Restored the missing featured image and two missing VideoPress embeds for `content/blog/2023/10/24/qfield-3-0-amazonia-is-here/index*.md` (EN/DE/FR/IT), including clickable embed links below each restored player.
+- Added Vimeo embed blocks (plus visible source links) to 28 legacy localized blog markdown files that previously contained only plain Vimeo video links, restoring in-post video playback.
+- Updated `themes/qfield-theme-v3/layouts/blog/single.html` to fall back to the first image found in rendered post content when `cover.image`/`image` front matter is missing, reducing missing featured-image cases on blog single pages.
+- Added `scripts/sync_blog_media_from_offline.py` to compare each blog markdown file against its mirrored offline source page (`/mnt/xtreme/DV/DEVTMP/opengis_hugo/opengis-offline`) and backfill missing in-content video embeds.
+- Ran the offline media sync across all 964 localized blog files, restoring 116 missing embedded videos in 72 files (with clickable source links preserved below each inserted embed).
+- Restructured site configuration to match `qfield_hugo_v2` by consolidating all active default config into `config/_default/hugo.yaml` and adding environment override files at `config/development/hugo.yaml`, `config/staging/hugo.yaml`, and `config/production/hugo.yaml`.
+- Removed now-redundant split YAML config fragments (`hugo.yaml`, `config/_default/config.yaml`, `config/_default/languages.yaml`, `config/_default/markup.yaml`, `config/_default/params.yaml`, and `config/_default/menus/*.yaml`) after consolidation.
+- Converted all active site configuration files from TOML to YAML by replacing `hugo.toml` with `hugo.yaml` and `config/_default/{config,languages,markup,params}.toml` with YAML equivalents.
+- Converted all multilingual menu config files from TOML to YAML (`config/_default/menus/menus.{en,de,fr,it,pt}.yaml`) and removed the old TOML files.
+- Converted shared social data from `data/social.toml` to `data/social.yaml` and removed the TOML source.
+- Converted theme `exampleSite` config files from TOML to YAML (`themes/qfield-theme-v3/exampleSite/config/_default/*.yaml` and `themes/qfield-theme-v3/exampleSite/config/_default/menus/*.yaml`) and removed their TOML versions.
+- Kept `themes/qfield-theme-v3/theme.toml` in place because Hugo theme metadata is expected in TOML.
+- Fixed a pre-existing TOML table-scoping issue during migration by placing `defaultContentLanguage`, `defaultContentLanguageInSubdir`, `theme`, `disableHugoGeneratorInject`, `enableRobotsTXT`, and `enableEmoji` at the root scope in the new consolidated `config/_default/hugo.yaml`.
+- Kept `enableDarkMode: true` and `defaultTheme: light` unchanged during the migration so dark-mode behavior remains intact.
+
 ## [Unreleased] - 2026-02-20
 - Removed 17 markdown files under `content/**` that contained the moved-page placeholder text `Page has moved`.
 - Checked for DE/FR/IT moved-page variants and found no additional localized matches to remove.

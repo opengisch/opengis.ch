@@ -2,6 +2,23 @@
 
 Hugo site for the OPENGIS.ch marketing website, using the `qfield-theme-v3` bootstrap-based theme.
 
+## Recent updates (February 25, 2026)
+- Restructured site config to match `qfield_hugo_v2`: one canonical `config/_default/hugo.yaml` plus environment overrides in `config/development/hugo.yaml`, `config/staging/hugo.yaml`, and `config/production/hugo.yaml`.
+- Consolidated previously split config fragments (`hugo.yaml`, `config/_default/{config,languages,markup,params}.yaml`, and `config/_default/menus/*.yaml`) into `config/_default/hugo.yaml`.
+- Removed the previous TOML and split-YAML config files; the active site config now follows a single-file default + env override structure.
+- Kept `themes/qfield-theme-v3/theme.toml` as-is because Hugo expects theme metadata in `theme.toml`.
+- Fixed a pre-existing table-scope issue from TOML by keeping global Hugo keys (`defaultContentLanguage`, `theme`, `enableRobotsTXT`, etc.) at root scope in `config/_default/hugo.yaml`.
+- Backfilled missing blog `image` front matter for 110 localized post files using verified local mirrored assets so cards/social metadata resolve the intended artwork again (including `2024/07/07/qfield-rapid-mapping-ticino`).
+- Updated the blog single-post template to render a featured image when `cover.image` or `image` is set, so posts with restored image metadata no longer appear imageless on detail pages.
+- Restored the missing embedded RSI video in `2024/07/07/qfield-rapid-mapping-ticino` (EN/DE/FR/IT) by replacing the plain URL link with a responsive iframe embed block.
+- Added the RSI embed URL back below the restored iframe in `2024/07/07/qfield-rapid-mapping-ticino` (EN/DE/FR/IT) as a clickable external link.
+- Fixed markdown block separation in the same Ticino post variants so the `## Empowering Response with Advanced Technology` section and following list render as markdown (not raw text) after the embed/link block.
+- Restored missing featured image + VideoPress embeds for `2023/10/24/qfield-3-0-amazonia-is-here` (EN/DE/FR/IT), including clickable links below both restored players.
+- Added Vimeo embed blocks to legacy posts that previously had only plain Vimeo links, so videos render inline again on blog single pages.
+- Added a fallback in `themes/qfield-theme-v3/layouts/blog/single.html` to use the first image found in post content when no `cover.image`/`image` front matter is defined.
+- Added `scripts/sync_blog_media_from_offline.py` and ran a full offline source comparison (`/mnt/xtreme/DV/DEVTMP/opengis_hugo/opengis-offline`) across all 964 localized blog files.
+- Restored 116 missing embedded videos in 72 blog markdown files from the offline source mirror while preserving clickable source links below each embedded player.
+
 ## Recent updates (February 20, 2026)
 - Removed 17 markdown files in `content/**` containing the placeholder text `Page has moved` and pruned 9 newly empty directories left behind after the cleanup.
 - Restored missing `content/pages/**` files and subfolders from `/mnt/xtreme/DV/DEVTMP/opengis_hugo/converted-md` (no overwrite mode), recovering 4,880 files and 4,718 directories after accidental deletion.
@@ -22,7 +39,7 @@ Hugo site for the OPENGIS.ch marketing website, using the `qfield-theme-v3` boot
 - Removed all remaining empty directories under `content/` after the cleanup passes (`241` empty folders removed).
 
 ## Recent updates (February 16, 2026)
-- Changed `defaultTheme` to `light` in `config/_default/params.toml`, so first-load theme selection defaults to light mode while still allowing users to toggle dark mode.
+- Changed `defaultTheme` to `light` (now in `config/_default/hugo.yaml` under `params.defaultTheme`), so first-load theme selection defaults to light mode while still allowing users to toggle dark mode.
 - Hardened non-blog service-page layout detection in `themes/qfield-theme-v3/layouts/_default/single.html` by matching normalized permalink/url paths (not only trailing slug), ensuring `qfield-training` and `qgis-support` consistently render their dedicated hero/header layouts even when URLs resolve via `index.html`.
 - Fixed non-home page content overlap by applying the fixed-navbar offset to `#content` with a safe fallback value.
 - Reworked main navigation structure so Services now renders nested submenus (Support, Consulting, Courses) with second-level links across translated menus.

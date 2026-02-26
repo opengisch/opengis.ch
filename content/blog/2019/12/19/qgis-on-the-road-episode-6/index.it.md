@@ -4,6 +4,7 @@ date: 2019-12-19
 slug: "qgis-on-the-road-episode-6"
 url: "/it/2019/12/19/qgis-on-the-road-episode-6/"
 source: "www.opengis.ch/it/2019/12/19/qgis-on-the-road-episode-6/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/12/episode_06a86e.png"
 ---
 **This summer we went on tour with what turned out to be an extremely popular event:**_**QGIS on the Road**_
 **Telling the most remarkable story of Maya the beekeeper building her honey business and fighting against seemingly hopeless challenges with the help of QGIS functionality you probably never heard of.**

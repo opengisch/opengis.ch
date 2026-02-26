@@ -4,6 +4,7 @@ date: 2023-03-06
 slug: "qfield-jump-start"
 url: "/de/2023/03/06/qfield-jump-start/"
 source: "www.opengis.ch/de/2023/03/06/qfield-jump-start/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/04/tim-gouw-73926-unsplasha86e.jpg"
 ---
 Sie möchten mit der Erfassung von Felddaten beginnen, haben aber noch **nie mit einem GIS gearbeitet**?
 Sie sind **leidenschaftlicher QGIS-Anwender** und möchten Ihre Feldarbeit in Schwung bringen?

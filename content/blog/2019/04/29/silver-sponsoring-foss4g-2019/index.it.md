@@ -4,6 +4,7 @@ date: 2019-04-29
 slug: "silver-sponsoring-foss4g-2019"
 url: "/it/2019/04/29/silver-sponsoring-foss4g-2019/"
 source: "www.opengis.ch/it/2019/04/29/silver-sponsoring-foss4g-2019/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/04/Screenshot-from-2019-04-26-09-06-36a86e.png"
 ---
 At OPENGIS.ch we live and love open source.  
 That is why we are extremely excited to announce that we are [supporting FOSS4G](<https://2019.foss4g.org/sponsors-2/our-sponsors/#ui-id-6-1550782414133116>) 2019, 26 to 30 August in Bucharest. 

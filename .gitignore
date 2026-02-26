@@ -1,3 +1,5 @@
 /public/
 /demo-layout/
 /qfield_hugo_v2/
+/qfield_hugo_v2/*
+!.gitignore

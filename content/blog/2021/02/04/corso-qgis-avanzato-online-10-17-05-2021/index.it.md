@@ -4,6 +4,7 @@ date: 2021-02-04
 slug: "corso-qgis-avanzato-online-10-17-05-2021"
 url: "/it/2021/02/04/corso-qgis-avanzato-online-10-17-05-2021/"
 source: "www.opengis.ch/it/2021/02/04/corso-qgis-avanzato-online-10-17-05-2021/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Iscrizione](</iscrizione-corsi/index.html>)
 ## CORSO ANNULLATO – Prossimo corso in Settembre 2021

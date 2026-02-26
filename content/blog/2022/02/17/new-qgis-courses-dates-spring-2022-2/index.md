@@ -4,6 +4,7 @@ date: 2022-02-17
 slug: "new-qgis-courses-dates-spring-2022-2"
 url: "/2022/02/17/new-qgis-courses-dates-spring-2022-2/"
 source: "www.opengis.ch/2022/02/17/new-qgis-courses-dates-spring-2022-2/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557a86e.jpg"
 ---
 We published our new dates for this springs QGIS online courses.
   - German:

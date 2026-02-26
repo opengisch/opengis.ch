@@ -7,6 +7,18 @@ source: "www.opengis.ch/it/2015/01/11/qgis-mobile-0-2-demo/index.html"
 ---
 QField (formerly known as QGIS Mobile) is a touch optimized interface for field work developed by OPENGIS.ch. It is with great pleasure the we want to share with you the demo video of version 0.2.  
 Since the project is going to be one of our core projects, we set up a dedicated [page here](</android-gis/qgis-mobile/index.html> "QGIS mobile").  
+<div class="blog-embed-video">
+  <iframe
+    src="https://player.vimeo.com/video/116231850"
+    title="Vimeo video 116231850"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://vimeo.com/116231850](<https://vimeo.com/116231850>)
+
 The [QGIS mobile 0.2](<https://vimeo.com/116231850>) video demonstrates some basic functionality like navigation, feature identification and attribute editing.  
   
 The performance is affected by android’s video recording software. In reality animaitons look fluent and the interface feels snappy.  

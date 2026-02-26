@@ -1,0 +1,26 @@
+defaultMarkdownHandler: goldmark
+
+goldmark:
+  extensions:
+    definitionList: true
+    footnote: true
+    linkify: true
+    strikethrough: true
+    table: true
+    taskList: true
+    typographer: true
+  parser:
+    autoHeadingID: true
+    wrapStandAloneImageWithinParagraph: false
+    attribute:
+      block: true
+      title: true
+  renderer:
+    hardWraps: false
+    unsafe: true
+    xHTML: false
+
+tableOfContents:
+  endLevel: 3
+  ordered: false
+  startLevel: 2

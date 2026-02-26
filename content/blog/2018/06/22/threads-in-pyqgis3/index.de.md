@@ -4,6 +4,7 @@ date: 2018-06-22
 slug: "threads-in-pyqgis3"
 url: "/de/2018/06/22/threads-in-pyqgis3/"
 source: "www.opengis.ch/de/2018/06/22/threads-in-pyqgis3/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2018/06/pexels-wendy-van-zyl-1212179-scaleda86e.jpg"
 ---
 While porting a plugin to QGIS3 I decided to also move all it’s threading infrastructure to QgsTasks. Here three possible variants to implement this.  
 the first uses the static method `QgsTask.fromFunction` and is simpler to use. A great quick solution. If you want need control you can look at the second solution that subclasses QgsTask. In this solution I also show how to create subtasks with interdependencies. The third variant, illustrates how to run a processing algorithm in a separate thread.  

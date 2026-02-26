@@ -4,6 +4,7 @@ date: 2022-09-09
 slug: "new-qgis-courses-dates-autumn-2022"
 url: "/fr/2022/09/09/new-qgis-courses-dates-autumn-2022/"
 source: "www.opengis.ch/fr/2022/09/09/new-qgis-courses-dates-autumn-2022/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557a86e.jpg"
 ---
 We published our new dates for this autumns QGIS online courses.
   - German:

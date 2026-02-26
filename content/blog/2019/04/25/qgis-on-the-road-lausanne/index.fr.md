@@ -4,6 +4,7 @@ date: 2019-04-25
 slug: "qgis-on-the-road-lausanne"
 url: "/fr/2019/04/25/qgis-on-the-road-lausanne/"
 source: "www.opengis.ch/fr/2019/04/25/qgis-on-the-road-lausanne/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/04/beetruck_banner_1800x530@2xa86e.jpg"
 ---
 [Mardi 28 mai 2019 13:40](<https://ti.to/opengisch/qgis-on-the-road-lausanne.ics>) [Lausanne](<https://maps.google.com/maps?q=Lausanne>)
 Événement **gratuit** avec places limitées (Reservation: [https://ti.to/opengisch/qgis-on-the-road-lausanne)](<https://ti.to/opengisch/qgis-on-the-road-lausanne>) Aussi à [Zurich](</de/2019/04/24/qgis-on-the-road/index.html>) et [Bellinzona](<https://opengis.ch/it/2019/04/24/qgis-on-the-road/>)

@@ -4,6 +4,7 @@ date: 2023-03-06
 slug: "le-modeleur-qgis"
 url: "/fr/2023/03/06/le-modeleur-qgis/"
 source: "www.opengis.ch/fr/2023/03/06/le-modeleur-qgis/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2023/03/models_modela86e.png"
 ---
 Avec la modélisation graphique dans QGIS, il est possible de combiner plusieurs outils QGIS dans une chaîne logique. Grâce à la conception visuelle, les utilisatrices et utilisateurs peuvent automatiser des processus dans QGIS sans connaissances en programmation. Les workflows récurrents peuvent ainsi être exécutés et reproduits efficacement.
 Dans ce cours, vous apprendrez les bases et la structure des modèles graphiques. Nous pratiquerons la création d’un tel modèle, y compris les entrées personnalisées, les options et les conditions.

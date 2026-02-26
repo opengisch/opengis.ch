@@ -1,0 +1,18 @@
+# Staging environment overrides
+build:
+  writeStats: true
+  useResourceCacheWhen: fallback
+
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: true
+  disableSVG: true
+  disableXML: true
+  minifyOutput: false
+
+params:
+  environment: staging
+  debug: true
+  analytics: false

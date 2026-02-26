@@ -4,6 +4,7 @@ date: 2021-02-04
 slug: "qgis-einsteigerkurs-online-12-13-04-2021"
 url: "/de/2021/02/04/qgis-einsteigerkurs-online-12-13-04-2021/"
 source: "www.opengis.ch/de/2021/02/04/qgis-einsteigerkurs-online-12-13-04-2021/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Anmelden](<https://opengis.ch/de/kursanmeldung>)
 Der Kurs dauert 2 Tage (9:00 – 17:00 Uhr) via Google Meet (kein Google Konto erforderlich) und kostet 850 CHF pro Person. Ein Lehrer für maximal 6 Personen und 2 Lehrer für 7 bis 12 Personen.

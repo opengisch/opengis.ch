@@ -4,6 +4,7 @@ date: 2021-08-31
 slug: "cours-qgis-de-base-online-09-16-11-2021"
 url: "/fr/2021/08/31/cours-qgis-de-base-online-09-16-11-2021/"
 source: "www.opengis.ch/fr/2021/08/31/cours-qgis-de-base-online-09-16-11-2021/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Inscription](</inscriptions-aux-cours/index.html>)
 ## COURS COMPLET – Prochain cours en avril/mai

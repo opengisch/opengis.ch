@@ -4,6 +4,7 @@ date: 2019-04-24
 slug: "qgis-on-the-road"
 url: "/de/2019/04/24/qgis-on-the-road/"
 source: "www.opengis.ch/de/2019/04/24/qgis-on-the-road/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/04/beetruck_banner_1800x530@2xa86e.jpg"
 ---
 Wir freuen, dieses Jahr die QGIS on the road Tour mit fünf **Gratisanlässen** in der ganzen Schweiz durchführen zu können.
   - [**Bern 24.09.19**](<https://ti.to/opengisch/qgis-on-the-road-bern>)**13:40 (Deutsch)**

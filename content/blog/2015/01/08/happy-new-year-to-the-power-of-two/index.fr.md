@@ -16,4 +16,17 @@ If you have a use-case for it and would like to support its development don’t 
 We are are also available for helping you with any idea and project you might have and to give ad-hoc courses that cover topics related to (Q)GIS and programming.
 All the best
 Marco and Matthias
+
+<div class="blog-embed-video">
+  <iframe
+    src="https://player.vimeo.com/video/116231850"
+    title="Vimeo video 116231850"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[https://vimeo.com/116231850](<https://vimeo.com/116231850>)
+
 ### _Related_

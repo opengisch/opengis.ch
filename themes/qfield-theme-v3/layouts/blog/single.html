@@ -31,6 +31,48 @@
       </header>
     </div>
 
+    {{ $image := "" }}
+    {{ $imageURL := "" }}
+    {{ $alt := .Title }}
+    {{ with .Params.cover }}
+      {{ with .image }}{{ $image = . }}{{ end }}
+      {{ with .alt }}{{ $alt = . }}{{ end }}
+    {{ end }}
+    {{ if eq $image "" }}
+      {{ with .Params.image }}{{ $image = . }}{{ end }}
+    {{ end }}
+    {{ if eq $image "" }}
+      {{ $contentImageTag := findRE `<img[^>]+src="[^"]+"` .Content 1 }}
+      {{ if gt (len $contentImageTag) 0 }}
+        {{ $srcAttr := findRE `src="[^"]+"` (index $contentImageTag 0) 1 }}
+        {{ if gt (len $srcAttr) 0 }}
+          {{ $image = replaceRE `^src="([^"]+)"$` "$1" (index $srcAttr 0) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if hasPrefix $image "/blog/wp-content/" }}
+      {{ $image = replace $image "/blog/wp-content/" "/wp-content/" }}
+    {{ end }}
+    {{ if ne $image "" }}
+      {{ $resource := .Resources.GetMatch $image }}
+      {{ if $resource }}
+        {{ $imageURL = $resource.RelPermalink }}
+      {{ else if or (hasPrefix $image "http://") (hasPrefix $image "https://") }}
+        {{ $imageURL = $image }}
+      {{ else if hasPrefix $image "/" }}
+        {{ $imageURL = $image | relURL }}
+      {{ else }}
+        {{ $imageURL = printf "%s%s" .RelPermalink $image }}
+      {{ end }}
+    {{ end }}
+    {{ if $imageURL }}
+    <div class="blog-single__inner mb-4">
+      <figure class="blog-single-featured-image mb-0">
+        <img src="{{ $imageURL }}" alt="{{ $alt }}" class="img-fluid rounded-3 w-100">
+      </figure>
+    </div>
+    {{ end }}
+
     {{ $content := .Content }}
     {{ $content = replace $content "\"/blog/wp-content/" "\"/wp-content/" }}
     {{ $content = replace $content "('/blog/wp-content/" "('/wp-content/" }}

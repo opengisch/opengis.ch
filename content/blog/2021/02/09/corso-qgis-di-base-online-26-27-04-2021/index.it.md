@@ -4,6 +4,7 @@ date: 2021-02-09
 slug: "corso-qgis-di-base-online-26-27-04-2021"
 url: "/it/2021/02/09/corso-qgis-di-base-online-26-27-04-2021/"
 source: "www.opengis.ch/it/2021/02/09/corso-qgis-di-base-online-26-27-04-2021/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Iscrizione](</iscrizione-corsi/index.html>)
 ## CORSO ANNULLATO – Prossimo corso in Settembre 2021

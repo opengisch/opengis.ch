@@ -4,6 +4,7 @@ date: 2023-03-06
 slug: "qgis-de-base"
 url: "/fr/2023/03/06/qgis-de-base/"
 source: "www.opengis.ch/fr/2023/03/06/qgis-de-base/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2024/06/vt_basemapa86e.png"
 ---
 ### Description
 A la fin du cours, les participant-e-s connaissent les principales fonctions du SIG open source QGIS Desktop, peuvent importer et analyser des données, créer une carte avec une mise en page professionnelle et saisir des objets avec des attributs et des géométries vectorielles.

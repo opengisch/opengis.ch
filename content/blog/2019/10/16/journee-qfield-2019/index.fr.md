@@ -4,6 +4,7 @@ date: 2019-10-16
 slug: "journee-qfield-2019"
 url: "/fr/2019/10/16/journee-qfield-2019/"
 source: "www.opengis.ch/fr/2019/10/16/journee-qfield-2019/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/09/qfield_love_10_bannera86e.jpg"
 ---
 _**12** **November 2019** 13:40_ in Bern, Événement gratuit, [inscription nécessaire](<https://ti.to/opengisch/qfield-day-bern/>)
 QField est une application mobile et personnalisable de saisie de données spatiales. Il s’intègre parfaitement avec QGIS, la solution SIG open-source la plus répandue.

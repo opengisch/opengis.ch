@@ -4,6 +4,7 @@ date: 2023-02-24
 slug: "cours-qgis-avance-lausanne-28-04-03-05-2023"
 url: "/2023/02/24/cours-qgis-avance-lausanne-28-04-03-05-2023/"
 source: "www.opengis.ch/2023/02/24/cours-qgis-avance-lausanne-28-04-03-05-2023/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557-scaleda86e.jpg"
 ---
 [Inscription](</course-registration/index.html>)
 ## 

@@ -4,6 +4,7 @@ date: 2023-02-24
 slug: "new-qgis-courses-dates-spring-2023"
 url: "/de/2023/02/24/new-qgis-courses-dates-spring-2023/"
 source: "www.opengis.ch/de/2023/02/24/new-qgis-courses-dates-spring-2023/index.html"
+image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/AdobeStock_305245557a86e.jpg"
 ---
 We published our new dates for this springs QGIS online courses.
   - French:
