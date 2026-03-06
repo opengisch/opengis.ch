@@ -236,6 +236,119 @@ function initializeApp() {
     })
   }
 
+  // GeoNinjas team filter controls
+  const teamFilterRoots = document.querySelectorAll('[data-team-filter-root]')
+  if (teamFilterRoots.length > 0) {
+    teamFilterRoots.forEach((root) => {
+      const teamFilterButtons = root.querySelectorAll('button[data-team-filter]')
+      const teamCards = root.querySelectorAll('.team-card[data-team]')
+
+      if (teamFilterButtons.length === 0 || teamCards.length === 0) {
+        return
+      }
+
+      const supportedFilters = Array.from(teamFilterButtons).map((button) => button.dataset.teamFilter)
+
+      const applyTeamFilter = (filter) => {
+        const normalizedFilter = supportedFilters.includes(filter) ? filter : 'all'
+
+        teamFilterButtons.forEach((button) => {
+          const isActive = button.dataset.teamFilter === normalizedFilter
+          button.classList.toggle('is-active', isActive)
+          button.setAttribute('aria-pressed', isActive ? 'true' : 'false')
+        })
+
+        teamCards.forEach((card) => {
+          const isVisible = normalizedFilter === 'all' || card.dataset.team === normalizedFilter
+          card.hidden = !isVisible
+          card.classList.toggle('is-hidden', !isVisible)
+        })
+      }
+
+      teamFilterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          applyTeamFilter(button.dataset.teamFilter || 'all')
+        })
+      })
+
+      applyTeamFilter('all')
+    })
+  }
+
+  // Order support contract ClickUp form setup
+  const orderSupportForm = document.querySelector('#cu-form.order-support-contract-iframe')
+  if (orderSupportForm) {
+    const planByDays = {
+      '2': 'Personal (2 Days)',
+      '5': 'Startup (5 Days)',
+      '10': 'Business (10 Days)',
+      '0': 'Enterprise (10+ Days)'
+    }
+    const localhostHosts = new Set(['localhost', '127.0.0.1', '::1'])
+    const search = new URLSearchParams(window.location.search)
+    const enableLocalEmbed = search.get('embed_clickup') === '1'
+    const requestedDays = search.get('days')
+    const hasRequestedDays = Object.prototype.hasOwnProperty.call(planByDays, requestedDays)
+    const days = hasRequestedDays ? requestedDays : '2'
+    const clickupSource = orderSupportForm.dataset.clickupSrc || 'https://forms.clickup.com/2192114/f/22wqj-2157/SV25SH6NBJMYBMCTFW'
+    const clickupUrl = new URL(clickupSource)
+    clickupUrl.searchParams.set('Plan', planByDays[days])
+    clickupUrl.searchParams.set('Days', days)
+    const fallbackLinks = document.querySelectorAll('[data-order-support-clickup-link]')
+    fallbackLinks.forEach((link) => {
+      link.href = clickupUrl.toString()
+    })
+
+    if (localhostHosts.has(window.location.hostname) && !enableLocalEmbed) {
+      const formContainer = orderSupportForm.closest('.order-support-contract-form')
+      if (formContainer) {
+        formContainer.classList.add('order-support-contract-form--local-fallback')
+      }
+      orderSupportForm.src = 'about:blank'
+      return
+    }
+
+    orderSupportForm.src = clickupUrl.toString()
+  }
+
+  // Book private course ClickUp form setup
+  const bookPrivateCourseForm = document.querySelector('#book-private-course-form.book-private-course-iframe')
+  if (bookPrivateCourseForm) {
+    const clickupSource = bookPrivateCourseForm.dataset.clickupSrc || 'https://forms.clickup.com/f/22wqj-11141/2YYC027R5B98SX991E'
+    const clickupUrl = new URL(clickupSource)
+    const search = new URLSearchParams(window.location.search)
+
+    search.forEach((value, key) => {
+      clickupUrl.searchParams.set(key, value)
+    })
+
+    const fallbackLinks = document.querySelectorAll('[data-book-private-course-clickup-link]')
+    fallbackLinks.forEach((link) => {
+      link.href = clickupUrl.toString()
+    })
+
+    bookPrivateCourseForm.src = clickupUrl.toString()
+  }
+
+  // Course registration ClickUp form setup
+  const courseRegistrationForm = document.querySelector('#course-registration-form.course-registration-iframe')
+  if (courseRegistrationForm) {
+    const clickupSource = courseRegistrationForm.dataset.clickupSrc || 'https://forms.clickup.com/f/22wqj-2612/1WH6MLMKJU0Z09R6TN?websubscription=1&language=EN'
+    const clickupUrl = new URL(clickupSource)
+    const search = new URLSearchParams(window.location.search)
+
+    search.forEach((value, key) => {
+      clickupUrl.searchParams.set(key, value)
+    })
+
+    const fallbackLinks = document.querySelectorAll('[data-course-registration-clickup-link]')
+    fallbackLinks.forEach((link) => {
+      link.href = clickupUrl.toString()
+    })
+
+    courseRegistrationForm.src = clickupUrl.toString()
+  }
+
   // Blog view toggle controls
   const blogViewGrid = document.querySelector('[data-blog-view-grid]')
   const blogViewToggleButtons = document.querySelectorAll('[data-blog-view-toggle]')
@@ -318,16 +431,8 @@ function tryInitialization() {
 // Gallery initialization function
 function initializeGalleries() {
   const galleryWrappers = document.querySelectorAll('.gallery-wrapper[data-gallery-id]')
-  console.log('Initializing galleries:', galleryWrappers.length)
-  
-  // Log all gallery IDs found
-  galleryWrappers.forEach((wrapper, index) => {
-    console.log(`Found gallery ${index + 1}:`, wrapper.dataset.galleryId)
-  })
-  
+
   if (galleryWrappers.length === 0) {
-    console.log('No gallery wrappers found, will retry in 100ms')
-    setTimeout(initializeGalleries, 100)
     return
   }
   
@@ -338,13 +443,9 @@ function initializeGalleries() {
     const controls = galleryWrapper.dataset.controls !== 'false'
     const indicators = galleryWrapper.dataset.indicators !== 'false'
     
-    console.log(`Processing gallery ${galleryId}`)
-    
     const figures = galleryWrapper.querySelectorAll('figure')
-    console.log(`Gallery ${galleryId} found ${figures.length} figures`)
-    
+
     if (figures.length === 0) {
-      console.log(`Gallery ${galleryId} has no figures, hiding wrapper`)
       galleryWrapper.style.display = 'none'
       return
     }
@@ -420,15 +521,12 @@ function initializeGalleries() {
           keyboard: true,
           touch: true
         })
-        console.log(`Gallery ${galleryId} Bootstrap carousel initialized`)
       } catch (error) {
         console.error(`Failed to initialize Bootstrap carousel for ${galleryId}:`, error)
       }
     } else {
       console.warn('Bootstrap not available for carousel initialization')
     }
-    
-    console.log(`Gallery ${galleryId} initialized successfully with ${figures.length} slides`)
   })
 }
 

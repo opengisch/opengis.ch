@@ -1,4 +1,6 @@
 # Development environment overrides
+baseURL: http://localhost:1313/
+
 build:
   writeStats: true
   useResourceCacheWhen: fallback

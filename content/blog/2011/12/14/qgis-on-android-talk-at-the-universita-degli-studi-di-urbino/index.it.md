@@ -10,15 +10,7 @@ I liked finally holding my first speech in Italian, although i felt more comfort
 Here you can find the [slides](<https://android.qgis.org/download/qgis-for-android.odp> "qgis-for-android slides"). Thanks a lot to Tim Sutton Sutton for letting me use part of his [QGIS for Humanity presentation](<https://linfiniti.com/2011/11/qgis-presentation-at-eth/> "QGIS for Humanity at ETHZ")  
 and here a little demo of the offline plugin at work:  
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/33610545"
-    title="Vimeo video 33610545"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/33610545" title="Vimeo video 33610545" >}}
 
 [https://vimeo.com/33610545](<https://vimeo.com/33610545>)
 

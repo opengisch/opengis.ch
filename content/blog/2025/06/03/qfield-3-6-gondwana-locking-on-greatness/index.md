@@ -21,15 +21,7 @@ Beyond that, tons more has made its way into QField, including **map layer notes
 This new version of QField coincides with the release of **[XLSForm Converter](</02/xlsform-converter-unlock-a-world-of-surveys-with-our-brand-new-qgis-plugin/index.html>)** , a new QGIS plugin created by OPENGIS.ch’s very own ninjas. As its title implies, the plugin converts an [XLSForm spreadsheet file (.xls, .xlsx, .ods)](<https://xlsform.org/en/>) into a full-fledged QGIS project ready to be used in QField with a pre-configured survey layer matching the content of the provided XLSForm.
 This was a golden opportunity to focus on polishing QField’s feature form. As a result, advanced functionalities such as **data-driven editable flag and label attribute properties are now supported**. In addition, tons of paper-cut bugs, visual inconsistencies, and UX shortcomings have been addressed. Our favourite one might just be the ability to drag the feature addition drawer’s header up and down to toggle its full-screen state 🙂
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/kJg69l49"
-    title="VideoPress video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/kJg69l49" title="VideoPress video" >}}
 
 [https://videopress.com/embed/kJg69l49](<https://videopress.com/embed/kJg69l49>)
 

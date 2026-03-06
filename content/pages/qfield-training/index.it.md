@@ -16,7 +16,7 @@ Introduzione all’utilizzo di QField
 Configurazione del progetto QGIS
 Sincronizzazione dei dati con QFieldCloud
 _* Prezzo ridotto valido solo in combinazione con un’ abbonamento[QFieldCloud](<https://qfield.cloud/>) a pagamento_
-[BOOK Now](<../book-private-course/indexbc77.html?wpf10757_9=QField%20Jumpstart%20-%20Half%20day>)
+[BOOK Now](</it/book-private-course/?wpf10757_9=QField%20Jumpstart%20-%20Half%20day>)
 ##### Giornata intera
 * * *
 ### EUR 1080* 
@@ -26,4 +26,4 @@ Analisi del modello di dati
 Ottimizzazione del progetto QGIS
 Altre strategie di sincronizzazione dei dati
 _* Prezzo ridotto valido solo in combinazione con un’ abbonamento[QFieldCloud](<https://qfield.cloud/>) a pagamento_
-[BOOK Now](<../book-private-course/index4953.html?wpf10757_9=QField%20Jumpstart%20-%20Full%20day>)
+[BOOK Now](</it/book-private-course/?wpf10757_9=QField%20Jumpstart%20-%20Full%20day>)

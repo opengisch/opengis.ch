@@ -1,0 +1,9 @@
+<div class="blog-embed-video">
+  <iframe
+    src="{{ .Get `src` | safeURL }}"
+    title="{{ .Get `title` | default `Embedded video` }}"
+    loading="lazy"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>

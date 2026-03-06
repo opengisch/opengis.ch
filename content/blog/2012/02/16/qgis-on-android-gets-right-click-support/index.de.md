@@ -9,15 +9,7 @@ So, finally I managed to add the right click support to QGIS on android, I made 
   
 This addition was the last show stopper bug.
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/36930759"
-    title="Vimeo video 36930759"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/36930759" title="Vimeo video 36930759" >}}
 
 [https://vimeo.com/36930759](<https://vimeo.com/36930759>)
 

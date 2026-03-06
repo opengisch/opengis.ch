@@ -14,29 +14,13 @@ Shipped with many new features and built with the latest generation of Qt’s cr
 Upon launching this new version of QField, users will be greeted by a revamped recent projects list featuring shiny map canvas thumbnails. While this is one of the most obvious UI improvements, countless interface tweaks and harmonization have occurred. From the refreshed dark theme to the further polishing of countless widgets, QField has never looked and felt better.
 The top search bar has a new functionality that allows users to look for features within the currently active vector layer by matching any of its attributes against a given search term. Users can also refine their searches by specifying a specific attribute. The new functionality can be triggered by typing the ‘f’ prefix in the search bar followed by a string or number to retrieve a list of matching features. When expanding it, a new list of functionalities appears to help users discover all of the tools available within the search bar.
 QField’s tracking has also received some love. A **new erroneous distance safeguard** setting has been added, which, when enabled, will dictate the tracker not to add a new vertex if the distance between it and the previously added vertex is greater than a user-specified value. This aims at preventing “spikes” of poor position readings during a tracking session. QField is now also capable of resuming a tracking session after being stopped. When resuming, tracking will reuse the last feature used when first starting, allowing sessions interrupted by battery loss or momentary pause to be continued on a single line or polygon geometry. 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/W2nwrWjt"
-    title="QField 3.0 release video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/W2nwrWjt" title="QField 3.0 release video" >}}
 
 [https://videopress.com/embed/W2nwrWjt](<https://videopress.com/embed/W2nwrWjt>)
 
 On the feature form front, QField has gained **support for feature form text widgets,** a new read-only type introduced in QGIS 3.30**,** which allows users to create expression-based text labels within complex feature form configurations. In addition, **relationship-related form widgets now allow for zooming to children/parent** features within the form itself.
 To enhance digitizing work in the field, QField now makes it **possible to turn snapping on and off** through a new snapping button on top of the map canvas when in digitizing mode. When a project has enabled advanced snapping, the dashboard’s legend item now showcases snapping badges, allowing users to **toggle snapping for individual vector layers**. 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/2LMsUg9l"
-    title="QField 3.0 snapping capabilities"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/2LMsUg9l" title="QField 3.0 snapping capabilities" >}}
 
 [https://videopress.com/embed/2LMsUg9l](<https://videopress.com/embed/2LMsUg9l>)
 

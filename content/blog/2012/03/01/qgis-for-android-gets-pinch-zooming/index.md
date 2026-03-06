@@ -20,15 +20,7 @@ and here a video:
 QGIS supports now an all new touch maptool that allows panning, pinch zooming, double tap zoomWithCenter and twofinger tap zoomOut
 ciao Marco
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/37691643"
-    title="Vimeo video 37691643"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/37691643" title="Vimeo video 37691643" >}}
 
 [https://vimeo.com/37691643](<https://vimeo.com/37691643>)
 

@@ -11,15 +11,7 @@ To be noticed that the gui now works properly as well on my mobile phone (Galaxy
 Now I’m tackling all the files like i18n, resources, svg and so on.  
 Here a video showing the newest stand of qgis for android and on my [github](<https://github.com/mbernasocchi/qgis-android/downloads>) you can download it.  
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/27854857"
-    title="Vimeo video 27854857"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/27854857" title="Vimeo video 27854857" >}}
 
 [https://vimeo.com/27854857](<https://vimeo.com/27854857>)
 

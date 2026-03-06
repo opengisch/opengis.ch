@@ -1,0 +1,86 @@
+items:
+  - key: "open_source_experts"
+    title:
+      en: "Open-source experts"
+      de: "Open-Source-Experten"
+      fr: "Experts open source"
+      it: "Esperti open source"
+    body:
+      en: "We are core developers, senior architects, full stack ninjas and GIS wizards. We love open-source and are committed to the <strong>sustainable growth</strong> of the tools we work on."
+      de: "Wir sind Core-Entwickler, Senior-Architekten, Full-Stack-Ninjas und GIS-Zauberer. Wir lieben Open Source und setzen uns fuer das <strong>nachhaltige Wachstum</strong> der Werkzeuge ein, mit denen wir arbeiten."
+      fr: "Nous sommes des developpeurs coeur, des architectes seniors, des ninjas full stack et des magiciens SIG. Nous aimons l'open source et nous nous engageons pour la <strong>croissance durable</strong> des outils avec lesquels nous travaillons."
+      it: "Siamo sviluppatori core, architetti senior, ninja full stack e maghi GIS. Amiamo l'open source e ci impegniamo per la <strong>crescita sostenibile</strong> degli strumenti con cui lavoriamo."
+    icon:
+      type: "class"
+      value: "fas fa-code"
+  - key: "swiss_made"
+    title:
+      en: "Swiss made"
+      de: "Schweizer Qualitaet"
+      fr: "Qualite suisse"
+      it: "Qualita svizzera"
+    body:
+      en: "Our mission is to offer to each of our partners products and services that live up to the famous Swiss values of <strong>quality, reliability</strong> and <strong>precision</strong>. Guaranteed and <strong>ISO 9001:2015</strong> certified"
+      de: "Unsere Mission ist es, jedem Partner Produkte und Services zu bieten, die den bekannten Schweizer Werten von <strong>Qualitaet, Zuverlaessigkeit</strong> und <strong>Praezision</strong> entsprechen. Garantiert und <strong>ISO 9001:2015</strong> zertifiziert."
+      fr: "Notre mission est d'offrir a chacun de nos partenaires des produits et services qui respectent les celebres valeurs suisses de <strong>qualite, fiabilite</strong> et <strong>precision</strong>. Garanti et certifie <strong>ISO 9001:2015</strong>."
+      it: "La nostra missione e offrire a ogni partner prodotti e servizi che rispettano i famosi valori svizzeri di <strong>qualita, affidabilita</strong> e <strong>precisione</strong>. Garantito e certificato <strong>ISO 9001:2015</strong>."
+    icon:
+      type: "image"
+      value: "/wp-content/uploads/2023/05/ISO.svg"
+      alt: "Swiss made"
+  - key: "no_vendor_lock_in"
+    title:
+      en: "No vendor lock-in"
+      de: "Kein Vendor Lock-in"
+      fr: "Sans verrouillage fournisseur"
+      it: "Nessun vendor lock-in"
+    body:
+      en: "Don't let vendor lock-in limit your IT agility. Take complete control and ownership over the developed software while keeping a <strong>low TCO</strong>."
+      de: "Lassen Sie sich nicht durch Vendor Lock-in in Ihrer IT-Agilitaet einschraenken. Behalten Sie die volle Kontrolle und Eigentuemerschaft an der entwickelten Software bei gleichzeitig <strong>niedrigen TCO</strong>."
+      fr: "Ne laissez pas le verrouillage fournisseur limiter votre agilite IT. Gardez un controle total et la propriete du logiciel developpe tout en conservant un <strong>TCO faible</strong>."
+      it: "Non lasciare che il vendor lock-in limiti la tua agilita IT. Mantieni il controllo completo e la proprieta del software sviluppato con un <strong>TCO basso</strong>."
+    icon:
+      type: "class"
+      value: "fas fa-unlock"
+  - key: "agile_processes"
+    title:
+      en: "Agile processes"
+      de: "Agile Prozesse"
+      fr: "Processus agiles"
+      it: "Processi agili"
+    body:
+      en: "Our vast experience in open-source technologies combined with our agile and distributed nature will help you <strong>quickly implement</strong> your envisioned solution."
+      de: "Unsere grosse Erfahrung mit Open-Source-Technologien in Kombination mit unserer agilen und verteilten Arbeitsweise hilft Ihnen, Ihre Loesung <strong>schnell umzusetzen</strong>."
+      fr: "Notre grande experience des technologies open source, combinee a notre approche agile et distribuee, vous aide a <strong>mettre en oeuvre rapidement</strong> la solution souhaitee."
+      it: "La nostra ampia esperienza nelle tecnologie open source, unita al nostro approccio agile e distribuito, ti aiutera a <strong>realizzare rapidamente</strong> la soluzione desiderata."
+    icon:
+      type: "class"
+      value: "fas fa-rocket"
+  - key: "guaranteed_support"
+    title:
+      en: "Guaranteed support"
+      de: "Garantierter Support"
+      fr: "Support garanti"
+      it: "Supporto garantito"
+    body:
+      en: "We care about you and your deployments. We take support and maintenance extremely seriously and offer different <strong>SLA</strong> to suit you needs."
+      de: "Uns sind Sie und Ihre Deployments wichtig. Wir nehmen Support und Wartung sehr ernst und bieten verschiedene <strong>SLA</strong>, die zu Ihren Anforderungen passen."
+      fr: "Vous et vos deploiements sont importants pour nous. Nous prenons tres au serieux le support et la maintenance et proposons differents <strong>SLA</strong> adaptes a vos besoins."
+      it: "Tu e i tuoi deployment siete importanti per noi. Prendiamo molto seriamente supporto e manutenzione e offriamo diversi <strong>SLA</strong> adatti alle tue esigenze."
+    icon:
+      type: "class"
+      value: "fa fa-support"
+  - key: "in_your_language_near_you"
+    title:
+      en: "In your language - near you"
+      de: "In Ihrer Sprache - in Ihrer Naehe"
+      fr: "Dans votre langue - pres de vous"
+      it: "Nella tua lingua - vicino a te"
+    body:
+      en: "With a <strong>multilingual team</strong> distributed across Switzerland we are never too far to come and fix your problems in English, German, French, Italian, Spanish, and Romansh."
+      de: "Mit einem <strong>mehrsprachigen Team</strong> in der ganzen Schweiz sind wir nie zu weit weg, um Ihre Probleme auf Deutsch, Englisch, Franzoesisch, Italienisch, Spanisch und Rumaentsch zu loesen."
+      fr: "Avec une <strong>equipe multilingue</strong> repartie dans toute la Suisse, nous ne sommes jamais trop loin pour resoudre vos problemes en anglais, allemand, francais, italien, espagnol et romanche."
+      it: "Con un <strong>team multilingue</strong> distribuito in tutta la Svizzera, non siamo mai troppo lontani per risolvere i tuoi problemi in inglese, tedesco, francese, italiano, spagnolo e romancio."
+    icon:
+      type: "class"
+      value: "fa fa-wechat"

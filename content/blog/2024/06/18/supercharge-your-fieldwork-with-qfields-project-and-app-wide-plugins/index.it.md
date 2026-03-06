@@ -116,15 +116,7 @@ P.S. If you are developing a cool QField plugin, also let us know! 🙂
     
     Bird SVG in video CC-BY <https://svgrepo.com/svg/417419/bird>
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/2EEGokQ2"
-    title="VideoPress video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/2EEGokQ2" title="VideoPress video" >}}
 
 [https://videopress.com/embed/2EEGokQ2](<https://videopress.com/embed/2EEGokQ2>)
 

@@ -1,0 +1,265 @@
+shared:
+  features_heading: "What makes us special?"
+  about_image: "https://opengis.ch/wp-content/uploads/2020/04/theteam_2.png"
+  what_we_do_heading: "What do we do"
+  what_we_do_subheading: "We are here to help you set up your spatial data infrastructure based on seamlessly integrated desktop, web and mobile components. We support your team in planning, developing, deploying and running your infrastructure."
+  newsletter_image: "/wp-content/uploads/2019/04/beetruck_banner_1800x530@2x.jpg"
+  geoninjas_heading: "Our GeoNinjas"
+  geoninjas_lead: "##### Thanks to our senior geodata infrastructure experts, Consultants, QGIS core developers and the makers of the mobile data acquisition solution QField, OPENGIS.ch has all it takes to make your project a success."
+  geoninjas_teams_heading: "Meet Our Teams"
+  geoninjas_teams_caption: "Discover all our teams and their expertise."
+  blog_heading: "Blog"
+  blog_subheading: "Latest news and tech suggestions live from your favourite team"
+  services:
+    - href: "custom-development/"
+      image: "https://opengis.ch/wp-content/uploads/2020/04/code-solid.png"
+      alt:
+        en: "Custom developments"
+        de: "Individuelle Entwicklung"
+        fr: "Développement sur mesure"
+        it: "Sviluppo su misura"
+      title:
+        en: "Custom developments"
+        de: "Individuelle Entwicklung"
+        fr: "Développement sur mesure"
+        it: "Sviluppo su misura"
+      tagline:
+        en: "QGIS | QField | PostGIS | Django | Docker"
+        de: "QGIS | QField | PostGIS | Django | Docker"
+        fr: "QGIS | QField | PostGIS | Django | Docker"
+        it: "QGIS | QField | PostGIS | Django | Docker"
+      body:
+        en: "Are you planning a new geodata infrastructure? We can help you build and deploy your complete Geodata infrastructure or smaller parts of it depending on your needs."
+        de: "Planen Sie eine neue Geodateninfrastruktur? Wir helfen Ihnen beim Aufbau und der Bereitstellung Ihrer gesamten Geodateninfrastruktur oder einzelner Komponenten - passend zu Ihren Anforderungen."
+        fr: "Vous planifiez une nouvelle infrastructure de géodonnées ? Nous vous aidons à concevoir et déployer toute votre infrastructure géospatiale, ou seulement les composants dont vous avez besoin."
+        it: "State pianificando una nuova infrastruttura di geodati? Vi aiutiamo a progettare e distribuire l'intera infrastruttura geospaziale oppure solo i componenti di cui avete bisogno."
+    - href: "qgis-support/"
+      image: "https://opengis.ch/wp-content/uploads/2020/04/maintenance.png"
+      alt:
+        en: "Support and maintenance"
+        de: "Support und Wartung"
+        fr: "Support et maintenance"
+        it: "Supporto e manutenzione"
+      title:
+        en: "Support and maintenance"
+        de: "Support und Wartung"
+        fr: "Support et maintenance"
+        it: "Supporto e manutenzione"
+      tagline:
+        en: "Support with SLA for your SDI"
+        de: "Support mit SLA für Ihre GDI"
+        fr: "Support avec SLA pour votre infrastructure géospatiale"
+        it: "Supporto con SLA per la vostra infrastruttura geospaziale"
+      body:
+        en: "Developing and deploying a great open-source solution is only half of the work. We deeply care about you and your deployments and this is why we take support and maintenance extremely seriously."
+        de: "Die Entwicklung und Bereitstellung einer starken Open-Source-Lösung ist nur die halbe Arbeit. Uns liegen Sie und Ihre Installationen am Herzen, deshalb nehmen wir Support und Wartung sehr ernst."
+        fr: "Développer et déployer une excellente solution open source n'est que la moitié du travail. Nous prenons le support et la maintenance de vos déploiements très au sérieux."
+        it: "Sviluppare e distribuire una grande soluzione open source è solo metà del lavoro. Abbiamo a cuore voi e le vostre implementazioni, per questo prendiamo assistenza e manutenzione molto sul serio."
+    - href: "training-consulting/"
+      image: "https://opengis.ch/wp-content/uploads/2020/04/consulting-3.png"
+      alt:
+        en: "Training and consulting"
+        de: "Training und Beratung"
+        fr: "Formation et conseil"
+        it: "Formazione e consulenza"
+      title:
+        en: "Training and consulting"
+        de: "Training und Beratung"
+        fr: "Formation et conseil"
+        it: "Formazione e consulenza"
+      tagline:
+        en: "We help you build your capacity"
+        de: "Wir stärken Ihre Kompetenzen"
+        fr: "Nous renforçons vos compétences"
+        it: "Vi aiutiamo a rafforzare le vostre competenze"
+      body:
+        en: "Our experienced and multilingual team is always ready to help you plan and improve the next steps and build up your in-house knowledge."
+        de: "Unser erfahrenes und mehrsprachiges Team hilft Ihnen bei der Planung und Verbesserung der nächsten Schritte und beim Aufbau von internem Know-how."
+        fr: "Notre équipe expérimentée et multilingue est toujours prête à vous aider à planifier les prochaines étapes, améliorer vos processus et renforcer vos compétences internes."
+        it: "Il nostro team esperto e multilingue è sempre pronto ad aiutarvi a pianificare i prossimi passi, migliorare i processi e sviluppare le competenze interne."
+    - href: "qgis-support/"
+      image: "https://opengis.ch/wp-content/uploads/2020/04/qgis_logo.resized.png"
+      alt:
+        en: "QGIS"
+        de: "QGIS"
+        fr: "QGIS"
+        it: "QGIS"
+      title:
+        en: "QGIS"
+        de: "QGIS"
+        fr: "QGIS"
+        it: "QGIS"
+      tagline:
+        en: "Core development | plugins | workflows"
+        de: "Kernentwicklung | Plugins | Workflows"
+        fr: "Développement du cœur | extensions | workflows"
+        it: "Sviluppo core | plugin | workflow"
+      body:
+        en: "We are among the main core committers of QGIS and know it inside-out. We can help you optimizing your workflows, build you plugins or modify QGIS itself."
+        de: "Wir gehören zu den wichtigsten Core-Committern von QGIS und kennen es in- und auswendig. Wir helfen Ihnen, Workflows zu optimieren, Plugins zu entwickeln oder QGIS selbst anzupassen."
+        fr: "Nous faisons partie des principaux contributeurs au cœur de QGIS et le connaissons en profondeur. Nous pouvons optimiser vos workflows, développer des extensions ou adapter QGIS lui-même."
+        it: "Siamo tra i principali contributori al core di QGIS e lo conosciamo a fondo. Possiamo aiutarvi a ottimizzare i workflow, sviluppare plugin o modificare QGIS stesso."
+    - href: "https://qfield.cloud/"
+      image: "/wp-content/uploads/2021/02/logo_notext_square.png"
+      alt:
+        en: "QFieldCloud"
+        de: "QFieldCloud"
+        fr: "QFieldCloud"
+        it: "QFieldCloud"
+      title:
+        en: "QFieldCloud"
+        de: "QFieldCloud"
+        fr: "QFieldCloud"
+        it: "QFieldCloud"
+      tagline:
+        en: "Seamless field work"
+        de: "Nahtlose Feldarbeit"
+        fr: "Travail de terrain fluide"
+        it: "Lavoro sul campo senza interruzioni"
+      body:
+        en: "QFieldCloud's unique technology allows your team to focus on what's important, making sure you efficiently get the best possible field data to your office."
+        de: "Die einzigartige Technologie von QFieldCloud ermöglicht es Ihrem Team, sich auf das Wesentliche zu konzentrieren und Felddaten effizient in bestmöglicher Qualität ins Büro zu bringen."
+        fr: "La technologie unique de QFieldCloud permet à votre équipe de se concentrer sur l'essentiel et de transférer efficacement les meilleures données terrain vers le bureau."
+        it: "La tecnologia unica di QFieldCloud consente al vostro team di concentrarsi sull'essenziale e trasferire in modo efficiente i migliori dati di campo in ufficio."
+    - href: "https://qfield.org/"
+      image: "https://opengis.ch/wp-content/uploads/2020/04/QField_Final_100-1.png"
+      alt:
+        en: "QField"
+        de: "QField"
+        fr: "QField"
+        it: "QField"
+      title:
+        en: "QField"
+        de: "QField"
+        fr: "QField"
+        it: "QField"
+      tagline:
+        en: "Mobile geodata collection app"
+        de: "App für mobile Geodatenerfassung"
+        fr: "Application mobile de collecte de géodonnées"
+        it: "App mobile per la raccolta di geodati"
+      body:
+        en: "We are the creators of QField, the solution for field data collection and validation. We can help you get started or build you a custom app based on QField libraries."
+        de: "Wir sind die Entwickler von QField, der Lösung für Erfassung und Validierung von Felddaten. Wir helfen Ihnen beim Einstieg oder entwickeln eine individuelle App auf Basis der QField-Bibliotheken."
+        fr: "Nous sommes les créateurs de QField, la solution de collecte et de validation de données terrain. Nous pouvons vous aider à démarrer ou développer une application sur mesure basée sur les bibliothèques QField."
+        it: "Siamo i creatori di QField, la soluzione per la raccolta e la validazione dei dati sul campo. Possiamo aiutarvi a partire rapidamente o sviluppare un'app personalizzata basata sulle librerie QField."
+  clients:
+    - href: "https://www.sob.ch/"
+      image: "/wp-content/uploads/2019/10/sob-300x21.png"
+      alt: ""
+    - href: "https://www.swisstopo.admin.ch/"
+      image: "https://opengis.ch/wp-content/uploads/2020/04/swisstopo-300x41.png"
+      alt: ""
+    - href: "http://www.sige.ch/"
+      image: "https://opengis.ch/wp-content/uploads/2020/04/sige.png"
+      alt: ""
+    - href: "https://www.geoformer.ch/"
+      image: "https://opengis.ch/wp-content/uploads/2020/04/Logo_geoformer_F10002_20200429-300x125.jpg"
+      alt: ""
+    - href: "https://www.ticinosentieri.ch/"
+      image: "/wp-content/uploads/2022/08/logo_ti_sentieri.png"
+      alt: ""
+    - href: "https://www.planidea.ch/"
+      image: "https://opengis.ch/wp-content/uploads/2020/04/planidea-300x41.png"
+      alt: ""
+    - href: "https://geo.so.ch/"
+      image: "/wp-content/uploads/2020/04/so_logo-300x29.png"
+      alt: ""
+    - href: "https://www.zg.ch/behoerden/direktion-des-innern/grundbuch-und-geoinformation/"
+      image: "/wp-content/uploads/2020/04/zg_logo.gif"
+      alt: ""
+    - href: "https://agi.sh.ch/"
+      image: "/wp-content/uploads/2020/04/sh_ch_logo_farbe.png"
+      alt: ""
+    - href: "https://www.globalquakemodel.org/"
+      image: "/wp-content/uploads/2019/10/gem-1-300x159.png"
+      alt: ""
+    - href: "https://www.ga.gov.au/"
+      image: "/wp-content/uploads/2020/04/ga-logo-300x208.jpg"
+      alt: ""
+    - href: "https://www.spc.int/"
+      image: "/wp-content/uploads/2020/04/spc.png"
+      alt: ""
+  contact:
+    image: "https://www.opengis.ch/wp-content/uploads/2025/02/group.jpg"
+    office_locations: "Laax, Bern, Winterthur, Champéry, Lausanne, Basel"
+    email: "sales@opengis.ch"
+    company_lines:
+      - "OPENGIS.ch GmbH"
+      - "Via Geinas 2"
+      - "CH-7031 Laax"
+
+en:
+  about:
+    paragraphs:
+      - "We are Swiss-made <strong>full-stack GeoNinjas.</strong> We offer a <strong>personalised</strong> service around your geodata solutions needs and support contracts with SLAs. Our vast experience in <strong>open-source</strong> technologies combined with our <strong>agile</strong> and distributed nature will help you <strong>quickly</strong> implement your envisioned solution with a low TCO, <strong>no vendor lock-in</strong> and complete <strong>control</strong> over the developed software."
+      - "At OPENGIS.ch we are completely dedicated to using and developing open-source tools for a wide variety of reasons. The most important one being that we are convinced that it is for the best for our customers because of the flexibility, scalability and the future-proof nature of open-source concepts. We offer installation support, <a href=\"training-consulting/index.html\">training</a>, consultancy, maintenance and tailor suited <a href=\"custom-development/index.html\">development</a> for your open geospatial stack. We speak English, German, French, Italian, Spanish, and Romansh."
+      - "We look forward to working with you on your next project."
+    cta_text: "Get in touch"
+    cta_href: "#contact"
+  newsletter:
+    title: "Subscribe to our Newsletter"
+    button_text: "Subscribe"
+    button_href: "newsletter/index.html"
+  contact:
+    title: "Get in Touch"
+    lead: "We look forward to working with you on your next project."
+    office_label: "Visit us at an office"
+    write_label: "Write us"
+    vat_label: "VAT Number CHE-183.516.448 MWST"
+
+de:
+  about:
+    paragraphs:
+      - "Wir sind Schweizer Software Entwickler – aber noch mehr sind wir <strong>full-stack Geo-Ninjas</strong>! Wir planen und entwickeln <strong>personalisierte</strong> Open Source GIS Lösungen als Desktop- oder Mobilapplikationen. Elegante Lösungen finden wir übrigens auch für vielschichtige Aufgaben."
+      - "Wie wir das machen? Mit jahrelanger <strong>Open-source</strong> Technologie-Erfahrung, QGIS und PostGIS Expertise, QField und QFieldCloud Entwicklerwissen und unserem eigenen, hohen <strong>Schweizer Anspruch</strong>. Persönlicher Service in sechs Sprachen und eine ausgezeichnete <strong>Projektunterstützung</strong> von A-Z gehören da natürlich dazu. Wir übernehmen nämlich gerne Verantwortung für das, was wir tun. Darauf geben wir Ihnen unser Ninja-Ehrenwort – oder einen <strong>Support Vertrag</strong> mit SLA."
+    cta_text: "Kontaktiere uns"
+    cta_href: "#contact"
+  newsletter:
+    title: "Abonniere unseren Newsletter"
+    button_text: "Abonnieren"
+    button_href: "newsletter/index.html"
+  contact:
+    title: "Kontaktiere uns"
+    lead: "Wir freuen uns darauf, mit Ihnen an Ihrem nächsten Projekt zu arbeiten."
+    office_label: "Besuchen Sie uns in einem Büro"
+    write_label: "Schreiben Sie uns"
+    vat_label: "MwSt Nummer CHE-183.516.448 MWST"
+
+fr:
+  about:
+    paragraphs:
+      - "Nous sommes des <strong>GeoNinjas à part entière</strong> et offrons un service <strong>personnalisé</strong> en fonction de vos besoins en matière de géodonnées. Notre vaste expérience dans les technologies <strong>open source</strong>, combinée à notre nature <strong>flexible</strong> et variée, vous aidera à mettre en œuvre <strong>rapidement</strong> la solution que vous envisagez, avec un faible coût de fonctionnement, <strong>sans blocage du fournisseur</strong> et avec un <strong>contrôle</strong> total sur le logiciel développé."
+      - "Chez OPENGIS.ch, nous nous consacrons entièrement à l’utilisation et au développement d’outils open source pour des raisons très diverses. La plus importante est que nous sommes convaincus que c’est pour le bien de nos clients grâce à la souplesse, l’extensibilité et la pérennité des concepts open source. Nous proposons une assistance à l’installation, des <a href=\"conseil/index.html\">formations</a>, des conseils, une maintenance et un <a href=\"developpement/index.html\">développement</a> sur mesure pour votre système géospatial. Nous parlons l’anglais, l’allemand, le français, l’italien, l’espagnol et le romanche."
+      - "Nous nous réjouissons de travailler avec vous sur votre prochain projet."
+    cta_text: "Contactez-nous"
+    cta_href: "#contact"
+  newsletter:
+    title: "Abonnez-vous à notre newsletter"
+    button_text: "S'abonner"
+    button_href: "newsletter/index.html"
+  contact:
+    title: "Nous contacter"
+    lead: "Nous nous réjouissons de travailler avec vous sur votre prochain projet."
+    office_label: "Rendez-nous visite dans un bureau"
+    write_label: "Écrivez-nous"
+    vat_label: "Numéro TVA CHE-183.516.448 MWST"
+
+it:
+  about:
+    paragraphs:
+      - "We are <strong>full-stack GeoNinjas</strong> and offer a <strong>personalised</strong> service around your geodata solutions needs. Our vast experience in <strong>open source</strong> technologies combined with our <strong>agile</strong> and distributed nature will help you <strong>quickly</strong> implement your envisioned solution with a low TCO, <strong>no vendor lock-in</strong> and complete <strong>control</strong> over the developed software."
+      - "At OPENGIS.ch we are completely dedicated to using and developing open source tools for a wide variety of reasons. The most important one being that we are convinced that it is for the best for our customers because of the flexibility, scalability and the future-proof nature of open source concepts. We offer installation support, <a href=\"training-consulting/index.html\">training</a>, consultancy, maintenance and tailor suited <a href=\"sviluppo/index.html\">development</a> for your open geospatial stack. We speak English, German, French, Italian, Spanish, and Romansh."
+      - "We look forward to working with you on your next project."
+    cta_text: "Contattaci"
+    cta_href: "#contact"
+  newsletter:
+    title: "Iscriviti alla nostra Newsletter"
+    button_text: "Iscriviti"
+    button_href: "newsletter/index.html"
+  contact:
+    title: "Contattaci"
+    lead: "Non vediamo l'ora di lavorare con voi per il vostro prossimo progetto."
+    office_label: "Visitateci in un ufficio"
+    write_label: "Scriveteci"
+    vat_label: "Numero IVA CHE-183.516.448 MWST"

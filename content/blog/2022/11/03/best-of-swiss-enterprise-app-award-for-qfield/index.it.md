@@ -18,15 +18,7 @@ Soon, [QFieldCloud](<https://qfield.cloud/>) will also be launched. QFieldCloud 
 And here some moments of the award night. It was a blast!
 ![](./Michael-Quade-Juryprasident-gratuliert-zur-Gold_c_bestofswissapps.ch_efef.jpg)Michael Quade enterprise jury chair congratulates on the win ![](./Best-of-swiss-App-Award-2022_c_bestofswissapps.ch_6aed.jpg)one of the BOSA2022 trophy ![](./QField-Werbevideo-bei-der-Awardvergabe_c_opengis.ch_-110df.jpg)360° QField projections! ![](./winner_selfie_c_opengis.ch_15bf.jpg)Happy chappies ![](./Marco-Bernasocchi-und-Anna-Randegger-von-OPENGI.ch_c_bestswissapps.ch_efef.jpg)and formally happy 🙂 ![](./qfield_laudatio-c-opengis.ch_632a.jpg)Laudatio
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/c95KEqlR"
-    title="VideoPress video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/c95KEqlR" title="VideoPress video" >}}
 
 [https://videopress.com/embed/c95KEqlR](<https://videopress.com/embed/c95KEqlR>)
 

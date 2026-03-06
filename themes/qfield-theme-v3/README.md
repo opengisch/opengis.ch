@@ -8,6 +8,24 @@ Theme for a blazing fast static website and/or blog using bootstrap 5.
 
 ## Local customizations
 
+- Replaced legacy alias mappings with real route-backed category pages under `content/pages/course-categories/**` (EN/DE/FR/IT) for old WordPress course taxonomy URLs (`/category/courses/qgis-courses/` plus DE/FR/IT category paths), preventing menu/category-link 404s without redirect pages.
+- Added course-archive rendering in `layouts/_default/single.html` for category pages with `course_posts` front matter, so `qgis-courses` routes now show post listings (EN/DE/FR/IT) instead of the calendar iframe.
+- Styled standalone course registration/calendar CTA links in content (e.g. “Register here”) as green rounded pill buttons via `assets/sass/styles.scss`, including localized EN/DE/FR/IT routes.
+- Added a dedicated `course-registration` layout branch in `layouts/_default/single.html` with language-specific ClickUp registration form embeds for `/course-registration/`, `/de/kursanmeldung/`, `/fr/inscriptions-aux-cours/`, and `/it/iscrizione-corsi/`.
+- Added registration-iframe initialization in `assets/js/main.js` so current query parameters are passed through to the embedded form URL/fallback link.
+- Added registration embed styles in `/assets/sass/styles.scss` (desktop/mobile sizing and dark-mode border/fallback text).
+- Removed stale imported “Recent Posts” placeholder body from all `content/pages/course-registration/index*.md` files.
+- Added a dedicated `courses-calendar` layout branch in `layouts/_default/single.html` with language-specific ClickUp shared-calendar iframes so `/courses-calendar/`, `/de/kurskalender/`, `/fr/calendrier-des-cours/`, and `/it/calendario-corsi/` match production behavior.
+- Added styles for the calendar embed iframe in `/assets/sass/styles.scss` (desktop/mobile height and dark-mode border).
+- Removed stale imported “Recent Posts” placeholder body from `content/pages/courses-calendar/index.md` so the English calendar page focuses on the embedded calendar.
+- Added a dedicated `book-private-course` branch in `layouts/_default/single.html` that renders the requested ClickUp booking iframe (`forms.clickup.com/f/22wqj-11141/2YYC027R5B98SX991E`) and a fallback external link.
+- Added booking-iframe initialization in `assets/js/main.js` to pass through current page query parameters (for example `wpf10757_9`) into the embed URL.
+- Added `book-private-course` form styles in `/assets/sass/styles.scss` (desktop/mobile sizing and dark-mode fallback text color).
+- Fixed QField jump-start booking CTAs in all localized `content/pages/qfield-training/index*.md` pages to point to canonical `book-private-course` URLs with query params, replacing legacy hashed URL targets that produced 404s.
+- Added legacy aliases in `content/pages/book-private-course/index*.md` so old hashed paths (`indexbc77.html` / `index4953.html`, including DE/FR/IT variants) continue to resolve.
+- Fixed gallery initialization in `assets/js/main.js` to return immediately when no gallery wrappers are present, removing the endless retry loop and repeated console noise on pages without galleries.
+- Updated the order-support-contract iframe flow to read a `data-clickup-src` URL, keep a direct fallback form link in markup, and skip automatic iframe loading on localhost unless `?embed_clickup=1` is set.
+- Added corresponding order-support fallback text and dark-mode-safe styles in the site-level Sass (`/assets/sass/styles.scss`).
 - Restructured OPENGIS site config to mirror `qfield_hugo_v2`: single `config/_default/hugo.yaml` plus `config/{development,staging,production}/hugo.yaml` environment overrides.
 - Migrated OPENGIS and `exampleSite` config/data files from TOML to YAML and removed the corresponding TOML files.
 - Kept `theme.toml` unchanged because Hugo expects theme metadata in TOML format.
@@ -22,6 +40,19 @@ Theme for a blazing fast static website and/or blog using bootstrap 5.
 - Extended `layouts/blog/single.html` with a featured-image fallback that pulls the first image from rendered post content when front matter does not define `cover.image`/`image`.
 - Added `scripts/sync_blog_media_from_offline.py` to reconcile blog markdown media against the offline mirror at `/mnt/xtreme/DV/DEVTMP/opengis_hugo/opengis-offline`.
 - Applied that offline sync across all localized blog files, restoring 116 missing embedded videos in 72 files and keeping direct clickable source links under each inserted embed.
+- Sanitized ClickUp embeds in `layouts/_default/single.html` by replacing ClickUp iframes with direct links and removing the ClickUp embed script tag from rendered content.
+- Reordered right-side navbar controls in `layouts/partials/header/header.html` so the language and theme switchers render at the outermost right edge (after search) on desktop.
+- Restored canonical routing for imported `content/pages/**` entries by configuring `permalinks.pages: /:contentbasename/` in the site config, preventing `/pages/...` URL regressions.
+- Added translated DE/FR/IT aliases on service/core-values/support/course pages so existing localized menu URLs continue to resolve instead of returning 404.
+- Refactored homepage GeoNinjas content into structured YAML (`data/geoninjas.yaml` card/link records) and render it via `layouts/shortcodes/geoninjas.html`, replacing duplicated team-grid markup across localized `_index` markdown files.
+- Refactored homepage feature cards into structured YAML data (`data/home_features.yaml`) rendered by `layouts/shortcodes/home-features.html`, ensuring identical icon/image wrapper markup (including the ISO card) across all localized home pages.
+- Moved homepage section structure out of localized `_index` markdown HTML into `layouts/index.html`, backed by shared/localized content in `data/homepage.yaml`; localized home markdown files now only carry front matter metadata.
+- Normalized `qfield-rapidmapper` image links across all language variants to a stable site-root static image path (`/i0.wp.com/.../qfield-rapidmappera86e.jpg`) with alt text, replacing `wp-json/otter` dynamic `.html` references and brittle relative query-string URLs.
+- Added `layouts/shortcodes/blog-video.html` and migrated raw blog embed wrappers from markdown HTML to `{{< blog-video ... >}}` shortcode usage across 104 localized blog post files.
+- Added `baseURL: http://localhost:1313/` in `config/development/hugo.yaml` so local alias pages in development do not redirect to the production domain.
+- Refactored `data/home_features.yaml` to use localized text fields and updated both homepage render paths (`layouts/index.html` and `layouts/shortcodes/home-features.html`) to resolve feature copy by active language with English fallback.
+- Replaced placeholder feature translations in `data/home_features.yaml` with explicit DE/FR/IT localized feature-card copy (titles and bodies).
+- Updated GeoNinjas team-filter active chip styling in `assets/sass/styles.scss` to use the site green palette in light and dark mode (instead of Bootstrap blue).
 - Hardened service-page layout detection in `_default/single.html` by matching normalized permalink/url paths in addition to trailing slug checks, so `qfield-training` and `qgis-support` consistently use their dedicated hero/header layouts.
 - Added an OPENGIS blog layout that mirrors the QField v2 list and single post presentation, including list/card toggles, share buttons, and related posts with dark-mode adjustments.
 - Limited blog share icon artwork to a maximum of 50px to match the requested sizing.

@@ -17,15 +17,7 @@ We are are also available for helping you with any idea and project you might ha
 All the best
 Marco and Matthias
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/116231850"
-    title="Vimeo video 116231850"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/116231850" title="Vimeo video 116231850" >}}
 
 [https://vimeo.com/116231850](<https://vimeo.com/116231850>)
 

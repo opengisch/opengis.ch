@@ -1,4 +1,9 @@
 {{ define "main" }}
+{{ $home := index site.Data.homepage .Site.Language.Lang }}
+{{ if not $home }}
+  {{ $home = site.Data.homepage.en }}
+{{ end }}
+{{ $shared := site.Data.homepage.shared }}
 <main class="opg-home">
   <section class="opg-hero" style="--opg-hero-image: url('{{ .Params.hero.image | default "https://opengis.ch/wp-content/uploads/2020/04/theteam_2.png" }}');">
     <div class="container">
@@ -16,7 +21,223 @@
 
   <section class="opg-content">
     <div class="container">
-      {{ .Content }}
+      <h2 id="what-makes-us-special">{{ $shared.features_heading | default "What makes us special?" }}</h2>
+      {{ $featureLang := .Site.Language.Lang }}
+      {{ with site.Data.home_features }}
+      <section class="opg-features" id="features">
+        <div class="row g-4">
+          {{ range .items }}
+            {{ $featureTitle := .title.en }}
+            {{ with index .title $featureLang }}{{ $featureTitle = . }}{{ end }}
+            {{ $featureBody := .body.en }}
+            {{ with index .body $featureLang }}{{ $featureBody = . }}{{ end }}
+            <div class="col-md-6 col-lg-4">
+              <article class="opg-feature-card">
+                <div class="opg-icon">
+                  {{ if eq .icon.type "image" }}
+                    <img src="{{ .icon.value | safeURL }}" alt="{{ .icon.alt }}">
+                  {{ else }}
+                    <i class="{{ .icon.value }}"></i>
+                  {{ end }}
+                </div>
+                <h3>{{ $featureTitle }}</h3>
+                <p>{{ $featureBody | safeHTML }}</p>
+              </article>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+
+      <section class="opg-about" id="about" style="--opg-about-image: url({{ $shared.about_image | safeURL }});">
+        <div class="opg-about-card">
+          {{ range $home.about.paragraphs }}
+            <p>{{ . | safeHTML }}</p>
+          {{ end }}
+          <a class="btn btn-primary" href="{{ $home.about.cta_href | default "#contact" }}">{{ $home.about.cta_text | default "Get in touch" }}</a>
+        </div>
+      </section>
+
+      <h2 id="what-do-we-do">{{ $shared.what_we_do_heading | default "What do we do" }}</h2>
+      <h5 id="what-we-do-lead">{{ $shared.what_we_do_subheading }}</h5>
+      <section class="opg-services" id="testimonials">
+        {{ $serviceLang := .Site.Language.Lang }}
+        <div class="row g-4">
+          {{ range $shared.services }}
+            {{ $serviceAlt := .alt.en }}
+            {{ with index .alt $serviceLang }}{{ $serviceAlt = . }}{{ end }}
+            {{ $serviceTitle := .title.en }}
+            {{ with index .title $serviceLang }}{{ $serviceTitle = . }}{{ end }}
+            {{ $serviceTagline := .tagline.en }}
+            {{ with index .tagline $serviceLang }}{{ $serviceTagline = . }}{{ end }}
+            {{ $serviceBody := .body.en }}
+            {{ with index .body $serviceLang }}{{ $serviceBody = . }}{{ end }}
+            {{ $serviceHref := .href }}
+            {{ if not (or (hasPrefix $serviceHref "http://") (hasPrefix $serviceHref "https://") (hasPrefix $serviceHref "#")) }}
+              {{ $serviceHref = $serviceHref | relLangURL }}
+            {{ end }}
+            <div class="col-md-6 col-lg-4">
+              <article class="opg-service-card">
+                <a href="{{ $serviceHref }}"><img src="{{ .image | safeURL }}" alt="{{ $serviceAlt }}"></a>
+                <h4>{{ $serviceTitle }}</h4>
+                <p class="opg-service-tagline">{{ $serviceTagline }}</p>
+                <p>{{ $serviceBody }}</p>
+              </article>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+
+      <section class="opg-newsletter" id="newsletter" style="--opg-newsletter-image: url({{ $shared.newsletter_image | safeURL }});">
+        {{ $newsletterHref := $home.newsletter.button_href | default "newsletter/index.html" }}
+        {{ if not (or (hasPrefix $newsletterHref "http://") (hasPrefix $newsletterHref "https://") (hasPrefix $newsletterHref "#")) }}
+          {{ $newsletterHref = $newsletterHref | relLangURL }}
+        {{ end }}
+        <div class="opg-newsletter-inner">
+          <h2>{{ $home.newsletter.title | default "Subscribe to our Newsletter" }}</h2>
+          <a class="btn btn-primary" href="{{ $newsletterHref }}">{{ $home.newsletter.button_text | default "Subscribe" }}</a>
+        </div>
+      </section>
+
+      <h2 id="our-geoninjas">{{ $shared.geoninjas_heading | default "Our GeoNinjas" }}</h2>
+      <p class="team-lead">{{ $shared.geoninjas_lead }}</p>
+      {{ with site.Data.geoninjas }}
+      {{ $fallbackTeam := "Team 42" }}
+      {{ $teamFilterScratch := newScratch }}
+      {{ $teamFilterScratch.Set "filters" (slice) }}
+      {{ $teamFilterScratch.Set "hasFallback" false }}
+      {{ range .cards }}
+        {{ with .team }}
+          {{ $teamLabel := . }}
+          {{ $teamKey := lower (urlize $teamLabel) }}
+          {{ if not ($teamFilterScratch.Get $teamKey) }}
+            {{ $teamFilterScratch.Set $teamKey true }}
+            {{ $teamFilterScratch.Add "filters" (slice (dict "key" $teamKey "label" $teamLabel)) }}
+          {{ end }}
+        {{ else }}
+          {{ $teamFilterScratch.Set "hasFallback" true }}
+        {{ end }}
+      {{ end }}
+      {{ if ($teamFilterScratch.Get "hasFallback") }}
+        {{ $fallbackKey := lower (urlize $fallbackTeam) }}
+        {{ if not ($teamFilterScratch.Get $fallbackKey) }}
+          {{ $teamFilterScratch.Set $fallbackKey true }}
+          {{ $teamFilterScratch.Add "filters" (slice (dict "key" $fallbackKey "label" $fallbackTeam)) }}
+        {{ end }}
+      {{ end }}
+      {{ $teamFilters := $teamFilterScratch.Get "filters" }}
+      <section class="team-grid" id="{{ .section_id | default `team` }}" data-team-filter-root>
+        <h3 class="team-filter-heading">{{ $shared.geoninjas_teams_heading | default "Meet Our Teams" }}</h3>
+        <div class="team-filters" role="toolbar" aria-label="Team filters">
+          <button type="button" class="team-filter is-active" data-team-filter="all" aria-pressed="true">ALL</button>
+          {{ range $teamFilters }}
+            {{ $teamButtonLabel := replaceRE `(?i)^team\s+` "" .label }}
+            <button type="button" class="team-filter" data-team-filter="{{ .key }}" aria-pressed="false">{{ $teamButtonLabel }}</button>
+          {{ end }}
+        </div>
+        <p class="team-filter-caption">{{ $shared.geoninjas_teams_caption | default "Discover all our teams and their expertise." }}</p>
+        <div class="team-grid__items">
+          {{ range .cards }}
+            {{ $cardTeam := .team | default $fallbackTeam }}
+            {{ $cardTeamKey := lower (urlize $cardTeam) }}
+            {{ $cardTeamLabel := $cardTeam }}
+            <article class="team-card" data-team="{{ $cardTeamKey }}">
+              <img src="{{ .image | safeURL }}" alt="{{ .alt }}">
+              <div class="team-card__body">
+                <h3>{{ .name }}</h3>
+                <p class="team-role">{{ .role }}</p>
+                <p class="team-team">{{ $cardTeamLabel }}</p>
+                <div class="team-links">
+                  {{ range .links }}
+                    {{ $labelKey := lower (trim .label " ") }}
+                    {{ $iconClass := "bi-link-45deg" }}
+                    {{ if eq $labelKey "github" }}
+                      {{ $iconClass = "bi-github" }}
+                    {{ else if eq $labelKey "twitter" }}
+                      {{ $iconClass = "bi-twitter-x" }}
+                    {{ else if eq $labelKey "linkedin" }}
+                      {{ $iconClass = "bi-linkedin" }}
+                    {{ else if eq $labelKey "mastodon" }}
+                      {{ $iconClass = "bi-mastodon" }}
+                    {{ else if eq $labelKey "website" }}
+                      {{ $iconClass = "bi-globe2" }}
+                    {{ end }}
+                    <a href="{{ .url | safeURL }}" target="_blank" rel="noopener" aria-label="{{ .label }}" title="{{ .label }}">
+                      <i class="bi {{ $iconClass }}" aria-hidden="true"></i>
+                    </a>
+                  {{ end }}
+                </div>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+
+      <h2 id="blog">{{ $shared.blog_heading | default "Blog" }}</h2>
+      <h5 id="blog-lead">{{ $shared.blog_subheading }}</h5>
+      <section class="opg-blog">
+        <div class="row g-4">
+          {{ $blogPosts := first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
+          {{ range $blogPosts }}
+            {{ $cardImage := "" }}
+            {{ with .Params.cover }}
+              {{ with .image }}
+                {{ $cardImage = . }}
+              {{ end }}
+            {{ end }}
+            {{ if not $cardImage }}
+              {{ with .Params.image }}
+                {{ $cardImage = . }}
+              {{ end }}
+            {{ end }}
+            {{ if not $cardImage }}
+              {{ $matches := findRE `(?i)<img[^>]+src=["']([^"']+)` .Content 1 }}
+              {{ if gt (len $matches) 0 }}
+                {{ $cardImage = replaceRE `(?i).*src=["']([^"']+).*` "$1" (index $matches 0) }}
+              {{ end }}
+            {{ end }}
+            <div class="col-md-6 col-lg-4">
+              <article class="opg-blog-card">
+                {{ if $cardImage }}<a href="{{ .RelPermalink }}"><img src="{{ $cardImage | safeURL }}" alt="{{ .Title }}"></a>{{ end }}
+                <div class="opg-blog-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+                <p>{{ (.Params.description | default .Summary | plainify) | truncate 280 }}</p>
+              </article>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+
+      <h2 id="clients">Clients</h2>
+      <section class="opg-clients">
+        <div class="opg-clients-row">
+          {{ range $shared.clients }}
+            <a href="{{ .href | safeURL }}"><img src="{{ .image | safeURL }}" alt="{{ .alt }}"></a>
+          {{ end }}
+        </div>
+      </section>
+
+      <section class="opg-contact" id="contact" style="--opg-contact-image: url({{ $shared.contact.image | safeURL }});">
+        <div class="opg-contact-inner container">
+          <div class="opg-contact-content opg-contact-simple">
+            <h2>{{ $home.contact.title | default "Get in Touch" }}</h2>
+            <p>{{ $home.contact.lead | default "We look forward to working with you on your next project." }}</p>
+            <div class="opg-contact-simple-block">
+              <p class="opg-contact-label">{{ $home.contact.office_label | default "Visit us at an office" }}</p>
+              <p>{{ $shared.contact.office_locations }}</p>
+            </div>
+            <div class="opg-contact-simple-block">
+              <p class="opg-contact-label">{{ $home.contact.write_label | default "Write us" }}</p>
+              <p class="opg-contact-email">
+                <a href="mailto:{{ $shared.contact.email }}">{{ $shared.contact.email }}</a>
+              </p>
+              <p>{{ delimit $shared.contact.company_lines "<br />" | safeHTML }}</p>
+              <hr />
+              <p class="opg-contact-detail">{{ $home.contact.vat_label | default "VAT Number CHE-183.516.448 MWST" }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 </main>

@@ -1,12 +1,7 @@
 ---
 title: "Kursanmeldung – OPENGIS.ch"
 source: "www.opengis.ch/de/kursanmeldung/index.html"
+aliases:
+- /de/kursanmeldung/
 ---
-
-##### Recent Posts
-  - [QField at FOSS4G 2025 Auckland](<../2026/01/07/qfield-at-foss4g-2025-auckland/index.html>) 2026-01-07
-  - [QField 4.0 “Aare”: Unlocking a great spatial experience for a larger audience](<../2025/12/17/qfield-4-0-aare-unlocking-a-great-spatial-experience-for-a-larger-audience/index.html>) 2025-12-17
-  - [Looking at recent QFieldCloud storage handling improvements](<../2025/10/09/looking-at-recent-qfieldcloud-storage-handling-improvements/index.html>) 2025-10-09
-  - [Future-Proof mit Model Baker 8](<../2025/09/16/future-proof-mit-model-baker-8/index.html>) 2025-09-16
-
 

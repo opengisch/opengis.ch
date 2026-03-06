@@ -1,6 +1,8 @@
 ---
 title: "La nostra iniziativa di sostenibilità QGIS – OPENGIS.ch"
 source: "www.opengis.ch/it/la-nostra-iniziativa-di-sostenibilita-qgis/index.html"
+aliases:
+- /it/la-nostra-iniziativa-di-sostenibilita-qgis/
 ---
 
 [QGIS](<https://qgis.org/>) is very popular because it is extremely powerful, flexible and stable and can be used without having to worry about licenses or vendor lock-in. 

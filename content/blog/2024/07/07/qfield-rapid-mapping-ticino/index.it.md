@@ -11,15 +11,7 @@ image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2024/07/qfield-rapidmappera
 [Aiuta adesso](<https://forms.gle/dkjZsSWdmCzr9xic8>)
 ## **OPENGIS.ch supporta gli sforzi di mappatura delle inondazioni in Ticino**
 Dopo aver discusso con la [Protezione Civile Locarno e Valle Maggia](<http://pcilocarno.ch/>) e il [Centro di Competenza per la Geoinformazione](<https://www4.ti.ch/dt/sg/sai/ugeo/chi-siamo/presentazione/>) (CCGEO), siamo orgogliosi di annunciare che OPENGIS.ch sta donando l’infrastruttura necessaria di QFieldCloud e progetti dedicati per un rapido POC di crowdsourcing per aiutare a mappare le inondazioni del 2024 in Ticino. Questa iniziativa di crowdsourcing mira a fornire supporto essenziale a professionisti e volontari che lavorano nella valutazione e nel recupero dalle inondazioni e dalle frane.
-<div class="blog-embed-video">
-  <iframe
-    src="https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false"
-    title="RSI video about rapid mapping in Ticino"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false" title="RSI video about rapid mapping in Ticino" >}}
 
 [https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false](<https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false>)
 
@@ -39,15 +31,7 @@ Usando QField e QFieldCloud, puoi aiutare a creare mappe dettagliate cruciali pe
 Visita la nostra pagina del progetto [QField Rapid Mapper](</qfield-rapidmapper/index.html>) per ulteriori informazioni su come QField e QFieldCloud possono aiutare nella mappatura di catastrofi naturali e in altri progetti di raccolta dati sul campo.
 Insieme, possiamo fare la differenza. Unisciti a noi nella mappatura delle inondazioni in Ticino e supporta gli sforzi di recupero della comunità.
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/4o4Q5n8X"
-    title="VideoPress video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/4o4Q5n8X" title="VideoPress video" >}}
 
 [https://videopress.com/embed/4o4Q5n8X](<https://videopress.com/embed/4o4Q5n8X>)
 

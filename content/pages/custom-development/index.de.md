@@ -1,6 +1,8 @@
 ---
 title: "Individuelle Entwicklung – OPENGIS.ch"
 source: "www.opengis.ch/de/entwicklung/index.html"
+aliases:
+- /de/entwicklung/
 ---
 
 > Wir lieben es, Anforderungen zu diskutieren und visionäre Lösungen dafür zu finden. Wir sind bestrebt, ausserordentlichen Wert für unsere Kunden zu generieren. Stets mit dem Menschen im Zentrum – Hi-Tech wo elegant, Low-Tech wo sinnvoll.

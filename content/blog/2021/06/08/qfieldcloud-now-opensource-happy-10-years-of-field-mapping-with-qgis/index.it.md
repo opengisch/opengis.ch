@@ -133,63 +133,23 @@ Going into all releases would be so much information that this post would turn i
 Yesterday we published QField 1.9.6, which is going to be the last 1.X release and will put QField 2.0 into the beta channel so that every beta tester can start using [QFieldCloud](<https://qfield.cloud/>) without having to use the [developer version](<https://play.google.com/store/apps/details?id=ch.opengis.qfield_dev>). 
 But that is a different story and you can read all about it in our latest [newsletter](<https://mailchi.mp/opengis.ch/seamless-fieldwork-with-qfieldcloud-is-around-the-corner#qfieldcloud>)…
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/27793965"
-    title="Vimeo video 27793965"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/27793965" title="Vimeo video 27793965" >}}
 
 [https://vimeo.com/27793965](<https://vimeo.com/27793965>)
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/27854857"
-    title="Vimeo video 27854857"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/27854857" title="Vimeo video 27854857" >}}
 
 [https://vimeo.com/27854857](<https://vimeo.com/27854857>)
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/36862461"
-    title="Vimeo video 36862461"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/36862461" title="Vimeo video 36862461" >}}
 
 [https://vimeo.com/36862461](<https://vimeo.com/36862461>)
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/75261402"
-    title="Vimeo video 75261402"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/75261402" title="Vimeo video 75261402" >}}
 
 [https://vimeo.com/75261402](<https://vimeo.com/75261402>)
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/116231850"
-    title="Vimeo video 116231850"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/116231850" title="Vimeo video 116231850" >}}
 
 [https://vimeo.com/116231850](<https://vimeo.com/116231850>)
 

@@ -1,6 +1,10 @@
 ---
 title: "Book QField Jumpstart – OPENGIS.ch"
 source: "www.opengis.ch/de/book-private-course/index.html"
+aliases:
+- /de/book-private-course/index.html
+- /de/book-private-course/indexbc77.html
+- /de/book-private-course/index4953.html
 ---
 
 ##### Recent Posts
@@ -8,5 +12,4 @@ source: "www.opengis.ch/de/book-private-course/index.html"
   - [QField 4.0 “Aare”: Unlocking a great spatial experience for a larger audience](<../2025/12/17/qfield-4-0-aare-unlocking-a-great-spatial-experience-for-a-larger-audience/index.html>) 2025-12-17
   - [Looking at recent QFieldCloud storage handling improvements](<../2025/10/09/looking-at-recent-qfieldcloud-storage-handling-improvements/index.html>) 2025-10-09
   - [Future-Proof mit Model Baker 8](<../2025/09/16/future-proof-mit-model-baker-8/index.html>) 2025-09-16
-
 

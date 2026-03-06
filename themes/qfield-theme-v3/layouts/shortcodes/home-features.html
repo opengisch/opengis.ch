@@ -1,0 +1,26 @@
+{{ with site.Data.home_features }}
+{{ $featureLang := site.Language.Lang }}
+<section class="opg-features" id="features">
+  <div class="row g-4">
+    {{ range .items }}
+      {{ $featureTitle := .title.en }}
+      {{ with index .title $featureLang }}{{ $featureTitle = . }}{{ end }}
+      {{ $featureBody := .body.en }}
+      {{ with index .body $featureLang }}{{ $featureBody = . }}{{ end }}
+      <div class="col-md-6 col-lg-4">
+        <article class="opg-feature-card">
+          <div class="opg-icon">
+            {{ if eq .icon.type "image" }}
+              <img src="{{ .icon.value | safeURL }}" alt="{{ .icon.alt }}">
+            {{ else }}
+              <i class="{{ .icon.value }}"></i>
+            {{ end }}
+          </div>
+          <h3>{{ $featureTitle }}</h3>
+          <p>{{ $featureBody | safeHTML }}</p>
+        </article>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

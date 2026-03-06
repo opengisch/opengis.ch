@@ -47,6 +47,30 @@
   "consulenza"
   "calendario-corsi"
   "iscrizione-corsi"
+  "courses"
+  "qgis-courses"
+  "qfield-courses"
+  "interlis-model-baker-courses"
+  "postgis-courses"
+  "pyqgis-courses"
+  "kurse"
+  "qgis-kurse"
+  "qfield-kurse"
+  "interlis-model-baker-kurse"
+  "postgis-kurse"
+  "pyqgis-kurse"
+  "cours"
+  "cours-qgis"
+  "cours-qfield"
+  "cours-interlis-model-baker"
+  "cours-postgis"
+  "cours-pyqgis"
+  "corsi"
+  "corsi-qgis"
+  "corsi-qfield"
+  "corsi-interlis-model-baker"
+  "corsi-postgis"
+  "corsi-pyqgis"
 }}
 {{ $relPath := trim .RelPermalink "/" }}
 {{ $relSegments := split $relPath "/" }}
@@ -93,6 +117,67 @@
   {{ $jumpStartSlug := lower . }}
   {{ if or (eq $slug $jumpStartSlug) (in $pathCandidates (printf "/%s/" $jumpStartSlug)) }}
     {{ $isJumpStartPage = true }}
+  {{ end }}
+{{ end }}
+{{ $orderSupportContractSlugs := slice "order-support-contract" }}
+{{ $isOrderSupportContractPage := false }}
+{{ range $orderSupportContractSlugs }}
+  {{ $orderSupportContractSlug := lower . }}
+  {{ if or (eq $slug $orderSupportContractSlug) (in $pathCandidates (printf "/%s/" $orderSupportContractSlug)) }}
+    {{ $isOrderSupportContractPage = true }}
+  {{ end }}
+{{ end }}
+{{ $bookPrivateCourseSlugs := slice "book-private-course" }}
+{{ $isBookPrivateCoursePage := false }}
+{{ range $bookPrivateCourseSlugs }}
+  {{ $bookPrivateCourseSlug := lower . }}
+  {{ if or (eq $slug $bookPrivateCourseSlug) (in $pathCandidates (printf "/%s/" $bookPrivateCourseSlug)) }}
+    {{ $isBookPrivateCoursePage = true }}
+  {{ end }}
+{{ end }}
+{{ $coursesCalendarSlugs := slice
+  "courses-calendar"
+  "kurskalender"
+  "calendrier-des-cours"
+  "calendario-corsi"
+  "courses"
+  "qgis-courses"
+  "qfield-courses"
+  "interlis-model-baker-courses"
+  "postgis-courses"
+  "pyqgis-courses"
+  "kurse"
+  "qgis-kurse"
+  "qfield-kurse"
+  "interlis-model-baker-kurse"
+  "postgis-kurse"
+  "pyqgis-kurse"
+  "cours"
+  "cours-qgis"
+  "cours-qfield"
+  "cours-interlis-model-baker"
+  "cours-postgis"
+  "cours-pyqgis"
+  "corsi"
+  "corsi-qgis"
+  "corsi-qfield"
+  "corsi-interlis-model-baker"
+  "corsi-postgis"
+  "corsi-pyqgis"
+}}
+{{ $isCoursesCalendarPage := false }}
+{{ range $coursesCalendarSlugs }}
+  {{ $coursesCalendarSlug := lower . }}
+  {{ if or (eq $slug $coursesCalendarSlug) (in $pathCandidates (printf "/%s/" $coursesCalendarSlug)) }}
+    {{ $isCoursesCalendarPage = true }}
+  {{ end }}
+{{ end }}
+{{ $courseRegistrationSlugs := slice "course-registration" "kursanmeldung" "inscriptions-aux-cours" "iscrizione-corsi" }}
+{{ $isCourseRegistrationPage := false }}
+{{ range $courseRegistrationSlugs }}
+  {{ $courseRegistrationSlug := lower . }}
+  {{ if or (eq $slug $courseRegistrationSlug) (in $pathCandidates (printf "/%s/" $courseRegistrationSlug)) }}
+    {{ $isCourseRegistrationPage = true }}
   {{ end }}
 {{ end }}
 {{ $contentHero := "" }}
@@ -586,6 +671,231 @@
       </section>
     </div>
   </article>
+{{ else if $isOrderSupportContractPage }}
+  {{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+  {{ $defaultClickupSrc := "https://forms.clickup.com/2192114/f/22wqj-2157/SV25SH6NBJMYBMCTFW?Plan=Personal%20(2%20Days)&Days=2" }}
+  <article class="custom-dev-page generic-single-page service-page order-support-contract-page">
+    <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+      <div class="container">
+        <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="generic-single-content">
+        {{ .Content }}
+      </div>
+      <div class="order-support-contract-form">
+        <iframe
+          id="cu-form"
+          class="clickup-embed clickup-dynamic-height order-support-contract-iframe"
+          src="about:blank"
+          data-clickup-src="{{ $defaultClickupSrc | safeURL }}"
+          onwheel=""
+          width="100%"
+          height="100%"
+          style="background: transparent; border: 1px solid #ccc;"
+          loading="lazy"
+          title="Order support contract"
+        ></iframe>
+        <p class="order-support-contract-fallback">
+          If the embedded form does not load, open it in a new tab:
+          <a data-order-support-clickup-link href="{{ $defaultClickupSrc | safeURL }}" target="_blank" rel="noopener">Open order form</a>
+        </p>
+      </div>
+    </div>
+  </article>
+{{ else if $isBookPrivateCoursePage }}
+  {{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+  {{ $bookPrivateCourseClickupSrc := "https://forms.clickup.com/f/22wqj-11141/2YYC027R5B98SX991E" }}
+  <article class="custom-dev-page generic-single-page service-page book-private-course-page">
+    <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+      <div class="container">
+        <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="book-private-course-form">
+        <iframe
+          id="book-private-course-form"
+          class="clickup-embed clickup-dynamic-height book-private-course-iframe"
+          src="about:blank"
+          data-clickup-src="{{ $bookPrivateCourseClickupSrc | safeURL }}"
+          onwheel=""
+          width="100%"
+          height="100%"
+          style="background: transparent; border: 1px solid #ccc; overflow: hidden;"
+          loading="lazy"
+          title="Book private course"
+        ></iframe>
+        <p class="book-private-course-fallback">
+          If the embedded form does not load, open it in a new tab:
+          <a data-book-private-course-clickup-link href="{{ $bookPrivateCourseClickupSrc | safeURL }}" target="_blank" rel="noopener">Open booking form</a>
+        </p>
+      </div>
+    </div>
+  </article>
+{{ else if $isCoursesCalendarPage }}
+  {{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+  {{ $coursesCalendarEmbedByLang := dict
+    "en" "https://sharing.clickup.com/2192114/l/22wqj-29741/upcomingcourses"
+    "de" "https://sharing.clickup.com/2192114/l/22wqj-24361/nchste-kurse"
+    "fr" "https://sharing.clickup.com/2192114/l/22wqj-24401/prochainscours"
+    "it" "https://sharing.clickup.com/2192114/l/h/22wqj-24421/d4691a34ef6fc1d"
+  }}
+  {{ $coursesCalendarEmbedSrc := index $coursesCalendarEmbedByLang .Lang | default (index $coursesCalendarEmbedByLang "en") }}
+  {{ $courseArchivePages := slice }}
+  {{ with .Params.course_posts }}
+    {{ range . }}
+      {{ $targetURL := . }}
+      {{ $matches := where $.Site.RegularPages "RelPermalink" "eq" $targetURL }}
+      {{ if eq (len $matches) 0 }}
+        {{ $matches = where $.Site.RegularPages "Params.url" "eq" $targetURL }}
+      {{ end }}
+      {{ if gt (len $matches) 0 }}
+        {{ $courseArchivePages = $courseArchivePages | append (index $matches 0) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  <article class="custom-dev-page generic-single-page service-page courses-calendar-page">
+    <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+      <div class="container">
+        <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      {{ if .Content }}
+        <div class="generic-single-content">
+          {{ .Content }}
+        </div>
+      {{ end }}
+      {{ if gt (len $courseArchivePages) 0 }}
+        <div class="row g-4">
+          {{ range $courseArchivePages }}
+            {{ $post := . }}
+            {{ $postImage := "" }}
+            {{ $imageParam := $post.Param "images" }}
+            {{ if $imageParam }}
+              {{ $imagePath := "" }}
+              {{ $imageParamType := printf "%T" $imageParam }}
+              {{ if or (eq $imageParamType "[]string") (eq $imageParamType "[]interface {}") }}
+                {{ if gt (len $imageParam) 0 }}
+                  {{ $imagePath = index $imageParam 0 }}
+                {{ end }}
+              {{ else }}
+                {{ $imagePath = $imageParam }}
+              {{ end }}
+              {{ with $post.Resources.GetMatch $imagePath }}
+                {{ $postImage = . }}
+              {{ end }}
+            {{ end }}
+            {{ if not $postImage }}
+              {{ with first 1 ($post.Resources.ByType "image") }}
+                {{ $postImage = index . 0 }}
+              {{ end }}
+            {{ end }}
+            {{ $contentImage := "" }}
+            {{ if not $postImage }}
+              {{ $matches := findRE `(?i)<img[^>]+src=["']([^"']+)` $post.Content 1 }}
+              {{ if gt (len $matches) 0 }}
+                {{ $contentImage = replaceRE `(?i).*src=["']([^"']+).*` "$1" (index $matches 0) }}
+              {{ else }}
+                {{ $mdMatches := findRE `!\\[[^\\]]*\\]\\(([^\\s\\)]+)\\)` $post.RawContent 1 }}
+                {{ if gt (len $mdMatches) 0 }}
+                  {{ $contentImage = replaceRE `!\\[[^\\]]*\\]\\(([^\\)\\s]+).*` "$1" (index $mdMatches 0) }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            {{ $summary := $post.Params.description | default $post.Summary }}
+            <div class="col-12">
+              <article class="card border-0 shadow-sm overflow-hidden h-100">
+                <div class="row g-0">
+                  <div class="col-12 col-md-4">
+                    <div class="ratio ratio-16x9 h-100 bg-light">
+                      {{ if $postImage }}
+                        {{ $thumb := $postImage.Fill "720x420 Center webp" }}
+                        <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy" alt="{{ $post.Title }}">
+                      {{ else if $contentImage }}
+                        <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ $contentImage | safeURL }}" loading="lazy" alt="{{ $post.Title }}">
+                      {{ else }}
+                        <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ "/images/qfield_blog_default.png" | relURL }}" loading="lazy" alt="{{ $post.Title }}">
+                      {{ end }}
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-8">
+                    <div class="card-body d-flex flex-column h-100">
+                      <div class="small text-uppercase text-muted mb-2">
+                        <time datetime="{{ $post.Lastmod.Format `2006-01-02T15:04:05Z0700` | safeHTML }}">{{ $post.Lastmod | time.Format ":date_long" }}</time>
+                      </div>
+                      <h2 class="h5 card-title text-primary mb-3">{{ $post.Title }}</h2>
+                      <div class="text-muted mb-2">{{ $summary | plainify | truncate 240 }}</div>
+                      <a class="stretched-link" href="{{ $post.RelPermalink }}"></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          {{ end }}
+        </div>
+      {{ else }}
+        <div class="courses-calendar-embed">
+          <iframe
+            class="clickup-embed courses-calendar-iframe"
+            src="{{ $coursesCalendarEmbedSrc | safeURL }}"
+            onwheel=""
+            width="100%"
+            height="100%"
+            loading="lazy"
+            title="{{ $displayTitle }}"
+          ></iframe>
+        </div>
+      {{ end }}
+    </div>
+  </article>
+{{ else if $isCourseRegistrationPage }}
+  {{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+  {{ $courseRegistrationFormByLang := dict
+    "en" "https://forms.clickup.com/f/22wqj-2612/1WH6MLMKJU0Z09R6TN?websubscription=1&language=EN"
+    "de" "https://forms.clickup.com/f/22wqj-2619/HCF1F5H8I0XW2NFPAB?websubscription=1&language=DE"
+    "fr" "https://forms.clickup.com/f/22wqj-2626/7SL7ZOGK3X7MJBKJ0A?websubscription=1&language=FR"
+    "it" "https://forms.clickup.com/f/22wqj-2633/2MZ5XCHYGCZOJ8A0Y3?websubscription=1&language=IT"
+  }}
+  {{ $courseRegistrationFormSrc := index $courseRegistrationFormByLang .Lang | default (index $courseRegistrationFormByLang "en") }}
+  <article class="custom-dev-page generic-single-page service-page course-registration-page">
+    <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+      <div class="container">
+        <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      {{ if .Content }}
+        <div class="generic-single-content">
+          {{ .Content }}
+        </div>
+      {{ end }}
+      <div class="course-registration-form">
+        <iframe
+          id="course-registration-form"
+          class="clickup-embed clickup-dynamic-height course-registration-iframe"
+          src="about:blank"
+          data-clickup-src="{{ $courseRegistrationFormSrc | safeURL }}"
+          onwheel=""
+          width="100%"
+          height="100%"
+          style="background: transparent; border: 1px solid #ccc;"
+          loading="lazy"
+          title="{{ $displayTitle }}"
+        ></iframe>
+        <p class="course-registration-fallback">
+          If the embedded form does not load, open it in a new tab:
+          <a data-course-registration-clickup-link href="{{ $courseRegistrationFormSrc | safeURL }}" target="_blank" rel="noopener">Open registration form</a>
+        </p>
+      </div>
+    </div>
+  </article>
 {{ else if $isCustomDevelopmentPage }}
   {{ $raw := .RawContent }}
   {{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
@@ -711,6 +1021,9 @@
     </article>
   {{ else }}
     {{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+    {{ $pageContent := .Content }}
+    {{ $pageContent = replaceRE `(?is)<iframe[^>]*src=["']([^"']*clickup[^"']*)["'][^>]*>\s*</iframe>` `<p><a href="$1" target="_blank" rel="noopener">Open this form in a new tab</a></p>` $pageContent }}
+    {{ $pageContent = replaceRE `(?is)<script[^>]*src=["'][^"']*app-cdn\.clickup\.com[^"']*["'][^>]*>\s*</script>` `` $pageContent }}
     <article class="custom-dev-page generic-single-page{{ if $isServicePage }} service-page{{ end }}">
       <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
         <div class="container">
@@ -720,7 +1033,7 @@
 
       <div class="container">
         <div class="generic-single-content">
-          {{ .Content }}
+          {{ $pageContent | safeHTML }}
         </div>
       </div>
     </article>

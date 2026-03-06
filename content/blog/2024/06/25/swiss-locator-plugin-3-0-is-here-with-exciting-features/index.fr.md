@@ -35,15 +35,7 @@ See the [official services documentation](<https://www.geo.admin.ch/en/vector-ti
 Thanks to your feedback, we’ve also fixed some issues. Don’t hesitate to reach out to us at [GitHub](<https://github.com/opengisch/qgis-swiss-locator/>) if you’d like to suggest or report something related to the Swiss Locator plugin.
 Happy (and now more powerful) mapping! 🗺️🚀
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/GVxzoz7j"
-    title="VideoPress video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/GVxzoz7j" title="VideoPress video" >}}
 
 [https://videopress.com/embed/GVxzoz7j](<https://videopress.com/embed/GVxzoz7j>)
 

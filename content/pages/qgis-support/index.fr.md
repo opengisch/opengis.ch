@@ -1,6 +1,8 @@
 ---
 title: "Support et maintenance QGIS – OPENGIS.ch"
 source: "www.opengis.ch/fr/support-qgis/index.html"
+aliases:
+- /fr/support-qgis/
 ---
 
 > Nous prenons le support et la maintenance de vos déploiements très au sérieux. C’est pourquoi nous sommes fiers de pouvoir proposer des contrats de support avec des accords de niveau de services (SLA). En souscrivant à nos contrats de support, vous participez également à notre [initiative pour l’amélioration de QGIS](<../qgis-sustainability-initiative/index.html>). Marco Bernasocchi, CEO
@@ -24,7 +26,7 @@ SLA de base inclus
 Pas d’extension SLAs
 Pas de jours d’itiative pour l’amélioration de QGIS
 5% de réduction dès la deuxième année
-[Commander](<../order-support-contract/index7ac1.html?days=2>)
+[Commander](<../order-support-contract/?days=2>)
 ##### Startup
 * * *
 ### 5 jours
@@ -33,7 +35,7 @@ SLA de base inclus
 Pas d’extension SLAs
 Pas de jours d’itiative pour l’amélioration de QGIS
 5% de réduction dès la deuxième année
-[Commander](<../order-support-contract/index58b3.html?days=5>)
+[Commander](<../order-support-contract/?days=5>)
 ##### Business
 * * *
 ### 10 jours
@@ -42,7 +44,7 @@ SLA de base inclus
 Possibilité d’extensions SLAs
 0.5 jours d’itiative pour l’amélioration de QGIS
 5% de réduction dès la deuxième année
-[Commander](<../order-support-contract/indexe55b.html?days=10>)
+[Commander](<../order-support-contract/?days=10>)
 ##### Enterprise
 * * *
 ### 10+ jours
@@ -51,7 +53,7 @@ SLA de base inclus
 Possibilité d’extensions SLAs
 1+ jours d’itiative pour l’amélioration de QGIS
 5% de réduction dès la deuxième année
-[Commander](<../order-support-contract/indexdc5b.html?days=0>)
+[Commander](<../order-support-contract/?days=0>)
 ## Contrat de niveau de service
 En plus de chaque contrat de support, vous pouvez demander le contrat de niveau de service annuel qui correspond le mieux à vos besoins. Nous faisons toujours de notre mieux pour vous assister aussi tôt que possible, mais durant certaines périodes, cela peut prendre un peu plus de temps. Nous comprenons qu’un temps de réponse minimal est crucial pour votre entreprise. C’est pourquoi nous vous offrons la possibilité d’un temps de réponse garanti. 
 ##### Basic

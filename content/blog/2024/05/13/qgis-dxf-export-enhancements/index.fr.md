@@ -28,27 +28,11 @@ Override output layer names for DXF export.
 We’ve also fixed some minor UX bugs and annoyances that were present when exporting layers to DXF format, so that we can enjoy using it. Happy DXF exporting!
 We would like to thank the Swiss QGIS user group for giving us the possibility to improve the important DXF part of QGIS 🚀🚀🚀
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/Bil3Kbew"
-    title="VideoPress video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/Bil3Kbew" title="VideoPress video" >}}
 
 [https://videopress.com/embed/Bil3Kbew](<https://videopress.com/embed/Bil3Kbew>)
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/IPjIkQxv"
-    title="VideoPress video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/IPjIkQxv" title="VideoPress video" >}}
 
 [https://videopress.com/embed/IPjIkQxv](<https://videopress.com/embed/IPjIkQxv>)
 

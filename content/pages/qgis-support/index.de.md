@@ -1,6 +1,8 @@
 ---
 title: "QGIS Supportverträge – OPENGIS.ch"
 source: "www.opengis.ch/de/qgis-support-wartung/index.html"
+aliases:
+- /de/qgis-support-wartung/
 ---
 
 > Uns liegen Sie und Ihre Installationen am Herzen. Das ist auch der Grund warum uns Support und Wartung enorm wichtig sind. Wir sind stolz darauf, Supportverträge mit SLAs anbieten zu können. Ausserdem unterstützen Sie mit einem OPENGIS.ch Supportvertrag die QGIS [Nachhaltigkeitsinitiative](<../qgis-sustainability-initiative/index.html>). Marco Bernasocchi, CEO
@@ -24,7 +26,7 @@ Basic SLA inklusive
 Keine erweiterten SLAs möglich
 Keine QGIS Nachhaltigkeitsinitiativtage
 5% Rabatt ab dem zweiten Jahr
-[Anfrage](<../order-support-contract/index7ac1.html?days=2>)
+[Anfrage](<../order-support-contract/?days=2>)
 ##### Startup
 * * *
 ### 5 Supporttage
@@ -33,7 +35,7 @@ Basic SLA inklusive
 Keine erweiterten SLAs möglich
 Keine QGIS Nachhaltigkeitsinitiativtage
 5% Rabatt ab dem zweiten Jahr
-[Anfrage](<../order-support-contract/index58b3.html?days=5>)
+[Anfrage](<../order-support-contract/?days=5>)
 ##### Business
 * * *
 ### 10 Supporttage
@@ -42,7 +44,7 @@ Basic SLA inklusive
 Erweiterten SLAs möglich
 0.5 QGIS Nachhaltigkeitsinitiativtage
 5% Rabatt ab dem zweiten Jahr
-[Anfrage](<../order-support-contract/indexe55b.html?days=10>)
+[Anfrage](<../order-support-contract/?days=10>)
 ##### Enterprise
 * * *
 ### 10+ Supporttage
@@ -51,7 +53,7 @@ Basic SLA inklusive
 Erweiterten SLAs möglich
 1+ Nachhaltigkeitsinitiativtage
 5% Rabatt ab dem zweiten Jahr
-[Anfrage](<../order-support-contract/indexdc5b.html?days=0>)
+[Anfrage](<../order-support-contract/?days=0>)
 ## Service level agreement
 Als weiterer bestandteil der Supportverträge sind Service Level Agreements verfügbar. Wir tun immer unser Bestes, um uns so schnell wie möglich bei Ihnen zu melden. In sehr geschäftigen Zeiten können die Antworten jedoch etwas länger dauern. Wir wissen, dass eine garantierte maximale Antwortzeit für Ihr Unternehmen von entscheidender Bedeutung sein kann. Deshalb bieten wir Ihnen die Möglichkeit, Ihren Supportvertrag mit einem höheren SLA zu verbessern. 
 ##### Basic

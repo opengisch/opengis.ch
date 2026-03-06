@@ -1,6 +1,8 @@
 ---
 title: "Nos valeurs – OPENGIS.ch"
 source: "www.opengis.ch/fr/nos-valeurs/index.html"
+aliases:
+- /fr/nos-valeurs/
 ---
 
 ## Vision

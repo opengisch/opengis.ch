@@ -34,15 +34,7 @@ You can easily install QField using the Playstore (<https://qfield.org/get>), fi
 QField, like QGIS, is an open source project. Everyone is welcome to contribute making the product even better – whether it is with financial support, [enthusiastic programming](<https://github.com/opengisch/QField>), [translation](<https://www.transifex.com/opengisch/qfield-for-qgis/>) and [documentation work](<https://www.qfield.org/docs/index.html>) or [visionary ideas](<https://github.com/opengisch/QField/issues>).
 If you want to help us build a better QField or QGIS, or need any services related to the whole QGIS stack don’t hesitate to [contact us](</%23contact.html>).
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/323697787"
-    title="Vimeo video 323697787"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/323697787" title="Vimeo video 323697787" >}}
 
 [https://vimeo.com/323697787](<https://vimeo.com/323697787>)
 

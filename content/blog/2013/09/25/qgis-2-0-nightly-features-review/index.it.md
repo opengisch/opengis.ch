@@ -20,15 +20,7 @@ Here a non exhaustive list of what is getting into this awesome package:
 Beside the whole UI and stability work, the nicest feature is probably the mbtiles support. mbtiles are raster tiles in a sqlite database and are blazing fast, have a look at it in the video below.  
 For now, you still need to use the [QGIS installer](<https://android.qgis.org/get/qgis.apk>), but i’m already working on a strategy to soon get the package in the play store, so stay tuned for more super exciting android QGIS times to come, and of course, if you or anyone you know can [buy me a glass of wine](<https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AAD9GMZA99B46>) I’ll be a merry coder 🙂  
   
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/75261402"
-    title="Vimeo video 75261402"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/75261402" title="Vimeo video 75261402" >}}
 
 [https://vimeo.com/75261402](<https://vimeo.com/75261402>)
 

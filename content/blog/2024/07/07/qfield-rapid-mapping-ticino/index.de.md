@@ -11,15 +11,7 @@ QField and QFieldCloud are **open-source** , and OPENGIS.ch is donating the need
 [Join the effort](<https://forms.gle/dkjZsSWdmCzr9xic8>)
 ## OPENGIS.ch Supports Flood Mapping Efforts in Ticino
 After discussing with the [Protezione Civile Locarno e Valle Maggia](<https://pcilocarno.ch/>) and the [Centro di Competenza per la geoinformazione (CCGEO)](<https://www4.ti.ch/dt/sg/sai/ugeo/chi-siamo/presentazione/>), we are proud to announce that OPENGIS.ch is donating the necessary QFieldCloud infrastructure and dedicated projects for a rapid crowdsourcing POC to aid in mapping the 2024 floods in Ticino. This crowdsourcing initiative aims to provide essential support to professionals and volunteers working on flood and landslide assessment and recovery.
-<div class="blog-embed-video">
-  <iframe
-    src="https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false"
-    title="RSI video about rapid mapping in Ticino"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false" title="RSI video about rapid mapping in Ticino" >}}
 
 [https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false](<https://www.rsi.ch/play/embed?urn=urn:rsi:video:2191880&subdivisions=false>)
 
@@ -39,15 +31,7 @@ Using QField and QFieldCloud, you can help create detailed maps crucial for unde
 Visit our [QField Rapid Mapper](</qfield-rapidmapper/index.html>) project page for more information on how QField and QFieldCloud can assist in flood mapping and other field data collection projects.
 Together, we can make a difference. Join us in mapping the floods in Ticino and support the community’s recovery efforts.
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/jsrjp0NU"
-    title="VideoPress video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/jsrjp0NU" title="VideoPress video" >}}
 
 [https://videopress.com/embed/jsrjp0NU](<https://videopress.com/embed/jsrjp0NU>)
 

@@ -26,7 +26,7 @@ Basic SLA included
 No extended SLAs available
 No QGIS Initiative days
 5% discount form the second year
-[Request Now](<../order-support-contract/index7ac1.html?days=2>)
+[Request Now](<../order-support-contract/?days=2>)
 ##### Startup
 * * *
 ### 5 Days support
@@ -35,7 +35,7 @@ Basic SLA included
 No extended SLAs available
 No QGIS Initiative days
 5% discount form the second year
-[Request Now](<../order-support-contract/index58b3.html?days=5>)
+[Request Now](<../order-support-contract/?days=5>)
 ##### Business
 * * *
 ### 10 Days support
@@ -44,7 +44,7 @@ Basic SLA included
 Extended SLAs available
 0.5 QGIS Initiative days
 5% discount form the second year
-[Request Now](<../order-support-contract/indexe55b.html?days=10>)
+[Request Now](<../order-support-contract/?days=10>)
 ##### Enterprise
 * * *
 ### 10+ Days support
@@ -53,7 +53,7 @@ Basic SLA included
 Extended SLAs available
 1+ QGIS Initiative days
 5% discount form the second year
-[Request Now](<../order-support-contract/indexdc5b.html?days=0>)
+[Request Now](<../order-support-contract/?days=0>)
 ## Service level agreement
 Additionally to each support contract, you can order a yearly service level agreement that best suits your business’ needs.   
 We always do our best to get back to you as soon as possible, but in very busy times answers might take a bit longer.   

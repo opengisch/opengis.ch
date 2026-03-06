@@ -15,15 +15,7 @@ Oh, we couldn’t help ourselves but take the opportunity to demonstrate how nic
 Happy field mapping to all!
 _The lovely animal markers used in the zoo example above were made by Serbian artist[Arsenije Vujovic](<https://www.behance.net/gallery/38312723/Animals>)._
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/732691644"
-    title="Vimeo video 732691644"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/732691644" title="Vimeo video 732691644" >}}
 
 [https://vimeo.com/732691644](<https://vimeo.com/732691644>)
 

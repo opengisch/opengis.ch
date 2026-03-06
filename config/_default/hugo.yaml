@@ -31,6 +31,7 @@ sitemap:
   priority: 0.5
 permalinks:
   blog: /:year/:month/:day/:slug/
+  pages: /:contentbasename/
 module:
   hugoVersion:
     extended: true

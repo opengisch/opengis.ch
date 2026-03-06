@@ -1,6 +1,8 @@
 ---
 title: "Sviluppo su misura – OPENGIS.ch"
 source: "www.opengis.ch/it/sviluppo/index.html"
+aliases:
+- /it/sviluppo/
 ---
 
 > We love discussing requirements and create visionary solutions to problems. We always strive to develop, deploy and maintain solutions that offer exceptional value for our customers.

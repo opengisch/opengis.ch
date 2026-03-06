@@ -52,15 +52,7 @@ Jede Unterstützung – ob finanziell, durch Teilen der Kampagne oder einfach du
 Die Open-Source-Welt lebt davon, dass Menschen zusammen an etwas Grossem arbeiten. Mit echter Unterstützung für Kreisbögen wird QGIS nicht nur präziser und schneller, sondern auch ein noch stärkeres Werkzeug für die Praxis.
 **Hilf mit – für bessere Geodaten, für bessere Analysen, für bessere Ergebnisse!**
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://videopress.com/embed/ZzDfFdzJ"
-    title="VideoPress video"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://videopress.com/embed/ZzDfFdzJ" title="VideoPress video" >}}
 
 [https://videopress.com/embed/ZzDfFdzJ](<https://videopress.com/embed/ZzDfFdzJ>)
 

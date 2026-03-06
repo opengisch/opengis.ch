@@ -12608,29 +12608,63 @@ h6,
 }
 
 .opg-clients {
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 3rem;
+  padding: 3.2rem 2.2rem;
+  background: #f0f1f3;
+  border-radius: 8px;
   text-align: center;
 }
 
 .opg-clients-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem 2.2rem;
   align-items: center;
 }
 
+.opg-clients-row a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  padding: 0.4rem 0.75rem;
+}
+
 .opg-clients-row img {
-  max-height: 48px;
+  max-height: 108px;
+  max-width: 100%;
   width: auto;
-  opacity: 0.8;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  filter: grayscale(10%);
+  opacity: 0.96;
+  transition: opacity 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+  filter: none;
 }
 
 .opg-clients-row a:hover img {
   opacity: 1;
   transform: translateY(-2px);
+  filter: saturate(110%);
+}
+
+@media (max-width: 991.98px) {
+  .opg-clients-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .opg-clients {
+    padding: 2rem 1rem;
+  }
+  .opg-clients-row {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+  .opg-clients-row a {
+    min-height: 94px;
+  }
+  .opg-clients-row img {
+    max-height: 82px;
+  }
 }
 
 .opg-contact {
@@ -12949,6 +12983,59 @@ h6,
   margin-top: 2rem;
 }
 
+.team-filter-heading {
+  text-align: center;
+  margin: 1.2rem 0 1rem;
+  color: #2f4869;
+  font-size: clamp(1.9rem, 3vw, 2.9rem);
+  font-weight: 400;
+}
+
+.team-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin: 0 auto 1.2rem;
+}
+
+.team-filter {
+  border: 1px solid rgba(60, 72, 88, 0.2);
+  border-radius: 6px;
+  background: #f4f5f7;
+  color: var(--opg-primary);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  padding: 0.8rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.team-filter:hover,
+.team-filter:focus {
+  border-color: rgba(130, 203, 42, 0.55);
+  color: var(--opg-primary-dark);
+  background: #ffffff;
+}
+
+.team-filter.is-active,
+.team-filter[aria-pressed="true"] {
+  background: var(--opg-primary);
+  border-color: var(--opg-primary);
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(130, 203, 42, 0.28);
+}
+
+.team-filter-caption {
+  text-align: center;
+  margin: 0 auto 1.6rem;
+  color: #2f4869;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .team-lead {
   text-align: center;
   max-width: 880px;
@@ -12965,15 +13052,15 @@ h6,
 
 .team-card {
   background: var(--opg-surface);
-  border-radius: 6px;
-  padding: 1.25rem;
+  border-radius: 8px;
+  padding: 1.35rem 1.25rem;
   box-shadow: var(--opg-shadow-soft);
   border: 1px solid rgba(60, 72, 88, 0.08);
   display: grid;
-  grid-template-columns: 96px 1fr;
-  column-gap: 1rem;
-  align-items: start;
-  gap: 0.35rem 1rem;
+  grid-template-columns: 94px minmax(0, 1fr);
+  column-gap: 1.15rem;
+  align-items: center;
+  row-gap: 0;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -12982,64 +13069,114 @@ h6,
   box-shadow: 0 20px 40px rgba(15, 26, 28, 0.12);
 }
 
+.team-card.is-hidden {
+  display: none;
+}
+
 .team-card img {
-  width: 96px;
-  height: 96px;
+  width: 94px;
+  height: 94px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 0;
+  margin: 0;
   box-shadow: 0 10px 24px rgba(15, 26, 28, 0.15);
-  grid-row: 1 / span 5;
+}
+
+.team-card__body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
 }
 
 .team-card h3, .team-card .h3 {
-  font-size: 1.1rem;
-  margin: 0.2rem 0 0;
+  font-size: clamp(1.08rem, calc(0.75vw + 0.9rem), 1.3rem);
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
 }
 
 .team-role {
-  font-weight: 600;
-  color: var(--opg-ink-soft);
-  margin-bottom: 0;
-  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--opg-secondary);
+  margin: 0.05rem 0 0;
+  font-size: clamp(0.95rem, calc(0.45vw + 0.78rem), 1.07rem);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
 }
 
 .team-team {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #6b7a7d;
-  margin-bottom: 0.6rem;
+  font-size: clamp(0.98rem, calc(0.3vw + 0.84rem), 1.08rem);
+  text-transform: none;
+  letter-spacing: 0;
+  color: #98a0a9;
+  line-height: 1.35;
+  margin: 0.05rem 0 0.45rem;
 }
 
 .team-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.45rem;
+  margin-top: 0.1rem;
 }
 
 .team-links a {
-  padding: 0.35rem 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
   border-radius: 999px;
-  border: 1px solid rgba(130, 203, 42, 0.4);
-  background: rgba(130, 203, 42, 0.15);
+  border: 1px solid rgba(130, 203, 42, 0.55);
+  background: rgba(130, 203, 42, 0.14);
   color: var(--opg-secondary);
-  font-size: 0.75rem;
   text-decoration: none;
-  font-weight: 600;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.team-links a:hover,
+.team-links a:focus {
+  background: rgba(130, 203, 42, 0.24);
+  border-color: rgba(130, 203, 42, 0.72);
+  transform: translateY(-1px);
+}
+
+.team-links a i {
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {
+  .team-filter-heading {
+    margin-top: 0.5rem;
+  }
+  .team-filters {
+    gap: 0.5rem;
+  }
+  .team-filter {
+    width: 100%;
+    max-width: 320px;
+  }
+  .team-filter-caption {
+    margin-bottom: 1.1rem;
+  }
   .team-card {
-    grid-template-columns: 1fr;
-    text-align: center;
+    grid-template-columns: 72px minmax(0, 1fr);
+    column-gap: 0.85rem;
+    padding: 1rem;
+    text-align: left;
+    align-items: start;
   }
   .team-card img {
-    grid-row: auto;
-    margin: 0 auto 0.5rem;
+    width: 72px;
+    height: 72px;
+    margin: 0;
   }
   .team-links {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .team-grid__items {
     grid-template-columns: 1fr;
@@ -13497,6 +13634,82 @@ h6,
 
 .generic-single-content a:hover {
   color: var(--opg-primary);
+}
+
+.order-support-contract-form {
+  margin: 1rem 0 2rem;
+}
+
+.book-private-course-form {
+  margin: 1rem 0 2rem;
+}
+
+.order-support-contract-fallback {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  color: #5b687a;
+}
+
+.book-private-course-fallback {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  color: #5b687a;
+}
+
+.order-support-contract-fallback a {
+  font-weight: 600;
+}
+
+.book-private-course-fallback a {
+  font-weight: 600;
+}
+
+.order-support-contract-iframe {
+  display: block;
+  width: 100%;
+  min-height: 980px;
+}
+
+.book-private-course-iframe {
+  display: block;
+  width: 100%;
+  min-height: 1188px;
+}
+
+.courses-calendar-embed {
+  margin: 1rem 0 2rem;
+}
+
+.courses-calendar-iframe {
+  display: block;
+  width: 100%;
+  min-height: 700px;
+  border: 1px solid #ccc;
+  background: transparent;
+}
+
+.course-registration-form {
+  margin: 1rem 0 2rem;
+}
+
+.course-registration-iframe {
+  display: block;
+  width: 100%;
+  min-height: 1188px;
+}
+
+.course-registration-fallback {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  color: #5b687a;
+}
+
+.course-registration-fallback a {
+  font-weight: 600;
+}
+
+.order-support-contract-form--local-fallback .order-support-contract-iframe {
+  display: none;
 }
 
 .custom-dev-quote {
@@ -14317,6 +14530,54 @@ h6,
   text-decoration: underline;
 }
 
+.blog-single .blog-content p > a:only-child[href*="/courses-calendar/"],
+.blog-single .blog-content p > a:only-child[href*="/course-registration/"],
+.blog-single .blog-content p > a:only-child[href*="/kurskalender/"],
+.blog-single .blog-content p > a:only-child[href*="/kursanmeldung/"],
+.blog-single .blog-content p > a:only-child[href*="/calendrier-des-cours/"],
+.blog-single .blog-content p > a:only-child[href*="/inscriptions-aux-cours/"],
+.blog-single .blog-content p > a:only-child[href*="/calendario-corsi/"],
+.blog-single .blog-content p > a:only-child[href*="/iscrizione-corsi/"],
+.generic-single-content p > a:only-child[href*="/courses-calendar/"],
+.generic-single-content p > a:only-child[href*="/course-registration/"],
+.generic-single-content p > a:only-child[href*="/kurskalender/"],
+.generic-single-content p > a:only-child[href*="/kursanmeldung/"],
+.generic-single-content p > a:only-child[href*="/calendrier-des-cours/"],
+.generic-single-content p > a:only-child[href*="/inscriptions-aux-cours/"],
+.generic-single-content p > a:only-child[href*="/calendario-corsi/"],
+.generic-single-content p > a:only-child[href*="/iscrizione-corsi/"] {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  background: var(--opg-primary);
+  color: #ffffff !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  line-height: 1.2;
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+.blog-single .blog-content p > a:only-child[href*="/courses-calendar/"]:hover,
+.blog-single .blog-content p > a:only-child[href*="/course-registration/"]:hover,
+.blog-single .blog-content p > a:only-child[href*="/kurskalender/"]:hover,
+.blog-single .blog-content p > a:only-child[href*="/kursanmeldung/"]:hover,
+.blog-single .blog-content p > a:only-child[href*="/calendrier-des-cours/"]:hover,
+.blog-single .blog-content p > a:only-child[href*="/inscriptions-aux-cours/"]:hover,
+.blog-single .blog-content p > a:only-child[href*="/calendario-corsi/"]:hover,
+.blog-single .blog-content p > a:only-child[href*="/iscrizione-corsi/"]:hover,
+.generic-single-content p > a:only-child[href*="/courses-calendar/"]:hover,
+.generic-single-content p > a:only-child[href*="/course-registration/"]:hover,
+.generic-single-content p > a:only-child[href*="/kurskalender/"]:hover,
+.generic-single-content p > a:only-child[href*="/kursanmeldung/"]:hover,
+.generic-single-content p > a:only-child[href*="/calendrier-des-cours/"]:hover,
+.generic-single-content p > a:only-child[href*="/inscriptions-aux-cours/"]:hover,
+.generic-single-content p > a:only-child[href*="/calendario-corsi/"]:hover,
+.generic-single-content p > a:only-child[href*="/iscrizione-corsi/"]:hover {
+  background: var(--opg-primary-dark);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
 .blog-related {
   background-color: #f8f9fa;
 }
@@ -14396,6 +14657,86 @@ h6,
 
 [data-bs-theme="dark"] .generic-single-content a {
   color: #a6e56a;
+}
+
+[data-bs-theme="dark"] .team-filter-heading,
+[data-bs-theme="dark"] .team-filter-caption {
+  color: #edf2f8;
+}
+
+[data-bs-theme="dark"] .team-filter {
+  background: #202833;
+  border-color: #37404c;
+  color: #c7ef98;
+}
+
+[data-bs-theme="dark"] .team-filter:hover,
+[data-bs-theme="dark"] .team-filter:focus {
+  background: #242d39;
+  border-color: #4b5768;
+  color: #d9f4b6;
+}
+
+[data-bs-theme="dark"] .team-filter.is-active,
+[data-bs-theme="dark"] .team-filter[aria-pressed="true"] {
+  background: var(--opg-primary);
+  border-color: var(--opg-primary);
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(130, 203, 42, 0.28);
+}
+
+[data-bs-theme="dark"] .team-card {
+  border-color: #2e3846;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+[data-bs-theme="dark"] .team-role {
+  color: #e3ebf8;
+}
+
+[data-bs-theme="dark"] .team-team {
+  color: #a9b5c8;
+}
+
+[data-bs-theme="dark"] .team-links a {
+  background: rgba(130, 203, 42, 0.18);
+  border-color: rgba(130, 203, 42, 0.45);
+  color: #f0f3ff;
+}
+
+[data-bs-theme="dark"] .team-links a:hover,
+[data-bs-theme="dark"] .team-links a:focus {
+  background: rgba(130, 203, 42, 0.28);
+  border-color: rgba(130, 203, 42, 0.62);
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] .opg-clients {
+  background: #e7e9ed;
+}
+
+[data-bs-theme="dark"] .order-support-contract-iframe {
+  border-color: #3b4552 !important;
+}
+
+[data-bs-theme="dark"] .order-support-contract-fallback {
+  color: #b4c0d1;
+}
+
+[data-bs-theme="dark"] .courses-calendar-iframe {
+  border-color: #3b4552;
+}
+
+[data-bs-theme="dark"] .course-registration-iframe {
+  border-color: #3b4552 !important;
+}
+
+[data-bs-theme="dark"] .course-registration-fallback {
+  color: #b4c0d1;
+}
+
+[data-bs-theme="dark"] .book-private-course-fallback {
+  color: #b4c0d1;
 }
 
 [data-bs-theme="dark"] .sustain-page {
@@ -14732,6 +15073,18 @@ h6,
 .jumpstart-page .jumpstart-hero,
 .support-page .support-hero {
     min-height: 170px;
+  }
+  .order-support-contract-iframe {
+    min-height: 1180px;
+  }
+  .book-private-course-iframe {
+    min-height: 1260px;
+  }
+  .courses-calendar-iframe {
+    min-height: 780px;
+  }
+  .course-registration-iframe {
+    min-height: 1260px;
   }
   .custom-dev-grid {
     margin-top: 3rem;

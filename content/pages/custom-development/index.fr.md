@@ -1,6 +1,8 @@
 ---
 title: "Développement – OPENGIS.ch"
 source: "www.opengis.ch/fr/developpement/index.html"
+aliases:
+- /fr/developpement/
 ---
 
 > We love discussing requirements and create visionary solutions to problems. We always strive to develop, deploy and maintain solutions that offer exceptional value for our customers.

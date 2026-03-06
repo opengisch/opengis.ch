@@ -1,6 +1,8 @@
 ---
 title: "Supporto e manutenzione QGIS – OPENGIS.ch"
 source: "www.opengis.ch/it/supporto-qgis/index.html"
+aliases:
+- /it/supporto-qgis/
 ---
 
 > Abbiamo a cuore voi e le vostre implementazioni: per questo motivo prendiamo molto sul serio l’assistenza e la manutenzione e siamo orgogliosi di offrire contratti di assistenza con SLA.
@@ -26,7 +28,7 @@ SLA di base incluso
 SLA estesi non disponibili
 Nessun giorno di iniziativa QGIS
 Sconto del 5% dal secondo anno
-[Richiedi ora](<../order-support-contract/index7ac1.html?days=2>)
+[Richiedi ora](<../order-support-contract/?days=2>)
 ##### Startup
 * * *
 ### 5 Giorni di supporto
@@ -35,7 +37,7 @@ SLA di base incluso
 SLA estesi non disponibili
 Nessun giorno di iniziativa QGIS
 Sconto del 5% dal secondo anno
-[Richiedi ora](<../order-support-contract/index58b3.html?days=5>)
+[Richiedi ora](<../order-support-contract/?days=5>)
 ##### Business
 * * *
 ### 10 giorni di supporto
@@ -44,7 +46,7 @@ SLA di base incluso
 SLA estesi disponibili
 0,5 Giorni di iniziativa QGIS
 Sconto del 5% dal secondo anno
-[Richiedi ora](<../order-support-contract/indexe55b.html?days=10>)
+[Richiedi ora](<../order-support-contract/?days=10>)
 ##### Enterprise
 * * *
 ### 10+ giorni di supporto
@@ -53,7 +55,7 @@ SLA di base incluso
 SLA estesi disponibili
 1+ giorni di iniziativa QGIS
 Sconto del 5% dal secondo anno
-[Richiedi ora](<../order-support-contract/indexdc5b.html?days=0>)
+[Richiedi ora](<../order-support-contract/?days=0>)
 ## Service level agreement
 In aggiunta a ciascun contratto di assistenza, è possibile ordinare un accordo annuale sul livello di servizio che meglio si adatta alle esigenze della vostra azienda.   
 Facciamo sempre del nostro meglio per risponder nel più breve tempo possibile, ma in periodi di grande affluenza le risposte potrebbero richiedere più tempo.   

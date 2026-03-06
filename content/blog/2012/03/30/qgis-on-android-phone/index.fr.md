@@ -17,15 +17,7 @@ Here some screenshots from my Samsung galaxy 9000 with 4″ screen and a video d
 
 This video shows QGIS on a Samsung I9000 Galaxy S Android smartphone with 4.0″ screen. the point size in settings->option->general is set to 4
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/39473397"
-    title="Vimeo video 39473397"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/39473397" title="Vimeo video 39473397" >}}
 
 [https://vimeo.com/39473397](<https://vimeo.com/39473397>)
 

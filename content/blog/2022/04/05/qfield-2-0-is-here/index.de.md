@@ -55,15 +55,7 @@ Also, since November 2021, Google has enforced new storage access limitations fo
 ## Join the effort
 QField is an open-source project. It is free to share, use and modify and it will stay like that. We are very happy if this app helps you in whatever creative way you may use it. If you found it useful, we will be even happier if you could give something back. You can easily [sponsor QField](<https://docs.qfield.org/get-started/sponsor/>), [contribute some help](<https://docs.qfield.org/get-started/contribute/>) or ask us to [develop a new feature](<https://docs.qfield.org/get-started/sponsor/#feature-sponsoring>).
 
-<div class="blog-embed-video">
-  <iframe
-    src="https://player.vimeo.com/video/695452246"
-    title="Vimeo video 695452246"
-    loading="lazy"
-    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-    allowfullscreen>
-  </iframe>
-</div>
+{{< blog-video src="https://player.vimeo.com/video/695452246" title="Vimeo video 695452246" >}}
 
 [https://vimeo.com/695452246](<https://vimeo.com/695452246>)
 

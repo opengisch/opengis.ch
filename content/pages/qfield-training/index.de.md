@@ -1,6 +1,8 @@
 ---
 title: "QField Starthilfepakete – OPENGIS.ch"
 source: "www.opengis.ch/de/qfield-jump-start-packages/index.html"
+aliases:
+- /de/qfield-jump-start-packages/
 ---
 
 > Sie möchten mit der Erfassung von Felddaten beginnen, haben aber noch **nie mit einem GIS gearbeitet**?
@@ -17,7 +19,7 @@ Einführung in die Verwendung von QField
 QGIS Projekt einrichten
 Datensynchronisierung mit QFieldCloud
 _* Der reduzierte Preis gilt nur in Verbindung mit einem bezahlten[QFieldCloud-Abonnement](<https://qfield.cloud/>)_
-[Jetzt BUCHEN](<../book-private-course/indexbc77.html?wpf10757_9=QField%20Jumpstart%20-%20Half%20day>)
+[Jetzt BUCHEN](</de/book-private-course/?wpf10757_9=QField%20Jumpstart%20-%20Half%20day>)
 ##### Ganzer Tag
 * * *
 ### EUR 1080* 
@@ -27,4 +29,4 @@ Analyse des Datenmodells
 QGIS Projektoptimierung
 Andere Strategien zur Datensynchronisierung
 _* Der reduzierte Preis gilt nur in Verbindung mit einem bezahlten[QFieldCloud-Abonnement](<https://qfield.cloud/>)_
-[Jetzt BUCHEN](<../book-private-course/index4953.html?wpf10757_9=QField%20Jumpstart%20-%20Full%20day>)
+[Jetzt BUCHEN](</de/book-private-course/?wpf10757_9=QField%20Jumpstart%20-%20Full%20day>)
