@@ -2,8 +2,9 @@
 {{ partial "header/alert.html" . }}
 {{ end -}}
 
+{{ $homeHeroNav := .IsHome }}
 <header class="main-header">
-  <nav class="navbar navbar-expand-lg navbar-default navbar-color-on-scroll navbar-transparent hestia_left shadow-sm fixed-top og-navbar">
+  <nav class="navbar navbar-expand-lg navbar-default navbar-color-on-scroll navbar-transparent hestia_left shadow-sm fixed-top og-navbar{{ if $homeHeroNav }} og-navbar-home{{ end }}"{{ if $homeHeroNav }} data-home-hero-nav="true" data-scroll-threshold="32"{{ end }}>
     <div class="container">
 
       <!-- Brand + toggle -->

@@ -137,18 +137,20 @@
         </div>
         <p class="team-filter-caption">{{ $shared.geoninjas_teams_caption | default "Discover all our teams and their expertise." }}</p>
         <div class="team-grid__items">
-          {{ range .cards }}
-            {{ $cardTeam := .team | default $fallbackTeam }}
+          {{ range $index, $card := .cards }}
+            {{ $cardTeam := $card.team | default $fallbackTeam }}
             {{ $cardTeamKey := lower (urlize $cardTeam) }}
             {{ $cardTeamLabel := $cardTeam }}
-            <article class="team-card" data-team="{{ $cardTeamKey }}">
-              <img src="{{ .image | safeURL }}" alt="{{ .alt }}">
+            <article class="team-card" data-team="{{ $cardTeamKey }}" data-reveal="fade-left" data-reveal-delay="{{ mul $index 70 }}">
+              <div class="team-card__media">
+                <img src="{{ $card.image | safeURL }}" alt="{{ $card.alt }}">
+              </div>
               <div class="team-card__body">
-                <h3>{{ .name }}</h3>
-                <p class="team-role">{{ .role }}</p>
+                <h3>{{ $card.name }}</h3>
+                <p class="team-role">{{ $card.role }}</p>
                 <p class="team-team">{{ $cardTeamLabel }}</p>
                 <div class="team-links">
-                  {{ range .links }}
+                  {{ range $card.links }}
                     {{ $labelKey := lower (trim .label " ") }}
                     {{ $iconClass := "bi-link-45deg" }}
                     {{ if eq $labelKey "github" }}

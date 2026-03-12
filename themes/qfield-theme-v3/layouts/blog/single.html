@@ -3,75 +3,32 @@
 <!-- Blog post header -->
 <section class="py-2">
   <div class="container">
-    <div class="blog-single__inner">
-      <!-- Back to blog link -->
-      <div class="my-4">
-        <a href="{{ .CurrentSection.RelPermalink }}" class="btn btn-outline-secondary btn-sm">
-          <i class="fas fa-arrow-left me-2"></i>Back to Blog
-        </a>
-      </div>
-
-      <!-- Post header -->
-      <header class="mb-2">
-        <h1 class="display-5 fw-bold mb-3">{{ .Title }}</h1>
-        
-        <div class="text-muted mb-1">
-          <i class="fas fa-calendar me-1"></i>
-          <span class="me-3">{{ .Date.Format "January 2, 2006" }}</span>
-          {{ if .Params.author }}
-          <i class="fas fa-user me-1"></i>
-          <span class="me-3">{{ .Params.author }}</span>
-          {{ end }}
-          {{ if .ReadingTime }}
-          <i class="fas fa-clock me-1"></i>
-          <span>{{ .ReadingTime }} min read</span>
-          {{ end }}
-        </div>
-        <hr>
-      </header>
+    
+    <!-- Back to blog link -->
+    <div class="my-4">
+      <a href="{{ "/blog/" | relURL }}" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-arrow-left me-2"></i>Back to Blog
+      </a>
     </div>
 
-    {{ $image := "" }}
-    {{ $imageURL := "" }}
-    {{ $alt := .Title }}
-    {{ with .Params.cover }}
-      {{ with .image }}{{ $image = . }}{{ end }}
-      {{ with .alt }}{{ $alt = . }}{{ end }}
-    {{ end }}
-    {{ if eq $image "" }}
-      {{ with .Params.image }}{{ $image = . }}{{ end }}
-    {{ end }}
-    {{ if eq $image "" }}
-      {{ $contentImageTag := findRE `<img[^>]+src="[^"]+"` .Content 1 }}
-      {{ if gt (len $contentImageTag) 0 }}
-        {{ $srcAttr := findRE `src="[^"]+"` (index $contentImageTag 0) 1 }}
-        {{ if gt (len $srcAttr) 0 }}
-          {{ $image = replaceRE `^src="([^"]+)"$` "$1" (index $srcAttr 0) }}
+    <!-- Post header -->
+    <header class="mb-2">
+      <h1 class="display-5 fw-bold mb-3">{{ .Title }}</h1>
+      
+      <div class="text-muted mb-1">
+        <i class="fas fa-calendar me-1"></i>
+        <span class="me-3">{{ .Date.Format "January 2, 2006" }}</span>
+        {{ if .Params.author }}
+        <i class="fas fa-user me-1"></i>
+        <span class="me-3">{{ .Params.author }}</span>
         {{ end }}
-      {{ end }}
-    {{ end }}
-    {{ if hasPrefix $image "/blog/wp-content/" }}
-      {{ $image = replace $image "/blog/wp-content/" "/wp-content/" }}
-    {{ end }}
-    {{ if ne $image "" }}
-      {{ $resource := .Resources.GetMatch $image }}
-      {{ if $resource }}
-        {{ $imageURL = $resource.RelPermalink }}
-      {{ else if or (hasPrefix $image "http://") (hasPrefix $image "https://") }}
-        {{ $imageURL = $image }}
-      {{ else if hasPrefix $image "/" }}
-        {{ $imageURL = $image | relURL }}
-      {{ else }}
-        {{ $imageURL = printf "%s%s" .RelPermalink $image }}
-      {{ end }}
-    {{ end }}
-    {{ if $imageURL }}
-    <div class="blog-single__inner mb-4">
-      <figure class="blog-single-featured-image mb-0">
-        <img src="{{ $imageURL }}" alt="{{ $alt }}" class="img-fluid rounded-3 w-100">
-      </figure>
-    </div>
-    {{ end }}
+        {{ if .ReadingTime }}
+        <i class="fas fa-clock me-1"></i>
+        <span>{{ .ReadingTime }} min read</span>
+        {{ end }}
+      </div>
+      <hr>
+    </header>
 
     {{ $content := .Content }}
     {{ $content = replace $content "\"/blog/wp-content/" "\"/wp-content/" }}
@@ -79,13 +36,15 @@
     {{ $content = replace $content "(/blog/wp-content/" "(/wp-content/" }}
     {{ $content = replace $content "https://www.opengis.ch/blog/wp-content/" "/wp-content/" }}
     {{ $content = replace $content "%5F" "_" }}
+    {{/* Drop a duplicated leading markdown heading from imported posts. */}}
+    {{ $content = replaceRE `(?s)^\s*<h[1-6][^>]*>.*?</h[1-6]>\s*` "" $content 1 }}
   </div>
 </section>
 
 <!-- Blog post content -->
 <article class="py-1 blog-single">
   <div class="container">
-    <div class="blog-single__inner">
+    <div class="row justify-content-center">
         <div class="content blog-content">
           {{ $content | safeHTML }}
         </div>
@@ -223,7 +182,7 @@
 
         <!-- Back to blog -->
         <div class="text-center">
-          <a href="{{ .CurrentSection.RelPermalink }}" class="btn btn-outline-primary">
+          <a href="{{ "/blog/" | relURL }}" class="btn btn-outline-primary">
             <i class="fas fa-arrow-left me-2"></i>Back to All Posts
           </a>
         </div>
@@ -235,7 +194,7 @@
 <!-- Related posts -->
 {{ $related := .Site.RegularPages.Related . | first 3 }}
 {{ if $related }}
-<section class="py-5 bg-light blog-related">
+<section class="py-5 bg-light">
   <div class="container">
     <h3 class="text-center mb-4">Related Posts</h3>
     <div class="row g-4">

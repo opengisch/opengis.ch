@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <!-- Section #1: title -->
-<section class="py-5 text-center bg-light mb-3 blog-list-hero">
+<section class="py-5 text-center bg-light mb-3">
   <div class="container">
     <h1 class="display-4 mb-4">QField Blog</h1>
     <p class="lead mb-0">
@@ -30,27 +30,12 @@
           {{ $image := "" }}
           {{ $imageURL := "" }}
           {{ $alt := $page.Title }}
-          {{ $contentImage := "" }}
           {{ with $page.Params.cover }}
             {{ with .image }}{{ $image = . }}{{ end }}
             {{ with .alt }}{{ $alt = . }}{{ end }}
           {{ end }}
           {{ if eq $image "" }}
             {{ with $page.Params.image }}{{ $image = . }}{{ end }}
-          {{ end }}
-          {{ if eq $image "" }}
-            {{ $htmlMatches := findRE `(?i)<img[^>]+src=["']([^"']+)` $page.Content 1 }}
-            {{ if gt (len $htmlMatches) 0 }}
-              {{ $contentImage = replaceRE `(?i).*src=["']([^"']+).*` "$1" (index $htmlMatches 0) }}
-            {{ else }}
-              {{ $mdMatches := findRE `!\\[[^\\]]*\\]\\(([^\\s\\)]+)\\)` $page.RawContent 1 }}
-              {{ if gt (len $mdMatches) 0 }}
-                {{ $contentImage = replaceRE `!\\[[^\\]]*\\]\\(([^\\)\\s]+).*` "$1" (index $mdMatches 0) }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-          {{ if and (eq $image "") (ne $contentImage "") }}
-            {{ $image = $contentImage }}
           {{ end }}
           {{ if hasPrefix $image "/blog/wp-content/" }}
             {{ $image = replace $image "/blog/wp-content/" "/wp-content/" }}

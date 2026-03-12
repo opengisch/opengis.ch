@@ -1,0 +1,97 @@
+{{- $page := .page -}}
+{{- $resource := false -}}
+{{- $url := "" -}}
+
+{{- with $page.Params.cover -}}
+  {{- with .image -}}
+    {{- $url = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if eq $url "" -}}
+  {{- with $page.Params.image -}}
+    {{- $url = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $imageParam := $page.Param "images" -}}
+{{- if $imageParam -}}
+  {{- $imagePath := "" -}}
+  {{- $imageParamType := printf "%T" $imageParam -}}
+  {{- if or (eq $imageParamType "[]string") (eq $imageParamType "[]interface {}") -}}
+    {{- if gt (len $imageParam) 0 -}}
+      {{- $imagePath = index $imageParam 0 -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $imagePath = $imageParam -}}
+  {{- end -}}
+  {{- with $page.Resources.GetMatch $imagePath -}}
+    {{- $resource = . -}}
+  {{- end -}}
+  {{- if and (not $resource) (eq $url "") -}}
+    {{- $url = $imagePath -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $resource -}}
+  {{- with first 1 ($page.Resources.ByType "image") -}}
+    {{- $resource = index . 0 -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if and (not $resource) (eq $url "") -}}
+  {{- $raw := $page.RawContent -}}
+  {{- $candidate := "" -}}
+  {{- $htmlMatches := findRE `(?i)<img[^>]+src=["']([^"']+)` $raw 1 -}}
+  {{- if gt (len $htmlMatches) 0 -}}
+    {{- $candidate = replaceRE `(?i).*src=["']([^"']+).*` "$1" (index $htmlMatches 0) -}}
+  {{- else -}}
+    {{- $mdMatches := findRE `!\[[^\]]*\]\(([^)\s]+)` $raw 1 -}}
+    {{- if gt (len $mdMatches) 0 -}}
+      {{- $candidate = replaceRE `!\[[^\]]*\]\(([^)\s]+).*` "$1" (index $mdMatches 0) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if ne $candidate "" -}}
+    {{- $candidate = trim $candidate " " -}}
+    {{- if hasPrefix $candidate "/blog/wp-content/" -}}
+      {{- $candidate = replace $candidate "/blog/wp-content/" "/wp-content/" -}}
+    {{- end -}}
+
+    {{- $candidateNoQuery := replaceRE `[?#].*$` "" $candidate -}}
+    {{- $pageRelativeCandidate := replaceRE `^(\./)+` "" $candidateNoQuery -}}
+    {{- $rootLikeCandidate := replaceRE `^(\.\./)+` "" $pageRelativeCandidate -}}
+    {{- $rootLikePath := replaceRE `^/` "" $rootLikeCandidate -}}
+
+    {{- if eq (lower $rootLikePath) "images/opengis-logo.png" -}}
+      {{- $candidate = "" -}}
+    {{- else if or (hasPrefix $candidate "http://") (hasPrefix $candidate "https://") -}}
+      {{- $url = $candidate -}}
+    {{- else if hasPrefix $candidate "/" -}}
+      {{- $url = $candidate | relURL -}}
+    {{- else if gt (len (findRE `^(images/|wp-content/|i[0-9]\.wp\.com/|download\.opengis\.ch/)` $rootLikePath 1)) 0 -}}
+      {{- $url = printf "/%s" $rootLikePath | relURL -}}
+    {{- else -}}
+      {{- $url = printf "%s%s" $page.RelPermalink $pageRelativeCandidate -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if and (not $resource) (ne $url "") -}}
+  {{- if hasPrefix $url "/blog/wp-content/" -}}
+    {{- $url = replace $url "/blog/wp-content/" "/wp-content/" -}}
+  {{- end -}}
+  {{- if and (not (hasPrefix $url "http://")) (not (hasPrefix $url "https://")) (not (hasPrefix $url "/")) -}}
+    {{- $rootLikeCandidate := replaceRE `^(\.\./)+` "" (replaceRE `^(\./)+` "" $url) -}}
+    {{- $rootLikePath := replaceRE `^/` "" $rootLikeCandidate -}}
+    {{- if gt (len (findRE `^(images/|wp-content/|i[0-9]\.wp\.com/|download\.opengis\.ch/)` $rootLikePath 1)) 0 -}}
+      {{- $url = printf "/%s" $rootLikePath | relURL -}}
+    {{- else -}}
+      {{- $url = printf "%s%s" $page.RelPermalink (replaceRE `^(\./)+` "" $url) -}}
+    {{- end -}}
+  {{- else if hasPrefix $url "/" -}}
+    {{- $url = $url | relURL -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (dict "resource" $resource "url" $url) -}}

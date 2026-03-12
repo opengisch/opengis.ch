@@ -1,15 +1,17 @@
 {{ with site.Data.geoninjas }}
 <section class="team-grid" id="{{ .section_id | default `team` }}">
   <div class="team-grid__items">
-    {{ range .cards }}
-      <article class="team-card">
-        <img src="{{ .image | safeURL }}" alt="{{ .alt }}">
+    {{ range $index, $card := .cards }}
+      <article class="team-card" data-reveal="fade-left" data-reveal-delay="{{ mul $index 70 }}">
+        <div class="team-card__media">
+          <img src="{{ $card.image | safeURL }}" alt="{{ $card.alt }}">
+        </div>
         <div class="team-card__body">
-          <h3>{{ .name }}</h3>
-          <p class="team-role">{{ .role }}</p>
-          {{ with .team }}<p class="team-team">{{ . }}</p>{{ end }}
+          <h3>{{ $card.name }}</h3>
+          <p class="team-role">{{ $card.role }}</p>
+          {{ with $card.team }}<p class="team-team">{{ . }}</p>{{ end }}
           <div class="team-links">
-            {{ range .links }}
+            {{ range $card.links }}
               {{ $labelKey := lower (trim .label " ") }}
               {{ $iconClass := "bi-link-45deg" }}
               {{ if eq $labelKey "github" }}

@@ -3,3 +3,6 @@
 /qfield_hugo_v2/
 /qfield_hugo_v2/*
 !.gitignore
+.venv/
+__pycache__/
+*.pyc

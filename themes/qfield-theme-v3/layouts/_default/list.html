@@ -38,39 +38,9 @@
         {{ $paginator := .Paginate $pages }}
         <div class="row g-4">
             {{ range $paginator.Pages }}
-                {{ $image := "" }}
-                {{ $imageParam := .Param "images" }}
-                {{ if $imageParam }}
-                    {{ $imagePath := "" }}
-                    {{ $imageParamType := printf "%T" $imageParam }}
-                    {{ if or (eq $imageParamType "[]string") (eq $imageParamType "[]interface {}") }}
-                        {{ if gt (len $imageParam) 0 }}
-                            {{ $imagePath = index $imageParam 0 }}
-                        {{ end }}
-                    {{ else }}
-                        {{ $imagePath = $imageParam }}
-                    {{ end }}
-                    {{ with .Resources.GetMatch $imagePath }}
-                        {{ $image = . }}
-                    {{ end }}
-                {{ end }}
-                {{ if not $image }}
-                    {{ with first 1 (.Resources.ByType "image") }}
-                        {{ $image = index . 0 }}
-                    {{ end }}
-                {{ end }}
-                {{ $contentImage := "" }}
-                {{ if not $image }}
-                    {{ $matches := findRE `(?i)<img[^>]+src=["']([^"']+)` .Content 1 }}
-                    {{ if gt (len $matches) 0 }}
-                        {{ $contentImage = replaceRE `(?i).*src=["']([^"']+).*` "$1" (index $matches 0) }}
-                    {{ else }}
-                        {{ $mdMatches := findRE `!\\[[^\\]]*\\]\\(([^\\s\\)]+)\\)` .RawContent 1 }}
-                        {{ if gt (len $mdMatches) 0 }}
-                            {{ $contentImage = replaceRE `!\\[[^\\]]*\\]\\(([^\\)\\s]+).*` "$1" (index $mdMatches 0) }}
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
+                {{ $imageData := partial "page-card-image.html" (dict "page" .) }}
+                {{ $image := index $imageData "resource" }}
+                {{ $contentImage := index $imageData "url" }}
 
                 <div class="col-12 col-md-6 col-xl-4">
                     <article class="card border-0 shadow-sm overflow-hidden h-100">

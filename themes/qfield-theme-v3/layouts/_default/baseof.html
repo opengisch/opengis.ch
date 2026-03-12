@@ -14,7 +14,7 @@
 {{ end -}}
 <body class="{{ .Scratch.Get `class` }} d-flex flex-column min-vh-100">
     {{- partial "header/header.html" . -}}
-    <div id="content">
+    <div id="content" class="flex-grow-1">
         {{- block "main" . }}{{- end }}
     </div>
     {{ partial "footer/footer.html" . }}
