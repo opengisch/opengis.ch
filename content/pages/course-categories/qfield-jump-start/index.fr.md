@@ -3,6 +3,8 @@ title: 'formation rapide à QField – OPENGIS.ch'
 date: 2025-08-19
 slug: "qfield-jump-start"
 url: "/fr/2025/08/19/qfield-jump-start/"
+aliases:
+  - "/fr/2025/08/19/qfield-jump-start/"
 source: "www.opengis.ch/fr/2025/08/19/qfield-jump-start/index.html"
 image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/04/tim-gouw-73926-unsplasha86e.jpg"
 ---

@@ -3,6 +3,8 @@ title: 'QGIS Avancé – OPENGIS.ch'
 date: 2023-03-06
 slug: "qgis-avance"
 url: "/fr/2023/03/06/qgis-avance/"
+aliases:
+  - "/fr/2023/03/06/qgis-avance/"
 source: "www.opengis.ch/fr/2023/03/06/qgis-avance/index.html"
 image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2021/11/modelbaker_baked_project_with_form_wide2a86e.png"
 ---

@@ -1,6 +1,8 @@
 ---
 title: "INTERLIS Model Baker Kurse - OPENGIS.ch"
 url: "/de/category/kurse/interlis-model-baker-kurse/"
+aliases:
+  - "/de/category/kurse/interlis-model-baker-kurse/"
 source: "www.opengis.ch/de/category/kurse/interlis-model-baker-kurse/index.html"
 course_posts:
   - /de/2023/03/06/interlis-crashkurs-webinar/

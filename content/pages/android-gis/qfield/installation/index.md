@@ -1,6 +1,8 @@
 ---
 title: "QField – Installation – OPENGIS.ch"
 source: "www.opengis.ch/android-gis/qfield/installation/index.html"
+aliases:
+  - "/android-gis/qfield/installation/"
 ---
 
 **Page moved to[qfield.org](<https://qfield.org/>)**  

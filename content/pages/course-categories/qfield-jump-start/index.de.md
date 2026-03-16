@@ -3,6 +3,8 @@ title: 'QField Starthilfepakete – OPENGIS.ch'
 date: 2023-03-06
 slug: "qfield-jump-start"
 url: "/de/2023/03/06/qfield-jump-start/"
+aliases:
+  - "/de/2023/03/06/qfield-jump-start/"
 source: "www.opengis.ch/de/2023/03/06/qfield-jump-start/index.html"
 image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2019/04/tim-gouw-73926-unsplasha86e.jpg"
 ---

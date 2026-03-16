@@ -1,6 +1,8 @@
 ---
 title: "Join Us – OPENGIS.ch"
 source: "www.opengis.ch/fr/jobs/index.html"
+aliases:
+  - "/fr/jobs/"
 ---
 
 > Are you self-sufficient team-player with a keen eye for creative solutions?

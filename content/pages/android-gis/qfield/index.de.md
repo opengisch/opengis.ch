@@ -1,6 +1,8 @@
 ---
 title: "QField – OPENGIS.ch"
 source: "www.opengis.ch/de/android-gis/qfield/index.html"
+aliases:
+  - "/de/android-gis/qfield/"
 ---
 
 [![QField app on Google Play](https://i0.wp.com/developer.android.com/images/brand/en_app_rgb_wo_45.png?resize=129%2C45&ssl=1)](<https://play.google.com/store/apps/details?id=ch.opengis.qfield>)

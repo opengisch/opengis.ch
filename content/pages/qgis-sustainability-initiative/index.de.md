@@ -1,6 +1,8 @@
 ---
 title: "Our QGIS Sustainability initiative #sustainQGIS – OPENGIS.ch"
 source: "www.opengis.ch/de/qgis-sustainability-initiative/index.html"
+aliases:
+  - "/de/qgis-sustainability-initiative/"
 ---
 
 [QGIS](<https://qgis.org/>) and QField are very popular because they are extremely powerful, flexible and stable and can be used without having to worry about licenses or vendor lock-in. 

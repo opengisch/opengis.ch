@@ -396,6 +396,25 @@ function initializeApp() {
     bookPrivateCourseForm.src = clickupUrl.toString()
   }
 
+  // Jobs application ClickUp form setup
+  const jobsApplicationForm = document.querySelector('#jobs-application-form.jobs-application-iframe')
+  if (jobsApplicationForm) {
+    const clickupSource = jobsApplicationForm.dataset.clickupSrc || 'https://forms.clickup.com/f/22wqj-820/2Z3S1OO9ZF44Y54FQQ'
+    const clickupUrl = new URL(clickupSource)
+    const search = new URLSearchParams(window.location.search)
+
+    search.forEach((value, key) => {
+      clickupUrl.searchParams.set(key, value)
+    })
+
+    const fallbackLinks = document.querySelectorAll('[data-jobs-clickup-link]')
+    fallbackLinks.forEach((link) => {
+      link.href = clickupUrl.toString()
+    })
+
+    jobsApplicationForm.src = clickupUrl.toString()
+  }
+
   // Course registration ClickUp form setup
   const courseRegistrationForm = document.querySelector('#course-registration-form.course-registration-iframe')
   if (courseRegistrationForm) {

@@ -3,6 +3,8 @@ title: 'QGIS ModelBaker – OPENGIS.ch'
 date: 2023-03-06
 slug: "qgis-model-baker"
 url: "/2023/03/06/qgis-model-baker/"
+aliases:
+  - "/2023/03/06/qgis-model-baker/"
 source: "www.opengis.ch/2023/03/06/qgis-model-baker/index.html"
 ---
 ### Description

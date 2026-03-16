@@ -1,6 +1,8 @@
 ---
 title: "Page not found – OPENGIS.ch"
 source: "www.opengis.ch/qfield-love/index.html"
+aliases:
+  - "/qfield-love/"
 ---
 
 It seems we can’t find what you’re looking for. Perhaps searching can help.

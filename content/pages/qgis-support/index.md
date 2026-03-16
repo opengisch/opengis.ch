@@ -1,10 +1,11 @@
 ---
 title: "QGIS Support & maintenance – OPENGIS.ch"
 source: "www.opengis.ch/qgis-support/index.html"
+aliases:
+  - "/qgis-support/"
 ---
 
-> We deeply care about you and your deployments and this is why we take support and maintenance very seriously and are proud to offer support contracts with SLAs.
-> Furthermore, by choosing one of our support contracts you help our [QGIS sustainability initiative](<../qgis-sustainability-initiative/index.html>).
+> "We deeply care about you and your deployments and this is why we take support and maintenance very seriously and are proud to offer support contracts with SLAs. Furthermore, by choosing one of our support contracts you help our [QGIS sustainability initiative](<../qgis-sustainability-initiative/index.html>)."
 > Marco Bernasocchi, CEO
 ## Choose Your Plan
 An OPENGIS.ch support contract guarantees you a team of geospatial experts at your fingertips. 

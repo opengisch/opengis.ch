@@ -3,6 +3,8 @@ title: 'QGIS Basic – OPENGIS.ch'
 date: 2023-03-06
 slug: "qgis-basic"
 url: "/2023/03/06/qgis-basic/"
+aliases:
+  - "/2023/03/06/qgis-basic/"
 source: "www.opengis.ch/2023/03/06/qgis-basic/index.html"
 ---
 ### Description

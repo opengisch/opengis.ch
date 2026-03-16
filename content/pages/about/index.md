@@ -1,6 +1,8 @@
 ---
 title: "Page not found – OPENGIS.ch"
 source: "www.opengis.ch/about/index.html"
+aliases:
+  - "/about/"
 ---
 
 It seems we can’t find what you’re looking for. Perhaps searching can help.

@@ -1,6 +1,8 @@
 ---
 title: "Our core values – OPENGIS.ch"
 source: "www.opengis.ch/core-values/index.html"
+aliases:
+  - "/core-values/"
 ---
 
 ## Vision

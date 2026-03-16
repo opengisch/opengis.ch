@@ -1,6 +1,8 @@
 ---
 title: "Formations rapide à QField – OPENGIS.ch"
 source: "www.opengis.ch/fr/qfield-training/index.html"
+aliases:
+  - "/fr/qfield-training/"
 ---
 
 > Vous souhaitez collecter des données sur le terrain, mais n’avez **jamais utilisé de SIG** auparavent ?

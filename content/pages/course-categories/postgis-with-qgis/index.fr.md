@@ -3,6 +3,8 @@ title: 'PostGIS with QGIS (on request) – OPENGIS.ch'
 date: 2023-02-14
 slug: "postgis-with-qgis"
 url: "/fr/2023/02/14/postgis-with-qgis/"
+aliases:
+  - "/fr/2023/02/14/postgis-with-qgis/"
 source: "www.opengis.ch/fr/2023/02/14/postgis-with-qgis/index.html"
 ---
 **Unlock the power of spatial databases in QGIS.**  

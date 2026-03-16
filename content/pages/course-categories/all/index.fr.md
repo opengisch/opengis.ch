@@ -1,6 +1,8 @@
 ---
 title: "Cours - OPENGIS.ch"
 url: "/fr/category/cours/"
+aliases:
+  - "/fr/category/cours/"
 source: "www.opengis.ch/fr/category/cours/index.html"
 course_posts:
   - /fr/2025/08/19/qfield-jump-start/

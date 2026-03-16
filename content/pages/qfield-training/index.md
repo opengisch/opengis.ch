@@ -1,6 +1,8 @@
 ---
 title: "QField Jump-start packages – OPENGIS.ch"
 source: "www.opengis.ch/qfield-training/index.html"
+aliases:
+  - "/qfield-training/"
 ---
 
 > You want to start collecting field data but **never worked with a GIS** before?

@@ -1,10 +1,13 @@
 ---
 title: "Consulting – OPENGIS.ch"
 source: "www.opengis.ch/training-consulting/index.html"
+aliases:
+  - "/training-consulting/"
 ---
 
-> “Our experienced and multilingual team is always ready to help you plan and improve your workflows, optimise your tools performance and build up your in-house knowledge.”
+> "Our experienced and multilingual team is always ready to help you plan and improve your workflows, optimise your tools performance and build up your in-house knowledge."
 > Marco Bernasocchi, CEO
+
 ### Geospatial Consulting
   - Are you planning a new geodata infrastructure?
   - Would you like to improve your QGIS workflows?
@@ -12,5 +15,5 @@ source: "www.opengis.ch/training-consulting/index.html"
   - Would you like to move away from a proprietary solution?
 
 
-Let’s discuss and find the optimal solution for your needs.
+Let's discuss and find the optimal solution for your needs.
 [Get in touch](<../index.html#contact>)

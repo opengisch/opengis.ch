@@ -3,6 +3,8 @@ title: 'QGIS Modeling – OPENGIS.ch'
 date: 2023-03-06
 slug: "qgis-graphical-modeler"
 url: "/de/2023/03/06/qgis-modellierung/"
+aliases:
+  - "/de/2023/03/06/qgis-modellierung/"
 source: "www.opengis.ch/de/2023/03/06/qgis-modellierung/index.html"
 image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2023/03/models_modela86e.png"
 ---

@@ -34,6 +34,10 @@ Theme shortcodes such as `gallery` and `blog-video` are rendered as part of a no
 Imported blog posts may start with their own markdown heading; the blog single template strips only the first leading rendered heading so the page title is not duplicated.
 The landing page header now renders transparently over the hero image on first load and switches to the fixed solid navbar style after scrolling, so homepage checks should be verified at both scroll positions.
 The active typography now follows the live OPENGIS stack again: `Roboto` for body copy, `Didact Gothic` for headings/titles, and the site’s custom title components now use the same heading-style weight/scale treatment instead of a separate local mix.
+Service-page quote components now use the full content width instead of a narrower 80% inset, so support/custom-development/sustainability quotes align with the rest of the body copy in both light and dark mode.
+Every `content/pages/index*.md` file now keeps its normalized `source:` route in `aliases`, and a regression test checks that content-page front matter stays valid and those source paths remain covered.
+The jobs page now uses a dedicated ClickUp application embed again, matching the live legacy `/jobs/` page and keeping a direct fallback link in the markup.
+Non-blog content pages that depended on legacy inline embeds now keep them in markdown again, including the Brevo newsletter signup iframe and the crowdfunding progress chart, with shared iframe styling that remains acceptable in dark mode.
 The GeoNinjas section now uses a split profile-card layout closer to the live OPENGIS site and reveals cards with a fade-in-from-left scroll animation.
 Navbar dropdowns now switch to collapsed-menu-safe static submenu layout for the full `navbar-expand-lg` range, avoiding broken absolute-position panels between tablet and desktop widths.
 Homepage hero-navbar colors are now scoped to top-level nav links only, so dropdown panels keep their normal menu-item colors even before the navbar switches to the scrolled state.

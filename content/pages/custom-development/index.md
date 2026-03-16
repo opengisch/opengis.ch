@@ -1,10 +1,13 @@
 ---
 title: "Custom Development – OPENGIS.ch"
 source: "www.opengis.ch/custom-development/index.html"
+aliases:
+  - "/custom-development/"
 ---
 
-> We love discussing requirements and create visionary solutions to problems. We always strive to develop, deploy and maintain solutions that offer exceptional value for our customers.
+> "We love discussing requirements and create visionary solutions to problems. We always strive to develop, deploy and maintain solutions that offer exceptional value for our customers."
 > Matthias Kuhn, CTO
+
 ![](../../i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/postgis465b.png?resize=150%2C150&ssl=1)
 ###  Model | Store
 ###### postGIS | Geopackage

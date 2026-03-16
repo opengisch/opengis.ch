@@ -1,6 +1,8 @@
 ---
 title: "Pacchetti di avvio a QField – OPENGIS.ch"
 source: "www.opengis.ch/it/qfield-training/index.html"
+aliases:
+  - "/it/qfield-training/"
 ---
 
 > Vuoi iniziare a raccogliere dati sul terreno ma non **hai mai lavorato con un GIS**?

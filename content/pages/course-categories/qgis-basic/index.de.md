@@ -3,6 +3,8 @@ title: 'QGIS Basic – OPENGIS.ch'
 date: 2023-03-06
 slug: "qgis-einsteiger"
 url: "/de/2023/03/06/qgis-einsteiger/"
+aliases:
+  - "/de/2023/03/06/qgis-einsteiger/"
 source: "www.opengis.ch/de/2023/03/06/qgis-einsteiger/index.html"
 image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2024/06/vt_basemapa86e.png"
 ---

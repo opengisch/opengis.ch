@@ -1,6 +1,8 @@
 ---
 title: "QField – Supported devices – OPENGIS.ch"
 source: "www.opengis.ch/android-gis/qfield/supported-devices/index.html"
+aliases:
+  - "/android-gis/qfield/supported-devices/"
 ---
 
 **Page Moved to<https://github.com/opengisch/QField/wiki/Tested-devices>**
@@ -122,5 +124,3 @@ My employer is about to let me have a smartphone. Would favorite a Huawei Mate 1
 [ ![](https://secure.gravatar.com/avatar/32d440fa1be9fed468186346efdb0c966899ae8be530f423bbf5d47f4c97226b?s=64&d=mm&r=g) ](< >)
 ####  Matthias Kuhn  · 2018-07-26 at 17:02 
 Hi Christine, while we didn’t have this device in our labs to test it yet, looking at the specs it looks like a good candidate for being compatible with QField, regarding hardware performance as well as the Android version 8.
-
-

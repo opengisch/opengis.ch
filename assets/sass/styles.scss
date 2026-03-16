@@ -1548,12 +1548,41 @@ h6 {
   color: #5b687a;
 }
 
+.jobs-application-fallback {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  color: #5b687a;
+}
+
 .order-support-contract-fallback a {
   font-weight: 600;
 }
 
 .book-private-course-fallback a {
   font-weight: 600;
+}
+
+.jobs-application-fallback a {
+  font-weight: 600;
+}
+
+.page-inline-embed {
+  margin: 1rem 0 2rem;
+}
+
+.page-inline-embed__iframe {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: transparent;
+}
+
+.newsletter-signup-iframe {
+  min-height: 1200px;
+}
+
+.crowdfunding-progress-iframe {
+  min-height: 200px;
 }
 
 .order-support-contract-iframe {
@@ -1563,6 +1592,16 @@ h6 {
 }
 
 .book-private-course-iframe {
+  display: block;
+  width: 100%;
+  min-height: 1188px;
+}
+
+.jobs-application-form {
+  margin: 1rem 0 2rem;
+}
+
+.jobs-application-iframe {
   display: block;
   width: 100%;
   min-height: 1188px;
@@ -1605,27 +1644,30 @@ h6 {
 }
 
 .custom-dev-quote {
-  margin: 2.75rem auto 0;
-  padding: 0 0 0 1.6rem;
-  border-left: 5px solid #e2e2e2;
+  margin: 2.5rem 0 3.5rem;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  padding: 0 0 0 1.7rem;
+  border-left: 6px solid #e0e3e8;
   background: transparent;
   text-align: left;
 }
 
 .custom-dev-quote p {
   margin: 0;
-  font-size: clamp(1.35rem, 2vw, 2.55rem);
-  line-height: 1.35;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: 1.45;
   font-style: italic;
-  color: #3b597d;
+  color: #4a6078;
 }
 
 .custom-dev-quote cite {
   display: block;
-  margin-top: 1.8rem;
-  font-size: 1.05rem;
+  margin-top: 1.3rem;
+  font-size: 1.15rem;
   font-style: normal;
-  color: #5c6e84;
+  color: #6f7786;
 }
 
 .custom-dev-grid {
@@ -1740,8 +1782,11 @@ h6 {
 }
 
 .sustain-quote {
-  margin: 0 0 3rem;
-  padding: 0 0 0 1.55rem;
+  margin: 2.5rem 0 3.5rem;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  padding: 0 0 0 1.7rem;
   border-left: 6px solid #e0e3e8;
   background: transparent;
   text-align: left;
@@ -1749,10 +1794,18 @@ h6 {
 
 .sustain-quote p {
   margin: 0;
-  color: #4c607b;
+  color: #4a6078;
   font-style: italic;
-  font-size: clamp(1.45rem, 2.35vw, 2rem);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
   line-height: 1.45;
+}
+
+.sustain-quote cite {
+  display: block;
+  margin-top: 1.3rem;
+  color: #6f7786;
+  font-size: 1.15rem;
+  font-style: normal;
 }
 
 .sustain-sections {
@@ -1863,9 +1916,11 @@ h6 {
 }
 
 .support-quote {
-  margin: 2.3rem 0 3.5rem;
-  max-width: 980px;
-  padding: 0 0 0 1.75rem;
+  margin: 2.5rem 0 3.5rem;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  padding: 0 0 0 1.7rem;
   border-left: 6px solid #e0e3e8;
   background: transparent;
   text-align: left;
@@ -1873,9 +1928,9 @@ h6 {
 
 .support-quote p {
   margin: 0;
-  color: #4d6076;
-  font-size: clamp(1.35rem, 2.1vw, 1.9rem);
-  line-height: 1.5;
+  color: #4a6078;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: 1.45;
   font-style: italic;
 }
 
@@ -1885,9 +1940,9 @@ h6 {
 
 .support-quote cite {
   display: block;
-  margin-top: 1.1rem;
-  color: #6a7484;
-  font-size: 1.2rem;
+  margin-top: 1.3rem;
+  color: #6f7786;
+  font-size: 1.15rem;
   font-style: normal;
 }
 
@@ -1958,6 +2013,7 @@ h6 {
 }
 
 .support-tier-card--featured {
+  background: #f7fbf3;
   border-color: var(--opg-primary);
   box-shadow: inset 0 0 0 1px rgba(130, 203, 42, 0.18);
 }
@@ -2899,6 +2955,18 @@ h6 {
   color: #b4c0d1;
 }
 
+[data-bs-theme="dark"] .jobs-application-iframe {
+  border-color: #3b4552 !important;
+}
+
+[data-bs-theme="dark"] .page-inline-embed__iframe {
+  border-color: #3b4552;
+}
+
+[data-bs-theme="dark"] .jobs-application-fallback {
+  color: #b4c0d1;
+}
+
 [data-bs-theme="dark"] .sustain-page {
   background: #14171d;
   color: #d8dfe9;
@@ -3002,6 +3070,7 @@ h6 {
 }
 
 [data-bs-theme="dark"] .support-tier-card--featured {
+  background: #1f2825;
   border-color: var(--opg-primary);
   box-shadow: inset 0 0 0 1px rgba(130, 203, 42, 0.22);
 }
@@ -3078,6 +3147,16 @@ h6 {
 [data-bs-theme="dark"] .jumpstart-card__cta:hover,
 [data-bs-theme="dark"] .jumpstart-card__cta:focus {
   color: #0f1319;
+}
+
+@media (max-width: 1399.98px) {
+  .support-tier-grid--plans {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+
+  .support-tier-grid--sla {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -3282,6 +3361,14 @@ h6 {
 
   .book-private-course-iframe {
     min-height: 1260px;
+  }
+
+  .jobs-application-iframe {
+    min-height: 1260px;
+  }
+
+  .newsletter-signup-iframe {
+    min-height: 1320px;
   }
 
   .courses-calendar-iframe {

@@ -3,6 +3,8 @@ title: 'INTERLIS Crash Course Webinar – OPENGIS.ch'
 date: 2023-03-06
 slug: "interlis-crashcourse-webinar"
 url: "/2023/03/06/interlis-crashcourse-webinar/"
+aliases:
+  - "/2023/03/06/interlis-crashcourse-webinar/"
 source: "www.opengis.ch/2023/03/06/interlis-crashcourse-webinar/index.html"
 ---
 ## Description

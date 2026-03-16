@@ -1,5 +1,24 @@
 # Changelog
 
+## [Unreleased] - 2026-03-16
+- Updated `assets/sass/styles.scss` and `themes/qfield-theme-v3/assets/sass/styles.scss` so service-page quote components (`support-quote`, `custom-dev-quote`, `sustain-quote`) use the full content width instead of the previous 80%/980px inset, aligning quote blocks with the surrounding copy in both light and dark mode.
+- Added `tests/test_service_quote_widths.py` to keep the full-width service-quote styling covered by regression tests.
+- Documented the service-page quote-width behavior in `README.md` and `themes/qfield-theme-v3/README.md`.
+- Added normalized `source:` aliases to every `content/pages/index*.md` entry that was missing one, including nested bundles such as `qfield-rapidmapper`, fixed a malformed front-matter delimiter in `content/pages/custom-development/index.fr.md`, and added regression coverage in `tests/test_content_page_source_aliases.py`.
+- Restored the missing legacy jobs application form by adding a dedicated `jobs` page branch in `themes/qfield-theme-v3/layouts/_default/single.html`, wiring the ClickUp embed in `themes/qfield-theme-v3/assets/js/main.js`, and adding shared jobs-form styling in `assets/sass/styles.scss`.
+- Restored the missing legacy newsletter signup embed on all localized `content/pages/newsletter/index*.md` pages and the missing crowdfunding progress chart on the EN/DE/IT crowdfunding pages, added shared inline-embed iframe styling in `assets/sass/styles.scss`, and covered the rendered output with `tests/test_page_embeds.py`.
+
+
+## [Unreleased] - 2026-03-13
+- Added training-consulting page slug detection and special template handling in `themes/qfield-theme-v3/layouts/_default/single.html` to render quotes with the `custom-dev-quote` class and `<cite>` tag structure, matching the visual formatting of the custom-development page.
+- Updated `content/pages/qgis-support/index.md` to add quotation marks around the quote text and combine multi-line quote into a single quoted sentence for consistent formatting across all service pages.
+- Standardized all quote CSS classes (`custom-dev-quote`, `support-quote`, `sustain-quote`) in `assets/sass/styles.scss` and `themes/qfield-theme-v3/assets/sass/styles.scss` to have identical styling (margin, padding, border, font-size, colors, cite formatting) ensuring consistent visual appearance across all pages.
+- Updated all quote classes to use 80% width with 980px max-width for better responsive behavior across different screen sizes while maintaining an upper limit on very large screens.
+- Fixed blockquote HTML structure in `themes/qfield-theme-v3/layouts/_default/single.html` for support page to wrap quote content in `<p>` tags, matching the custom-development and training-consulting page structure and ensuring consistent rendering across all service pages.
+- Added comprehensive responsive breakpoints for support page pricing cards in both `assets/sass/styles.scss` and `themes/qfield-theme-v3/assets/sass/styles.scss`: 4 columns on large screens (>1399.98px) → 3 columns on medium screens (1200-1399.98px) → 2 columns on tablets (768-1199.98px) → 1 column on mobile (<767.98px), improving layout readability across all screen sizes.
+- Improved support pricing card buttons (`.support-tier-cta`) with responsive sizing: full-width on tablet and mobile screens with increased padding and font size for better touch targets and visual consistency on smaller devices.
+- Added light green background (`#f7fbf3` in light mode, `#1f2825` in dark mode) to featured support tier cards (`.support-tier-card--featured`) in both SCSS files to enhance visual emphasis of highlighted pricing options while maintaining dark mode compatibility.
+
 ## [Unreleased] - 2026-03-12
 - Updated `themes/qfield-theme-v3/layouts/partials/header/header.html`, `themes/qfield-theme-v3/assets/js/main.js`, and `assets/sass/styles.scss` so the landing page navbar now starts fully transparent over the hero image, switches to the solid fixed header styling after scrolling, keeps matching dark-mode treatment, recalculates the navbar offset when the header height changes, and uses a lighter navbar font weight.
 - Realigned typography with the live `opengis.ch` font stack by using `Roboto` for body text and `Didact Gothic` for headings/titles in both `assets/sass/styles.scss` and `themes/qfield-theme-v3/assets/sass/styles.scss`, and added regression coverage in `tests/test_font_stack_alignment.py`.

@@ -1,6 +1,8 @@
 ---
 title: "Courses - OPENGIS.ch"
 url: "/category/courses/"
+aliases:
+  - "/category/courses/"
 source: "www.opengis.ch/category/courses/index.html"
 course_posts:
   - /2023/03/06/qgis-graphical-modeler/
