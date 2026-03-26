@@ -7,7 +7,7 @@ source: "www.opengis.ch/2025/03/21/django-full-stack-engineer-with-devops-affini
 ---
 **Location** : Remote, preferably with at least 4h overlap to [CEST office hours](<https://www.timeanddate.com/worldclock/converter.html?p1=270>)
 **Employment Type** : Full-time (80-100%)
-![](./imagebb94.png)
+![Illustration of the OPENGIS.ch team collaborating remotely on open-source geospatial work](./imagebb94.png)
 **About OPENGIS.ch** :
 [OPENGIS.ch](</index.html>) is a team of Full-Stack GeoNinjas offering personalized open-source geodata solutions to Swiss and international clients. We are dedicated to using and developing open-source tools, providing flexibility, scalability, and future-proof solutions, and playing a key role in the free and open-source geospatial community. We pride ourselves on our agile and distributed nature, which allows us to have a motivated and multicultural team that supports each other in working together.
 **Job Description** :

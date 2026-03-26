@@ -12,5 +12,5 @@ What I still need to do Is to translate the site using [wp-i18n](<https://wordpr
 In any case I think that it is pretty amazing to what result you can come in about 20 hours of development.  
 Enjoy and let me know if you find any issues.  
 ciao  
-[![](./Screenshot-from-2012-05-22-165307465b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2012/05/Screenshot-from-2012-05-22-165307eb45.png?ssl=1>)
+[![Screenshot of the new OPENGIS.ch website launched in 2012](./Screenshot-from-2012-05-22-165307465b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2012/05/Screenshot-from-2012-05-22-165307eb45.png?ssl=1>)
 ### _Related_

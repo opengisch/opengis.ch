@@ -1,0 +1,17 @@
+[build]
+writeStats = true
+useResourceCacheWhen = "fallback"
+
+[minify]
+disableCSS = false
+disableHTML = false
+disableJS = false
+disableJSON = false
+disableSVG = false
+disableXML = false
+minifyOutput = true
+
+[params]
+environment = "production"
+debug = false
+analytics = true

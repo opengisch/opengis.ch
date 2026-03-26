@@ -6,7 +6,7 @@ url: "/2024/06/27/behind-the-scenes-our-latest-projects-and-company-news/"
 source: "www.opengis.ch/2024/06/27/behind-the-scenes-our-latest-projects-and-company-news/index.html"
 ---
 We are proudly celebrating our **10th anniversary** , a significant milestone that marks a decade of innovation, collaboration, and success in the geodata world. Stay tuned for more details on how we celebrate this remarkable journey!
-![](./Design-ohne-Titel-615bf.gif)
+![OPENGIS.ch 10th anniversary newsletter banner](./Design-ohne-Titel-615bf.gif)
 We are also excited that our CEO and QGIS.org Chair, Marco Bernasocchi, has been proposed as **OSGEO Vice-president Europe**. Showing that staying true to our core values of [giving back](</core-values/index.html>) to the open-source geospatial community is the right path to follow.  
   
 Finally we’re very proud that, QField, has been officially recognized as a **Digital Public Good** by the UN-endorsed [Digital Public Goods Alliance](<https://digitalpublicgoods.net/>). This prestigious recognition highlights QField’s significant contributions to six key Sustainable Development Goals. At [OPENGIS.ch](<https://www.linkedin.com/company/opengisch/>) we don’t just do open-source, we L[i|o]ve open-source.  
@@ -33,7 +33,7 @@ A new module allows for bringing application logic to REST services, according t
   
 At [OPENGIS.ch](</index.html>), we are not only dedicated to our project work but also focus on the education of crucial software tools such as QGIS, INTERLIS Modelbaker, and QField. The QField course is the latest addition to our educational portfolio. In this course, you can learn how to get started with your field data collection project. Check out our next course dates here: [Upcoming Courses – OPENGIS.ch](</courses-calendar/index.html>)  
 
-![](./image-1463d.png)
+![Poster announcing the new OPENGIS.ch QField course](./image-1463d.png)
 #### ****Stay tuned for more updates as we continue to explore the endless possibilities of GIS****!
 To better serve you and continue improving our projects, please take a moment to fill out our survey. Your feedback is invaluable to us: 
 [LINK TO THE SURVEY](<https://opengisch.surveysparrow.com/n/2024q2/ntt-eM9wwtcuvnNaWUAKvBiA6h>)

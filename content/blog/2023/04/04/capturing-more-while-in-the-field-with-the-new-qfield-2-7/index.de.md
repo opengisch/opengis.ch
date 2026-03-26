@@ -7,7 +7,7 @@ source: "www.opengis.ch/de/2023/04/04/capturing-more-while-in-the-field-with-the
 ---
 A brand new version of QField has been released, **packed with features** that will make you fall in love with this essential open source tool all over again with a focus on capturing more while you are in the field. QField 2.7 nicknamed “Heroic Hedgehog” also includes a number of worthy fixes making it a crucial update to get.
 ## New recording capabilities
-![](./224213255-e51e619a-2505-49dc-a03d-088bfa2530e46114.png)
+![QField 2.7 feature form showing audio and video recording attachments](./224213255-e51e619a-2505-49dc-a03d-088bfa2530e46114.png)
 The highlight of QField 2.7 is the **new audio and video recording capability straight from the feature form**. In addition to preexisting still photo capture, this functionality allows for video motion and audio clips to be added as attachments to feature attributes.
 The audio recording capability can come in handy in the field when typing on a keyboard-less device can be challenging. Simply record an audio note of observations to process later.
 The experience wouldn’t be complete without **audio and video playback support** , which we took care of in this version too. Playback of such media content within the feature form gives an immediate feedback and saves time. For those interested in full screen immersion, simply click on the video frame to open the attached in your favorite media player. We also took the opportunity to implement audio and video playback on QGIS so people can easily consume the fruits of their labor in the field at their workstation.

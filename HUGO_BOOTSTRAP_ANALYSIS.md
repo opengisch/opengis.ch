@@ -4,6 +4,8 @@
 
 This document provides a comprehensive analysis of the OPENGIS.ch website repository against Hugo and Bootstrap best practices. The analysis covers configuration, structure, performance, accessibility, security, and code organization.
 
+**Status Sync:** Updated on March 25, 2026 to reflect improvements already implemented on the current branch.
+
 **Overall Assessment:** The repository demonstrates **strong adherence** to both Hugo and Bootstrap best practices with some areas for potential improvement.
 
 ---
@@ -68,17 +70,19 @@ This document provides a comprehensive analysis of the OPENGIS.ch website reposi
 - ✅ **Best Practice**: Proper Hugo module mounts
 - ✅ Hugo version requirements specified (extended: true, min: 0.99.1)
 
-### ⚠️ Areas for Improvement
-
-#### 1.1 Configuration File Format
-- **Current**: Using YAML format
-- **Recommendation**: Consider TOML for better performance in Hugo
-- **Impact**: Minor performance improvement
+### ✅ Completed Since Initial Analysis
 
 #### 1.2 Image Processing
-- **Current**: Custom image processing in partials
-- **Recommendation**: Consider Hugo's built-in image processing with `.Page.Resources`
-- **Impact**: Better integration with Hugo's asset pipeline
+- **Status**: Completed
+- The shared image helper now accepts resolved resources and page context so bundle-local images can be handled through `.Page.Resources`.
+- Key card/list surfaces now emit processed responsive variants from Hugo-managed image resources instead of relying on raw original bundle images.
+
+### ✅ Completed Since Initial Analysis
+
+#### 1.1 Configuration File Format
+- **Status**: Completed
+- The active Hugo configuration now lives in `config/_default/hugo.toml` with TOML environment overrides under `config/{development,staging,production}/hugo.toml`.
+- This restores the intended TOML-based config layout without changing the site's effective configuration.
 
 ---
 
@@ -155,30 +159,17 @@ This document provides a comprehensive analysis of the OPENGIS.ch website reposi
   })
   ```
 
-### ⚠️ Areas for Improvement
+### ✅ Completed Since Initial Analysis
 
 #### 2.1 Bootstrap Tree Shaking
-- **Current**: Full Bootstrap import (`@import "bootstrap/bootstrap.scss"`)
-- **Recommendation**: Import only needed components to reduce CSS size
-  ```scss
-  // Example
-  @import "bootstrap/functions";
-  @import "bootstrap/variables";
-  @import "bootstrap/mixins";
-  @import "bootstrap/utilities";
-  @import "bootstrap/root";
-  @import "bootstrap/reboot";
-  @import "bootstrap/type";
-  @import "bootstrap/grid";
-  @import "bootstrap/buttons";
-  // ... only what you need
-  ```
-- **Impact**: Could reduce CSS bundle size by 30-50%
+- **Status**: Completed
+- The theme Sass entrypoint now imports only the Bootstrap partials the site actually uses instead of the full `bootstrap.scss` bundle.
+- Regression coverage keeps the curated Bootstrap Sass import list from drifting.
 
 #### 2.2 Bootstrap JavaScript Optimization
-- **Current**: Full Bootstrap bundle
-- **Recommendation**: Consider importing only needed JS modules
-- **Impact**: Reduced JavaScript bundle size
+- **Status**: Completed
+- The site now ships a Hugo-built Bootstrap entrypoint that imports only the required modules (`alert`, `carousel`, `collapse`, `dropdown`, `tooltip`).
+- This replaces the previous full bundle approach and reduces unused JavaScript.
 
 ---
 
@@ -226,33 +217,32 @@ This document provides a comprehensive analysis of the OPENGIS.ch website reposi
   srcset="image-400.jpg 400w, image-960.jpg 960w, ..."
   ```
 - ✅ Multiple image widths: 400, 640, 960, 1280, 1600
+- ✅ Shared responsive image helpers now emit AVIF and WebP `<picture>` sources with original-format fallbacks for Hugo-managed raster assets
 
-### ⚠️ Areas for Improvement
+### ✅ Completed Since Initial Analysis
 
-#### 3.1 Font Loading
-- **Current**: Google Fonts loaded via CSS import:
-  ```scss
-  @import url("https://fonts.googleapis.com/css2?family=...");
-  ```
-- **Recommendation**: Use preconnect and consider self-hosting fonts
-  ```html
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  ```
-- **Impact**: Improved LCP (Largest Contentful Paint)
+#### 3.1 Font Loading and Resource Hints
+- **Status**: Completed
+- Google Fonts are now loaded from the document head with `dns-prefetch`, `preconnect`, and stylesheet `preload` hints instead of SCSS `@import`.
+- Analytics-enabled builds now also warm `www.googletagmanager.com` before the tag script is requested.
+- This aligns the site with the recommended font-loading pattern and improves first-load behavior.
+
+#### 3.3 PostCSS Integration
+- **Status**: Completed
+- The stylesheet pipeline now runs PostCSS with Autoprefixer using the theme-local `postcss.config.js`.
+- The root Node toolchain pins the required PostCSS packages so clean local and CI builds can reproduce the pipeline.
+
+#### 3.5 Modern Image Formats
+- **Status**: Completed
+- The shared image partial and reusable carousel now emit AVIF and WebP variants before falling back to the original resized asset format.
+- This extends the existing responsive-image pipeline to modern codecs without breaking older browsers.
+
+### ⚠️ Remaining Improvement Opportunities
 
 #### 3.2 Critical CSS
 - **Current**: Single CSS file
 - **Recommendation**: Consider extracting critical CSS for above-the-fold content
 - **Impact**: Improved FCP (First Contentful Paint)
-
-#### 3.3 PostCSS Integration
-- **Current**: CSS commented out in stylesheet.html
-  ```go-html-template
-  {{/*- $postcssOptions := dict "use" "autoprefixer" "noMap" true -*/}}
-  ```
-- **Recommendation**: Enable PostCSS with autoprefixer
-- **Impact**: Better browser compatibility
 
 ---
 
@@ -292,15 +282,14 @@ This document provides a comprehensive analysis of the OPENGIS.ch website reposi
 - ✅ Bootstrap's default color system provides good contrast
 - ✅ Custom primary color (#80cc28) provides sufficient contrast
 
-### ⚠️ Areas for Improvement
+### ✅ Completed Since Initial Analysis
 
 #### 4.1 Skip to Content Link
-- **Missing**: No skip navigation link
-- **Recommendation**: Add skip link for keyboard users:
-  ```html
-  <a href="#content" class="skip-link">Skip to main content</a>
-  ```
-- **Impact**: Better keyboard navigation experience
+- **Status**: Completed
+- The base shell now includes a skip link targeting the main content region.
+- This closes the keyboard-navigation gap identified in the original analysis.
+
+### ⚠️ Remaining Improvement Opportunities
 
 #### 4.2 Form Labels
 - **Recommendation**: Review all form fields for proper label associations
@@ -348,11 +337,12 @@ This document provides a comprehensive analysis of the OPENGIS.ch website reposi
   - Translated pages
   - x-default tag
 
-### ⚠️ Areas for Improvement
+### ✅ Completed Since Initial Analysis
 
 #### 5.1 Image Alt Text
-- **Recommendation**: Audit all images for descriptive alt text
-- **Impact**: Better SEO and accessibility
+- ✅ **Completed Since Initial Analysis**: Built-site alt-text audit tooling now exists via `scripts/image_alt_audit.py`, which emits JSON/CSV reports for rendered Hugo output.
+- ✅ **Current Baseline (March 25, 2026)**: The rendered-site audit now reports `0` review findings (`0` empty-alt reviews, `0` generic-alt reviews) after completing the remaining multilingual release/news, hiring, crowdfunding, translated plugin-manager, course, homepage-logo, and legacy post cleanup.
+- The audit script and report files remain useful as ongoing regression tooling when new content is added.
 
 ---
 
@@ -383,20 +373,19 @@ This document provides a comprehensive analysis of the OPENGIS.ch website reposi
   target="_blank"
   ```
 
-### ⚠️ Areas for Improvement
+### ✅ Completed Since Initial Analysis
+
+#### 6.2 Font-Awesome Loading
+- **Status**: Completed
+- The tracked Font Awesome CSS assets are now emitted through Hugo fingerprinting with SHA512 integrity attributes.
+- This closes the original integrity-gap concern for those stylesheet assets.
+
+### ⚠️ Remaining Improvement Opportunities
 
 #### 6.1 CSP Strictness
 - **Current**: `style-src 'unsafe-inline'` allowed
 - **Recommendation**: Move inline styles to external stylesheet or use nonces
 - **Impact**: Enhanced security against XSS
-
-#### 6.2 Font-Awesome Loading
-- **Current**: Loading from static folder without integrity hashes
-  ```html
-  <link rel="stylesheet" href="{{ "/font-awesome/css/all.min20b9.css" | relURL }}">
-  ```
-- **Recommendation**: Add SRI hashes or load from CDN with integrity
-- **Impact**: Better security validation
 
 ---
 
@@ -470,11 +459,12 @@ No improvements needed in this area.
   - `homepage.yaml`
   - `social.yaml`
 
-### ⚠️ Areas for Improvement
+### ✅ Completed Since Initial Analysis
 
 #### 8.1 Partial Documentation
-- **Recommendation**: Add comments explaining partial parameters and usage
-- **Impact**: Better maintainability
+- **Status**: Completed
+- Shared dict-driven partials now include header comments documenting parameters and usage expectations.
+- Regression coverage keeps that documentation contract in place.
 
 ---
 
@@ -509,16 +499,18 @@ No improvements needed in this area.
 #### 9.4 Console Logging
 - ✅ Development-friendly logging for debugging
 
-### ⚠️ Areas for Improvement
+### ✅ Completed Since Initial Analysis
+
+#### 9.2 Remove Console Logs in Production
+- **Status**: Completed
+- `main.js` debug logging is now gated to development and localhost contexts, so production users do not see the diagnostic output.
+- This preserves local debugging value without polluting production consoles.
+
+### ⚠️ Remaining Improvement Opportunities
 
 #### 9.1 Build Process
 - **Recommendation**: Consider using a bundler (webpack, rollup, esbuild)
 - **Impact**: Tree shaking, code splitting, better optimization
-
-#### 9.2 Remove Console Logs in Production
-- **Current**: Console logs present
-- **Recommendation**: Strip console logs in production build
-- **Impact**: Slightly smaller file size, cleaner production code
 
 ---
 
@@ -541,11 +533,12 @@ No improvements needed in this area.
 - ✅ Sitemap auditing
 - ✅ Static asset auditing
 
-### ⚠️ Areas for Improvement
+### ✅ Completed Since Initial Analysis
 
 #### 10.1 Automated Testing
-- **Recommendation**: Integrate tests into CI/CD pipeline
-- **Impact**: Catch regressions early
+- **Status**: Completed
+- The repository now has a GitHub Actions workflow that runs the Python regression suite, `compileall`, a development Hugo build, `pa11y`, `htmltest`, and Lighthouse CI.
+- This closes the original CI/CD automation gap and catches regressions on rendered output as well as source contracts.
 
 ---
 
@@ -567,53 +560,71 @@ No improvements needed in this area.
 - ✅ Environment-specific parameters
 - ✅ Debug mode toggle
 
-### ⚠️ Areas for Improvement
+### ✅ Completed Since Initial Analysis
 
 #### 11.1 Build Scripts
-- **Recommendation**: Document build commands in package.json or Makefile
-- **Impact**: Better developer experience
+- **Status**: Completed
+- The repository README now documents the Hugo build, environment, and validation commands used for local work and CI.
+- The root `package.json` also exposes the Lighthouse smoke command for the Node-side validation toolchain.
 
 ---
 
 ## Priority Recommendations
 
-### High Priority
+### Completed Since Analysis
 
 1. **Enable PostCSS/Autoprefixer**
-   - Better browser compatibility
-   - Automated vendor prefixing
+   - Implemented in the Hugo stylesheet pipeline
+   - Covered by regression tests
 
 2. **Add Skip Navigation Link**
-   - Critical for accessibility
-   - Easy to implement
+   - Implemented in the base layout
+   - Improves keyboard navigation
 
 3. **Optimize Bootstrap Bundle**
-   - Import only needed components
-   - Significant size reduction
-
-### Medium Priority
+   - Completed for both Sass and JavaScript
+   - Reduces unused Bootstrap payload
 
 4. **Improve Font Loading Strategy**
-   - Preconnect to font providers
-   - Consider self-hosting
+   - Completed with head-level `dns-prefetch`, `preconnect`, and stylesheet `preload` hints
+   - Removes the previous SCSS font import and warms the active third-party font/tag origins
 
-5. **Add Critical CSS Extraction**
+5. **Partial Documentation**
+   - Added to the shared parameterized partials
+   - Covered by regression tests
+
+6. **Automated Quality Checks**
+   - CI now runs the Python suite, `pa11y`, `htmltest`, and Lighthouse CI
+   - Catches rendered-site regressions earlier
+
+7. **Minimal Service Worker / PWA Support**
+   - A same-origin service worker now caches static assets for repeat visits
+   - The head also exposes a web app manifest for installability-aware browsers
+
+8. **Mirror Cleanup Tooling**
+   - `scripts/wordpress_mirror_audit.py` now reports which mirrored WordPress/static roots are still referenced from source content
+   - This pass pruned the unreferenced `static/i1.wp.com/**` and `static/wp-json/otter/**` leftovers while keeping still-linked mirror roots in place
+
+9. **Configuration File Format**
+   - The active Hugo config now uses `config/_default/hugo.toml` plus TOML environment overrides
+   - Regression coverage keeps the old `hugo.yaml` layout from returning unnoticed
+
+10. **Automated Dependency Updates**
+   - Dependabot now tracks GitHub Actions plus both npm manifests
+   - This keeps build and CI dependencies from drifting silently between manual updates
+
+### Remaining Priorities
+
+1. **Add Critical CSS Extraction**
    - Faster initial page load
    - Better Core Web Vitals
 
-6. **Enhanced CSP**
-   - Remove 'unsafe-inline' for styles
+2. **Enhanced CSP**
+   - Remove `'unsafe-inline'` for styles
    - Use nonces or hashes
 
-### Low Priority
-
-7. **JavaScript Build Process**
-   - Modern bundling
-   - Better optimization
-
-8. **Partial Documentation**
-   - Improved maintainability
-   - Team onboarding
+3. **JavaScript Build Process**
+   - More advanced bundling only if future complexity justifies it
 
 ---
 
@@ -637,10 +648,10 @@ The repository demonstrates **excellent implementation** of both Hugo and Bootst
 4. Security measures are in place
 
 ### Recommended Next Steps
-1. Implement high-priority recommendations
-2. Review and audit all images for alt text
-3. Consider setting up automated accessibility testing
-4. Monitor Core Web Vitals and adjust accordingly
+1. Remove the remaining inline-style dependency so CSP can drop `'unsafe-inline'`
+2. Keep using `reports/image_alt_audit_report.csv` as a regression check when new content is imported or translated
+3. Evaluate critical-CSS extraction against measured Core Web Vitals gains
+4. Monitor Lighthouse and accessibility reports over time
 
 ---
 

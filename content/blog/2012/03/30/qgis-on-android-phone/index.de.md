@@ -13,7 +13,7 @@ fontPointSize=4`and pushed it to the device using the [android debug bridge](<ht
 `adb push myQGISConfigFile.conf /data/data/org.qgis.qgis/files/Settings/QuantumGIS/QGIS.conf`  
 On the next start the whole gui was nice and small and fitted the screen.  
 Here some screenshots from my Samsung galaxy 9000 with 4″ screen and a video demonstrating digitising (with pen and fingers), GPS, compass and zooming on the phone.  
-[![](./P20120330131311465b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2012/02/P20120330131311eb45.png?ssl=1>) [![](./P20120330123638465b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2012/02/P20120330123638eb45.png?ssl=1>)  
+[![QGIS map view running on a Samsung Galaxy S Android phone](./P20120330131311465b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2012/02/P20120330131311eb45.png?ssl=1>) [![QGIS interface scaled down to fit a Samsung Galaxy S screen](./P20120330123638465b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2012/02/P20120330123638eb45.png?ssl=1>)  
 
 This video shows QGIS on a Samsung I9000 Galaxy S Android smartphone with 4.0″ screen. the point size in settings->option->general is set to 4
 

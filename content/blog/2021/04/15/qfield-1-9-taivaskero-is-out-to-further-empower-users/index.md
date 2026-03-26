@@ -10,7 +10,7 @@ From unlocking selective atlas layout export to opening individual datasets and 
 ## **Print Atlas-Driven Layouts to PDF**
 QField has long supported exporting print layouts to PDF, but now users are able to export _atlas-driven layouts_ from selected features, all while being in the field. A new print action is now attached to the feature form and identified features list for all vector layers acting as atlas coverage layers in any of the print layouts present in a loaded project.
 Oh, and did we mention exported PDFs from QField are now georeferenced?
-![](./image-139b0.png)
+![QField 1.9 atlas-driven PDF export from selected features](./image-139b0.png)
 ## **Opening of individual datasets**
 Users in the field can find themselves in need of opening individual geospatial datasets not bound to a project: that KML file a colleague has just sent through via a messenger app or a new GeoPDF sitting in the inbox. QField 1.9 will seamlessly do that for you.
 ![geopackage](https://i0.wp.com/user-images.githubusercontent.com/28384354/110384939-97faa880-805e-11eb-9f02-520e995573b3.png?w=750&ssl=1)

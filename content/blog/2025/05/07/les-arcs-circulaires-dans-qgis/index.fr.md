@@ -6,10 +6,10 @@ url: "/fr/2025/05/07/les-arcs-circulaires-dans-qgis/"
 source: "www.opengis.ch/fr/2025/05/07/les-arcs-circulaires-dans-qgis/index.html"
 ---
 ### **Pourquoi ils sont si importants et comment tu peux aider**.
-![](./pb6001.png)
+![Diagram illustrating circular arcs used in GIS geometry instead of segmented straight lines](./pb6001.png)
 Dans le monde du traitement des données géographiques, les **arcs circulaires** (en anglais _circular arcs_) sont un élément souvent négligé, mais extrêmement important. Dans **QGIS** , l’application SIG open-source de référence, ils ne sont actuellement pris en charge que de façon limitée, et c’est précisément ce que nous voulons changer.
 🔗**Aide-nous ici** 👇
-[![](./arcs_crowdfunding_link-fr1bd6.png)](</crowdfunding-un-soutien-fiable-pour-les-arcs-de-cercle-dans-qgis/index.html>)
+[![French crowdfunding call-to-action banner for reliable circular-arc support in QGIS](./arcs_crowdfunding_link-fr1bd6.png)](</crowdfunding-un-soutien-fiable-pour-les-arcs-de-cercle-dans-qgis/index.html>)
 * * *
 ### **Que sont les arcs circulaires, et pourquoi sont-ils importants?**
 Les arcs circulaires sont des éléments géométriques qui ne sont pas composés de segments de ligne droite, mais représentent de véritables **courbes**. Ils sont définis par trois points: un point de départ, un point final et un point d’intersection _(ou le centre du cercle)_.
@@ -42,12 +42,12 @@ En avril, nous avons lancé un **financement participatif**. Notre objectif:
   - Adapter le moteur de superposition _(Overlay Engine)_ de GEOS pour gérer les arcs circulaires
   - Et sur cette base, améliorer considérablement la gestion dans QGIS.
 
-![](./pb-sol65b5.png)
+![Crowdfunding progress graphic showing the circular-arcs campaign already over halfway funded](./pb-sol65b5.png)
 * * *
 **La bonne nouvelle:** nous avons déjà réuni **la moitié du financement**!
 Maintenant, nous avons besoin de ton aide pour réussir. Chaque soutien, qu’il soit financier, par le partage de la campagne ou simplement en en parlant autour de vous, nous rapproche d’une **version améliorée de QGIS** , accessible à tous.
 🔗 **Le crowdfunding, c’est par ici** 👇
-[![](./arcs_crowdfunding_link-fr1bd6.png)](</crowdfunding-un-soutien-fiable-pour-les-arcs-de-cercle-dans-qgis/index.html>)
+[![French crowdfunding call-to-action banner for reliable circular-arc support in QGIS](./arcs_crowdfunding_link-fr1bd6.png)](</crowdfunding-un-soutien-fiable-pour-les-arcs-de-cercle-dans-qgis/index.html>)
 * * *
 ### **Ensemble, nous pouvons y arriver!**
 Le monde de l’open-source vit du fait que les gens travaillent ensemble sur quelque chose de grand. Avec une véritable prise en charge des arcs circulaires, QGIS deviendra non seulement plus précis et plus rapide, mais aussi un outil encore plus puissant pour la pratique.

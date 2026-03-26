@@ -8,7 +8,7 @@ source: "www.opengis.ch/de/2024/01/16/oid-tid-t_ili_tid-tid-model-baker-7-8-nimm
 _****Letztes Jahr – pünktlich zu Weihnachten 2023 – ist[QGIS Model Baker Release 7.8](<https://github.com/opengisch/QgisModelBaker/releases/tag/v7.8.0>) erschienen. Dieser bietet dir ein optimiertes GUI, die Möglichkeit UsabILIty Toppings auf bestehende Datenquellen zu applizieren und die angenehme Handhabung von OIDs. Denn OIDs sind oft mühsam zu erfassen und können generell verwirren. In diesem Blogpost wird versucht, die[ ](</indexb2ed.html?page_id=14111>)OIDs einfach zu erklären und zu zeigen, wie man sie in Model Baker verwalten kann.****_
 ## Probleme mit OIDs
 Wenn du dich noch nie mit OIDs herumschlagen hast müssen, verwendet dein Umfeld entweder konsequent [UUID](<https://datatracker.ietf.org/doc/html/rfc4122>)s oder du bist anderweitig von der Fortuna gesegnet worden. Denn viele kennen diese Fehlermeldungen beim Validieren der Daten.
-![](./blog_validation0bd9.png)
+![Validation errors caused by missing or conflicting OIDs in Model Baker](./blog_validation0bd9.png)
 ## Was sind denn genau OIDs?
 Objekt-IDs (OID) sind systemübergreifend eindeutige Zeichenketten, die ein INTERLIS Objekt identifizieren. Damit lassen sich solche Objekte über verschiedene Stellen austauschen und updaten. Es gibt keine Konflikte, denn diese IDs sind einmalig.
 In der Transferdatei ist die OID unter TID einsehbar (hier als Beispiel „chMBAKER00000100“)
@@ -80,7 +80,7 @@ Model Baker konfiguriert im QGIS Projekt den Standardert für die `t_ili_tid` da
 Das erkennen des OID Typs und das setzen der Default-Werte für die `t_ili_tid` Felder ist also die eine Funktionalität, die Model Baker mit dem neuen Release gekriegt hat. Doch ist es nun so, dass du einige dieser Default-Werte auch anpassen musst oder willst.
 Damit du nicht mühsam in jede Layer-Konfiguration gehen musst, werden sie dir gesammelt und in einem GUI bereitgestellt.
 Der **OID Manager** wird im Wizard beim Erstellen des QGIS Projektes miteinbezogen. Allerdings kannst du auch bereits erstellte Projekte nachkonfigurieren. Öffne den **OID Manager** einfach über das Menü  _Datenbank > Model Baker_.
-![](./blog_tid_manager8bdc.png)
+![Model Baker OID manager dialog for configuring t_ili_tid default values](./blog_tid_manager8bdc.png)
 Hier kannst du den gewohnten QGIS Expression Dialog verwenden, um den Default-Wert für das Feld `t_ili_tid` jedes Layers zu bearbeiten.
 Um die `t_ili_tid` im Formular anzuzeigen, kannst du  _**Show**_ anwählen.
 Wenn du einen Zähler brauchst, kannst du das oben beschriebene Feld `t_id` verwenden. Du kannst diese Sequenz auch zurücksetzten. Achte aber darauf, sie nicht niedriger zu setzen als die bereits in Ihrem Projekt vorhandenen `t_id`s. Siehe dazu auch die aufgeführten Limitierungen in der [Doku](<https://opengisch.github.io/QgisModelBaker/de/background_info/oid_tid_generator/#limitations>).

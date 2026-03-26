@@ -32,9 +32,9 @@ After 3 months of intensive work, QGIS for android finally has a a proper GUI
 I still remember the feeling that day when after almost 3 months, of fighting with shell scripts, patching of build systems, debugging via ADB, writing C++ in Java wrappers and so on, my Quantum GIS test project was suddenly running on my tablet… I Was so happy I just went running in the mountains :). 
 > Just a quick screenshot to show that qgis on android is now a working reality. Tomorrow I’ll make a video and so on. The major missing thing now is reading SHP files ad maybe spatialite… maybe tomorrow. Now it’s Sunday ?
 > [https://www.opengis.ch/2011/08/21/qgis-android-works-2/](</2011/08/21/qgis-android-works-2/index.html>)
-  - ![](./P20110820193600cbc2.png)First data is shown on the print composer
-  - ![](./P20110820193325cbc2.png)Map canvas still had some glitches
-  - ![](./wpid-P20110821115718637c.jpg)Finally a map is rendered in the canvas
+  - ![First data is shown on the print composer](./P20110820193600cbc2.png)
+  - ![Map canvas still had some glitches](./P20110820193325cbc2.png)
+  - ![Finally a map is rendered in the canvas](./wpid-P20110821115718637c.jpg)
 
 
 ### GSoC 2011 results
@@ -54,7 +54,7 @@ At the end of the Google Summer of code, I received my MSc in geoinformatics and
 > cheers
 > [https://www.opengis.ch/2011/08/24/gsoc-2011-final-report/](</2011/08/24/gsoc-2011-final-report/index.html>)
 Quantum GIS for Android was a reality and I was fully committed to keeping working on it. Turns out I wasn’t wrong 🙂
-![](./image-1f837.png)A commitment is a commitment 🙂
+![A commitment is a commitment 🙂](./image-1f837.png)
 ## Classical – QGIS for Android grows
 The Next Era of QGIS for android is what could be seen as the time of great knowledge enhancement, philosophical musings and the rise of the first great features including:
   - [GPS support](</2012/01/31/qgis-on-android-gets-gps-support/index.html>) including [external GPS](</2012/05/01/qgis-on-android-using-external-gps-receivers/index.html>)
@@ -70,10 +70,10 @@ The Next Era of QGIS for android is what could be seen as the time of great know
 The dark ages, times of instability, change and some setbacks. Sounds terrifying, it was not at all, on the contrary it was a very formative period that apexed with the fantastic release of QGIS 2.0 for android.
 ### The QML app experiment
 From the beginning on, the idea behind QGIS for android was to eventually ditch the GUI and build a dedicated one for touch devices. The [https://web.archive.org/web/20120826232000/https://rcarrillo.org/” target=”_blank”>Google Summer of code 2012](<https://web.archive.org/web/20120826232000/https://rcarrillo.org/>) by Ramon Carrillo mentored by myself set off to do that. Unfortunately, the project encountered some roadblocks and never took off as expected, but it did lay some ideas and [code](<https://github.com/rcarrillo/Quantum-GIS/commits/mobileapp-qml>) for the future.
-  - ![](./Legend2-159f5.png)UX mockup for the first QML based app
-  - ![](./Legend2-259f5.png)UX mockup for the first QML based app
-  - ![](./Map59f5.png)UX mockup for the first QML based app
-  - ![](./Screenshot-from-2021-06-06-19-24-4594aa.png)Screenshots of the first QML based UI
+  - ![UX mockup for the first QML based app](./Legend2-159f5.png)
+  - ![UX mockup for the first QML based app](./Legend2-259f5.png)
+  - ![UX mockup for the first QML based app](./Map59f5.png)
+  - ![Screenshots of the first QML based UI](./Screenshot-from-2021-06-06-19-24-4594aa.png)
 
 
 ### The Python failure
@@ -83,11 +83,11 @@ Probably the major setback in QGIS for android’s history was the non-completio
 > [Python support even closer](</2013/05/21/python-suport-even-closer/index.html>)
 ### The QGIS 2.0 release
 The pivotal point of the Middle Ages was definitely 20.09.2013, when Tim Sutton presented to a full auditorium the shiny new QGIS 2.0. And along with it it introduced the general availability of QGIS 2.0 on android. The first real QGIS version for mobile devices was finally available for the broad public.
-  - ![](./wpid-Screenshot_2013-09-19-01-19-31cbc2.jpg)
-  - ![](./wpid-Screenshot_2013-09-17-23-31-39cbc2.jpg)
-  - ![](./wpid-Screenshot_2013-09-20-14-30-15cbc2.jpg)
-  - ![](./13796959200376aed.jpg)Tim Sutton announcing QGIS 2.0
-  - ![](./1379696319910-16aed.jpg)Tim Sutton announcing QGIS 2.0 for Android
+  - ![QGIS 2.0 for Android screenshot, photo 1](./wpid-Screenshot_2013-09-19-01-19-31cbc2.jpg)
+  - ![QGIS 2.0 for Android screenshot, photo 2](./wpid-Screenshot_2013-09-17-23-31-39cbc2.jpg)
+  - ![QGIS 2.0 for Android screenshot, photo 3](./wpid-Screenshot_2013-09-20-14-30-15cbc2.jpg)
+  - ![Tim Sutton announcing QGIS 2.0](./13796959200376aed.jpg)
+  - ![Tim Sutton announcing QGIS 2.0 for Android](./1379696319910-16aed.jpg)
 
 QGIS 2.0 general availability for Android
 After the launch followed a very active time of keeping QGIS for Android on pair with the desktop versions leading to a regular release of updates on the playstore between 2013 and late 2014. This is also when Matthias Kuhn started committing to the QGIS for Android [repository](<https://github.com/qgis/QGIS-Android/graphs/contributors>).
@@ -96,29 +96,29 @@ Humanism, Renaissance and Enlightenment are what we saw happening in the period 
 Early 2015 was also when Matthias Kuhn and myself decided to join forces in OPENGIS.ch LLC.
 ### The rebranding
 The project never had a clear name, at times it was called QGIS for Android at times QGIS mobile, we felt that to clearly convey what we were building we needed a clear, simple and poignant name.
-![](./image-61bd6.png)Beginning of 2015 saw the last rebranding
+![Beginning of 2015 saw the last rebranding](./image-61bd6.png)
 > It is with great pleasure that we want to announce the new name for what was briefly known as QGIS mobile.
 > **Please welcome QField for QGIS™!**
 > After long thinking about various names and variants including QGIS mobile, QTouch, OPENGIS.ch QGIS mobile, QWork, and many more, we felt that QField represents best what we want to archive. A field data capture and management app fully compatible with QGIS™.
 > [https://www.opengis.ch/2015/01/28/qgis-mobile-is-now-qfield/](</2015/01/28/qgis-mobile-is-now-qfield/index.html>)
-![](./image-71bd6.png)
+![QField Experimental beta announcement graphic](./image-71bd6.png)
 > QField Experimental is out, after a couple of months of requirements gathering, private early alpha testing and foremost tons of emails requesting access to the testes group we decided today to put the current BETA version in the playstore.
 > [https://www.opengis.ch/2015/06/15/qfield-in-the-wild/](</2015/06/15/qfield-in-the-wild/index.html>)
 ### Streamlined installation
 Since the beginning of QGIS for android, to distribute the needed Qt libraries, we used a project called “ministro”. This was interesting because it allowed to download the libraries only once but on the other hand, it was a very painful experience for the user that needed to install a second app before getting QField to start. Around the end of 2015 it was so far, we finally managed to get rid of that dependency and make the installation process as streamlined as possible.
-![](./image-88fca.png)
+![Graphic about streamlined QField installation without Ministro](./image-88fca.png)
 > It’s done, finally we managed to get rid of Ministro so that we finally can say, QField runs on any android from 4.0.3 (ICS). This makes as of today (according to [google](<https://developer.android.com/about/dashboards/index.html>)) 96% of the android installations worldwide.
 > [https://www.opengis.ch/2015/12/01/qfield-for-android-5/](</2015/12/01/qfield-for-android-5/index.html>)
 ## Release candidates
 In these 3.5 years, a continuous, mainly volunteer-driven iterative process led by Matthias Kuhn made QField grow to the point where we felt confident it was time to launch QField 1.0. 
 After a series of release candidates with lots of feedback from the community, we felt it was time to move into a New Era.
-![](./image-9ec1e.png)
+![QField 1.0 release candidate announcement graphic](./image-9ec1e.png)
 > It was a long and winding road but we are very excited to announce the general availability of QField 1.0 Release Candidate 1.
 > Packed with loads of useful features like online and offline features digitizing, geometry and attributes editing, attribute search, powerful forms, theme switching, GPS support, camera integration and much more, QField is a powerful tool for those who need to edit on the go and would like to avoid standing in the swamp with a laptop or paper charts.
 > [https://www.opengis.ch/2019/01/08/qfield-1-0-rc1/](</2019/01/08/qfield-1-0-rc1/index.html>)
 ## Modern times – QField 1.X
 Fast forward to March 28th 2019, 
-![](./image-1024dc.png)
+![QField 1.0 release announcement graphic](./image-1024dc.png)
 > Let’s get straight to the point
 > **It’s official, QField for QGIS 1.0 is out!**
 > Get it while it’s hot on the Playstore ([qfield.org/get](<https://qfield.org/get>)) or on [GitHub](<https://github.com/opengisch/QField/releases>)
@@ -127,7 +127,7 @@ Fast forward to March 28th 2019,
 ### Recent releases
 In the last 2 years the development pace increased tremendously, the sponsored featured grew as never before, QField rating skyrocketed to 4.7 ⭐ we currently have 100’000 active users and we’re getting around 500 new users every day.
 Our QField core team grew more and now thanks to David Signer’s lead and Mathieu Pellerin keen eye for UX we’re pushing QField even further.
-![](./Screenshot-from-2021-06-07-00-08-00b834.png)
+![Recent QField releases overview in the app store](./Screenshot-from-2021-06-07-00-08-00b834.png)
 Going into all releases would be so much information that this post would turn into a 3 volumes classic, and since starting from QField 1.0 we’ve documented each new release, we’re just going to link them: [https://www.opengis.ch/category/qfield/highlights/](</category/qfield-it/highlights/index.html>)
 ## The future is cloudy – ehm sunny of course 😉
 Yesterday we published QField 1.9.6, which is going to be the last 1.X release and will put QField 2.0 into the beta channel so that every beta tester can start using [QFieldCloud](<https://qfield.cloud/>) without having to use the [developer version](<https://play.google.com/store/apps/details?id=ch.opengis.qfield_dev>). 

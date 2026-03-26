@@ -839,8 +839,13 @@
                   <div class="col-12 col-md-4">
                     <div class="ratio ratio-16x9 h-100 bg-light">
                       {{ if $postImage }}
-                        {{ $thumb := $postImage.Fill "720x420 Center webp" }}
-                        <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy" alt="{{ $post.Title }}">
+                        {{ partial "image.html" (dict
+                          "resource" $postImage
+                          "alt" $post.Title
+                          "class" "w-100 h-100 object-fit-cover"
+                          "sizes" "(max-width: 767px) 100vw, 33vw"
+                          "widths" (slice 400 720 960 1280)
+                        ) }}
                       {{ else if $postImageURL }}
                         <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ $postImageURL | safeURL }}" loading="lazy" alt="{{ $post.Title }}">
                       {{ else }}

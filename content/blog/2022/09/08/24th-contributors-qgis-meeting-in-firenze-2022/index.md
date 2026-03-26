@@ -18,6 +18,6 @@ Regis Haubourg asked to help **simplify the[QGIS Downloads](<https://qgis.org/en
 There were many interesting and sometimes spontaneous presentations which always involved lively discussions. Amy Burness from Kartoza presented new styling capabilities for QGIS, Tobias Schmetzer from the Bavarian Center for Applied Energy Research presented the geo data processing and pointed out issues he encountered using QGIS on this and Etienne Trimaille from 3liz talked about [qgis-plugins-ci](<https://github.com/opengisch/qgis-plugin-ci>), just to name a few.
 ## Amazing community
 On Saturday evening a bus showed up at the campus and took us on a trip up to the hills. After quite a long ride we arrived at a restaurant high up with mind-blowing view of the city. I forgot how many rounds of Tuscan food were served, but it was delicious throughout. An amazing evening with fruitful conversations and many laughs. 
-![](./WhatsApp-Image-2022-08-22-at-13.40.296aed.jpg)
+![QGIS contributors sharing dinner with a panoramic view over Florence during the Firenze 2022 meeting](./WhatsApp-Image-2022-08-22-at-13.40.296aed.jpg)
 The weather was nice and hot, the beers cold, the Tuscan food delicious and the contributors were not only popular Github avatars but really nice people. **Thank you QGIS.**
 ### _Related_

@@ -16,7 +16,7 @@ With the usual QGIS widgets „List“ and „Key/Value“ you are able to displ
         "Carniolan honey bee",
         "Buckfast bee"
     ]
-[![](./blog_qml_list0e6b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_listeb45.png?ssl=1>)
+[![QGIS List widget displaying a JSON array of bee species](./blog_qml_list0e6b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_listeb45.png?ssl=1>)
 ## Simple JSON object as Key/Value
     
     {
@@ -24,9 +24,9 @@ With the usual QGIS widgets „List“ and „Key/Value“ you are able to displ
         "name":"European dark bee",
         "link":"https://en.wikipedia.org/wiki/European_dark_bee"
     }
-### [![](./blog_qml_keyvalue0e6b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_keyvalueeb45.png?ssl=1>)
+### [![QGIS Key/Value widget displaying a simple JSON object](./blog_qml_keyvalue0e6b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_keyvalueeb45.png?ssl=1>)
 Or of course both as plain text in the „Text Edit“ widget:  
-[![](./blog_qml_texteditbc6e.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_textediteb45.png?ssl=1>)
+[![QGIS Text Edit widget showing raw JSON content](./blog_qml_texteditbc6e.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_textediteb45.png?ssl=1>)
 # Say hi to Postgres JSON in QML widget
 Probably, your JSON data does not look really nice with the aforementioned widgets, luckily since QGIS 3.4, you are free to create your own QML widget. Since QGIS already loads the JSON data into structures that are supported by QML, we can use all the JSON data within the QML code.  
 Let’s assume you have the JSON array from above and you like the elegance of the blue of Jacques Majorelle. You create your personal list widget by adding the JSON field as an expression:
@@ -53,7 +53,7 @@ Let’s assume you have the JSON array from above and you like the elegance of t
         }
     }
 You will have your very personal list:  
-[![](./blog_qml_qmllist-14817.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_qmllist-1eb45.png?ssl=1>)  
+[![Custom QML list widget displaying JSON array items in blue cards](./blog_qml_qmllist-14817.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_qmllist-1eb45.png?ssl=1>)  
 JSON also allows storing more complex data, like for example a list of objects. In that case, you will reach the limits of the common QGIS widgets.  
 Let’s assume you have a table looking like this:
 nomenclatura | name | link  
@@ -91,7 +91,7 @@ With the QML Widget you can use the QML TableView to visualize:
             width: 200
         }
     }
-[![](./blog_qml_qml_tableviewd190.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_qml_tablevieweb45.png?ssl=1>)  
+[![QML TableView displaying JSON object rows with nomenclature, name, and link columns](./blog_qml_qml_tableviewd190.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_qml_tablevieweb45.png?ssl=1>)  
 Or, even more powerful, you can create your super individual table using the model and create each row by using a QML [Repeater](<https://doc.qt.io/qt-5/qml-qtquick-repeater.html>).  
 Additionally, you can use a lot of fancy stuff like:
   - mouse interaction
@@ -100,7 +100,7 @@ Additionally, you can use a lot of fancy stuff like:
   - … and so on
 
 
-[![](./blog_qml_qml_table5e60.gif)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_qml_tableeb45.gif?ssl=1>)  
+[![Animated custom QML table widget for PostgreSQL JSON object data](./blog_qml_qml_table5e60.gif)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_qml_tableeb45.gif?ssl=1>)  
 The QML code for that looks like this.
     
     import QtQuick 2.0
@@ -181,5 +181,5 @@ The QML code for that looks like this.
 # And that’s it
 I hope you liked reading and you will enjoy using it to make beautiful widgets and forms. If you have questions or inputs, feel free to add a comment.  
 … and in case you still asking where the promised unicorns are. Here’s is a super-fancy implementation 😉  
-[![](./blog_qml_qml_fancy-1ecff.gif)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_qml_fancy-1eb45.gif?ssl=1>)
+[![Animated custom QML widget example built from PostgreSQL JSON data](./blog_qml_qml_fancy-1ecff.gif)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/11/blog_qml_qml_fancy-1eb45.gif?ssl=1>)
 ### _Related_

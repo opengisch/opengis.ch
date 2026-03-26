@@ -10,26 +10,26 @@ source: "www.opengis.ch/2022/11/15/model-baker-interlis-data-validator/index.htm
 Using the Model Baker Data Validator has two major advantages.
 First, **you do not need to export your data before you validate them**. Thanks to the `--validate` option, Model Baker can use [ili2db](<https://github.com/claeis/ili2db>) to validate the data directly in the database.
 Second, you can interactively use the result list and **zoom or pan to coordinates of validation issues** in the QGIS map canvas or directly **open or select the feature in question**. So fixing the errors is much easier.
-![](./menu18ce.png)
+![Menu entry for the Model Baker Data Validator](./menu18ce.png)
 ## Step-by-step guide
 Though the validation is performed on the database, we start with importing an invalid transfer file. With this, we have the complete end-to-end journey ?‍?
 ### Import invalid data
 Depending on the quality of your data, you need to create the schema already with less strict constraints in the database. Like if some mandatory (NOT NULL) constraints are violated in your data, you need create a database without these constraints enabled.
 We use an [example model](</models.opengis.ch/demo_data/ModernCity_V1.ili>) in this guide to avoid complexity and some [invalid demo data](</models.opengis.ch/demo_data/invalid_data.xtf>). 
 In  _Database > Model Baker > Import/Export Wizard_ choose _Run without constraints_ on the import session. 
-![](./runwithoutconstraints14dd.png)
+![Import wizard option to run without constraints](./runwithoutconstraints14dd.png)
 And when importing the transfer data choose _Run without validation_.
 The database is created and the invalid data from the transfer file are imported. 
-![](./importedproject695f.png)
+![Imported invalid project in QGIS](./importedproject695f.png)
 > More information how to import models and transfer files in general you can find in the [official Model Baker documentation](<https://opengisch.github.io/QgisModelBaker/user_guide/import_workflow/>) or in this [blog post.](</2021/12/07/model-baker-6-7-noch-nie-wars-so-einfach/index.html>)
 ### Let’s validate
 Now open the Data Validator panel with  _Database > Model Baker > Data Validator_.
 There the current database is found according to the active layer. In our example, we have only one database, but if you use more than one in the same QGIS project, the Data Validator will recognize the source of the current layer.
-![](./15dfd.png)
+![Data Validator panel with the detected database](./15dfd.png)
 After performing the validation we receive 14 errors. Geometry intersections, wrong formatted TIDs, out-of-range values and others. Actually, these are not many errors, still, sometimes you might want to separate the kind of errors that are found to keep the overview.
 ### Filtering data
 Let’s start with the separation of the data and later we separate the kinds of errors. You can do it by filtering the data either by _models_ or _datasets_ or _baskets_. You can choose multiple of them, but only one kind of filter. Let’s validate only the data of the basket considering the TOPIC `nature`.
-![](./25dfd.png)
+![Data Validator results filtered to the nature basket](./25dfd.png)
 We have three intersection issues and one type error.
 ### Skip geometry errors
 When the checkbox is activated, geometry errors are ignored and the validation of area topology is disabled. Errors like those will not be listed:
@@ -40,7 +40,7 @@ When the checkbox is activated, geometry errors are ignored and the validation o
 
 > In the back end the parameters `--skipGeometryErrors` and `--disableAreaValidation` are passed to ili2db.
 After performing the validation only the error with the TID is left.
-![](./35dfd.png)
+![Validation results after skipping geometry errors](./35dfd.png)
 ### Analise the error
 Before we go narrowing down the error message by disabling constraints, let’s have a look at the fixing part. The error we see above tells us the TID needs to be a UUID but it is a string: “velopark_id”
 The TID is the OID defined in the model like this:
@@ -53,26 +53,26 @@ With  _right-click_ in the Data Validator on the error a menu is opened with the
 – Select in Attribute Table (if a stable `t_ili_tid` is available)  
 – Set to fixed (marking the entry mark green to have organize the fixing process)  
 – Copy (to copy the message text)
-![](./45dfd.png)
+![Context menu for a validation error in the Data Validator](./45dfd.png)
 On opening the form, we see that we don’t have any possibility of changing the t_ili_tid. Since it’s an auto-generated value, Model Baker did not set it to the visible fields on creating the form. We would need to display it by clicking on the  _Layer > Properties… > Attribute Form_ or we use the other option to _Select in Attribute Table_.
-![](./55dfd.png)
+![Feature form without the t_ili_tid field visible](./55dfd.png)
 Now we can use the QGIS Field Calculator to set a UUID on the `t_ili_tid` of the currently selected feature (the feature in question).
-![](./6bebf.png)
+![QGIS field calculator setting a UUID for t_ili_tid](./6bebf.png)
 After validating again, the error disappears.
-![](./72cd1.png)
+![Validation results after fixing the TID error](./72cd1.png)
 Valid. But of course, there are still the geometry errors as well as all the errors we had in the other TOPIC `living`.
 ### Fixing geometry errors
 Let’s have a look at the geometry errors. 
-![](./82cd1.png)With _right-click_ > Zoom to Coordinates the canvas zoom to the coordinates in question and highlights them. 
-To fix intersections as well as duplicate errors, the QGIS _Vertex Tool_ can be used. ![](./Screenshot-from-2022-11-08-14-14-5630db.png)As well the _Vertex Editor_ is very helpful.
-![](./Screenshot-from-2022-11-07-17-14-022cd1.png)
+![Geometry validation errors with the zoom-to-coordinates option](./82cd1.png)With _right-click_ > Zoom to Coordinates the canvas zoom to the coordinates in question and highlights them. 
+To fix intersections as well as duplicate errors, the QGIS _Vertex Tool_ can be used. ![As well the _Vertex Editor_ is very helpful.](./Screenshot-from-2022-11-08-14-14-5630db.png)
+![Geometry error highlighted in the QGIS map canvas](./Screenshot-from-2022-11-07-17-14-022cd1.png)
 ### Navigating through the errors
-With the three symbols on the bottom left you can navigate through the features and coordinates in the error list, like you are used to it in the attribute table. ![](./grafikfc12.png)
+With the three symbols on the bottom left you can navigate through the features and coordinates in the error list, like you are used to it in the attribute table. ![Navigation controls for moving through validation errors](./grafikfc12.png)
 Most of the errors concerning a value can be fixed comfortably by the tools provided with _right-click_ _> Open in Feature Form / Select in Attribute Table_.
 ### Using Config File with meta attributes
 The possibility to skip the error messages is quite present. But there are much more possibilities to narrow down the errors by skipping more specific checks. 
 To have all the validation functionalities available you can load a Config File (INI) the Data Validator passes to ili2db. In this Config File, meta attributes can be defined to enable / disable specific checks as well as naming and describe constraints in a more readable format. The basics are described [here](<https://opengisch.github.io/QgisModelBaker/user_guide/validation/#using-of-meta-attributes-in-the-validation>). Let’s continue in this post with the example.
-![](./Screenshot-from-2022-11-07-17-41-33f09e.png)
+![Config file loaded in the Data Validator](./Screenshot-from-2022-11-07-17-41-33f09e.png)
 #### Global parameters
     
     ["PARAMETER"]
@@ -82,7 +82,7 @@ By disabling the `multiplicity` we disable mandatory constraints and cardinality
 > See all the possible meta attributes in the official [documentation of ilivalidator](<https://github.com/claeis/ilivalidator/blob/master/docs/ilivalidator.rst#interlis-metaattribute>).
 #### Specific class / attribute parameters
 The errors that are left are type errors. A value in `Levels` that is too high (see in the Model: `Levels: 0 .. 200;`) then the error with control characters (mostly because of using multiple lines in normal `TEXT`) in the attribute `Description` and the values in `Email` that are not in the requested `INTERLIS.URI `format.
-![](./Screenshot-from-2022-11-07-17-53-3671ea.png)
+![Type validation errors for attributes in the Data Validator](./Screenshot-from-2022-11-07-17-53-3671ea.png)
 We can disable them by referencing the attribute in question with the format `Model.Topic.Attribute`:
     
     ["ModernCity_V1.Living.Building.Levels"]
@@ -115,7 +115,7 @@ But because normally the person doing the data validation is not the same as the
     ["ModernCity_V1.Living.Resident.Constraint1"]
     msg = "When the resident with the id {ID} is human, then it needs a name."
 Notices that you can use other attribute values with curly brackets.
-![](./Screenshot-from-2022-11-08-13-54-17-1c767.png)
+![Validation message with a custom meta-attribute description](./Screenshot-from-2022-11-08-13-54-17-1c767.png)
 ## Well then, that’s it
 For more information, check out the [Model Baker documentation.](<https://opengisch.github.io/QgisModelBaker/>)
 Meanwhile happy baking and: Happy validating! ?‍?

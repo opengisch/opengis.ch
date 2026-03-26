@@ -1,32 +1,78 @@
-// Simple test to verify script is running
-console.log('Main.js script loaded at:', new Date().toISOString())
+const localhostHosts = new Set(['localhost', '127.0.0.1', '::1'])
+const debugEnabled =
+  document.documentElement.dataset.hugoEnvironment === 'development' ||
+  localhostHosts.has(window.location.hostname)
+
+const debugLog = (...args) => {
+  if (debugEnabled) {
+    console.log(...args)
+  }
+}
+
+const debugWarn = (...args) => {
+  if (debugEnabled) {
+    console.warn(...args)
+  }
+}
+
+debugLog('Main.js script loaded at:', new Date().toISOString())
 
 let isInitialized = false
-let initAttempts = 0
+let successStoriesObserver = null
+
+function disconnectSuccessStoriesObserver() {
+  if (successStoriesObserver) {
+    successStoriesObserver.disconnect()
+    successStoriesObserver = null
+  }
+}
+
+function observeSuccessStoryCards() {
+  if (successStoriesObserver || typeof MutationObserver === 'undefined' || !document.body) {
+    return false
+  }
+
+  successStoriesObserver = new MutationObserver(() => {
+    const cards = document.querySelectorAll('.success-story-card')
+    if (cards.length === 0) {
+      return
+    }
+
+    debugLog('Success story cards detected, continuing initialization:', cards.length)
+    disconnectSuccessStoriesObserver()
+    initializeApp()
+  })
+
+  successStoriesObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+  })
+
+  return true
+}
 
 function initializeApp() {
-  initAttempts++
-  console.log(`Initialization attempt #${initAttempts}, readyState: ${document.readyState}`)
-  
   if (isInitialized) {
-    console.log('App already initialized, skipping')
+    debugLog('App already initialized, skipping')
     return
   }
-  
+
   // Check if we have the required elements before initializing
   const testFiltersContainer = document.querySelector('[data-success-stories-filters]')
   const testCards = document.querySelectorAll('.success-story-card')
-  
+
   if (testFiltersContainer && testCards.length === 0) {
-    console.log('Filter container found but no cards yet, will retry...')
-    if (initAttempts < 10) {  // Limit retry attempts
-      setTimeout(initializeApp, 100)
+    if (observeSuccessStoryCards()) {
+      debugLog('Filter container found before cards, waiting with MutationObserver')
       return
     }
+
+    debugWarn('Filter container found before cards, but MutationObserver is unavailable')
   }
-  
-  console.log('Initializing app, readyState:', document.readyState, 'at:', new Date().toISOString())
+
+  debugLog('Initializing app, readyState:', document.readyState, 'at:', new Date().toISOString())
   isInitialized = true
+  disconnectSuccessStoriesObserver()
   
   // Initialize Bootstrap tooltips if Bootstrap is available
   if (typeof bootstrap !== 'undefined') {
@@ -137,13 +183,13 @@ function initializeApp() {
     const filterLinks = regionFiltersContainer.querySelectorAll('a[data-region]')
     const partnerPanels = document.querySelectorAll('.panel[data-region]')
     
-    console.log('Partner region filter initialized:', { 
+    debugLog('Partner region filter initialized:', { 
       filterLinks: filterLinks.length, 
       panels: partnerPanels.length 
     })
 
     const applyRegionFilter = (region) => {
-      console.log('Applying region filter:', region)
+      debugLog('Applying region filter:', region)
 
       // Update active state on nav pills (Bootstrap 5 style)
       filterLinks.forEach((link) => {
@@ -168,7 +214,7 @@ function initializeApp() {
         }
       })
       
-      console.log('Region filter applied:', { region, visiblePanels: visibleCount })
+      debugLog('Region filter applied:', { region, visiblePanels: visibleCount })
     }
 
     // Set initial filter to 'world' (show all)
@@ -179,7 +225,7 @@ function initializeApp() {
       link.addEventListener('click', (e) => {
         e.preventDefault()
         const region = link.dataset.region
-        console.log('Region filter clicked:', region)
+        debugLog('Region filter clicked:', region)
         applyRegionFilter(region)
       })
     })
@@ -187,39 +233,40 @@ function initializeApp() {
 
   // Success stories filter controls
   const filtersContainer = document.querySelector('[data-success-stories-filters]')
-  console.log('Looking for filter container:', filtersContainer)
+  debugLog('Looking for filter container:', filtersContainer)
   
-  // Manual test - add a global function for debugging
-  window.testFilter = function(filterName) {
-    const cards = document.querySelectorAll('.success-story-card')
-    console.log('Manual test - found cards:', cards.length)
-    cards.forEach((card, index) => {
-      const categories = (card.dataset.categories || '').split(/\s+/).filter(Boolean)
-      const isVisible = filterName === 'all' || categories.includes(filterName)
-      card.classList.toggle('d-none', !isVisible)
-      console.log(`Card ${index}:`, { categories: card.dataset.categories, visible: isVisible })
-    })
+  if (debugEnabled) {
+    window.testFilter = function(filterName) {
+      const cards = document.querySelectorAll('.success-story-card')
+      debugLog('Manual test - found cards:', cards.length)
+      cards.forEach((card, index) => {
+        const categories = (card.dataset.categories || '').split(/\s+/).filter(Boolean)
+        const isVisible = filterName === 'all' || categories.includes(filterName)
+        card.classList.toggle('d-none', !isVisible)
+        debugLog(`Card ${index}:`, { categories: card.dataset.categories, visible: isVisible })
+      })
+    }
   }
   
   if (filtersContainer) {
     const filterButtons = filtersContainer.querySelectorAll('button[data-filter]')
     const cards = document.querySelectorAll('.success-story-card')
     
-    console.log('Filter system initialized:', { 
+    debugLog('Filter system initialized:', { 
       filterButtons: filterButtons.length, 
       cards: cards.length 
     })
     
     // Test if the first card has the expected data
     if (cards.length > 0) {
-      console.log('First card data-categories:', cards[0].dataset.categories)
+      debugLog('First card data-categories:', cards[0].dataset.categories)
     }
 
     const applyFilter = (filter) => {
       const supportedFilters = Array.from(filterButtons).map((button) => button.dataset.filter)
       const normalizedFilter = supportedFilters.includes(filter) ? filter : 'all'
       
-      console.log('Applying filter:', { filter, normalizedFilter, supportedFilters })
+      debugLog('Applying filter:', { filter, normalizedFilter, supportedFilters })
 
       filterButtons.forEach((button) => {
         const isActive = button.dataset.filter === normalizedFilter
@@ -235,7 +282,7 @@ function initializeApp() {
         if (isVisible) visibleCount++
         
         if (!isVisible && normalizedFilter !== 'all') {
-          console.log('Hiding card:', { 
+          debugLog('Hiding card:', { 
             categories: card.dataset.categories, 
             parsed: categories, 
             filter: normalizedFilter,
@@ -244,7 +291,7 @@ function initializeApp() {
         }
       })
       
-      console.log('Filter applied:', { filter: normalizedFilter, visibleCards: visibleCount })
+      debugLog('Filter applied:', { filter: normalizedFilter, visibleCards: visibleCount })
     }
 
     const urlParams = new URLSearchParams(window.location.search)
@@ -253,7 +300,7 @@ function initializeApp() {
 
     filterButtons.forEach((button) => {
       button.addEventListener('click', (e) => {
-        console.log('Filter button clicked:', button.dataset.filter)
+        debugLog('Filter button clicked:', button.dataset.filter)
         const filter = button.getAttribute('data-filter')
         const nextUrl = `${window.location.pathname}?filter=${encodeURIComponent(filter)}`
         if (window.history && history.pushState) {
@@ -327,8 +374,8 @@ function initializeApp() {
           observer.unobserve(entry.target)
         })
       }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -10% 0px'
+        threshold: 0.08,
+        rootMargin: '0px 0px -4% 0px'
       })
 
       revealItems.forEach((item) => {
@@ -350,7 +397,6 @@ function initializeApp() {
       '10': 'Business (10 Days)',
       '0': 'Enterprise (10+ Days)'
     }
-    const localhostHosts = new Set(['localhost', '127.0.0.1', '::1'])
     const search = new URLSearchParams(window.location.search)
     const enableLocalEmbed = search.get('embed_clickup') === '1'
     const requestedDays = search.get('days')
@@ -477,29 +523,29 @@ function initializeApp() {
 if ('addEventListener' in window) {
   window.addEventListener('beforeunload', () => {
     isInitialized = false
-    initAttempts = 0
+    disconnectSuccessStoriesObserver()
   })
 }
 
 // Multiple initialization strategies for different loading scenarios
 function tryInitialization() {
-  console.log('Trying initialization, readyState:', document.readyState)
+  debugLog('Trying initialization, readyState:', document.readyState)
   
   // Strategy 1: DOM ready check
   if (document.readyState === 'loading') {
-    console.log('Document still loading, adding DOMContentLoaded listener')
+    debugLog('Document still loading, adding DOMContentLoaded listener')
     document.addEventListener('DOMContentLoaded', initializeApp, { once: true })
   } else {
     // DOM is already ready, initialize immediately
-    console.log('Document already loaded, initializing immediately')
+    debugLog('Document already loaded, initializing immediately')
     initializeApp()
   }
   
   // Strategy 2: Window load backup
   window.addEventListener('load', () => {
-    console.log('Window load event fired')
+    debugLog('Window load event fired')
     if (!isInitialized) {
-      console.log('Not yet initialized, trying now')
+      debugLog('Not yet initialized, trying now')
       initializeApp()
     }
   }, { once: true })
@@ -507,7 +553,7 @@ function tryInitialization() {
   // Strategy 3: Delayed backup for cached pages
   setTimeout(() => {
     if (!isInitialized) {
-      console.log('Delayed backup initialization')
+      debugLog('Delayed backup initialization')
       initializeApp()
     }
   }, 250)
@@ -610,7 +656,7 @@ function initializeGalleries() {
         console.error(`Failed to initialize Bootstrap carousel for ${galleryId}:`, error)
       }
     } else {
-      console.warn('Bootstrap not available for carousel initialization')
+      debugWarn('Bootstrap not available for carousel initialization')
     }
   })
 }

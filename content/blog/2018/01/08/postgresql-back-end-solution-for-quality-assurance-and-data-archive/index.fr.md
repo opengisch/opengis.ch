@@ -10,9 +10,9 @@ It’s always the question, where to put the logical part of the solution. QGIS 
 # Situation
 ## It’s all about trees
 At least for that customer we got lately. The customer owns pieces of land all over Switzerland. On this pieces are forests and in the forests are – as expected – trees. Well, mostly – if you are not a bark beetle or a squirrel – you don’t care about a single tree. Except if there is something special with it. For example, a branch that could fell down on your brand new Citroën DS or if the tree has a disease that could kill the whole forest, that is actually needed to convert the carbon dioxide (from your DS) into oxygen.  
-[![](./waldbdac.png)  
+[![Diagram showing land parcels, forests, and issue trees used in the quality-assurance example](./waldbdac.png)  
 ](</i0.wp.com/www.opengis.ch/wp-content/uploads/2017/12/waldeb45.png?ssl=1>)The issuetrees (yellow) lie on the forest (green) – and the forest lies on the land piece (brown).  
-[![](./erm2b8ac.png)  
+[![Entity relationship model connecting land, forest, and issue-tree tables](./erm2b8ac.png)  
 ](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/01/erm2eb45.png?ssl=1>)And the (Entity Relationship Model) ERM looks like this. A land can have zero, one or more forests – and a forest can have zero, one or more trees with issues.
 ## It’s not really about trees
 The situation is, that a lot of field workers (so called tree-inspectors) work with our mobile solution [QField](<https://www.qfield.org/>), where they can collect the data while standing in the middle of a wild forest with one foot in a rabbit hole and the other one in the stinging nettle. It’s quite possible and usual that there can be some problems entering all the data correctly. Typing issues on the tablet while running away from wolves or just lack of concentration because of the beauty of the swiss forests.
@@ -69,7 +69,7 @@ Let’s imagine that the tree-inspector collected all day data in QField. Standi
 All data entered to the database (valid or not) need to be stored. The entries accepted from the so called live tables with all constraints, are stored normally. The entries failed because of the constraint, are stored in another table. In the so called quarantine table. So you have for every live table another quarantine table. This means, we need another table structure existing parallel to the live tables. We do it in two schemas: The live schema and the quarantine schema.  
 So the tree-inspector synchronizes his QField without any problem to the database. The correct entries are written into the live tables. The incorrect into the quarantine. Actually all the data are coming into the quarantine and there is a Trigger passing them through to the live table. If they success, they will be stored in live and removed from quarantine. Otherwise they keeps staying in the quarantine. Same situation when the quarantine-clerk later corrects the data entries in the quarantine. On an update they are pushed into the live-table. If success, all good. Otherwise the entry keeps staying in the quarantine.
 ### Structure
-### [![](./structure14452.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2017/12/structure1eb45.png?ssl=1>)
+### [![Schema diagram showing the live and quarantine table structure used for backend validation](./structure14452.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2017/12/structure1eb45.png?ssl=1>)
 ### And how we do that?
 It’s all solved by using triggers. SQL triggers are procedural code that are automatically executed on an action on a table or view. For this solution we actually need two trigger per quarantine table. **_After insert into_** or _**update**_ quarantine table, a trigger should be fired for every entry, doing this:  
 _Insert the same entry into the live table. If success, then delete the entry in the quarantine table. Else write the info to the current entry in the quarantine table._  
@@ -163,7 +163,7 @@ We could solve the problem by checking the depth of triggers in PostgreSQL:
 ### And it looks like this
 The yellow points are the issue trees in the live. If we create another one and have a mistake in it (GPS Id wrong), then it’s stored in the quarantine (pink). When we correct the data it’s written over the quarantine trigger into live. If succeeded, the point changes the color to yellow.  
 Actually the yellow point appears (live) and the pink point(quarantine) disappears, because the entry is inserted into live and deleted in quarantine.  
-[![](./DemoQuaranLive8970.gif)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2017/12/DemoQuaranLiveeb45.gif?ssl=1>)
+[![Animated demo of issue trees moving from quarantine to live after validation succeeds](./DemoQuaranLive8970.gif)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2017/12/DemoQuaranLiveeb45.gif?ssl=1>)
 # Archiving all data
 There are different reasons why you need to archive data. Maybe somewhen you want to show your grandchildren, how much forest we still had today before the sky got dark. But this was not the reason for the mentioned customer, but legal reasons:  
 When the woodsman cuts the last bamboo tree of the forest and this was the only food for the very last living panda bear of Switzerland, we need to know who created or changed this entry in the database and what tree should have been chopped down instead.
@@ -177,7 +177,7 @@ So there will be the updated entry in the live-table (2), no entry in the quaran
 The tree-inspector enters an entry of an issue tree that already existed in the live table to the quarantine (1). The after insert trigger is fired and it tries to write to the live table. And it fails. The entry in the quarantine will be updated with the error-message (2). The old status is copied to archive (1). The office clerk makes no the changes to this entries. The trigger is fired and this time it could write into the live-table with success (3). So the old entry is copied to the archive (4) and after deleting the entry in the quarantine, there will be the second old status of quarantine (5) in archive too.  
 So there will be the updated entry in the live-table (3), no entry in the quarantine-table (1 and 2) and three entries (1, 4 and 5) in the archive table.
 ### Structure
-[![](./structure2f338.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2017/12/structure2eb45.png?ssl=1>)
+[![Schema diagram showing live, quarantine, and archive tables for full data-history tracking](./structure2f338.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2017/12/structure2eb45.png?ssl=1>)
 ## And how we do that?
 It’s solved by using triggers too. We actually need only one trigger per table, but not only in quarantine, but also in live. It has to be fired before every update of every entry, doing this:  
 _Insert a copy of the current entry into the archive table with the status it had until the update we are doing right now._

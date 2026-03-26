@@ -30,5 +30,5 @@ Nyall Dawson (North Road) führte durch sein [Youtube Video](<https://www.youtub
 Schließlich schloss Marco Bernasocchi die Präsentationen mit einer Sammlung unglaublich kreativer QGIS-Karten ab, darunter Weihnachtswünsche, Sporttatistiken und die Topologie menschlicher Gesichter.
 ## Workshops
 Nach einem leckeren Mittagessen inklusive Käsebuffet und fruchtbaren Diskussionen wurden die Teilnehmer aufgefordert, in den vier Nachmittagsworkshops selbst aktiv zu werden. Neben anderen interessanten Themen konnten die Benutzer die Arbeit mit [QField](<https://qfield.org/>) und [QFieldCloud](<https://app.qfield.cloud/>) kennenlernen oder in die Arbeit mit QGIS Model Baker und Datenvalidierung eintauchen, alles unterrichtet von den Experten und Entwicklern von OPENGIS.ch.
-![](./P6153916ef34.jpg)Lernen ![](./P6153946ef34.jpg)Diskutieren ![](./P6153911ef34.jpg)Präsentieren ![](./P6153928ef34.jpg)SICH TREFFEN
+![Lernen](./P6153916ef34.jpg) ![Diskutieren](./P6153946ef34.jpg) ![Präsentieren](./P6153911ef34.jpg) ![SICH TREFFEN](./P6153928ef34.jpg)
 ### _Related_

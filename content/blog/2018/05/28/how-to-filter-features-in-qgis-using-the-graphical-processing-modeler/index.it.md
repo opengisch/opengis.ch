@@ -11,7 +11,7 @@ When building workflows for simple or complex geodata infrastructures, one of th
 Let’s imagine a situation where we sent a field worker out to collect information about public infrastructure, equipped with a brand-new tablet and the latest and greatest version of [QField](<https://www.qfield.org/>). To make his task super easy, we prepare one single layer for him with an attribute type which can be set to Bus Station, Car Parking or Train Station. Now back in the office we want to integrate this back into our spatially enabled database which has been designed with 3 target tables.  
   
   
-[![](./Untitled-Diagramca8f.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/05/Untitled-Diagrameb45.png?ssl=1>)  
+[![Workflow diagram splitting one infrastructure layer into separate bus, parking, and train-station outputs](./Untitled-Diagramca8f.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/05/Untitled-Diagrameb45.png?ssl=1>)  
 Easy enough to go to QGIS and select those features by type one after the other and use a bit of copy-paste. And maybe fiddling a bit with the attributes. But hey, after all we are a bit lazy and on the one hand like to have an ice cream later on that afternoon and on the other hand like to avoid errors. Those who are lucky enough to know SQL and have full access to the database are well enough equipped to do the job.
 ## Short introduction to the graphical modeler
 For those who just want to quickly do this job visually within QGIS, there is a tool called modeler in the processing plugin. With the help of this tool it is straightforward for everyone to automate processes. To get started with the modeler, simply enable the processing plugin and click on _Processing_ > _Graphical Modeler._  
@@ -22,11 +22,11 @@ With this in place, the job of doing the buffer can now be run on 200 input laye
 Now back to the job of splitting the infrastructure layer into 3 different layers. To do this job visually and easily within QGIS, there is now a new algorithm available in QGIS 3.2. It is called **Feature Filter** and available in the processing modeler.  
 To make use of it, we open the processing modeler and first add a new **Vector Features** input and name it **Infrastructure**. Since we know in this project we will always deal with points, we can make already specify that in this first dialog.  
   
-[![](./Screenshot-from-2018-05-24-15-25-153a2a.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/05/Screenshot-from-2018-05-24-15-25-15eb45.png?ssl=1>)  
+[![Graphical Modeler input configuration creating the Infrastructure vector-features input](./Screenshot-from-2018-05-24-15-25-153a2a.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/05/Screenshot-from-2018-05-24-15-25-15eb45.png?ssl=1>)  
 Let’s now add a **Feature Filter** algorithm and use the following configuration:  
 The **Infrastructure** layer is set as input, and we define three outputs for **Train Stations** , **Bus Stations** and **Car Parking**. All layers will be final outputs on which no further transformations will be applied within this model and they will be directly written to a new layer.  
   
-[![](./Screenshot-from-2018-05-24-15-30-1897f2.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/05/Screenshot-from-2018-05-24-15-30-18eb45.png?ssl=1>)  
+[![Feature Filter algorithm configured to route infrastructure features into train, bus, and parking outputs](./Screenshot-from-2018-05-24-15-30-1897f2.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/05/Screenshot-from-2018-05-24-15-30-18eb45.png?ssl=1>)  
 Now it’s time to run our new model and check that it does what it promised.  
 We can also uncheck the final output checkbox and send filtered features to further processing algorithms. For example sending them through a buffer based on an attribute size (although as a QGIS professional you know you should rather be using styles than modifying the geometry in most situations in such cases).
 ## Conclusion

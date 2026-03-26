@@ -19,17 +19,17 @@ Vector tiles will be loaded at the bottom of the QGIS layer tree as base maps, s
 Vector tiles are optimized for local caching and scale-independent rendering. This also makes it a perfect fit for adding it to your [QField](<https://qfield.org/>) project.
 There are a couple of different vector tile sets available:
 #### leichte-basiskarte
-![](./vt_leichte_basiskartebb93.png)
+![Swiss Locator search result and rendered leichte-basiskarte vector-tile base map in QGIS](./vt_leichte_basiskartebb93.png)
 #### Light base map
 Similar to the _leichte-basiskarte_ layer, but using an older version of the data source and adjusted styles.
-![](./vt_lightbasemapbb93.png)
+![Swiss Locator search result and rendered Light base map vector-tile layer in QGIS](./vt_lightbasemapbb93.png)
 #### leichte-basiskarte-imagery (with WMTS sublayer)
-![](./vt_leichte_basiskarte_imagerybb93.png)
+![Swiss Locator adding the leichte-basiskarte-imagery vector-tile layer with grouped WMTS imagery](./vt_leichte_basiskarte_imagerybb93.png)
 #### Imagery base map (with WMTS sublayer)
 This layer is similar to the _leichte-basiskarte-imagery_ layer, but it uses an older version of the data source and adjusted styles.
-![](./vt_imagery_basemapbb93.png)
+![Swiss Locator loading the Imagery base map vector-tile layer with imagery reference data](./vt_imagery_basemapbb93.png)
 #### Base map
-![](./vt_basemapbb93.png)
+![Swiss Locator adding the standard Base map vector-tile layer in QGIS](./vt_basemapbb93.png)
 See the [official services documentation](<https://www.geo.admin.ch/en/vector-tiles-service-available-services-and-data>) for details on data sources and styles.
 ## Fixes
 Thanks to your feedback, we’ve also fixed some issues. Don’t hesitate to reach out to us at [GitHub](<https://github.com/opengisch/qgis-swiss-locator/>) if you’d like to suggest or report something related to the Swiss Locator plugin.

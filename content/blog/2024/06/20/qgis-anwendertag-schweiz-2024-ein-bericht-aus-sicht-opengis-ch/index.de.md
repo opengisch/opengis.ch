@@ -7,11 +7,11 @@ source: "www.opengis.ch/de/2024/06/20/qgis-anwendertag-schweiz-2024-ein-bericht-
 ---
 Während der Pandemie bemerkte man, wie effizient man eigentlich remote kann, wie produktiv Meetings per Videocall sein können und wie gut Webinare funktionieren. Für uns bei OPENGIS.ch war das nichts Neues, da wir schon immer 100% remote gearbeitet haben. Aber was wir während dieser Zeit wirklich vermisst haben, waren die unplanmässigen, persönlichen Interaktionen bei einer Kaffeepause, auf dem Weg zur Toilette oder beim Feierabendbier in der Sonne. Deshalb freuten wir uns sehr, dass das QGIS Anwendertreffen letzte Woche nun schon zum zweiten Mal seither stattgefunden hat.
 OPENGIS.ch ist seit der Entstehung von QGIS dabei. Eigentlich sogar schon davor; unser CEO Marco begann 2004 mit QGIS 0.6 zu arbeiten und unser CTO Matthias mit Version 1.7 im Jahr 2012. Und seit 2019 sind wir Weltweit die Firma mit den meisten QGIS Core Committer. Wir können definitiv sagen, dass OPENGIS.ch eine der treibenden Kräfte hinter der grossen Verbreitung von QGIS in der Schweiz und weltweit war.
-![](./contrib15bf.png)Beiträge zum QGIS-Kern, gemessen in Commit-Zahlen
+![Beiträge zum QGIS-Kern, gemessen in Commit-Zahlen](./contrib15bf.png)
 Wenn man sich die Arbeit im QGIS-Code ansieht, sind wir bei weitem das produktivste Unternehmen in der Schweiz und stehen weltweit nach North Road Consulting an zweiter Stelle. Darüber hinaus waren wir das erste – und immer noch eines von nur zwei – Unternehmen, das QGIS.org seit 2021 als[ large sustaining member unterstützt](<https://qgis.org/de/site/about/sustaining_members.html>).
 Das macht uns sehr stolz und deshalb freuen wir uns umso mehr zu sehen, wie viel rund um QGIS in der Schweiz passiert und wie sehr es mit den Visionen und Zielen übereinstimmt, die wir uns vor Jahren gesetzt haben.
 Nun zum Anwendertreffen: Der Morgen begann mit einer Präsentation unseres CTO Matthias „Neues aus der QGIS Welt“, die auch viele von der Anwendergruppe Schweiz gesponserte Arbeiten vorstellte.
-![](./IMG_20240611_0859256aed.jpg)Unser CTO Matthias beantwortet QGIS-Fragen
+![Unser CTO Matthias beantwortet QGIS-Fragen](./IMG_20240611_0859256aed.jpg)
 Verbesserungen bei DXF, die Veröffentlichung von SwissLocator 3.0 mit swissalti3d und Vector-Tiles-Integration sowie ein Update zu den Fortschritten bei der Handhabung von Kreisbögen – eine Voraussetzung für die saubere Handhabung von AV-Daten in der Schweiz – waren nur einige der Highlights.
 Der geheime Star von Matthias‘ Präsentation war die bessere Unterstützung von OGC API Features in QGIS, die auch in einem nachfolgenden Vortrag über Kablo hervorgehoben wurde, in dem gezeigt wurde, wie die nächste Generation von Fachschalen umgesetzt wird.
     
@@ -30,7 +30,7 @@ Natürlich war nicht nur die Beiträge von OPENGIS.ch spannend. Sandro Mani von 
 Um den Vormittag abzurunden, machte Nyall Dawson von North Road Consulting eine Live-Session vom anderen Ende der Welt, um die neuesten Entwicklungen zur Höhenfilterung in QGIS zu zeigen.
 Am Nachmittag folgten Workshops. Claas Leiner leitete einen Workshop zu Ausdrücken in QGIS, während Matthias und Michael zeigten, wie man die QGIS-Verarbeitung für den Aufbau geospatialer Datenverarbeitungs-Workflows nutzen kann.
 Im dritten Raum fand das erste [QGIS Model Baker](<https://modelbaker.ch/>) Anwendertreffen statt, bei dem dieses fantastische Werkzeug diskutiert wurde, welches wir seit Jahren entwickeln, um alles aus INTERLIS herauszuholen und zu helfen, angenehm und effizient damit zu arbeiten.
-![](./10000508056aed.jpg)Erstes QGIS Model Baker Anwendertreffen
+![Erstes QGIS Model Baker Anwendertreffen](./10000508056aed.jpg)
 Es war wirklich ein sehr reichhaltiges und konstruktives QGIS-Anwendertreffen. Wir kamen mit vielen neuen Ideen und einem Gefühl der Erfüllung nach Hause. Wir sahen, wie grossartig die Community geworden ist, die wir beim Wachsen miterlebt und unterstützt haben.
 Ein riesiger Dank geht an die Organisatoren und alle Beteiligten, die eine so grossartige Veranstaltung möglich gemacht haben. Nur das Bier in der Sonne fiel buchstäblich ins Wasser. Trotzdem gab es noch spannende Diskussionen im Bahnhofs-Bistro oder in den Speisewagen auf dem Nachhauseweg.
 Bis zum nächsten Mal, und bis dahin helft weiterhin mit, QGIS und seine Community besser zu machen.

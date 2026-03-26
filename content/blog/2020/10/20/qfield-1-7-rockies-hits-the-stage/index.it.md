@@ -13,22 +13,22 @@ So let’s welcome QField 1.7 Rockies. And yes, we mean THE [Rockies](<https://e
 Let’s have a look.
 ## Merging features
 Splitting of a feature has been possible for quite some time. Now the merging of features of multipolygon-layer is possible as well. Select them and merge them – easy like that. The first selected feature gets the new geometry and keeps its attributes.
-![](./mergesmall-386c7.png)
+![QField merging selected multipolygon features into one geometry](./mergesmall-386c7.png)
 ## Filters in the Value Relation Widget
 The value relation widgets provide an easy selection of a related feature. Often it’s used for lookup tables but sometimes the related tables contain a lot of entries and the list of the possible values is long.
 Using filters in the value relation drop-down can increase the efficiency in selecting the correct value. It can be configured by expressions in QGIS, so it’s possible to have the content of the drop down depend on the values entered previously in other fields.
-![](./filtervaluerelation_trans9110.png)
+![Value relation widget filtered by a previously selected category in QField](./filtervaluerelation_trans9110.png)
 In the screenshot above there is a Map Value Widget with “forest” and “meadow” as values. On selecting “forest”, only the trees appear in the Field “Plant Species”. On selecting “meadow” there would be listed flowers instead.
 ## Go to coordinates in the Search
 The search has not only been improved in its appearance, but it’s handling is much more comfortable with a button to clear the text and easy opening and closing.
 Additionally, we added the possibility to jump to coordinates. Searching a place you know the coordinates of is now super simple. And this means that digitizing that precise geometry with known coordinates is finally possible.
-[![coordinates](https://i0.wp.com/user-images.githubusercontent.com/28384354/91524953-c144ba00-e900-11ea-97db-8f8b5a7f32a3.jpg?w=750&ssl=1)](<https://i0.wp.com/user-images.githubusercontent.com/28384354/91524953-c144ba00-e900-11ea-97db-8f8b5a7f32a3.jpg?ssl=1>)
+[![Coordinate display and map navigation improvements in QField](https://i0.wp.com/user-images.githubusercontent.com/28384354/91524953-c144ba00-e900-11ea-97db-8f8b5a7f32a3.jpg?w=750&ssl=1)](<https://i0.wp.com/user-images.githubusercontent.com/28384354/91524953-c144ba00-e900-11ea-97db-8f8b5a7f32a3.jpg?ssl=1>)
 ## QML and HTML Widget
 You might remember when we introduced the [QML widget in QGIS](</2018/11/06/qml-widgets-qgis/index.html>). Now it’s in QField as well. And it’s not alone. HTML widgets are supported too.
 This provides a lot of possibilities to display information with texts, images and charts and it even allows you interaction.  
 Do you need help setting up complex forms? Don’t hesitate to [get in touch with us](</supporto-qgis/index.html>)!
-  - ![qml](https://i0.wp.com/user-images.githubusercontent.com/28384354/91524902-ad00bd00-e900-11ea-86e2-c44af84bb04a.png?w=750&ssl=1)
-  - ![](./html-1407c.png)
+  - ![QML widget rendered inside a QField form](https://i0.wp.com/user-images.githubusercontent.com/28384354/91524902-ad00bd00-e900-11ea-86e2-c44af84bb04a.png?w=750&ssl=1)
+  - ![HTML widget displayed inside a QField form](./html-1407c.png)
 
 
 ##   

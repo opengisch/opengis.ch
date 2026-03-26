@@ -20,7 +20,7 @@ You create your project about beekeeping and store it as „citybees.qgs“. You
 On changes you will edit always this project and no translated projects.
 ## 2\. Generate Ts File
 In the project properties in the section _**General**_ there is the part to generate a translation source file. First, you select the source language, to have this information in programs you’ll edit the file (like Qt Linguist or Transifex) afterwards. Per default the language of your QGIS is selected here.  
-[![](./trans_generate_ts84ca.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_generate_tseb45.png?ssl=1>)  
+[![QGIS project properties showing the Generate TS File section for project translation](./trans_generate_ts84ca.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_generate_tseb45.png?ssl=1>)  
 When pressing _**Generate TS File**_ you will find in your projects folder the new file „citybees.ts“.  
 **_But wait a minute, why are we generating a .ts file when we need a .qm file?_**  
 The .ts file is the translation source file and it’s the uncompiled .qm file. The .qm file contains compact binary format code Qt can make the translation of programs with, but you and your brave translator cannot read it. So you create a .ts file looking like this:
@@ -61,13 +61,13 @@ You could enter your translations directly in this file using the text editor an
 ## 3\. Translate your File in Qt Linguist
 You open _**Qt Linguist**_ an you select the target language of the .qm file you want to build in the end. Let’s choose German.  
 The file opens and you see a list of entries described by the _**Context**_. The context is, where the strings are located in the QGIS project.  
-[![](./trans_context-e1536565867989a802.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_context-e1536565867989eb45.png?ssl=1>)  
+[![Qt Linguist showing the translation context entries extracted from a QGIS project](./trans_context-e1536565867989a802.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_context-e1536565867989eb45.png?ssl=1>)  
 The string „beekeeper“ stays in the context _**project:layers:apiary_1f7b5e82839c:fieldaliases**_ and this means it’s a _**field or alias**_ of the layer **_apiary_1f7b5e82839c_** in the project.  
 The translation is done simply over the graphical interface. To confirm your translation you can set the check mark.  
-[![](./trans_linguist_translation5df2.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_linguist_translationeb45.png?ssl=1>)
+[![Qt Linguist editor with a translated project string marked as finished](./trans_linguist_translation5df2.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_linguist_translationeb45.png?ssl=1>)
 ## 4\. Finally build your .qm file
 You compile the translation – means build a .qm file – by simply select _**Release as…**_ in the Qt Linguist and store it as „citybees_de.qm“.  
-[![](./trans_trans_de7f2b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_trans_deeb45.png?ssl=1>)  
+[![Qt Linguist Release As dialog saving the compiled German citybees_de.qm file](./trans_trans_de7f2b.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_trans_deeb45.png?ssl=1>)  
 _**And now your customer will be able to open your project in German 🙂**_
 # What’s translated
 Most of the needed parameters like layer names and fields are translated. There could be still some strings in your use case that are not like for example action titles or labels. But the solution is designed, that it’s extendable for more project parameters (see the next chapter). So don’t worry if you will find parameters that cannot be translated yet. They possibly will be in the future.
@@ -87,7 +87,7 @@ Let’s assume, you want to have the values in the field _**bee_species**_ trans
 – European dark bee  
 – Carniolan honey bee  
 – Buckfast bee  
-[![](./trans_values_en3c3a.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_values_eneb45.png?ssl=1>)  
+[![QGIS value relation widget showing bee species values in English](./trans_values_en3c3a.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_values_eneb45.png?ssl=1>)  
 You can solve this by using the value relation widget. Means you create a non geometrical layer „beespecies“ and enter the following values:
 nomenclatura | name_en | name_de | name_fr | name_it  
 ---|---|---|---|---  
@@ -95,7 +95,7 @@ Apis mellifera mellifera | European dark bee | Dunkle Europäische Biene | abeil
 Apis mellifera carnica | Carniolan honey bee | Kärntner Biene | abeille carniolienne | ape carnica  
 Apis mellifera | Buckfast bee | Buckfastbiene | abeille Buckfast | ape Buckfast  
 And configure the field _**bee_species**_ of _**apiary**_ as _**value relation****widget**_ :  
-[![](./trans_valuerelationa0e6.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_valuerelationeb45.png?ssl=1>)
+[![QGIS field configuration using a value relation widget for translated bee species values](./trans_valuerelationa0e6.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_valuerelationeb45.png?ssl=1>)
 ### And now comes the magic:
 When you create the .ts file it includes not only the field name _**bee_**__**species**_ but also the referenced value _**name_en**_ :
     
@@ -107,7 +107,7 @@ When you create the .ts file it includes not only the field name _**bee_**__**sp
       </message>
      </context>
 When you now „translate“ the _**name_en**_ to _**name_de**_ the field is referenced to the German values of the entry:  
-[![](./trans_values_de3c3a.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_values_deeb45.png?ssl=1>)
+[![QGIS value relation widget showing bee species values in German](./trans_values_de3c3a.png)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2018/09/trans_values_deeb45.png?ssl=1>)
 # Getting technical
 Let’s have a quick look into the source code, shall we?
 ## Generate Ts File

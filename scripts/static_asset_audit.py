@@ -18,7 +18,6 @@ ALLOWED_DOMAINS = {"opengis.ch", "www.opengis.ch"}
 UPLOAD_ROOTS = (
     "/wp-content/uploads/",
     "/i0.wp.com/www.opengis.ch/wp-content/uploads/",
-    "/i1.wp.com/www.opengis.ch/wp-content/uploads/",
 )
 ASSET_EXTENSIONS = {
     ".apng",

@@ -6,7 +6,7 @@ url: "/de/2023/05/30/qfield-2-8-boosting-field-work-through-external-sensors/"
 source: "www.opengis.ch/de/2023/05/30/qfield-2-8-boosting-field-work-through-external-sensors/index.html"
 ---
 The latest version of QField is out, featuring as its main new feature sensor handling alongside the usual round of user experience and stability improvements. We simply can’t wait to see the sensor uses you will come up with!
-![](./238116107-1792bb88-9fdb-41e7-9716-7fd65f8837ceec0c.png)
+![QField 2.8 interface showing external sensor integration during field work](./238116107-1792bb88-9fdb-41e7-9716-7fd65f8837ceec0c.png)
 ## **The main highlight: sensors**
 QField 2.8 ships with **out-of-the-box handling of external sensor streams** over TCP, UDP, and serial port. The functionality allows for data captured through instruments – such as geiger counter, decibel sensor, CO detector, etc. – to be visualized and manipulated within QField itself.
 Things get really interesting when sensor data is utilized as default values alongside positioning during the digitizing of features. You are always one tap away from adding a point locked onto your current position with spatially paired sensor readings saved as point attribute(s).

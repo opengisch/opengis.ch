@@ -9,12 +9,12 @@ Today marks the initial release of our brand-new QGIS plugin, _XLSForm Converter
 As the name suggests, the plugin converts XLSForm survey files into ready-to-use QGIS projects with a preconfigured survey attribute form.
 Migrating to QField was never easier!  
 
-![](./xlsformconverter-qgis-qfield-1757d.png)_The converted survey form as displayed on QGIS (left) and QField (right)_
+![_The converted survey form as displayed on QGIS (left) and QField (right)_](./xlsformconverter-qgis-qfield-1757d.png)
 Even more exciting is that the converted QGIS project includes all the necessary settings for use with QField, thanks to a nifty QFieldCloud integration. With just a single checkbox, you can upload your generated project to the cloud and begin gathering data—either as a standalone surveyor or collaboratively as part of a team.
 We believe this provides a fantastic solution for organisations and groups familiar with XLSForm—or already working with templates—who want to leverage QGIS-powered QField to conduct spatial surveys.
 ## Plugin highlights
 The plugin adds an algorithm to QGIS’ processing toolbox that converts a XLSForm file – Microsoft Excel’s .xls or .xlsx as well as LibreOffice Calc’s .ods – into a QGIS project containing a main survey layer and a basemap.
-![](./xlsformconverter-algorithm-screenshot57ca.png)_The XLSForm Converter’s algorithm dialog_
+![_The XLSForm Converter’s algorithm dialog_](./xlsformconverter-algorithm-screenshot57ca.png)
 The layer’s geometry type will reflect the first geometry-driven question type found in the XLSForm, namely a point geometry for geopoint, a line geometry for geotrace, or a polygon geometry for geoshape.
 For XLSForm _repeat_ blocks, the algorithm generates additional layers and configures parent-child relationships to bind them to the main survey layer. These layers are hidden from the layer tree by default, keeping the project simple and user-friendly—even for users unfamiliar with QGIS.
 For questions that capture media content—such as photographs, videos, and audio clips—the converter sets up the project so users can easily record them in QField with a single tap.

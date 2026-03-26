@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test:lighthouse": "./scripts/run_lighthouse_ci.sh"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.4.27",
+    "bootstrap": "^5.3.8",
+    "pa11y-ci": "^4.1.0",
+    "postcss": "^8.5.8",
+    "postcss-cli": "^11.0.1"
+  }
+}

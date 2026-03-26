@@ -5,7 +5,7 @@ slug: "unterstutzung-fur-wmts-in-qgis-swiss-locator"
 url: "/2023/06/13/unterstutzung-fur-wmts-in-qgis-swiss-locator/"
 source: "www.opengis.ch/2023/06/13/unterstutzung-fur-wmts-in-qgis-swiss-locator/index.html"
 ---
-![](./unnamede29a.png)
+![QGIS Swiss Locator plugin showing WMTS background layer support](./unnamede29a.png)
 Das **QGIS swiss locator Plugin** erleichtert in der Schweiz vielen Anwendern das Leben dadurch, dass es die umfangreichen Geodaten von **[swisstopo](<https://www.swisstopo.ch/>)** und **[opendata.swiss](<https://opendata.swiss/>)** zugänglich macht. Darunter ein breites Angebot an GIS Layern, aber auch Objektinformationen und eine Ortsnamensuche.
 Dank eines Förderprojektes der Anwendergruppe Schweiz durfte OPENGIS.ch ihr Plugin um eine zusätzliche Funktionalität erweitern. Dieses Mal mit der Integration von WMTS als Datenquelle, eine ziemlich coole Sache. Doch **was ist eigentlich der Unterschied zwischen WMS und WMTS**?
 ## WMS vs. WMTS

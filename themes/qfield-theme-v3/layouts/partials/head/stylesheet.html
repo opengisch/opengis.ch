@@ -1,11 +1,11 @@
 {{- $sassOptions := dict "targetPath" "css/style.css" "enableSourceMap" true "outputStyle" "expanded" "precision" 6 -}}
-{{/*- $postcssOptions := dict "use" "autoprefixer" "noMap" true -*/}}
+{{- $postcssOptions := dict "config" "themes/qfield-theme-v3" "noMap" true -}}
 
 {{ if eq hugo.Environment "production" -}}
   {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
 {{- end -}}
 
-{{ $css := resources.Get "sass/main.scss" | toCSS $sassOptions -}}
+{{ $css := resources.Get "sass/main.scss" | toCSS $sassOptions | postCSS $postcssOptions -}}
 
 {{ if eq (hugo.Environment) "development" -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink | relURL }}" media="screen">
@@ -17,5 +17,11 @@
 {{ $bi := resources.Get "bootstrap-icons/bootstrap-icons.css" | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $bi.RelPermalink }}">
 
-<link rel="stylesheet" href="{{ "/font-awesome/css/all.min20b9.css" | relURL }}">
-<link rel="stylesheet" href="{{ "/font-awesome/css/v4-shims.min20b9.css" | relURL }}">
+{{ if fileExists "static/font-awesome/css/all.min20b9.css" -}}
+  {{ $fontAwesomeAll := resources.FromString "font-awesome/css/all.min20b9.css" (readFile "static/font-awesome/css/all.min20b9.css") | resources.Fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ $fontAwesomeAll.RelPermalink }}" integrity="{{ $fontAwesomeAll.Data.Integrity }}" crossorigin="anonymous">
+{{ end -}}
+{{ if fileExists "static/font-awesome/css/v4-shims.min20b9.css" -}}
+  {{ $fontAwesomeShims := resources.FromString "font-awesome/css/v4-shims.min20b9.css" (readFile "static/font-awesome/css/v4-shims.min20b9.css") | resources.Fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ $fontAwesomeShims.RelPermalink }}" integrity="{{ $fontAwesomeShims.Data.Integrity }}" crossorigin="anonymous">
+{{ end -}}

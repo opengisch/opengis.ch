@@ -11,10 +11,10 @@ class GeoNinjasCardTests(unittest.TestCase):
         shortcode = (REPO_ROOT / "themes/qfield-theme-v3/layouts/shortcodes/geoninjas.html").read_text(encoding="utf-8")
 
         self.assertIn('data-reveal="fade-left"', homepage)
-        self.assertIn('data-reveal-delay="{{ mul $index 70 }}"', homepage)
+        self.assertIn('data-reveal-delay="{{ mul $index 36 }}"', homepage)
         self.assertIn('class="team-card__media"', homepage)
         self.assertIn('data-reveal="fade-left"', shortcode)
-        self.assertIn('data-reveal-delay="{{ mul $index 70 }}"', shortcode)
+        self.assertIn('data-reveal-delay="{{ mul $index 36 }}"', shortcode)
         self.assertIn('class="team-card__media"', shortcode)
 
     def test_scroll_reveal_logic_and_card_styles_exist(self) -> None:
@@ -24,8 +24,11 @@ class GeoNinjasCardTests(unittest.TestCase):
         self.assertIn('querySelectorAll(\'[data-reveal="fade-left"]\')', script)
         self.assertIn("new IntersectionObserver", script)
         self.assertIn("item.style.setProperty('--reveal-delay'", script)
+        self.assertIn("threshold: 0.08", script)
+        self.assertIn("rootMargin: '0px 0px -4% 0px'", script)
         self.assertIn(".team-card.is-visible", styles)
-        self.assertIn("transform: translate3d(-44px, 0, 0);", styles)
+        self.assertIn("transform: translate3d(-24px, 0, 0);", styles)
+        self.assertIn("transition: opacity 0.34s ease-out, transform 0.34s ease-out;", styles)
         self.assertIn(".team-card__media", styles)
         self.assertIn("@media (prefers-reduced-motion: reduce)", styles)
 

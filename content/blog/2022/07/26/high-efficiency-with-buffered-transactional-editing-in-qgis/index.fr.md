@@ -7,7 +7,7 @@ source: "www.opengis.ch/fr/2022/07/26/high-efficiency-with-buffered-transactiona
 ---
 **Tired of start/stop editing for every single layer in your project with mixed data sources?  
 Starting from version 3.26, QGIS has a new transaction mode called « Buffered Transaction Groups ».**
-![](./150740898-3f5c70e8-d441-441a-bc42-c458605f3bc8c98b.png)
+![QGIS buffered transaction groups setting in project properties](./150740898-3f5c70e8-d441-441a-bc42-c458605f3bc8c98b.png)
 Within this mode, **all layers** which are not read-only are put in one « transaction group » and **handled together** when the actions « Toggle Editing » or « Save Layer Edits » are activated. It doesn’t matter if the layers come from different providers like GeoPackage, PostgreSQL or Shapefile. Edits are buffered locally and saved within one single transaction on all layers per provider. With this, you can store all edited layers with a single click. And in comparison to the well-known « Automatic Transaction Groups » mode you have better performance during editing and fewer problems with locking of the database when multiple users edit the same table in parallel.
 To try it out; go to **_Project - > Properties -> Data Sources -> Transaction mode_**
 Enjoy and let us know what you think!

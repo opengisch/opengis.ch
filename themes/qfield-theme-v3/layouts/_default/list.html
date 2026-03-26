@@ -46,8 +46,13 @@
                     <article class="card border-0 shadow-sm overflow-hidden h-100">
                         <div class="ratio ratio-16x9 bg-light">
                             {{ if $image }}
-                                {{ $thumb := $image.Fill "720x420 Center webp" }}
-                                <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy" alt="{{ .Title }}">
+                                {{ partial "image.html" (dict
+                                    "resource" $image
+                                    "alt" .Title
+                                    "class" "w-100 h-100 object-fit-cover"
+                                    "sizes" "(max-width: 767px) 100vw, (max-width: 1399px) 50vw, 33vw"
+                                    "widths" (slice 400 720 960 1280)
+                                ) }}
                             {{ else if $contentImage }}
                                 <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ $contentImage | safeURL }}" loading="lazy" alt="{{ .Title }}">
                             {{ else }}

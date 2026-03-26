@@ -5,7 +5,7 @@ slug: "we-live-love-open-source"
 url: "/fr/2024/06/27/we-live-love-open-source/"
 source: "www.opengis.ch/fr/2024/06/27/we-live-love-open-source/index.html"
 ---
-![](./Design-ohne-Titel-115bf.gif)
+![Open-source events and sponsorship newsletter banner](./Design-ohne-Titel-115bf.gif)
 **MEET US AT THESE UPCOMING EVENTS  
 **  
 Calling all geo-enthusiasts! We’ve curated an exclusive list of must-attend events for you. These gatherings are the perfect opportunity to meet and engage with our GeoNinjas – the pioneers of geospatial technology who are shaping the future of GIS. Whether you’re looking to network, learn, or share your passion for projects, these events are where you need to be:  
@@ -38,7 +38,7 @@ Our vision is to establish open-source GIS as the industry standard. We’re com
 **Our Team – Our Heart:** Since the beginning, OPENGIS.ch has been about empowering our team to achieve the perfect work-life balance. We support each team member in organizing their work hours and locations to harmonize with their personal lives.  
 **Your Project, Our Passion**
 **Every project we undertake is fueled by our passion for open-source GIS and our commitment to our clients and community. Let’s advance the world of geospatial technology together.**
-![](./image-2463d.png)
+![World map graphic accompanying OPENGIS.ch open-source mission and events](./image-2463d.png)
 #### ******Stay connected, and get ready to join a community that inspires!******
 To better serve you and continue improving our projects, please take a moment to fill out our survey. Your feedback is invaluable to us: 
 [LINK TO THE SURVEY](<https://opengisch.surveysparrow.com/n/2024q2/ntt-eM9wwtcuvnNaWUAKvBiA6h>)

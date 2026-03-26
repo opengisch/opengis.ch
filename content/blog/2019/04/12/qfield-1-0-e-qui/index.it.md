@@ -32,7 +32,7 @@ Grazie a questi miglioramenti, QField permette di ridurre significativamente il 
 ### Supporto per GNSS ad alta precisione
 La semplice precisione interna del GPS potrebbe essere sufficiente per i progetti di base, ma misurazioni ufficiali e altre digitalizzazioni ad alta precisione hanno requisiti molto più elevati. QFields ascolta nativamente i servizi di localizzazione Android in modo da poter usufruire della migliore posizione fornita da dispositivi esterni.  
 
-![](./gnss8590.jpg)
+![QField GNSS panel showing high precision positioning details](./gnss8590.jpg)
 ### Generazione di PDF
 Grazie al supporto nativo di QField per la generazione di PDF basati sui layout di stampa di QGIS, il report giornaliero generato al volo è a un solo clic di distanza.
 ### Selezione intuitiva dei progetti

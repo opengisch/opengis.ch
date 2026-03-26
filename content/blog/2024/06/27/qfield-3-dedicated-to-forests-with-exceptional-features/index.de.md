@@ -6,7 +6,7 @@ url: "/de/2024/06/27/qfield-3-dedicated-to-forests-with-exceptional-features/"
 source: "www.opengis.ch/de/2024/06/27/qfield-3-dedicated-to-forests-with-exceptional-features/index.html"
 ---
 With the current release of the **QField Series 3** , the significance of forests is reflected in the naming, underscoring the importance of **environmental protection** and the role of QField in forest management. This update not only recognizes the ecological value of our forests but also introduces numerous new features that **redefine data collection and management** across various sectors.
-![](./Design-ohne-Titel-315bf.gif)
+![QField 3 newsletter banner dedicated to forests and new features](./Design-ohne-Titel-315bf.gif)
 **NEW FUNCTIONALITIES ABOUND**  
   
 The latest updates of QField introduce a wealth of **new features** that are revolutionizing the collection and management of field data. Critical updates include the ability to sketch over photos and drawing templates, undo/redo functionality, and improvements in tracking. Enhanced form widgets and a new snapping tool simplify fieldwork during digitization, while support for text widgets and relationship management within forms deepens data handling.  
@@ -35,7 +35,7 @@ QField is used in a variety of exciting projects. In this issue, we would like t
 **Groupements Forestiers Québec  
 ** Finally, we would like to shed light on the topic of forests again by briefly presenting the cooperation with the forestry association named [Groupements Forestiers Québec](<https://groupementsforestiers.quebec/>). They have recognized that QField plays an essential role in the management of forests. By keeping track of the work done, they gain essential knowledge and insights to plan ahead in a time when the future conditions for forests are challenged by changing climate. Since the forests being planted today will endure into the next century, it is crucial to cultivate them with a sustainable composition. Their use of QField is diverse, thanks to its ability to work entirely offline in remote areas, coupled with its user-friendly design that remains effective even in challenging conditions like rain and rough weather.
 **If you would also like to advance your project with us, please**[contact us](<mailto:sales@qfield.org>)**. We are happy to help with everything from idea generation using design thinking methods to the deployment of a ready-to-use QField project.**
-![](./image-1463d.png)
+![Poster announcing the new OPENGIS.ch QField course](./image-1463d.png)
 #### ******Stay tuned for new features – we’ve got some exciting updates coming your way soon!******
 To better serve you and continue improving our projects, please take a moment to fill out our survey. Your feedback is invaluable to us:
 [LINK TO THE SURVEY](<https://opengisch.surveysparrow.com/n/2024q2/ntt-eM9wwtcuvnNaWUAKvBiA6h>)

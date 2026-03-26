@@ -32,7 +32,7 @@ Thanks to these enhancements, QField allows reducing the error rate significantl
 ### Support for high precision GNSS
 Simple internal GPS accuracy might be enough for basic projects but cadastral surveying and other high accuracy digitizations have much higher requirements. QFields natively listens to the Android location services so it can take advantage of the best location provided by external devices.  
 
-![](./gnss8590.jpg)
+![QField GNSS panel showing high precision positioning details](./gnss8590.jpg)
 ### Generate PDF
 Thanks to QField’s native support for generating PDFs based on QGIS’s print layouts, your on the fly daily report map is just one click away. 
 ### Intuitive project chooser

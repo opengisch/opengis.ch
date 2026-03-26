@@ -13,5 +13,5 @@ D/Qt (27512): src/python/qgspythonutilsimpl.cpp: 91: (initPython) newpaths: "/da
 D/Qt (27512): src/python/qgspythonutilsimpl.cpp: 188: (runString) COMAND OK: from sip import wrapinstance, unwrapinstance  
 D/Qt (27512): src/core/qgsmessagelog.cpp: 45: (logMessage) 2013-05-21T01:57:20 [0] Python support ENABLED :-)  
 `  
-[![image](./wpid-Screenshot_2013-05-21-02-10-296451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/05/wpid-Screenshot_2013-05-21-02-10-29eb45.jpg?ssl=1>)[![image](./wpid-Screenshot_2013-05-21-01-58-016451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/05/wpid-Screenshot_2013-05-21-01-58-01eb45.jpg?ssl=1>)
+[![QGIS for Android log output showing embedded Python support enabled](./wpid-Screenshot_2013-05-21-02-10-296451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/05/wpid-Screenshot_2013-05-21-02-10-29eb45.jpg?ssl=1>)[![QGIS for Android screenshot after enabling Python support](./wpid-Screenshot_2013-05-21-01-58-016451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/05/wpid-Screenshot_2013-05-21-01-58-01eb45.jpg?ssl=1>)
 ### _Related_

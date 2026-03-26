@@ -67,7 +67,7 @@ Le modèle fédéral INTERLIS `Wildruhezonen_LV95_V2_1` se présente (de manièr
       END Wildruhezonen;
     END Wildruhezonen_LV95_V2_1.
 Vous trouvez [l’original dans le Model Repository de l’OFEV](<https://models.geo.admin.ch/BAFU/Wildruhezonen_V2_1.ili>) Il est fondamentalement conçu de manière « lisible » – du point de vue d’un technicien. Un coup d’œil sur l’UML facilite la compréhension.
-![](./UML-19110.png)
+![Simplified UML diagram of the Wildruhezonen INTERLIS model used in the tutorial](./UML-19110.png)
 ### Du modèle INTERLIS au projet QGIS
 Souvent, les utilisateurs reçoivent simplement quelques fichiers avec des extensions `ili` ou `xtf` et ils ne savent pas exactement quoi en faire.
 Heureusement, nous avons le plaisir de présenter un tout nouvel assistant dans la version 6.6, qui a été étendu dans la version 6.7 suivante. L’idée est que les utilisateurs avancés peuvent garder le contrôle, mais qu’ils ne doivent pas nécessairement savoir ce qu’ils doivent faire et dans quel ordre. En revanche, on est automatiquement accompagné tout au long du processus. Prenons un exemple.
@@ -85,7 +85,7 @@ Si Frédéric ouvrait le _Model Baker_ Wizard, il aurait le choix entre plusieur
 
 
 Mais Frédéric ne le fait pas. La peur d’être licencié pendant sa période d’essai paralyse son esprit. Mais comme il doit faire quelque chose, il glisse les fichiers dans le QGIS sans réfléchir. Heureusement, les fichiers avec l’extension `xtf`, `ili` et `xml` sont reconnus par _Model Baker_ et la page Wizard pour l’ajout de sources de données s’ouvre.
-![](./modelbaker_source_selectionaf9f.png)
+![Model Baker wizard source-selection page listing dragged INTERLIS model, catalog, and transfer files](./modelbaker_source_selectionaf9f.png)
 ### Ajouter des données
 On peut ajouter des sources de données de différentes manières. Soit on les glisse dans QGIS comme Frédéric, soit on arrive sur la même page via la première option de l’assistant « Ajouter des données ». Là, on peut glisser-déposer d’autres fichiers ou les ouvrir via le navigateur de fichiers et les ajouter avec le bouton +. On peut également charger des modèles INTERLIS à partir d’un Repository. Il suffit de taper le nom en haut et de l’ajouter.
 > **Qu’est-ce qu’un Repository ?**
@@ -93,7 +93,7 @@ On peut ajouter des sources de données de différentes manières. Soit on les g
 ### Sélectionner une base de données
 L’étape suivante consiste à configurer la connexion à la base de données. Frédéric choisit sa base de données PostgreSQL et un nouveau schéma de base de données. Le GeoPackage ou MSSQL sont également pris en charge.
 ### Mise en place des modèles
-![](./modelbaker_schema_configurationaf9f.png)
+![Model Baker wizard schema-configuration page listing importable models and advanced ili2db options](./modelbaker_schema_configurationaf9f.png)
 Enfin, Frédéric voit une liste des modèles qui peuvent être transférés physiquement. Il affiche d’une part les modèles issus du fichier `ili` qu’il a ajouté, et d’autre part les modèles qui ont été extraits du catalogue ou du fichier de transfert (`xtf`ou `xml`) et qui pourraient être chargés depuis le Repository. Les modèles trouvés en double sont affichés, mais ne sont pas sélectionnés. Frédéric pourrait encore modifier la sélection, mais il ne le fait pas. Au lieu de cela, il regarde ce que l’on peut faire dans les « Options avancées ».
 Dans les « Options avancées », il est possible de définir des paramètres pour `ili2db`, par exemple la manière dont les héritages sont mis en place (`smartInheritance`) ou si l’on souhaite charger des métafichiers d’attributs supplémentaires (`toml`). Là encore, Frédéric laisse faire comme proposé.
 Mais ce qu’il voit encore ici, c’est un champ de saisie qui lui permet de charger des « Toppings » depuis le UsabILIty Hub. Il clique dessus et trouve une entrée. L’entrée a été trouvée sur la base du modèle `Wildruhezonen_LV95_V2_1` et en cliquant dessus, Frédéric voit différentes configurations affichées.
@@ -101,12 +101,12 @@ Mais ce qu’il voit encore ici, c’est un champ de saisie qui lui permet de ch
 > L’idée de l’UsabILIty Hub est de recevoir automatiquement via le web des informations supplémentaires pour les modèles INTERLIS implémentés. De la même manière que nous pouvons recevoir des modèles en connectant le fichier `ilimodels.xml` de [https://models.interlis.ch](<https://models.interlis.ch/>) et les Repositories liés, nous pouvons recevoir les informations supplémentaires avec le fichier `ilidata.xml` sur le UsabILIty Hub (actuellement [https://models.opengis.ch](</models.opengis.ch/index.html>)) et les référentiels liés. Les paramètres des outils sont configurés dans un fichier de méta-configuration, tout comme les liens vers les fichiers d’en-tête contenant des informations sur le projet SIG (comme les symbologies ou les structures de légende). Ainsi, ces informations supplémentaires se composent généralement d’une méta-configuration et d’un nombre quelconque de Toppings.
 Les fichiers de méta-configuration peuvent également contenir des liens vers des fichiers de catalogue. Les modèles nécessaires pour les catalogues seraient alors automatiquement ajoutés. De même, le fichier `ilidata.xml` est également parcouru à la recherche de catalogues liés aux modèles et si les modèles sur lesquels se basent les catalogues sont saisis proprement, ils sont également ajoutés à la liste.
 Ensuite, les modèles sont créés physiquement avec _ili2db_.
-![](./modelbaker_imported_models-1af9f.png)
+![Database browser showing the imported INTERLIS models after ili2db created the schema](./modelbaker_imported_models-1af9f.png)
 La structure de la base de données a été mise en place avec succès.
 ### Importer des données
 Ensuite, les fichiers de transfert à importer, que Frédéric a glissés dans le programme, sont énumérés. Ici aussi, les catalogues qui auraient été saisis dans le fichier de méta-configuration du _UsabILIty Hub_ seraient automatiquement ajoutés.
 Comme les catalogues se présentent souvent sous forme de fichiers `xml`, les fichiers `xml` sont marqués par défaut comme catalogues et donc importés dans le dataset des catalogues. Pour le fichier de données, Frédéric pourrait créer un nouveau dataset via le Dataset Manager. Sinon, le dataset par défaut (« Baseset ») sera utilisé.
-![](./modelbaker_data_configurationaf9f.png)
+![Model Baker data-import configuration page showing transfer files, datasets, and linked catalog toppings](./modelbaker_data_configurationaf9f.png)
 > **Que sont les datasets ?**
 > Les datasets sont des ensembles de données d’un domaine spatial ou d’une thématique donnée, mais qui n’affectent pas la structure du modèle. Les données d’un dataset peuvent ainsi être gérées, validées et exportées indépendamment des autres données. Les baskets ou conteneurs constituent une instance plus petite. Alors que les datasets comprennent généralement l’ensemble du Topic (ou même plusieurs), les conteneurs font généralement partie d’un Topic. Souvent, ils constituent même le sous-ensemble du Topic et du dataset.
 Ici aussi, un champ de saisie apparaît à nouveau avec la mention « Topping ». Ici sont listés les catalogues qui sont liés dans `ilidata.xml` et qui auraient pu être trouvés via les repositories. Dans le cas de Frédéric, le seul catalogue lié est toutefois déjà disponible à partir de ses fichiers. Même s’il n’avait pas ajouté ce fichier ou ne l’avait pas reçu, le catalogue serait maintenant à sa disposition sous forme de sélection.
@@ -114,7 +114,7 @@ Les données sont importées et sont maintenant prêtes à être envoyées dans 
 ### Et finalement, tout est passé
 Dans la dernière étape, on arrive à la fonction principale du _Model Baker_. _Model Baker_ charge les tables de la base de données en couches, les relie aux relations, configure les formulaires et les widgets de champ et définit les conditions. Si, dans le fichier de méta-configuration chargé via le UsabILIty Hub il trouve également des fichiers `qml` pour des couches spécifiques, celles-ci sont également chargées. Il en va de même pour la légende.
 Le résultat est un projet QGIS prêt à l’emploi.
-![](./modelbaker_baked_project_with_form_wide261d3.png)
+![Finished QGIS project generated by Model Baker with configured forms, relations, and styling](./modelbaker_baked_project_with_form_wide261d3.png)
 La patronne de Frédéric est impressionnée et ne le licencie pas. Du moins, pas tout de suite. Frédéric est content, tout était si simple et il commence à utiliser _Model Baker_ et _ili2db_ avec plaisir. Enfin, il commence à s’informer en détail sur INTERLIS.
 Mais même plus tard – en tant que QGIS Poweruser et INTERLIS Pro – Frédéric utilise le _Model Baker_ avec toutes ses possibilités.
 Bon appétit!

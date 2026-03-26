@@ -1,36 +1,19 @@
 {{/*
-  Bootstrap Carousel
-  A slideshow component for cycling through images like a carousel.
-  https://getbootstrap.com/docs/5.1/components/carousel/
+  Carousel Partial
 
-  Serve responsive images
-  https://web.dev/serve-responsive-images/
-  https://cloudfour.com/thinks/responsive-images-the-simple-way/
-  https://responsivebreakpoints.com/
-
-  Lazy loading
-  https://github.com/aFarkas/lazysizes
-
-  Fixing The Resizing Problem
-
-  Setting Height And Width On Images Is Important Again
-  https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/
-
-  New aspect-ratio CSS property supported in Chromium, Safari Technology Preview, and Firefox Nightly
-  https://web.dev/aspect-ratio/
+  Usage:
+    partial "content/carousel.html" (dict "imagesPattern" "carousel/home/*.png" "aspectRatio" "8/3" "withControls" true)
 
   Parameters:
+    - "imagesPattern" string, required: glob passed to `resources.Match`
+    - "aspectRatio" string, optional: CSS aspect-ratio value for slide images (default "16/9")
+    - "crossFade" bool, optional: enable Bootstrap carousel fade transition
+    - "withIndicators" bool, optional: render slide indicator buttons
+    - "withControls" bool, optional: render previous/next controls
 
-    - "imagesPattern" to pass to resources.Match
-    - "aspectRatio" to be used in aspect-ratio CSS property (default "16/9")
-    - "crossFade" boolean to animate slides with a fade transition instead of a slide (default false)
-    - "withIndicators" boolean to add the indicators to the carousel, alongside the controls (default false) 
-    - "withControls" boolean to add the previous and next controls (default false)
-
-  Example:
-
-    partial "carousel.html" (dict "context" . "imagesPattern" "carousel/home/*.png" "aspectRatio" "8/3" "withControls" true)
-
+  Notes:
+    - Images are resized to a fixed responsive width ladder and emitted as AVIF/WebP variants with original-format fallbacks
+    - The partial warns during build when `resources.Match` returns no images
 */}}
 
 {{/* warnf "Carousel imagesPattern: '%+v'" .imagesPattern */}}
@@ -59,19 +42,43 @@
   <div class="carousel-inner">
     {{ range $index, $image := $images }}
       <div class="carousel-item{{ if (eq $index 0) }} active{{ end }}">
-        {{ $imageExtraLarge := $image.Resize "2560x webp" -}}  
-        {{ $imageLarge := $image.Resize "1920x webp" -}}
-        {{ $imageMedium := $image.Resize "1280x webp" -}}
-        {{ $imageSmall := $image.Resize "960x webp" -}}
-        {{ $imageExtraSmall := $image.Resize "640x webp" -}}
-        {{ $imageExtraExtraSmall := $image.Resize "320x webp" -}}
-        <img class="d-block w-100"
-             {{ if (ne $index 0) }} loading="lazy" {{ end }}
-             style="width: 100%; height: auto; aspect-ratio: {{ $.aspectRatio | default `16/9` | safeCSS }};"
-             src="{{ $imageMedium.RelPermalink }}"
-             srcset="{{ $imageExtraLarge.RelPermalink }} 2560w, {{ $imageLarge.RelPermalink }} 1920w, {{ $imageMedium.RelPermalink }} 1280w, {{ $imageSmall.RelPermalink }} 960w, {{ $imageExtraSmall.RelPermalink }} 640w, {{ $imageExtraExtraSmall.RelPermalink }} 320w"
-             sizes="100vw"
-             alt="{{ $image.Title }}">
+        {{ $imageDefaultExtraLarge := $image.Resize "2560x" -}}
+        {{ $imageDefaultLarge := $image.Resize "1920x" -}}
+        {{ $imageDefaultMedium := $image.Resize "1280x" -}}
+        {{ $imageDefaultSmall := $image.Resize "960x" -}}
+        {{ $imageDefaultExtraSmall := $image.Resize "640x" -}}
+        {{ $imageDefaultExtraExtraSmall := $image.Resize "320x" -}}
+        {{ $imageAvifExtraLarge := $image.Resize "2560x avif" -}}
+        {{ $imageAvifLarge := $image.Resize "1920x avif" -}}
+        {{ $imageAvifMedium := $image.Resize "1280x avif" -}}
+        {{ $imageAvifSmall := $image.Resize "960x avif" -}}
+        {{ $imageAvifExtraSmall := $image.Resize "640x avif" -}}
+        {{ $imageAvifExtraExtraSmall := $image.Resize "320x avif" -}}
+        {{ $imageWebpExtraLarge := $image.Resize "2560x webp" -}}
+        {{ $imageWebpLarge := $image.Resize "1920x webp" -}}
+        {{ $imageWebpMedium := $image.Resize "1280x webp" -}}
+        {{ $imageWebpSmall := $image.Resize "960x webp" -}}
+        {{ $imageWebpExtraSmall := $image.Resize "640x webp" -}}
+        {{ $imageWebpExtraExtraSmall := $image.Resize "320x webp" -}}
+        <picture>
+          <source
+            type="image/avif"
+            srcset="{{ $imageAvifExtraLarge.RelPermalink }} 2560w, {{ $imageAvifLarge.RelPermalink }} 1920w, {{ $imageAvifMedium.RelPermalink }} 1280w, {{ $imageAvifSmall.RelPermalink }} 960w, {{ $imageAvifExtraSmall.RelPermalink }} 640w, {{ $imageAvifExtraExtraSmall.RelPermalink }} 320w"
+            sizes="100vw"
+          >
+          <source
+            type="image/webp"
+            srcset="{{ $imageWebpExtraLarge.RelPermalink }} 2560w, {{ $imageWebpLarge.RelPermalink }} 1920w, {{ $imageWebpMedium.RelPermalink }} 1280w, {{ $imageWebpSmall.RelPermalink }} 960w, {{ $imageWebpExtraSmall.RelPermalink }} 640w, {{ $imageWebpExtraExtraSmall.RelPermalink }} 320w"
+            sizes="100vw"
+          >
+          <img class="d-block w-100"
+               {{ if (ne $index 0) }} loading="lazy" {{ end }}
+               style="width: 100%; height: auto; aspect-ratio: {{ $.aspectRatio | default `16/9` | safeCSS }};"
+               src="{{ $imageDefaultMedium.RelPermalink }}"
+               srcset="{{ $imageDefaultExtraLarge.RelPermalink }} 2560w, {{ $imageDefaultLarge.RelPermalink }} 1920w, {{ $imageDefaultMedium.RelPermalink }} 1280w, {{ $imageDefaultSmall.RelPermalink }} 960w, {{ $imageDefaultExtraSmall.RelPermalink }} 640w, {{ $imageDefaultExtraExtraSmall.RelPermalink }} 320w"
+               sizes="100vw"
+               alt="{{ $image.Title }}">
+        </picture>
       </div>
     {{ end }}
   </div>

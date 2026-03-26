@@ -141,14 +141,14 @@ The last step is styling our output layer in QGIS, based on the M-values (our tr
     	END
     )
 And voilà! Wherever we have enough measurements on one line feature, we get our motorway network continuously coloured according to the measured traffic volume.
-![](./Screenshot-2022-08-15-at-15.27.35-1265c.png)Motorway network – the different lanes are regrouped for each direction. M-values of the vertices closest to measurement points are attributed the measured traffic volume. The vertices are coloured accordingly. ![](./Screenshot-2022-08-15-at-15.26.22cbc2.png)Trafic on motorway network after „manual“ M-value interpolation.  ![](./Screenshot-2022-08-22-at-09.27.249dcc.png)Trafic on motorway network after M-value interpolation using numpy.
+![Motorway network with measured traffic volumes assigned to nearby vertices before interpolation](./Screenshot-2022-08-15-at-15.27.35-1265c.png)Motorway network – the different lanes are regrouped for each direction. M-values of the vertices closest to measurement points are attributed the measured traffic volume. The vertices are coloured accordingly. ![Trafic on motorway network after „manual“ M-value interpolation.](./Screenshot-2022-08-15-at-15.26.22cbc2.png)  ![Trafic on motorway network after M-value interpolation using numpy.](./Screenshot-2022-08-22-at-09.27.249dcc.png)
 _One disclaimer at the end_ : We get this seemingly continuous styling only because of the combination of our „complex“ polylines (containing many vertices) and the zoomed-out view of the motorway network. Because really, we’re styling many points and not directly the line itself. But in our case, this is working very well.
 If you’d like to make your custom processing algorithm available through the processing toolbox in your QGIS, just put your script in the folder containing the files related to your user profile:
     
     profiles > default > processing > scripts 
 You can directly access this folder by clicking on _Settings_ > _User Profiles_ > _Open Active Profile Folder_ in the QGIS menu. 
 That way, it’s also available for integration in the graphical modeller.
-![](./Screenshot-2022-08-08-at-16.39.175063.png)
+![QGIS graphical modeler workflow including the custom M-value interpolation algorithm](./Screenshot-2022-08-08-at-16.39.175063.png)
 Extract of the _Graphical_ _Modeler_ sequence. „Interpolate M-values neg“ refers to the custom feature-based processing algorithm described above.
   
 You can download the above-mentioned processing scripts (with numpy and without numpy) **[here](<https://github.com/opengisch/qgis-resourse-sharing-content/tree/master/collections/swiss_knife/processing>)**.

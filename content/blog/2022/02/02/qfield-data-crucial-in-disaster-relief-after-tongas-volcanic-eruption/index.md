@@ -6,7 +6,7 @@ url: "/2022/02/02/qfield-data-crucial-in-disaster-relief-after-tongas-volcanic-e
 source: "www.opengis.ch/2022/02/02/qfield-data-crucial-in-disaster-relief-after-tongas-volcanic-eruption/index.html"
 ---
 **For once, it’s not an app from the Silicon Valley, but from Laax in the Swiss Alps that made the news. By publishing QField as an open-source app, OPENGIS.ch allows companies, organisations and even countries without the necessary financial means to have the opportunity to benefit from this important data collection app. And it is being used: Over half a million downloads have already been achieved. Now, since the volcanic eruption in Tonga on 15 January 2022, the app of the small Laax-based company is playing a not-unimportant role in disaster response planning.**
-![](./qfield-field-training15bf.jpg)
+![Field training session using QField to collect agricultural survey data in Tonga](./qfield-field-training15bf.jpg)
 We’ve only been around for seven years. We could almost pass for a start-up. But OPENGIS.ch is already a household name when it comes to field data collection. OPENGIS.ch makes its field mapping tool QField available without restrictions (i.e. open-source) so that companies or even nations can collect their geographical data. In this way, data is brought from the field to the office and provides important insights for future decisions.
 This was also the case for Tonga’s volcanic eruption. There, in December 2021, many relevant agricultural datasets were captured with “QField” and “QFieldCloud”. This currently helps the Ministry of Agriculture, Food, Forests, and Fisheries to analyse the damage after the volcanic eruption and the subsequent tsunami and plan the response.
 ## **Swiss software in use for Tonga**
@@ -34,7 +34,7 @@ Further information on QField in connection with Tonga:
 
 ## **About OPENGIS.ch**
 OPENGIS.ch GmbH is a Swiss software development company based in Laax. OPENGIS.ch employs 19 people and works mainly in the field of spatial software development, geodata infrastructure deployments and professional support. Personalised open source GIS solutions are often planned and developed as desktop or mobile applications. OPENGIS.ch finances itself through tailor-made customer solutions, professional support and adaptations. Link: [https://opengis.ch](</index.html>)
-![](./bgbd52.jpg)OPENGIS.ch team in Summer 2021 company retreat
+![OPENGIS.ch team in Summer 2021 company retreat](./bgbd52.jpg)
 ## **About the OPENGIS.ch product “QField” application**
 “QField” is an open-source app developed for efficient fieldwork in real-time in urban areas, with 5G connection or with offline data. The mobile GIS app combines a minimal design with sophisticated technology to conveniently bring data from the field to the office. Seamless QGIS integration, GPS centred, offline functionality, synchronisation capabilities, desktop configurable: “QField” is designed for fieldwork – simple but uncompromising. Link: [https://qfield.org](<https://qfield.org/>)
 ## **About the OPENGIS.ch service “QFieldCloud** “

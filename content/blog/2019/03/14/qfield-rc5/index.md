@@ -8,10 +8,10 @@ source: "www.opengis.ch/2019/03/14/qfield-rc5/index.html"
 We are really happy to announce the fifth and (hopefully) last 1.0 release candidate in QField’s history! This means that QField 1.0 is closer than ever.
 Get it while it’s hot on the Playstore (<https://qfield.org/get>) or on [GitHub](<https://github.com/opengisch/QField/releases>)
 Thanks to all the feedback by the fantastic community we were able to fix plenty of bugs, address performance issues and even add some super cool new features.
-![](./fileselectorc462.jpg)New file selector
+![New file selector](./fileselectorc462.jpg)
 Among the new features, the most important is the flashy new file selector with favorite directories (long press on a folder to add it to the favorites and longpress on the favorites list to remove it) and an automatic list of the last three opened projects that will save you heaps of time while looking for your projects. 
 Another lifesaver is the newly added support for pasting text from the clipboard in the search bar. Finally, we added a smart and unobtrusive “rate this app” dialog to make it easier for you to give QField the ★★★★★ you always wanted to give it 🙂
-![](./Screenshot_20190313-030202_QField6951.jpg)Search functionality
+![Search functionality](./Screenshot_20190313-030202_QField6951.jpg)
 List of improvements since RC3
   - New Custom file selector ([#476](<https://github.com/opengisch/QField/pull/476>))
   - Favorite directories in file selector ([#507](<https://github.com/opengisch/QField/pull/507>))

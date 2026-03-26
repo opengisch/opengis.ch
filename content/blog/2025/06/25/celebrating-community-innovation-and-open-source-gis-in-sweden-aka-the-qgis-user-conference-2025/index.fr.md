@@ -7,7 +7,7 @@ source: "www.opengis.ch/fr/2025/06/25/celebrating-community-innovation-and-open-
 ---
 It was such a pleasure to be part of the QGIS User Conference 2025 in Norrköping! The event was extremely well organised — a big thank you to the amazing local team for pulling it all together so smoothly. Personally, it felt special to be back in Sweden, almost 20 years after my Uppsala university days. I truly enjoyed giving the opening keynote and sharing the latest from the QGIS project — and of course, showcasing all the QField greatness we’ve been working so hard on 💚
 * * *
-![](./20250605_17513715bf.jpg) ![](./20250603_15400715bf.jpg) ![](./20250602_16301715bf.jpg)
+![Attendees at the QGIS User Conference 2025 in Norrkoping](./20250605_17513715bf.jpg) ![Conference attendees during a QGIS User Conference session](./20250603_15400715bf.jpg) ![Opening moments at the QGIS User Conference 2025](./20250602_16301715bf.jpg)
 # 🚀 Talks & Presentations
 ### 🎊 QGIS.org updates
 As Chair of the QGIS.org association, I had the opportunity to share recent updates from the QGIS community. I spoke about ongoing development efforts, community growth, funding initiatives, and collaborations that help keep the project moving forward.  
@@ -30,13 +30,13 @@ I spoke about where we’re headed next, what new features are coming, and how w
 ### 💧 Standardizing Groundwater Data Collection with QField
 We were excited to see **Alexandra Nozik** from the Leibniz Centre for Tropical Marine Research (ZMT) present her work on a QField project designed to standardize groundwater data collection in remote tropical regions. The setup uses QGIS layers, predefined parameters, and metadata standards to ensure high-quality, consistent field data. Integrated with QFieldCloud, the workflow improves data accuracy, reduces data loss, and enables real-time collaboration. The project will be published on GitHub as a ready-to-use package, supporting reliable and comparable groundwater data collection across the scientific community.
 ### 📱 QField and QFieldCloud – seamless fieldwork for QGIS 
-![](./20250603_09372515bf.jpg) ![](./20250603_10194915bf.jpg) ![](./20250603_16312915bf.jpg)
+![QField and QFieldCloud workshop at the QGIS User Conference 2025](./20250603_09372515bf.jpg) ![Participants during the QField and QFieldCloud workshop](./20250603_10194915bf.jpg) ![Workshop discussion at the QGIS User Conference 2025](./20250603_16312915bf.jpg)
 In this workshop, Zsanett, _QField Product Manager_ , went through **the** **complete fieldwork process** : setting up a QGIS project, publishing the project via QFieldCloud, collecting data via the QField mobile app and synchronising the field data back to your main dataset in the office. QField works on top of QGIS and allows users to set up maps and forms in QGIS on their workstation and deploy them in the field. QField uses QGIS’s data providers (OGR, GDAL, PostGIS and others) and supports most common file formats. QField combines **a** **minimal design with sophisticated technology** that allows intuitive viewing and editing of data. QField’s map rendering is supported by the QGIS rendering engine, so **the results are identical** and the full range of styling options available on the desktop is available. Editing forms in QField respect the QGIS configuration and are optimised for touch interaction. **QFieldCloud makes field collaboration much easier.** Participants learned about configuring users with different rights, collecting offline and online data, and synchronizing field data and QGIS project data.
 * * *
 # 🚀 Our first international **QField Day**
 On June 4th, the first international QField Day took place in Norrköping, right after the QGIS User Conference. This free half-day event was dedicated to QField, QFieldCloud, and the mobile GIS community, bringing together users, contributors, and developers for an afternoon of field-tested workflows, live demos, community stories, and open discussions. It was a great opportunity to connect, exchange ideas, and explore the future of mobile geospatial tools in the open-source ecosystem.  
 Definitely not our last one. 💚
-![](./20250604_0946176aed.jpg) ![](./20250604_0954416aed.jpg) ![](./20250604_1146416aed.jpg)
+![Participants at the first international QField Day](./20250604_0946176aed.jpg) ![QField Day session in Norrkoping](./20250604_0954416aed.jpg) ![Audience at the international QField Day](./20250604_1146416aed.jpg)
 * * *
 # 🤝 Supporting Open Source
 We were proud to support QGIS UC25 in Norrköping, Sweden, as **Platinum Sponsors** — reaffirming our commitment to the open-source geospatial community and the continued growth of the QGIS ecosystem.
@@ -44,7 +44,7 @@ We were proud to support QGIS UC25 in Norrköping, Sweden, as **Platinum Sponsor
 # 👋 Looking Ahead
 We’re already looking forward to the next gathering — **QGIS UC26 will take place in Switzerland** 🇨🇭!
 After the conference, I joined the contributor meeting along with four QGIS developers from OPENGIS.ch. It was a fantastic chance to collaborate in person, help shape the future of QGIS, and reconnect with old friends from the community.
-![](./20250603_150639-11179.jpg) ![](./20250604_19253515bf.jpg) ![](./20250606_10180815bf.jpg)
+![OPENGIS.ch team members at the QGIS User Conference 2025](./20250603_150639-11179.jpg) ![Contributor meeting after the QGIS User Conference 2025](./20250604_19253515bf.jpg) ![QGIS contributors after the conference in Sweden](./20250606_10180815bf.jpg)
 
 {{< blog-video src="https://www.youtube.com/embed/HtE3mUE-R2o" title="YouTube video" >}}
 

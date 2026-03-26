@@ -8,7 +8,7 @@
     <div class="container">
 
       <!-- Brand + toggle -->
-      <a class="navbar-brand d-flex align-items-center" href="{{ .Site.Home.RelPermalink }}">
+      <a class="navbar-brand d-flex align-items-center" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} home">
         {{ $logo := .Site.Params.mainMenuLogo | default "images/opengis-logo.png" }}
         <img src="{{ $logo | relURL }}" alt="{{ .Site.Title }}" class="navbar-logo">
       </a>
@@ -50,7 +50,7 @@
                   {{ range .Children }}
                   {{ $grandActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
                   <li>
-                    <a class="dropdown-item{{ if $grandActive }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $grandActive }} aria-current="true"{{ end }}>
+                    <a class="dropdown-item{{ if $grandActive }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $grandActive }} aria-current="page"{{ end }}>
                       {{ with .Params.icon }}
                         {{ $iconClass := . }}
                         {{ if not (in $iconClass "obfx-menu-icon") }}
@@ -66,7 +66,7 @@
               </li>
               {{ else }}
               <li>
-                <a class="dropdown-item{{ if $childActive }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $childActive }} aria-current="true"{{ end }}>
+                <a class="dropdown-item{{ if $childActive }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $childActive }} aria-current="page"{{ end }}>
                   {{ with .Params.icon }}
                     {{ $iconClass := . }}
                     {{ if not (in $iconClass "obfx-menu-icon") }}
@@ -83,7 +83,7 @@
           </li>
           {{ else }}
           <li class="nav-item">
-            <a class="nav-link{{ if $active }} active{{ end }}" aria-current="page" href="{{ .URL | relLangURL }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+            <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $active }} aria-current="page"{{ end }}{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
               {{ with .Params.icon }}<i class="{{ . }} me-1" aria-hidden="true"></i>{{ end }}
               {{ .Name }}
             </a>
@@ -104,12 +104,12 @@
           </li>
           {{ if hugo.IsMultilingual -}}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarLanguageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="nav-link dropdown-toggle btn btn-link" id="navbarLanguageDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
               {{ with .Site.Language.Params.languageISO }}{{ . }}{{ else }}{{ .Site.Language.LanguageName }}{{ end }}
-            </a>
+            </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarLanguageDropdown">
               <li>
-                <a class="dropdown-item active" aria-current="true" href="{{ .RelPermalink }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                <a class="dropdown-item active" aria-current="page" href="{{ .RelPermalink }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
                   {{ .Site.Language.LanguageName }}
                 </a>
               </li>
@@ -140,7 +140,7 @@
           {{ end -}}
           {{ if eq .Site.Params.enableDarkMode true -}}
           <li class="nav-item d-flex align-items-center ms-lg-2">
-            <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">
+            <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
               <i id="themeIcon" class="bi"></i>
             </button>
           </li>

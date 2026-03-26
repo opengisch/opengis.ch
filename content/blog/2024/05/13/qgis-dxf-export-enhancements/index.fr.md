@@ -19,7 +19,7 @@ We’ve made sure that you won’t miss it anymore.
 ![DXF Export, output layer attribute](./output_layer_attributecfb0.png)
 ### Possibility to export only the current map selection
 Filter features to be exported via layer selection, and even combine this filter with the existing _map extent_ one.
-![DXF Export algorithm, use only selected features](./use_only_selected_features_alge3fb.png) ![](./use_only_selected_features_appcfb0.png)
+![DXF Export algorithm, use only selected features](./use_only_selected_features_alge3fb.png) ![DXF Export app dialog, use only selected features option](./use_only_selected_features_appcfb0.png)
 ### Empty layers are no longer exported to DXF
 When applying spatial filters like feature selection and map extent, you might end up with empty layers to be exported. Well, those won’t be exported anymore, producing cleaner DXF output files for you.
 ### Possibility to override the export name of individual layers

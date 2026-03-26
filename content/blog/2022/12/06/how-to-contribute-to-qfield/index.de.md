@@ -6,7 +6,7 @@ url: "/de/2022/12/06/how-to-contribute-to-qfield/"
 source: "www.opengis.ch/de/2022/12/06/how-to-contribute-to-qfield/index.html"
 ---
 QField is a community-driven open-source project. It is free to share, use and modify and it will stay like that. The very essence of a community is to help and support each other. And that’s where YOU come into play. To make it work we need your support!
-![](./QField_AppAward_12-202215bf.png)
+![QField award graphic encouraging community contributions and support](./QField_AppAward_12-202215bf.png)
 For those who don’t know much about the concept of open source projects, a bit of background. Investing in open-source projects is a technical and ethical decision for OPENGIS.ch. Open source is a technological advantage, as we receive input from many developers worldwide who are motivated to work out the best possible software. It prevents our customers from vendor lock-in and allows complete ownership and control of the developed software. And finally, not only financially independent businesses and people should benefit from professional software but also those who might not have the financial means to pay for features, and licences. 
 You are not a developer, but you still like to use QField and support it? Good news. You don’t have to be a developer to use, contribute or recommend the app. There are plenty of things that need to be done to help QField to remain the powerful software it is right now and become even better. Here are a few suggestions on how you can give something back.
   1. **Review the app** ★★★★★ in [google’s play store](<https://play.google.com/store/apps/details?id=ch.opengis.qfield&hl=en#details-reviews>) or [apple’s app store](<https://apps.apple.com/app/qfield-for-qgis/id1531726814>). 

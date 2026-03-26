@@ -36,13 +36,13 @@ Cependant, on suppose aussi que la structure de la base de données reste dans l
 Lors de la création d’un schéma pour le modèle de traduction `PlansDAffectation_V1_2` avec le Model Baker, le paramètre `--createNlsTabs` est transmis.
 > Techniquement, cela signifie qu’ili2db crée une table de correspondance et que Model Baker peut en lire les valeurs traduites.
 Lors de la création du projet QGIS, vous pouvez désormais choisir si vous souhaitez que l’interface utilisateur soit en allemand ou en français.
-![](./image15bf.jpg)
+![Model Baker project-generation dialog offering the QGIS GUI language for a translated INTERLIS model](./image15bf.jpg)
 Et voilà!
-![](./image-15df2.jpg)
+![Generated QGIS project with translated French layer and field names from the PlansDAffectation model](./image-15df2.jpg)
 Si vous êtes satisfait, vous pouvez arrêter de lire ici. Mais peut-être souhaitez-vous en savoir plus…
 ### Traduction de la structure de la base de données
 [](<https://gist.github.com/signedav/4d7105fd084cec818f3771e236c15d0b#beides>)Il se peut que vous souhaitiez également traduire la structure de la base de données. Cela n’est pas encore pleinement intégré dans Model Baker, mais vous pouvez y parvenir en configurant manuellement le paramètre approprié.
-![](./image-210df.jpg)
+![Model Baker import parameter field using nameLang to translate the database structure](./image-210df.jpg)
 Avec le paramètre ili2db `--nameLang fr` , vous pouvez importer le `PlansDAffectation_V1_2` de manière à ce que la structure de la base de données soit en français. La traduction de l’interface utilisateur reste disponible en français ou en allemand.
 ### Et que contient le XTF?[](<https://gist.github.com/signedav/4d7105fd084cec818f3771e236c15d0b#und-was-steht-im-xtf>)
 Les données de transfert peuvent également être dans la langue traduite. Elles peuvent être importées facilement dans un schéma de base de données dans la langue originale. Inversement : un fichier de transfert dans la langue originale peut être importé dans un schéma dont la structure est traduite.
@@ -57,7 +57,7 @@ Les données de transfert peuvent également être dans la langue traduite. Elle
     
 Par défaut, les données sont toujours exportées dans la langue originale. Cela signifie que pour le `Nutzungsplanung_V1_2`, les éléments dans le XTF seront en allemand.
 Il est toutefois possible d’exporter dans la langue de la traduction, quelle que soit la langue dans laquelle le schéma ou le projet QGIS a été créé. Il suffit de spécifier le modèle de traduction lors de l’exportation: `--exportModels PlansDAffectation_V1_2`
-![](./image-3a5ee.jpg)
+![Export dialog specifying the translated INTERLIS model for XTF export](./image-3a5ee.jpg)
 Les modèles de traduction ne sont pas encore disponibles dans la sélection pour l’exportation. Mais cela pourrait être une amélioration pertinente à ajouter à Model Baker.
 ## Donc, à toi de jouer
 Bien divertiment / Buon divertimento / Amuse-toi bien / Viel Spass!

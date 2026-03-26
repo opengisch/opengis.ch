@@ -21,7 +21,7 @@ QField’s growing documentation site covers this functionality in depth, follow
 ## On-demand attachment download
 A new project setting has made its way into[ QFieldCloud’s web interface](<https://qfield.cloud/>): on demand attachment file download. When turned on, QField will defer the download of image, video, audio and other file types until users open a feature form containing such an attachment.
 This option can greatly reduce the time spent downloading and synchronizing projects when a large number of attachments is present.
-![](./on-demand-attachmentfce0.png)
+![QFieldCloud web interface showing the on-demand attachment download setting](./on-demand-attachmentfce0.png)
 For work in remote areas with poor connectivity, this option should not be used when users require access to attachments while offline.
 However, this new behavior is ideal for fieldwork taking place within a well connected area, especially for projects spanning over a long period of time when gigabytes of accumulated attachment can transform project download into a real pain point.
 ## **Resumable cloud project download**

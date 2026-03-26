@@ -16,12 +16,12 @@ In QField 1.2 we started to improve on the usability of the user interface. We a
 Besides lots of clean-up and polishing, QField received two major improvements, a portrait mode and a new welcome screen with recent projects.
 ### Welcome screen with recent projects
 QField is all about efficiency. While favourites folders in the file selector already give a great productivity boost, very often we work with the same 3-4 projects. This is why we redesigned the welcome screen to list the last five project used. And if you look carefully you might get a hint of what will be coming soon…
-![](./WhatsApp-Image-2020-02-25-at-20.57.357497.jpg)
+![QField 1.4 welcome screen showing recent projects](./WhatsApp-Image-2020-02-25-at-20.57.357497.jpg)
 ### Portrait mode
 QField now flawlessly works in portrait mode. We heard you say you needed a comfortable way to work in portrait mode, especially on smartphones. QField forms and button placements are now optimized to be easy to use with your thumbs.
-  - ![](./Screenshot_20200227-130403_QField1e78.jpg)Optimised forms
-  - ![](./Screenshot_20200227-125335_QField1e78.jpg)Buttons align at the bottom
-  - ![](./Screenshot_20200227-131446_QField1e78.jpg)Roomy legend
+  - ![Optimised forms](./Screenshot_20200227-130403_QField1e78.jpg)
+  - ![Buttons align at the bottom](./Screenshot_20200227-125335_QField1e78.jpg)
+  - ![Roomy legend](./Screenshot_20200227-131446_QField1e78.jpg)
 
 
 ## New features

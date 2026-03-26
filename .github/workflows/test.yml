@@ -1,0 +1,64 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Set up Chrome
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.147.9"
+          extended: true
+
+      - name: Run Python regression tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Run Python compile check
+        run: python -m compileall scripts tests
+
+      - name: Build Hugo site
+        run: hugo --environment development
+
+      - name: Validate Lighthouse scores
+        run: ./scripts/run_lighthouse_ci.sh
+        env:
+          CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}
+
+      - name: Validate accessibility
+        run: ./scripts/run_pa11y_ci.sh
+        env:
+          CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}
+
+      - name: Validate generated HTML
+        run: ./scripts/run_htmltest_ci.sh

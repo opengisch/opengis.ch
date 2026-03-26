@@ -18,7 +18,7 @@ On the new functionality front, the feature form has gained:
 
 ## Speed up workflow with new duplicate and move feature(s) actions
 QField 1.10 brings in a pair of new useful actions: the duplicate feature(s) and move feature(s). This can speed up work in the field for many surveyors by avoiding potentially lengthy digitizing and attribute filling processes in favour of quickly duplicating what’s already done whenever possible.
-![](./move_duplicate6d1b.jpg)
+![QField duplicate and move feature actions in the feature form](./move_duplicate6d1b.jpg)
 ## Vertex digitizing logger
 Conducting quality assurance (QA) reviews from work done in the field with QField has just gotten a lot better thanks to the brand new vertex digitizing logger. When enabled, each vertex entered while digitizing new features or editing preexisting geometries are logged as point features onto a ‘digitizing logs’ layer. Each point feature added has access to snapping result context, position context including horizontal and vertical accuracy, and more. This allows for data reviewers to get a fuller picture of how geometries were built.
 ## Quality of life improvements
@@ -29,11 +29,11 @@ Quite a few improvements have landed in QField 1.10 which should improve users�
   - Opening an individual point dataset will **automatically setup and show feature labels** ; for other geometry types, users can show labels via a new checkbox in the layer item properties panel
 
 
-![](./labelstracking-1225f.jpg)
+![QField labels and tracking quality-of-life improvements](./labelstracking-1225f.jpg)
 ## QField speaks many languages
 Thanks to community efforts, QField has been translated into a growing number of languages. However, the user interface language adopted by QField was until now hard-coded to match that of the device onto which QField was running.
 Starting with QField 1.10, users are able to customize the language used by going to the settings panel.
-![](./russianjapanese225f.jpg)
+![QField language settings showing support for additional interface languages](./russianjapanese225f.jpg)
 ## Updates to foundational libraries
 Time was spent during this development cycle to update a large number of libraries powering up QField, which is now running against QGIS 3.22, gdal 3.3.2, PROJ 8.1.1. This has resulted in increased stability as well as speed gains in a number of scenarios.
 ## The Future is almost here

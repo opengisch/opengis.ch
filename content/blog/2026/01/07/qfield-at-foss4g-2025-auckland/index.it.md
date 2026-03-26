@@ -16,12 +16,12 @@ What stood out was not just the number of talks, but how consistently QField was
 **Plugins and APIs** for integration into broader organizational systems
 This ecosystem approach transforms field data collection from an isolated task into an integrated workflow. It’s the difference between “collecting points” and “running a programme.”
 ## QField Day: A Community Deep Dive
-![](./20251117_1659386aed.jpg)
+![Participants gathered for QField Day during FOSS4G 2025 Auckland](./20251117_1659386aed.jpg)
 Early in the conference, QField Day brought together practitioners, developers, and decision-makers for a focused exploration of the platform’s capabilities. The day emphasized practical implementation—what’s possible now, and what organizations are already achieving in production environments.
 ## Workshops
 ### Complete Lifecycle Management
 The QField & QFieldCloud workshop covered the full data collection cycle: project setup in QGIS Desktop, field deployment with QField, synchronization through QFieldCloud, and integration back into desktop workflows for analysis and quality control. Participants worked through the entire pipeline, from initial design to final deliverables.
-![](./20251120_141128-16aed.jpg)
+![Workshop participants following the QField and QFieldCloud lifecycle session in Auckland](./20251120_141128-16aed.jpg)
 ### Field-to-Analysis Integration
 One workshop demonstrated the speed of modern field-to-cloud-to-analysis workflows by using Auckland itself as a live laboratory. Participants collected ground truth data with QField, then fed it directly into machine learning workflows running in Digital Earth Pacific’s Jupyter environment. The exercise highlighted how quickly iteration cycles can operate when field, cloud, and analysis infrastructure are properly connected.
 ### Plugin Development
@@ -32,10 +32,10 @@ For developers, the plugin authoring workshop signaled platform maturity. QField
 ## Production Deployments
 ### Conservation Operations
 [Zero Invasive Predators](<https://www.youtube.com/watch?v=cNRbeHH85no>) showed QField and QFieldCloud integrated into operational fieldwork for predator eradication programmes across New Zealand. Planning happens in QGIS, capture in QField, and coordination through QFieldCloud—enabling systematic management of conservation campaigns across remote terrain.
-![](./20251120_1411286aed.jpg)
+![Presentation slide from the Zero Invasive Predators conservation workflow using QField and QFieldCloud](./20251120_1411286aed.jpg)
 ### Government-Scale Implementation
 [Finland’s National Land Survey](<https://www.youtube.com/watch?v=lVMLaTMP9qA>) presented their use of QField as part of national topographic data production infrastructure, deployed alongside QGIS and PostGIS. This represents enterprise validation: a national mapping agency selecting QField for production topographic surveying.
-![](./20251121_1131006aed.jpg)
+![Presentation from Finland's National Land Survey about production use of QField](./20251121_1131006aed.jpg)
 ### Precision Agriculture
 [Smart vineyards with QGIS & QField](<https://www.youtube.com/watch?v=YLIL6RHaI3U>) demonstrated advanced symbology, map themes, and structured capture workflows supporting precision agriculture operations—showing that the platform handles the level of detail and complexity that professional workflows require.
 ## Developer Infrastructure and Sustainability
@@ -51,7 +51,7 @@ Two presentations framed QField’s development within broader conversations abo
 [Open-source road infrastructure management and digital twin direction](<https://www.youtube.com/watch?v=rT2Jev2DubA>) demonstrated that open standards and open tooling are increasingly part of serious infrastructure conversations—and that many organizations are still transitioning from spreadsheet-based workflows to structured spatial data management.
 ## Looking Forward
 FOSS4G 2025 Auckland was all about the conversations, and our small booth quickly became a popular meeting point — the **QField caps were gone within half a day**. We demonstrated the tight integration of[ **Happy Mini Q GNSS**](<https://happy-q.com/>) with **QField** , showing how sub-centimeter positioning can be used seamlessly in real field workflows. The booth also featured **[EGENIOUSS](<https://www.egeniouss.eu/>)** , an EU project where QField is part of the solution to complement GNSS with visual localisation, enabling accurate and reliable positioning even in challenging environments such as urban canyons where satellite signals alone fall short.
-![](./Screenshot-From-2026-01-07-14-53-113914.jpg)
+![QField booth at FOSS4G 2025 Auckland with Happy Mini Q GNSS integration on display](./Screenshot-From-2026-01-07-14-53-113914.jpg)
 Thank you to everyone who took the time to share your workflows, your challenges, and your stories—whether in presentations, workshops, or over coffee between sessions.
 Hearing how you’re using QField in the field, what’s working, what needs improvement, and what you’re building next helps us understand where the platform needs to go.
 These conversations remind us that we’re building tools for real people doing important work, and that’s what keeps this community moving forward together.

@@ -15,7 +15,7 @@ You can find this utility, written in Python, called ITF_Translator on <https://
 ITF_Translator is capable of translating Interlis v1 transfer files (ITF) to another language thanks to a dictionary text file. Currently restricted to German, French and Italian, it is a simple operation to add support for other languages.  
 ITFTranslator class from itf_translator_generic module creates a translator object based on a custom dictionary file whereas some custom translations rules can be added.  
 Two extensions of ITFTranslator exist already and contain everything needed to translate DM01AVCH (cadastral data model from the Swiss confederation) and MD01MOVD (cadastral data model from Canton Vaud). These classes are ITFTranslatorDM01AVCH respectively ITFTranslatorMD01MOVD.  
-![](https://documents.lucidchart.com/documents/d4616523-4323-46c8-b964-a2d408f2051c/pages/0_0?a=204&x=162&y=206&w=1276&h=308&store=1&accept=image%2F*&auth=LCA%2090d759de416ce1d7dc7b7a42bd7f9aa5951828d9-ts%3D1505628781)
+![Diagram illustrating the INTERLIS translation workflow between model languages](https://documents.lucidchart.com/documents/d4616523-4323-46c8-b964-a2d408f2051c/pages/0_0?a=204&x=162&y=206&w=1276&h=308&store=1&accept=image%2F*&auth=LCA%2090d759de416ce1d7dc7b7a42bd7f9aa5951828d9-ts%3D1505628781)
 ## Dictionary file
 The dictionary file is a text file composed of line formatted as follows:  
 german_translation;french_tranlsation;italian_translation  

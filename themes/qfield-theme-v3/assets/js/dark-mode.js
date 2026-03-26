@@ -18,16 +18,25 @@
         icon.className = t === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
       }
 
+      function syncThemeToggleState(theme) {
+        if (!btn) return;
+        const isDark = theme === 'dark';
+        btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        btn.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+      }
+
       function setTheme(next) {
         const theme = next === 'dark' ? 'dark' : 'light';
         document.documentElement.setAttribute('data-bs-theme', theme);
         localStorage.setItem('theme', theme);
         renderIcon();
+        syncThemeToggleState(theme);
       }
 
       const initial = resolveInitial();
       document.documentElement.setAttribute('data-bs-theme', initial);
       renderIcon();
+      syncThemeToggleState(initial);
 
       btn?.addEventListener('click', () => {
         const current = document.documentElement.getAttribute('data-bs-theme') || 'light';

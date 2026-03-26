@@ -29,7 +29,7 @@ Once you have this, the service name can be used in the client application. That
     
     gis=#
 And in QGIS like this:
-![](./image38f5.png)
+![QGIS PostgreSQL connection dialog using a pg_service.conf service entry](./image38f5.png)
 If you then add a layer in QGIS, only the name of the service is written in the project file. Neither the connection parameters nor username/password are saved. In addition to the security aspect, this has various advantages, more on this below.
 But you don’t have to pass all of these parameters to a service. If you only pass parts of them (e.g. without the database), then you have to pass them when the connection is called:
     
@@ -88,28 +88,28 @@ And the one for the production database `/home/dave/connectionfiles/prod/pg_serv
     port=54322
     dbname=gis-productive
 In QGIS you create two profiles “Test” and “Prod”:
-![](https://lh7-us.googleusercontent.com/P5tG5kloX-sTGLtJjItVhTwQzGjhMugMEhgkUTfUfO4jblPxurVHGRdRcMkH2BGLyMrAPNZtOdaRO5OzeMvxR4CUC38gY23c9uGjXPn_65qSRRddeohzlDU4bQdPlbg5q9yGozwMjzuz9GeP-CTCPN8)
+![QGIS profile chooser showing separate Test and Prod profiles for PostgreSQL services](https://lh7-us.googleusercontent.com/P5tG5kloX-sTGLtJjItVhTwQzGjhMugMEhgkUTfUfO4jblPxurVHGRdRcMkH2BGLyMrAPNZtOdaRO5OzeMvxR4CUC38gY23c9uGjXPn_65qSRRddeohzlDU4bQdPlbg5q9yGozwMjzuz9GeP-CTCPN8)
 And you set the environment variable for each profile `PGSERVICEFILE` which should be used (in the menu  _Settings > Options…_ and there under  _System_ scroll down to  _Environment_
-![image](https://lh7-us.googleusercontent.com/BZQzdWMsz1dbNf43syK1wkViu_uiOjitDu3a2wnJw7NElQ-OyvVwc26BR2y9rIW7ol_ocLGPOeRhfsjliIj9yWhUYqColQnwIpGfwVcMX2kPtFebDymTlFJjmbxDehH9QJ2MshLFu5TaULQfgOW-VZk)
+![QGIS profile environment settings for PGSERVICEFILE, screenshot 1](https://lh7-us.googleusercontent.com/BZQzdWMsz1dbNf43syK1wkViu_uiOjitDu3a2wnJw7NElQ-OyvVwc26BR2y9rIW7ol_ocLGPOeRhfsjliIj9yWhUYqColQnwIpGfwVcMX2kPtFebDymTlFJjmbxDehH9QJ2MshLFu5TaULQfgOW-VZk)
 or
-![image](https://lh7-us.googleusercontent.com/1KSjiGIKgFBxD13G7FYB_6wz6BRt2XbYmNJVdsgoCzptjN9K6PoR-Q5Ttxxnf6XAKXLYjWFL6PacuroU6klaW0EZJZtPDGVkLHPYQYUA1kACMMmJz7TZkQpGp-yvRaAaqN0j3sYJsZTXT2EXQACtdIc)
+![QGIS profile environment settings for PGSERVICEFILE, screenshot 2](https://lh7-us.googleusercontent.com/1KSjiGIKgFBxD13G7FYB_6wz6BRt2XbYmNJVdsgoCzptjN9K6PoR-Q5Ttxxnf6XAKXLYjWFL6PacuroU6klaW0EZJZtPDGVkLHPYQYUA1kACMMmJz7TZkQpGp-yvRaAaqN0j3sYJsZTXT2EXQACtdIc)
 If you now use the service `my-local-gis` in a QGIS layer, it connects the database `prod` in the “Prod” profile and the database `test` in the “Test” profile.
 ## **The authentication configuration**
 Let’s have a look at the authentication. If you have the connection service file on a network drive and make it available to several users, you may not want everyone to access it with the same login. Or you generally don’t want any user information in this file. This can be elegantly combined with the authentication configuration in QGIS.
 If you want to make a QGIS project file available to multiple users, you create the layers with a service. This service contains all connection parameters except the login information.
 This login information is transferred using QGIS authentication.
-![image](https://lh7-us.googleusercontent.com/RGByDYJr2czDGs4XKQD6SzCbsgiM318UdYav1m0z9fzX9_vQcFNjnZ5zqqg2X5hQ6HnJhwNGuszKYPpVSE5L53mxrpSTlLhGw5J8TAOB43IhTXFJlfII3ICPmX9ztbEOlR-TpJrlW5jfOy42-Dbx_Os)
+![QGIS authentication configuration for a PostgreSQL service connection](https://lh7-us.googleusercontent.com/RGByDYJr2czDGs4XKQD6SzCbsgiM318UdYav1m0z9fzX9_vQcFNjnZ5zqqg2X5hQ6HnJhwNGuszKYPpVSE5L53mxrpSTlLhGw5J8TAOB43IhTXFJlfII3ICPmX9ztbEOlR-TpJrlW5jfOy42-Dbx_Os)
 You also configure this authentication per QGIS profile we mentioned above. This is done via Menu  _Settings > Options…_ and there under  _Authentication_ :
-![image](https://lh7-us.googleusercontent.com/nnQe3fm9iMDFxG5QCxV_kpeBKjiUUefXx5B0dcNvMF7v0ObW_5051hXBBldC_CKSTrNPblJzwDo0zK2aQBKyz9ZM_27wIPtOY1i7srhpJLMr84VHWevuy4F1hj93ZjzJXbAKlt80gw0HuHtHaqcuigQ)
+![QGIS authentication settings dialog](https://lh7-us.googleusercontent.com/nnQe3fm9iMDFxG5QCxV_kpeBKjiUUefXx5B0dcNvMF7v0ObW_5051hXBBldC_CKSTrNPblJzwDo0zK2aQBKyz9ZM_27wIPtOY1i7srhpJLMr84VHWevuy4F1hj93ZjzJXbAKlt80gw0HuHtHaqcuigQ)
 (or directly where you create the PostgreSQL connection)
 If you add such a layer, the service and the ID of the authentication configuration are saved in the QGIS project file. This is in this case `mylogin`. Of course this name must be communicated to the other users so that they can also set the ID for their login to `mylogin`.
 Of course, you can use multiple authentication configurations per profile.
 ## **QGIS Plugin**
 And yes, there is now a great plugin to configure these services directly in QGIS. This means you no longer have to deal with text-based INI files. It’s called [PG service parser](<https://github.com/opengisch/qgis-pg-service-parser-plugin>):
-![image](https://lh7-us.googleusercontent.com/3JNSq_fmD2g33fLls2FGklpoCRo-M4Pyuts7z4dP56wKK7_tRj3hGyakJSQHTHBxWyQNkBfJQggaPl_InrOdY58b-6GN8eGBH9oOgJYLkq6XMApgGBrboR_FQ5dZwJZFiBpZZ4_oBg2_BTNUAGiuPkk)
+![PG service parser plugin interface in QGIS](https://lh7-us.googleusercontent.com/3JNSq_fmD2g33fLls2FGklpoCRo-M4Pyuts7z4dP56wKK7_tRj3hGyakJSQHTHBxWyQNkBfJQggaPl_InrOdY58b-6GN8eGBH9oOgJYLkq6XMApgGBrboR_FQ5dZwJZFiBpZZ4_oBg2_BTNUAGiuPkk)
 It finds the connection service file according to the mentioned environment variables `PGSERVICEFILE` or `PGSYSCONFDIR` or at its default location.
 As well it’s super easy to create new services by duplicating existing ones.
-![](https://lh7-us.googleusercontent.com/FvLhRVplNNN5EGo8OYmED9L786WKZOxxBZy98wVnJq6vywqo_Ny2wHQaKUbcMMaiyEVTD8BNKAeD0kAY_4HgmJ39NvEF9z20PPlbwPNIgVFRXwNQTYn5KgGOzJ8iUGJ4PnY7l1y0rNzOTrdOqMtbcNY)
+![PG service parser plugin duplicating an existing service](https://lh7-us.googleusercontent.com/FvLhRVplNNN5EGo8OYmED9L786WKZOxxBZy98wVnJq6vywqo_Ny2wHQaKUbcMMaiyEVTD8BNKAeD0kAY_4HgmJ39NvEF9z20PPlbwPNIgVFRXwNQTYn5KgGOzJ8iUGJ4PnY7l1y0rNzOTrdOqMtbcNY)
 ### And for the Devs
 And what would a blog post be without some geek food? The back end of this plugin is published on [PYPI](<https://pypi.org/project/pgserviceparser/>) and can be easily installed with `pip install pgserviceparser `and then be used in Python.
 For example to list all the service names. 

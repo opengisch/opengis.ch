@@ -32,7 +32,7 @@ Hat man das, kann ein Service der Client-Applikation übergeben werden. Das heis
     
     gis=#
 Und in QGIS so:
-![](./image38f5.png)
+![QGIS PostgreSQL connection dialog using a pg_service.conf service entry](./image38f5.png)
 Wenn du dann in QGIS einen Layer hinzufügst, wird in das Projektfile nur der Name des Services geschrieben. Weder die Verbindungsparameter noch Benutzername/Passwort sind gespeichert. Das hat neben dem Sicherheitsaspekt verschiedene Vorteile, mehr dazu weiter unten.
 Du musst aber nicht alle diese Parameter einem Service übergeben. Übergibst du nur Teile davon (zBs. ohne die Datenbank), dann musst du diese beim Aufruf der Verbindung noch mitgeben:
     
@@ -91,28 +91,28 @@ Und das für die Produktivdatenbank in `/home/dave/connectionfiles/prod/pg_servi
     port=54322
     dbname=gis-productive
 In QGIS erstellst du zwei Profile „Test“ und „Prod“:
-![](https://lh7-us.googleusercontent.com/P5tG5kloX-sTGLtJjItVhTwQzGjhMugMEhgkUTfUfO4jblPxurVHGRdRcMkH2BGLyMrAPNZtOdaRO5OzeMvxR4CUC38gY23c9uGjXPn_65qSRRddeohzlDU4bQdPlbg5q9yGozwMjzuz9GeP-CTCPN8)
+![QGIS profile chooser showing separate Test and Prod profiles for PostgreSQL services](https://lh7-us.googleusercontent.com/P5tG5kloX-sTGLtJjItVhTwQzGjhMugMEhgkUTfUfO4jblPxurVHGRdRcMkH2BGLyMrAPNZtOdaRO5OzeMvxR4CUC38gY23c9uGjXPn_65qSRRddeohzlDU4bQdPlbg5q9yGozwMjzuz9GeP-CTCPN8)
 Und pro Profil setzst du die Umgebungsvariable `PGSERVICEFILE` die verwendet werden soll (im Menu  _Settings > Options…_ und dort unter  _System_ herunterscrollen bis  _Environment_).
-![image](https://lh7-us.googleusercontent.com/BZQzdWMsz1dbNf43syK1wkViu_uiOjitDu3a2wnJw7NElQ-OyvVwc26BR2y9rIW7ol_ocLGPOeRhfsjliIj9yWhUYqColQnwIpGfwVcMX2kPtFebDymTlFJjmbxDehH9QJ2MshLFu5TaULQfgOW-VZk)
+![QGIS profile environment settings for PGSERVICEFILE, screenshot 1](https://lh7-us.googleusercontent.com/BZQzdWMsz1dbNf43syK1wkViu_uiOjitDu3a2wnJw7NElQ-OyvVwc26BR2y9rIW7ol_ocLGPOeRhfsjliIj9yWhUYqColQnwIpGfwVcMX2kPtFebDymTlFJjmbxDehH9QJ2MshLFu5TaULQfgOW-VZk)
 bzw.
-![image](https://lh7-us.googleusercontent.com/1KSjiGIKgFBxD13G7FYB_6wz6BRt2XbYmNJVdsgoCzptjN9K6PoR-Q5Ttxxnf6XAKXLYjWFL6PacuroU6klaW0EZJZtPDGVkLHPYQYUA1kACMMmJz7TZkQpGp-yvRaAaqN0j3sYJsZTXT2EXQACtdIc)
+![QGIS profile environment settings for PGSERVICEFILE, screenshot 2](https://lh7-us.googleusercontent.com/1KSjiGIKgFBxD13G7FYB_6wz6BRt2XbYmNJVdsgoCzptjN9K6PoR-Q5Ttxxnf6XAKXLYjWFL6PacuroU6klaW0EZJZtPDGVkLHPYQYUA1kACMMmJz7TZkQpGp-yvRaAaqN0j3sYJsZTXT2EXQACtdIc)
 Wenn du nun in QGIS den Service `my-local-gis` nutzst, verbindet es im Profil „Prod“ mit der Datenbank `prod` und im Profil „Test“ mit der Datenbank `test`.
 ## **Die Authentifizierungskonfiguration**
 Nun noch zur Authentifizierung. Hat man das Connection Service File auf einem Netzlaufwerk und stellt es mehreren Usern zur Verfügung, möchte man ja vielleicht eher nicht, dass alle mit demselben Login zugreiffen. Oder man möchte generell keine Benutzerinformation in diesem File drin haben. Das lässt sich in QGIS elegant mit der Authentifizierungskonfiguration kombinieren.
 Möchtest du eine QGIS Projektfile mehreren Usern zur Verfügung stellen, erstellst du die Layer mit einem Service. Dieser Service enthält alle Verbindungsparameter, bis auf die Login-Information.
 Diese Login-Information übergibt man mit einer QGIS Authentifizierung.
-![image](https://lh7-us.googleusercontent.com/RGByDYJr2czDGs4XKQD6SzCbsgiM318UdYav1m0z9fzX9_vQcFNjnZ5zqqg2X5hQ6HnJhwNGuszKYPpVSE5L53mxrpSTlLhGw5J8TAOB43IhTXFJlfII3ICPmX9ztbEOlR-TpJrlW5jfOy42-Dbx_Os)
+![QGIS authentication configuration for a PostgreSQL service connection](https://lh7-us.googleusercontent.com/RGByDYJr2czDGs4XKQD6SzCbsgiM318UdYav1m0z9fzX9_vQcFNjnZ5zqqg2X5hQ6HnJhwNGuszKYPpVSE5L53mxrpSTlLhGw5J8TAOB43IhTXFJlfII3ICPmX9ztbEOlR-TpJrlW5jfOy42-Dbx_Os)
 Diese Authentifizierung konfigurierst du ebenfalls pro obengenanntem QGIS-Profil. Dieses wird über Menu  _Settings > Options…_ und dort unter  _Authetification_ mit dem  _+_ erstellt:
-![image](https://lh7-us.googleusercontent.com/nnQe3fm9iMDFxG5QCxV_kpeBKjiUUefXx5B0dcNvMF7v0ObW_5051hXBBldC_CKSTrNPblJzwDo0zK2aQBKyz9ZM_27wIPtOY1i7srhpJLMr84VHWevuy4F1hj93ZjzJXbAKlt80gw0HuHtHaqcuigQ)
+![QGIS authentication settings dialog](https://lh7-us.googleusercontent.com/nnQe3fm9iMDFxG5QCxV_kpeBKjiUUefXx5B0dcNvMF7v0ObW_5051hXBBldC_CKSTrNPblJzwDo0zK2aQBKyz9ZM_27wIPtOY1i7srhpJLMr84VHWevuy4F1hj93ZjzJXbAKlt80gw0HuHtHaqcuigQ)
 (oder auch direkt dort, wo man die PostgreSQL Verbindung erstellt)
 Wenn du so einen Layer hinzufügst, werden im QGIS Projektfile einerseits der Service wie auch die Id der Authentifizierungskonfiguration gespeichert. Diese ist in diesem Fall `mylogin` und muss natürlich den anderen Usern mitgeteilt werden, damit auch sie für ihr Login die Id `mylogin` konfigurieren.
 Pro Profil kann man natürlich mehrere Authetifizierungkonfigurationen verwenden.
 ## **QGIS Plugin**
 Übrigens gibt es neu ein tolles Plugin, um diese Services direkt in QGIS zu konfigurieren. So musst du dich nicht mehr mit Textbasierten INI-Files herumschlagen. Es heisst [PG service parser](<https://github.com/opengisch/qgis-pg-service-parser-plugin>):
-![image](https://lh7-us.googleusercontent.com/3JNSq_fmD2g33fLls2FGklpoCRo-M4Pyuts7z4dP56wKK7_tRj3hGyakJSQHTHBxWyQNkBfJQggaPl_InrOdY58b-6GN8eGBH9oOgJYLkq6XMApgGBrboR_FQ5dZwJZFiBpZZ4_oBg2_BTNUAGiuPkk)
+![PG service parser plugin interface in QGIS](https://lh7-us.googleusercontent.com/3JNSq_fmD2g33fLls2FGklpoCRo-M4Pyuts7z4dP56wKK7_tRj3hGyakJSQHTHBxWyQNkBfJQggaPl_InrOdY58b-6GN8eGBH9oOgJYLkq6XMApgGBrboR_FQ5dZwJZFiBpZZ4_oBg2_BTNUAGiuPkk)
 Es findet das Connection Service File anhand den erwähnten Umgebungsvariabeln `PGSERVICEFILE` or `PGSYSCONFDIR` oder in den Standardverzeichnissen.
 Ebenso ist es supereasy neue Services zu erstellen, indem man bestehende dupliziert und bearbeitet.
-![](https://lh7-us.googleusercontent.com/FvLhRVplNNN5EGo8OYmED9L786WKZOxxBZy98wVnJq6vywqo_Ny2wHQaKUbcMMaiyEVTD8BNKAeD0kAY_4HgmJ39NvEF9z20PPlbwPNIgVFRXwNQTYn5KgGOzJ8iUGJ4PnY7l1y0rNzOTrdOqMtbcNY)
+![PG service parser plugin duplicating an existing service](https://lh7-us.googleusercontent.com/FvLhRVplNNN5EGo8OYmED9L786WKZOxxBZy98wVnJq6vywqo_Ny2wHQaKUbcMMaiyEVTD8BNKAeD0kAY_4HgmJ39NvEF9z20PPlbwPNIgVFRXwNQTYn5KgGOzJ8iUGJ4PnY7l1y0rNzOTrdOqMtbcNY)
 ### Und für die Devs
 Was wäre ein Blogpost ohne Geek-Futter? Das backend des Plugins ist in [PYPI](<https://pypi.org/project/pgserviceparser/>) publiziert und kann einfach mit `pip install pgserviceparser `installiert und in Python genutzt werden.
 Zum Beispiel um die Services aufzulisten.

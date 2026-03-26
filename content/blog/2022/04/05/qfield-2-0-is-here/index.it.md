@@ -7,7 +7,7 @@ source: "www.opengis.ch/it/2022/04/05/qfield-2-0-is-here/index.html"
 ---
 > Let’s not paraphrase it, QField 2.0 is here and it is taking professional GIS fieldwork to a completely new level.
 > TL;DR
-![](./Feature_Graphic_QField_1024x5008091.png)
+![QField 2.0 Arctic Fox feature graphic](./Feature_Graphic_QField_1024x5008091.png)
 After an intense development and testing period, we are ready, QField 2.0 is out.
 QField 2.0 is packed with new features that will make your professional fieldwork even more efficient. You can get a taste of all you will be getting with this major update on QField’s [changelog](<https://github.com/opengisch/QField/releases>). Be aware, it will blow your mind… ?
 If you do not have it yet, [get it now](<https://qfield.org/get/>)!
@@ -22,7 +22,7 @@ If you do not have it yet, [get it now](<https://qfield.org/get/>)!
 ## What mountain is Arctic Fox?
 If you have been following QFields development, you might remember that we named each release after a mountain. We are very outdoorsy and this was a sort of tribute to the places we love. With each release, we had great fun looking for places that would be meaningful for us and our community. From beautiful mountains outside our window to the remotest island mountain on Earth and even further.
 After Elbrus (0.5), Finsteraarhorn (0.6), Gonnus Mons (0.7), Hiendertelltihoren (0.8), Jungfraujoch (0.9), Kesch (0.10), Lucendro (0.11), Matterhorn (1.0 – 1.2), Ben Nevis (1.3), Olavtoppen (1.4), Piz Palü (1.5), Qinling (1.6), Rockies (1.7), Selma (1.8), Taivaskero (1.9) and Uluru (1.10), we decided to change the subject and for the 2.X series we’ll name the releases after cool animals that reflect different characteristics of QField. 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Iceland-1979445_\(cropped_2\).jpg/1280px-Iceland-1979445_\(cropped_2\).jpg)
+![.jpg/1280px-Iceland-1979445_\(cropped_2\).jpg)](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Iceland-1979445_\(cropped_2\)
 The arctic fox is an incredibly hardy animal that can survive frigid Arctic temperatures as low as –50°C in the treeless lands where it makes its home. It has furry soles, short ears, and a short muzzle—all-important adaptations to the chilly clime. Arctic foxes live in burrows, and in a blizzard, they may tunnel into the snow to create shelter. 
 Like an Arctic Fox, QField is perfectly adapted to the outdoors and helps you get your data in the most efficient way possible. 
 Ah yes, and they seem to be pretty good navigators and tech-savvy too: <https://www.space.com/arctic-fox-epic-journey-satellite-tracking.html>
@@ -36,7 +36,7 @@ Obviously, the big news in QField 2.0 is the integration with QFieldCloud BETA, 
 
 
 ## Cloudy ☁️ with a chance of meatballs
-![](./07_work-anywhere_tablet3e80.png)
+![QFieldCloud team workflow on a tablet for working anywhere](./07_work-anywhere_tablet3e80.png)
 QFieldCloud’s unique technology allows your team to focus on what’s important, making sure you **efficiently get the best field data** possible. Thanks to the tight integration with QField, you will be able to start surveying and digitising data in no time.
 Some of you may already have been part of the closed BETA testing phase. THANKS!   
 For all the others, great news, [QFieldCloud is now **officially** in open BETA](<https://qfield.cloud/>).

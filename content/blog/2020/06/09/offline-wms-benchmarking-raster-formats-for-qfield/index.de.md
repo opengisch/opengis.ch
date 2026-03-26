@@ -37,7 +37,7 @@ Now you have a raster Geopackage that you can use in QField.
 ## Testing raster formats
 ### Preparing the files
 As first step we exported our test orthophoto WMS to a plain GeoTIFF using QGIS‘ default behaviour.
-![](./tiffc22d.png)Default parameters used to create the initial tiff Format| gdal_translate| gdaladdo  
+![Default parameters used to create the initial tiff Format| gdal_translate| gdaladdo](./tiffc22d.png)
 ---|---|---  
 gpkg JPEG| gdal_translate -of GPKG „C:\test\ortho_test.tif“ „C:\test\test_JPEG.gpkg“ -co TILE_FORMAT=JPEG  |  | gpkg PNG| gdal_translate -of GPKG „C:\test\ortho_test.tif“ „C:\test\test_PNG.gpkg“ -co TILE_FORMAT=PNG|  | gpkg PNG_JPEG| gdal_translate -of GPKG „C:\test\ortho_test.tif“ „C:\test\test_PNG_JPEG.gpkg“ -co TILE_FORMAT=PNG_JPEG|   
 gpkg PNG8| gdal_translate -of GPKG „C:\test\ortho_test.tif“ „C:\test\test_PNG8.gpkg“ -co TILE_FORMAT=PNG8|   

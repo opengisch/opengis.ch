@@ -15,19 +15,19 @@ Kurz darauf präsentierte Marco die neuesten Entwicklungen von **QField** – da
 Anschließend sprach unser CTO **Matthias Kuhn** über **Machine Learning und Künstliche Intelligenz in QGIS** , zeigte reale Anwendungsfälle und innovative Lösungen, die GIS-Workflows mit intelligenter Automatisierung verbinden und ging auf Herausforderungen in diesem Bereich ein.  
 👉 _(Folien[hier](<https://docs.google.com/presentation/d/e/2PACX-1vSFapOPJzfF1Fw-KHw_PqTUjd3RHBdAuLSwdo8BsSU2qBHdrUZJ-qvLWQtw2ONdgDDXq_hDI8IP2BrY/pub?start=false&loop=false&delayms=3000&slide=id.g369116688fd_0_108>))_
 Gemeinsam mit **Timothée Produit** von der IG Group SA stellte unsere Kollegin **Isabel Kiefer** Werkzeuge und optimierte Prozesse für die **Installation, Verwaltung und Aktualisierung von TEKSI-Modulen** vor – ein weiterer Beitrag zu unserem Ziel, komplexe GIS-Infrastrukturen zu vereinfachen, sowohl für öffentliche als auch private Organisationen.
-![](./20250617_12244915bf.jpg)Matthias talking AI ![](./20250617_12002015bf.jpg)Isa introducing the architectural work we did in Teksi
+![Matthias talking AI](./20250617_12244915bf.jpg) ![Isa introducing the architectural work we did in Teksi](./20250617_12002015bf.jpg)
 ## Sicherheit für QGIS stärken
 Im Rahmen unseres Engagements für Nachhaltigkeit und Professionalisierung in der Open-Source-GIS-Welt sind wir auch **Partner von Oslandia im[QGIS Security Project](<https://security.qgis.oslandia.com/>)**, das von **Vincent Picavet** vorgestellt wurde. Ziel dieses Projekts ist es, sicherzustellen, dass QGIS höchste Sicherheitsstandards erfüllt – besonders wichtig für den Einsatz in kritischen Infrastrukturen weltweit.
 * * *
 ## QField zum Anfassen – in drei Sprachen!
 Am Nachmittag führte OPENGIS.ch einen **ausgebuchten, mehrsprachigen QField-Workshop** mit **25 Teilnehmenden** durch. In der praxisnahen Session lernten die Teilnehmer:innen, wie sie ihre QGIS-Projekte effizient im Feld einsetzen können – inklusive wertvoller Tipps, realer Beispiele und ein wenig Sonne ☀️
-![](./20250617_16185315bf.jpg) ![](./20250617_15324415bf.jpg)Digitising ![](./20250617_15324015bf.jpg)Got sun! ![](./20250617_16272315bf.jpg)and the winner is…
+![Participants attending the multilingual QField workshop at the QGIS.ch user meeting in Bern](./20250617_16185315bf.jpg) ![Digitising](./20250617_15324415bf.jpg) ![Got sun!](./20250617_15324015bf.jpg) ![and the winner is…](./20250617_16272315bf.jpg)
 ## OPENGIS.ch-Werkzeuge im Einsatz
 Auch ausserhalb unserer eigenen Sessions wurden **Lösungen von OPENGIS.ch** während der Veranstaltung vielfach eingesetzt und vorgestellt:
   - **QField** spielte eine zentrale Rolle in der **Zermatt-Fallstudie** , die den Einsatz in anspruchsvoller alpiner Umgebung demonstrierte.
   - Das Plugin **Model Baker** , das von uns entwickelt wird, wurde mit seiner neuen **Mehrsprachigkeitsunterstützung für QGIS-Modelle** vorgestellt – ein grosser Fortschritt für die Schweiz mit ihren Sprachregionen.
 
-![](./20250617_11240015bf.jpg)Modelbaker in action ![](./20250617_12193215bf.jpg)QField usage in Zermatt
+![Modelbaker in action](./20250617_11240015bf.jpg) ![QField usage in Zermatt](./20250617_12193215bf.jpg)
 ## Eine lebendige Community
 Das **QGIS.ch Anwendertreffen** war einmal mehr ein Beweis für die Stärke und Leidenschaft der Schweizer Open-Source-GIS-Community. Ein grosses Dankeschön an die **Organisator:innen, Referent:innen und Teilnehmenden** , die diesen Tag möglich gemacht haben – wir freuen uns schon jetzt auf das nächste Treffen!
 * * *

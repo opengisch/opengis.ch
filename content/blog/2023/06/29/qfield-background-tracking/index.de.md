@@ -9,7 +9,7 @@ Years ago, the QField community and its users showed their love for their favour
 Since then, OPENGIS.ch has continued to lead the development of QField with the regular support of sponsors. We couldn’t be prouder of the progress we have made, with plenty of new features added in every major release. This includes major improvements to positioning including location tracking, integration of external GNSS receivers through not only Bluetooth but TCP/UDP and serial port connections, accuracy indicator and constraints, and most recently sensors reading to list a few.
 We are now calling for the community to help further better QField and unlock an important milestone: **background location tracking service**.
 Pledge now
-![](./gps-trackingf4e5.jpg)
+![Illustration of QField background tracking and route recording on a mobile device](./gps-trackingf4e5.jpg)
 ## Main goal: background location tracking on Android – 25’000€
 Currently, QField requires users to keep their devices’ screen on and have the app in the foreground to keep track of the device’s positioning location. On mobile devices, this can drain batteries faster than many would want to, in environments where charging options are limited.
 This crowdfunding aims at removing this constraint and **allow QField – via a background service – to constantly keep tracking location** even while the device is suspended (i.e., when the screen is turned off / locked). 

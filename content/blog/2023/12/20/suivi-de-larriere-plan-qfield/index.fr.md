@@ -9,7 +9,7 @@ Il y a quelques années, la communauté QField et ses utilisateurs ont montré l
 Depuis lors, OPENGIS.ch a continué à diriger le développement de QField avec le soutien régulier de sponsors. Nous ne pourrions être plus fiers des progrès que nous avons réalisés, avec de nombreuses nouvelles fonctionnalités ajoutées dans chaque version majeure. Il s’agit notamment d’améliorations majeures en matière de positionnement, y compris le suivi de la localisation, l’intégration de récepteurs GNSS externes par le biais non seulement de Bluetooth, mais aussi de connexions TCP/UDP et de ports série, d’indicateurs et de contraintes de précision et, plus récemment, de lecture de capteurs, pour n’en citer que quelques-uns.
 Nous faisons maintenant appel à la communauté pour nous aider à améliorer QField et à franchir une étape importante : le **service de localisation en arrière-plan**.
 S’engager maintenant
-![](./gps-trackingf4e5.jpg)
+![Illustration of QField background tracking and route recording on a mobile device](./gps-trackingf4e5.jpg)
 ## Objectif principal : localisation en arrière-plan sur Android – 25’000€.
 Actuellement, QField exige que les utilisateurs gardent l’écran de leur appareil allumé et que l’application soit au premier plan pour suivre le positionnement de l’appareil. Sur les appareils mobiles, cela peut décharger les batteries plus rapidement que ce qui est souhaité, dans des environnements où les possibilités de recharge sont limitées.
 Ce crowdfunding vise à supprimer cette contrainte et à **permettre à QField – par le biais d’un service en arrière-plan – de suivre en permanence la localisation** même lorsque l’appareil est suspendu (c’est-à-dire lorsque l’écran est éteint ou verrouillé). 

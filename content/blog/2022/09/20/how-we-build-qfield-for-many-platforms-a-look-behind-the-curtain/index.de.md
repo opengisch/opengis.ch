@@ -13,7 +13,7 @@ When we decided to make QField also available on other platforms like **iOS, Win
 A couple of days later we had a build for Windows and later in the same year for macOS. With many dependencies already available in modern versions. Cheers.
 What’s left to do than just enable it for Android, and all our problems are suddenly solved? Alas, it’s not so easy. **Cross-compiling is always a bit trickier.** And so we started another journey to improve the situation. After a while, we had a working build chain based on vcpkg for Android in our R&D labs. Interestingly, this added a couple of features just because the community around vcpkg had already added them. For example using [COG](<https://www.cogeo.org/>)-based raster data via HTTP was suddenly working _(for the record: thanks to the availability of curl which we never took care of adding ourselves in OSGeo4A)_.
 Soon after we also wanted to try building for **iOS with vcpkg** , which after a few attempts also was successful, and even managed to resolve some weird crashes and other issues we had experienced with the old buildchain.
-![](./Peek-2022-09-19-17-01417b.gif)
+![Animated diagram of the QField cross-platform build pipeline based on vcpkg](./Peek-2022-09-19-17-01417b.gif)
 The main benefit was that we could upgrade the QGIS base libraries in one single place for every platform, in an isolated branch without playing the Jenga game on each upgrade. 
 The only unfinished business we still had was that support for iOS and Android was still available only in our own vcpkg fork.
 So the last few weeks and months **we have been working closely with upstream** to bring building for Android and iOS up to the same level as desktop platforms. The relevant parts are now in a clean state. 

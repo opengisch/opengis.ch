@@ -141,7 +141,7 @@
             {{ $cardTeam := $card.team | default $fallbackTeam }}
             {{ $cardTeamKey := lower (urlize $cardTeam) }}
             {{ $cardTeamLabel := $cardTeam }}
-            <article class="team-card" data-team="{{ $cardTeamKey }}" data-reveal="fade-left" data-reveal-delay="{{ mul $index 70 }}">
+            <article class="team-card" data-team="{{ $cardTeamKey }}" data-reveal="fade-left" data-reveal-delay="{{ mul $index 36 }}">
               <div class="team-card__media">
                 <img src="{{ $card.image | safeURL }}" alt="{{ $card.alt }}">
               </div>
@@ -182,26 +182,27 @@
         <div class="row g-4">
           {{ $blogPosts := first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
           {{ range $blogPosts }}
-            {{ $cardImage := "" }}
+            {{ $cardImageData := partial "page-card-image.html" (dict "page" .) }}
+            {{ $cardImage := index $cardImageData "resource" }}
+            {{ $cardImageURL := index $cardImageData "url" }}
+            {{ $cardAlt := .Title }}
             {{ with .Params.cover }}
-              {{ with .image }}
-                {{ $cardImage = . }}
-              {{ end }}
-            {{ end }}
-            {{ if not $cardImage }}
-              {{ with .Params.image }}
-                {{ $cardImage = . }}
-              {{ end }}
-            {{ end }}
-            {{ if not $cardImage }}
-              {{ $matches := findRE `(?i)<img[^>]+src=["']([^"']+)` .Content 1 }}
-              {{ if gt (len $matches) 0 }}
-                {{ $cardImage = replaceRE `(?i).*src=["']([^"']+).*` "$1" (index $matches 0) }}
+              {{ with .alt }}
+                {{ $cardAlt = . }}
               {{ end }}
             {{ end }}
             <div class="col-md-6 col-lg-4">
               <article class="opg-blog-card">
-                {{ if $cardImage }}<a href="{{ .RelPermalink }}"><img src="{{ $cardImage | safeURL }}" alt="{{ .Title }}"></a>{{ end }}
+                {{ if $cardImage }}
+                  <a href="{{ .RelPermalink }}">{{ partial "image.html" (dict
+                    "resource" $cardImage
+                    "alt" $cardAlt
+                    "sizes" "(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
+                    "widths" (slice 400 720 960 1280)
+                  ) }}</a>
+                {{ else if $cardImageURL }}
+                  <a href="{{ .RelPermalink }}"><img src="{{ $cardImageURL | safeURL }}" alt="{{ $cardAlt }}"></a>
+                {{ end }}
                 <div class="opg-blog-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
                 <p>{{ (.Params.description | default .Summary | plainify) | truncate 280 }}</p>
               </article>

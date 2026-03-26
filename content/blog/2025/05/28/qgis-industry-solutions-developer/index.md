@@ -7,7 +7,7 @@ source: "www.opengis.ch/2025/05/28/qgis-industry-solutions-developer/index.html"
 ---
 **Location** : Remote, preferably in Switzerland or with at least 4 h overlap with [CEST office hours](<https://www.timeanddate.com/worldclock/converter.html?p1=270>)
 **Employment Type** : Full-time (80-100%)
-![](./imagebb94.png)
+![Illustration of the OPENGIS.ch team collaborating remotely on open-source geospatial work](./imagebb94.png)
 **About OPENGIS.ch** :
 [OPENGIS.ch](</index.html>) is a dynamic team of Full-Stack GeoNinjas delivering tailored open-source geodata solutions to Swiss and international clients. We are passionate about using and developing open-source tools, providing flexibility, scalability, and future-proof solutions, and we play an active role in the open-source geospatial community. Our agile, distributed team thrives on collaboration, diversity, and mutual support.
 **Job Description** :

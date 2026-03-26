@@ -1,0 +1,1054 @@
+baseURL = "https://www.opengis.ch/"
+title = "OPENGIS.ch"
+author = "OPENGIS.ch"
+copyright = "OPENGIS.ch"
+timeZone = "Europe/Zurich"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+theme = "qfield-theme-v3"
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+enableEmoji = true
+
+[pagination]
+pagerSize = 12
+
+[frontmatter]
+date = ["date", "publishDate", "lastmod"]
+lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+series = "series"
+author = "authors"
+
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
+[permalinks]
+blog = "/:year/:month/:day/:slug/"
+pages = "/:contentbasename/"
+
+[module]
+[module.hugoVersion]
+extended = true
+min = "0.99.1"
+max = ""
+
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[mediaTypes."text/css"]
+suffixes = ["css"]
+
+[params]
+description = "OPENGIS.ch - Open Source GIS services, products, and training."
+images = ["images/opengis-logo.png", "images/site-feature-image.png"]
+mainMenuLogo = "images/opengis-logo.png"
+enableDarkMode = true
+defaultTheme = "light"
+themeColorLight = "#ffffff"
+themeColorDark = "#05060b"
+themeColor = "#fff"
+alert = false
+alertDismissable = true
+alertText = "Introducing this new service! <a class=\"alert-link stretched-link\" href=\"https://salvus.site/\">Check out Total Security</a>"
+footerAbout = true
+footerAboutTitle = "About OPENGIS.ch"
+footerAboutText = "We build open-source geospatial solutions and provide services, support, and training."
+
+[params.options]
+bootStrapJs = true
+breadCrumb = true
+listCategoryFilter = true
+listTagFilter = true
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+[markup.goldmark]
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+strikethrough = true
+table = true
+taskList = true
+typographer = true
+
+[markup.goldmark.parser]
+autoHeadingID = true
+wrapStandAloneImageWithinParagraph = false
+
+[markup.goldmark.parser.attribute]
+block = true
+title = true
+
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = true
+xHTML = false
+
+[markup.tableOfContents]
+endLevel = 3
+ordered = false
+startLevel = 2
+
+[languages]
+[languages.en]
+languageName = "English"
+languageCode = "en-US"
+weight = 10
+
+[languages.en.params]
+languageISO = "EN"
+
+[[languages.en.menu.main]]
+name = "Why us?"
+url = "#features"
+weight = 10
+
+[[languages.en.menu.main]]
+identifier = "services"
+name = "Services"
+url = "#testimonials"
+weight = 20
+
+[[languages.en.menu.main]]
+name = "Custom Development"
+url = "custom-development/"
+weight = 10
+parent = "services"
+
+[languages.en.menu.main.params]
+icon = "bi bi-code-slash"
+
+[[languages.en.menu.main]]
+identifier = "services-support-maintenance"
+name = "Support & maintenance"
+url = "qgis-support/"
+weight = 20
+parent = "services"
+
+[languages.en.menu.main.params]
+icon = "bi bi-tools"
+
+[[languages.en.menu.main]]
+name = "Support contracts"
+url = "qgis-support/"
+weight = 30
+parent = "services-support-maintenance"
+
+[languages.en.menu.main.params]
+icon = "bi bi-headset"
+
+[[languages.en.menu.main]]
+name = "QGIS Sustainability initiative"
+url = "qgis-sustainability-initiative/"
+weight = 40
+parent = "services-support-maintenance"
+
+[languages.en.menu.main.params]
+icon = "bi bi-emoji-smile"
+
+[[languages.en.menu.main]]
+identifier = "services-consulting"
+name = "Consulting"
+url = "training-consulting/"
+weight = 50
+parent = "services"
+
+[languages.en.menu.main.params]
+icon = "bi bi-rocket"
+
+[[languages.en.menu.main]]
+name = "Consulting services"
+url = "training-consulting/"
+weight = 55
+parent = "services-consulting"
+
+[languages.en.menu.main.params]
+icon = "obfx-menu-icon fa fa-handshake-o"
+
+[[languages.en.menu.main]]
+name = "QField Jump-start packages"
+url = "qfield-training/"
+weight = 60
+parent = "services-consulting"
+
+[languages.en.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.en.menu.main]]
+identifier = "services-courses"
+name = "Courses"
+url = "category/courses/"
+weight = 70
+parent = "services"
+
+[languages.en.menu.main.params]
+icon = "bi bi-mortarboard"
+
+[[languages.en.menu.main]]
+name = "Courses calendar"
+url = "courses-calendar/"
+weight = 80
+parent = "services-courses"
+
+[languages.en.menu.main.params]
+icon = "bi bi-calendar3"
+
+[[languages.en.menu.main]]
+name = "Course registration"
+url = "course-registration/"
+weight = 90
+parent = "services-courses"
+
+[languages.en.menu.main.params]
+icon = "bi bi-pencil-square"
+
+[[languages.en.menu.main]]
+name = "QGIS courses"
+url = "category/courses/qgis-courses/"
+weight = 100
+parent = "services-courses"
+
+[languages.en.menu.main.params]
+icon = "bi bi-display"
+
+[[languages.en.menu.main]]
+name = "QField courses"
+url = "category/courses/qfield-courses/"
+weight = 110
+parent = "services-courses"
+
+[languages.en.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.en.menu.main]]
+name = "INTERLIS & Model Baker courses"
+url = "category/courses/interlis-model-baker-courses/"
+weight = 120
+parent = "services-courses"
+
+[languages.en.menu.main.params]
+icon = "bi bi-diagram-3"
+
+[[languages.en.menu.main]]
+name = "PostGIS courses"
+url = "category/courses/postgis-courses/"
+weight = 130
+parent = "services-courses"
+
+[languages.en.menu.main.params]
+icon = "bi bi-database"
+
+[[languages.en.menu.main]]
+name = "PyQGIS courses"
+url = "category/courses/pyqgis-courses/"
+weight = 140
+parent = "services-courses"
+
+[languages.en.menu.main.params]
+icon = "bi bi-file-earmark-code"
+
+[[languages.en.menu.main]]
+identifier = "about"
+name = "About"
+url = "#team"
+weight = 30
+
+[[languages.en.menu.main]]
+name = "Team"
+url = "#team"
+weight = 10
+parent = "about"
+
+[languages.en.menu.main.params]
+icon = "bi bi-people"
+
+[[languages.en.menu.main]]
+name = "Our core values"
+url = "core-values/"
+weight = 20
+parent = "about"
+
+[languages.en.menu.main.params]
+icon = "bi bi-heart"
+
+[[languages.en.menu.main]]
+name = "Join Us"
+url = "jobs/"
+weight = 30
+parent = "about"
+
+[languages.en.menu.main.params]
+icon = "bi bi-rocket"
+
+[[languages.en.menu.main]]
+identifier = "qfield"
+name = "QField"
+url = "https://qfield.org/"
+weight = 40
+
+[[languages.en.menu.main]]
+name = "qfield.org"
+url = "https://qfield.org/"
+weight = 10
+parent = "qfield"
+
+[languages.en.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.en.menu.main]]
+name = "QFieldCloud"
+url = "https://qfield.cloud/"
+weight = 20
+parent = "qfield"
+
+[languages.en.menu.main.params]
+icon = "bi bi-cloud"
+
+[[languages.en.menu.main]]
+name = "Jump-start packages"
+url = "qfield-training/"
+weight = 30
+parent = "qfield"
+
+[languages.en.menu.main.params]
+icon = "bi bi-mortarboard"
+
+[[languages.en.menu.main]]
+name = "Highlights"
+url = "category/qfield/highlights/"
+weight = 40
+parent = "qfield"
+
+[languages.en.menu.main.params]
+icon = "bi bi-star-fill"
+
+[[languages.en.menu.main]]
+name = "Blog"
+url = "blog/"
+weight = 50
+
+[[languages.en.menu.main]]
+name = "Contact"
+url = "/#contact"
+weight = 60
+
+[languages.de]
+languageName = "German"
+languageCode = "de-CH"
+weight = 20
+
+[languages.de.params]
+languageISO = "DE"
+
+[[languages.de.menu.main]]
+name = "Warum uns?"
+url = "#features"
+weight = 10
+
+[[languages.de.menu.main]]
+identifier = "angebot"
+name = "Angebot"
+url = "#testimonials"
+weight = 20
+
+[[languages.de.menu.main]]
+name = "Individuelle Entwicklung"
+url = "entwicklung/"
+weight = 10
+parent = "angebot"
+
+[languages.de.menu.main.params]
+icon = "bi bi-code-slash"
+
+[[languages.de.menu.main]]
+identifier = "angebot-support-wartung"
+name = "Support & Wartung"
+url = "qgis-support-wartung/"
+weight = 20
+parent = "angebot"
+
+[languages.de.menu.main.params]
+icon = "bi bi-tools"
+
+[[languages.de.menu.main]]
+name = "QGIS Supportverträge"
+url = "qgis-support-wartung/"
+weight = 30
+parent = "angebot-support-wartung"
+
+[languages.de.menu.main.params]
+icon = "bi bi-headset"
+
+[[languages.de.menu.main]]
+name = "Our QGIS Sustainability initiative #sustainQGIS"
+url = "qgis-sustainability-initiative/"
+weight = 40
+parent = "angebot-support-wartung"
+
+[languages.de.menu.main.params]
+icon = "bi bi-emoji-smile"
+
+[[languages.de.menu.main]]
+identifier = "angebot-beratung"
+name = "Beratung"
+url = "beratung/"
+weight = 50
+parent = "angebot"
+
+[languages.de.menu.main.params]
+icon = "bi bi-rocket"
+
+[[languages.de.menu.main]]
+name = "Beratungsdienstleistungen"
+url = "beratung/"
+weight = 55
+parent = "angebot-beratung"
+
+[languages.de.menu.main.params]
+icon = "obfx-menu-icon fa fa-handshake-o"
+
+[[languages.de.menu.main]]
+name = "QField Starthilfepakete"
+url = "qfield-jump-start-packages/"
+weight = 60
+parent = "angebot-beratung"
+
+[languages.de.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.de.menu.main]]
+identifier = "angebot-kurse"
+name = "Kurse"
+url = "category/kurse/"
+weight = 70
+parent = "angebot"
+
+[languages.de.menu.main.params]
+icon = "bi bi-mortarboard"
+
+[[languages.de.menu.main]]
+name = "Kurskalender"
+url = "kurskalender/"
+weight = 80
+parent = "angebot-kurse"
+
+[languages.de.menu.main.params]
+icon = "bi bi-calendar3"
+
+[[languages.de.menu.main]]
+name = "Kursanmeldung"
+url = "kursanmeldung/"
+weight = 90
+parent = "angebot-kurse"
+
+[languages.de.menu.main.params]
+icon = "bi bi-pencil-square"
+
+[[languages.de.menu.main]]
+name = "QGIS Kurse"
+url = "category/kurse/qgis-kurse/"
+weight = 100
+parent = "angebot-kurse"
+
+[languages.de.menu.main.params]
+icon = "bi bi-display"
+
+[[languages.de.menu.main]]
+name = "QField Kurse"
+url = "category/kurse/qfield-kurse/"
+weight = 110
+parent = "angebot-kurse"
+
+[languages.de.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.de.menu.main]]
+name = "INTERLIS & Model Baker Kurse"
+url = "category/kurse/interlis-model-baker-kurse/"
+weight = 120
+parent = "angebot-kurse"
+
+[languages.de.menu.main.params]
+icon = "bi bi-diagram-3"
+
+[[languages.de.menu.main]]
+name = "PostGIS Kurse"
+url = "category/kurse/postgis-kurse/"
+weight = 130
+parent = "angebot-kurse"
+
+[languages.de.menu.main.params]
+icon = "bi bi-database"
+
+[[languages.de.menu.main]]
+name = "PyQGIS Kurse"
+url = "category/kurse/pyqgis-kurse/"
+weight = 140
+parent = "angebot-kurse"
+
+[languages.de.menu.main.params]
+icon = "bi bi-file-earmark-code"
+
+[[languages.de.menu.main]]
+identifier = "ueber"
+name = "Über uns"
+url = "#team"
+weight = 30
+
+[[languages.de.menu.main]]
+name = "Team"
+url = "#team"
+weight = 10
+parent = "ueber"
+
+[languages.de.menu.main.params]
+icon = "bi bi-people"
+
+[[languages.de.menu.main]]
+name = "Jobs"
+url = "jobs/"
+weight = 20
+parent = "ueber"
+
+[languages.de.menu.main.params]
+icon = "bi bi-rocket"
+
+[[languages.de.menu.main]]
+name = "Unsere Werte"
+url = "unsere-werte/"
+weight = 30
+parent = "ueber"
+
+[languages.de.menu.main.params]
+icon = "bi bi-heart"
+
+[[languages.de.menu.main]]
+identifier = "qfield"
+name = "QField"
+url = "https://qfield.org/"
+weight = 40
+
+[[languages.de.menu.main]]
+name = "qfield.org"
+url = "https://qfield.org/"
+weight = 10
+parent = "qfield"
+
+[languages.de.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.de.menu.main]]
+name = "QFieldCloud"
+url = "https://qfield.cloud/"
+weight = 20
+parent = "qfield"
+
+[languages.de.menu.main.params]
+icon = "bi bi-cloud"
+
+[[languages.de.menu.main]]
+name = "QField Starthilfepakete"
+url = "qfield-jump-start-packages/"
+weight = 30
+parent = "qfield"
+
+[languages.de.menu.main.params]
+icon = "bi bi-mortarboard"
+
+[[languages.de.menu.main]]
+name = "Highlights"
+url = "category/qfield-de/highlights/"
+weight = 40
+parent = "qfield"
+
+[languages.de.menu.main.params]
+icon = "bi bi-star-fill"
+
+[[languages.de.menu.main]]
+name = "Kontakt"
+url = "/#contact"
+weight = 50
+
+[[languages.de.menu.main]]
+name = "Blog"
+url = "blog/"
+weight = 60
+
+[languages.fr]
+languageName = "French"
+languageCode = "fr-CH"
+weight = 30
+
+[languages.fr.params]
+languageISO = "FR"
+
+[[languages.fr.menu.main]]
+name = "Pourquoi nous?"
+url = "#features"
+weight = 10
+
+[[languages.fr.menu.main]]
+identifier = "services"
+name = "Services"
+url = "#testimonials"
+weight = 20
+
+[[languages.fr.menu.main]]
+name = "Développement"
+url = "developpement/"
+weight = 10
+parent = "services"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-code-slash"
+
+[[languages.fr.menu.main]]
+identifier = "services-support-maintenance"
+name = "Support et maintenance QGIS"
+url = "support-qgis/"
+weight = 20
+parent = "services"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-tools"
+
+[[languages.fr.menu.main]]
+name = "Our QGIS Sustainability initiative #sustainQGIS"
+url = "qgis-sustainability-initiative/"
+weight = 30
+parent = "services-support-maintenance"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-emoji-smile"
+
+[[languages.fr.menu.main]]
+identifier = "services-conseil"
+name = "Conseil"
+url = "conseil/"
+weight = 40
+parent = "services"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-rocket"
+
+[[languages.fr.menu.main]]
+name = "Services de conseil"
+url = "conseil/"
+weight = 45
+parent = "services-conseil"
+
+[languages.fr.menu.main.params]
+icon = "obfx-menu-icon fa fa-handshake-o"
+
+[[languages.fr.menu.main]]
+name = "Formations rapide à QField"
+url = "qfield-training/"
+weight = 50
+parent = "services-conseil"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.fr.menu.main]]
+identifier = "services-cours"
+name = "Cours"
+url = "category/cours/"
+weight = 60
+parent = "services"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-mortarboard"
+
+[[languages.fr.menu.main]]
+name = "Calendrier des cours"
+url = "calendrier-des-cours/"
+weight = 70
+parent = "services-cours"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-calendar3"
+
+[[languages.fr.menu.main]]
+name = "Inscriptions aux cours"
+url = "inscriptions-aux-cours/"
+weight = 80
+parent = "services-cours"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-pencil-square"
+
+[[languages.fr.menu.main]]
+name = "Cours QGIS"
+url = "category/cours/cours-qgis/"
+weight = 90
+parent = "services-cours"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-display"
+
+[[languages.fr.menu.main]]
+name = "Cours QField"
+url = "category/cours/cours-qfield/"
+weight = 100
+parent = "services-cours"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.fr.menu.main]]
+name = "Cours INTERLIS & Model Baker"
+url = "category/cours/cours-interlis-model-baker/"
+weight = 110
+parent = "services-cours"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-diagram-3"
+
+[[languages.fr.menu.main]]
+name = "Cours PostGIS"
+url = "category/cours/cours-postgis/"
+weight = 120
+parent = "services-cours"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-database"
+
+[[languages.fr.menu.main]]
+name = "Cours PyQGIS"
+url = "category/cours/cours-pyqgis/"
+weight = 130
+parent = "services-cours"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-file-earmark-code"
+
+[[languages.fr.menu.main]]
+identifier = "about"
+name = "À propos"
+url = "#team"
+weight = 30
+
+[[languages.fr.menu.main]]
+name = "Team"
+url = "#team"
+weight = 10
+parent = "about"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-people"
+
+[[languages.fr.menu.main]]
+name = "Jobs"
+url = "jobs/"
+weight = 20
+parent = "about"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-rocket"
+
+[[languages.fr.menu.main]]
+name = "Nos valeurs"
+url = "nos-valeurs/"
+weight = 30
+parent = "about"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-heart"
+
+[[languages.fr.menu.main]]
+identifier = "qfield"
+name = "QField"
+url = "https://qfield.org/"
+weight = 40
+
+[[languages.fr.menu.main]]
+name = "qfield.org"
+url = "https://qfield.org/"
+weight = 10
+parent = "qfield"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.fr.menu.main]]
+name = "QFieldCloud"
+url = "https://qfield.cloud/"
+weight = 20
+parent = "qfield"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-cloud"
+
+[[languages.fr.menu.main]]
+name = "Formations rapide à QField"
+url = "qfield-training/"
+weight = 30
+parent = "qfield"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-mortarboard"
+
+[[languages.fr.menu.main]]
+name = "Points forts"
+url = "category/qfield/highlights/"
+weight = 40
+parent = "qfield"
+
+[languages.fr.menu.main.params]
+icon = "bi bi-star-fill"
+
+[[languages.fr.menu.main]]
+name = "Contact"
+url = "/#contact"
+weight = 50
+
+[[languages.fr.menu.main]]
+name = "Blog"
+url = "blog/"
+weight = 60
+
+[languages.it]
+languageName = "Italian"
+languageCode = "it-CH"
+weight = 40
+
+[languages.it.params]
+languageISO = "IT"
+
+[[languages.it.menu.main]]
+name = "Perché noi?"
+url = "#features"
+weight = 10
+
+[[languages.it.menu.main]]
+identifier = "servizi"
+name = "Servizi"
+url = "#testimonials"
+weight = 20
+
+[[languages.it.menu.main]]
+name = "Sviluppo su misura"
+url = "sviluppo/"
+weight = 10
+parent = "servizi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-code-slash"
+
+[[languages.it.menu.main]]
+identifier = "servizi-supporto-manutenzione"
+name = "Supporto e manutenzione QGIS"
+url = "supporto-qgis/"
+weight = 20
+parent = "servizi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-tools"
+
+[[languages.it.menu.main]]
+name = "La nostra iniziativa di sostenibilità QGIS"
+url = "la-nostra-iniziativa-di-sostenibilita-qgis/"
+weight = 30
+parent = "servizi-supporto-manutenzione"
+
+[languages.it.menu.main.params]
+icon = "bi bi-emoji-smile"
+
+[[languages.it.menu.main]]
+identifier = "servizi-consulenza"
+name = "Consulenza"
+url = "consulenza/"
+weight = 40
+parent = "servizi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-rocket"
+
+[[languages.it.menu.main]]
+name = "Servizi di consulenza"
+url = "consulenza/"
+weight = 45
+parent = "servizi-consulenza"
+
+[languages.it.menu.main.params]
+icon = "obfx-menu-icon fa fa-handshake-o"
+
+[[languages.it.menu.main]]
+name = "Pacchetti di avvio a QField"
+url = "qfield-training/"
+weight = 50
+parent = "servizi-consulenza"
+
+[languages.it.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.it.menu.main]]
+identifier = "servizi-corsi"
+name = "Corsi"
+url = "category/corsi/"
+weight = 60
+parent = "servizi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-mortarboard"
+
+[[languages.it.menu.main]]
+name = "Calendario dei corsi"
+url = "calendario-corsi/"
+weight = 70
+parent = "servizi-corsi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-calendar3"
+
+[[languages.it.menu.main]]
+name = "Iscrizione corsi"
+url = "iscrizione-corsi/"
+weight = 80
+parent = "servizi-corsi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-pencil-square"
+
+[[languages.it.menu.main]]
+name = "Corsi QGIS"
+url = "category/corsi/corsi-qgis/"
+weight = 90
+parent = "servizi-corsi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-display"
+
+[[languages.it.menu.main]]
+name = "Corsi QField"
+url = "category/corsi/corsi-qfield/"
+weight = 100
+parent = "servizi-corsi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.it.menu.main]]
+name = "Corsi INTERLIS & Model Baker"
+url = "category/corsi/corsi-interlis-model-baker/"
+weight = 110
+parent = "servizi-corsi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-diagram-3"
+
+[[languages.it.menu.main]]
+name = "corsi PostGIS"
+url = "category/corsi/corsi-postgis/"
+weight = 120
+parent = "servizi-corsi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-database"
+
+[[languages.it.menu.main]]
+name = "Corsi PyQGIS"
+url = "category/corsi/corsi-pyqgis/"
+weight = 130
+parent = "servizi-corsi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-file-earmark-code"
+
+[[languages.it.menu.main]]
+identifier = "noi"
+name = "Noi"
+url = "#team"
+weight = 30
+
+[[languages.it.menu.main]]
+name = "Team"
+url = "#team"
+weight = 10
+parent = "noi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-people"
+
+[[languages.it.menu.main]]
+name = "Jobs"
+url = "jobs/"
+weight = 20
+parent = "noi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-rocket"
+
+[[languages.it.menu.main]]
+name = "I nostri valori"
+url = "i-nostri-valori/"
+weight = 30
+parent = "noi"
+
+[languages.it.menu.main.params]
+icon = "bi bi-heart"
+
+[[languages.it.menu.main]]
+identifier = "qfield"
+name = "QField"
+url = "https://qfield.org/"
+weight = 40
+
+[[languages.it.menu.main]]
+name = "qfield.org"
+url = "https://qfield.org/"
+weight = 10
+parent = "qfield"
+
+[languages.it.menu.main.params]
+icon = "bi bi-phone"
+
+[[languages.it.menu.main]]
+name = "QFieldCloud"
+url = "https://qfield.cloud/"
+weight = 20
+parent = "qfield"
+
+[languages.it.menu.main.params]
+icon = "bi bi-cloud"
+
+[[languages.it.menu.main]]
+name = "Pacchetti di avvio a QField"
+url = "qfield-training/"
+weight = 30
+parent = "qfield"
+
+[languages.it.menu.main.params]
+icon = "bi bi-mortarboard"
+
+[[languages.it.menu.main]]
+name = "Novità"
+url = "category/qfield-it/highlights/"
+weight = 40
+parent = "qfield"
+
+[languages.it.menu.main.params]
+icon = "bi bi-star-fill"
+
+[[languages.it.menu.main]]
+name = "Contatto"
+url = "/#contact"
+weight = 50
+
+[[languages.it.menu.main]]
+name = "Blog"
+url = "blog/"
+weight = 60

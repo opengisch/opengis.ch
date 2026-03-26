@@ -33,14 +33,14 @@ In this practical workshop, _Michael_ guided participants through using **qgis-j
 * * *
 ### 🤝 At the Booth
 Our QField booth was buzzing with activity all week – from [plugin](<https://github.com/topics/qfield-plugin>) demos and project showcases to deep dives into [QFieldCloud](<https://qfield.cloud/>) and field mapping workflows. We had great conversations, received valuable feedback, and met many enthusiastic users.
-![](./20250326_13374615bf.jpg)
+![Busy OPENGIS.ch QField booth at FOSSGIS 2025](./20250326_13374615bf.jpg)
 * * *
 ### 💚 Supporting Open Source
 We were proud to be **Platinum Sponsors** of FOSSGIS 2025. Supporting open-source events like this is essential for fostering innovation, collaboration, and community-driven growth in the GIS world.
-![](./20250326_10031415bf.jpg)
+![OPENGIS.ch platinum sponsor presence at FOSSGIS 2025](./20250326_10031415bf.jpg)
 * * *
 ### 👋 Looking Ahead
 **Thank you** to the organisers, speakers, and everyone who joined us in Münster. We left the event full of ideas, motivation, and appreciation for this community – and we’re already looking forward to the next FOSSGIS!
-![](./20250326_0907491179.jpg)
+![Conference scene from FOSSGIS 2025 in Muenster](./20250326_0907491179.jpg)
 #QField #QFieldCloud #FOSSGIS2025 #OpenSourceGIS #QGIS #SupportOpenSource
 ### _Related_

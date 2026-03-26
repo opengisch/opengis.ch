@@ -13,7 +13,7 @@ In the canton of Schaffhausen, there are over 100 downloads per month and it’s
 ## Optimize the process
 For the canton of Schaffhausen, the goal was to find a solution with existing components of the new SDI, completely based on machine-to-machine communication and to make the turnaround time for the customer as fast as possible. As soon as they realized QGIS server is also able to deliver DXF, this seemed to be the best approach to fulfil their needs concerning the download of GEOBAU-DXF. And, with the help of OPENGIS.ch, it was a full success.
 In the cantonal infrastructure, the data is available in a Postgres database, which is regularly filled through an ETL workflow. On top of this database, the canton created a QGIS project with symbology, labelling and layers that reflect the GEOBAU-DXF standard.
-![](./image89e3.png)
+![QGIS project prepared for GEOBAU-DXF export on QGIS Server](./image89e3.png)
 With this project published on a QGIS server, it was quickly possible to generate a DXF file, but some improvements were still required in QGIS 3.10.
   - Label alignment was not preserved
   - Altitudes (Z values) of coordinates were not properly exported
@@ -25,6 +25,6 @@ The Canton Shaffausen already had a [support and maintenance](</support-qgis/ind
 As a side effect, the DXF code has been cleaned up. This is now in a much more solid and modular state (it would, for example, be straightforward to expose it as processing algorithm now). Another nice improvement was that QGIS WMS server is now able to handle multiple layers with the same name, merging them to a single layer. This can be interesting if you have to expose the same layer multiple times with points, lines and polygons.
 Meanwhile in Schaffhausen, the service is running in production and architects can happily obtain DXF-GEOBAU files by choosing the area of interest on the web map and download the file in no time.
 To try it out, head over to the [geoportal of the canton of Schaffhausen](<https://map.geo.sh.ch/>), click the three-dots menu and choose GEOBAU-DXF.
-![](./image-305fe.png)
+![Geoportal menu option for downloading a GEOBAU-DXF file](./image-305fe.png)
 Or directly use the following download sample link to generate a GEOBAU-DXF file: [https://wfs.geo.sh.ch/dxfgeobau?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=dxfgeobau&STYLES=&CRS=EPSG%3A2056&BBOX=2690035,1283484,2690299,1283694&WIDTH=1042&HEIGHT=811&FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:500;NO_MTEXT:TEXT&FILE_NAME=geobau.dxf&FORMAT=application/dxf](<https://wfs.geo.sh.ch/dxfgeobau?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=dxfgeobau&STYLES=&CRS=EPSG%3A2056&BBOX=2690035,1283484,2690299,1283694&WIDTH=1042&HEIGHT=811&FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:500;NO_MTEXT:TEXT&FILE_NAME=geobau.dxf&FORMAT=application/dxf>)
 ### _Related_

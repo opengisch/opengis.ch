@@ -3,9 +3,9 @@
   
   Usage: {{ partial "assistance/service-card.html" (dict "service" . "context" $) }}
   
-  Expects:
-  - service: service object with title, description, icon, cta_text, cta_url, etc.
-  - context: page context for accessing site variables
+  Parameters:
+    - "service" map, required: service payload with fields like `title`, `description`, `icon`, `inline_link`, `cta_text`, `cta_url`, and `cta_external`
+    - "context" page, optional: parent page context when the caller needs to pass through outer scope
 */}}
 
 {{- $service := .service -}}

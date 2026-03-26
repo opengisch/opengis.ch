@@ -13,15 +13,15 @@ Enough of the highlevel talking, let’s see what has been done.
 Do you recall Geography lesson 101, Toblers first law? _Everything is related to everything else. But near things are more related than distant things._
 Very often there are similar objects nearby which share a property, tree species tend to group, human created objects like street light types or street paint markings tend to be of the same type at the same location.
 With QField 1.6 it is now much easier to select a couple of features and change an attribute with very few taps. Identify a feature, long press an identify results, select more features and click the edit attributes button.
-![](./edit_00eb45.png)
-![](./selection_00-1eb45.png)
+![QField multi-edit workflow changing attributes on several selected features](./edit_00eb45.png)
+![QField identify results with multiple selected nearby features](./selection_00-1eb45.png)
 ## Stylus support
 Sometimes it is just too cold to be working with fingers (although of course you can get capacitive gloves too). Or you just prefer to be working with a pen. QField 1.6 comes with support for stylus pens. If your device ships with one, give it a try.
 ## Lock geometries
 For some scenarios, especially in asset management, you only need to change attributes of existing objects and never add new features, delete features or change geometries. This can be configured through QFieldSync and set in the layer properties.
 ## Image name configuration
 Did you ever want to have the file names of your pictures to match the feature id, the layer name or any free text? The expression based configuration in QFieldSync offers now complete freedom in naming your images.
-![](./blog_imagepath7e40.png)
+![QFieldSync expression-based image file naming configuration](./blog_imagepath7e40.png)
 ## Legend and UX and legacy code
 Didn’t expect to read UX and legacy code in one single title?
 QML is the technology on which the QField user interface is built. QML ships a lot of user interface elements in a library called « Quick Controls ». A long time ago already it received an update from version 1 to version 2. Up to recently we still have been using some elements from version 1, which had an effect on high resolution displays not being able to properly display everything. To workaround that we introduced a lot of band aids, to improve the situation. We are very happy, that by migrating the legend and few other remaining elements to Quick Controls 2 in version 1.6, we have been able to completely drop this code.

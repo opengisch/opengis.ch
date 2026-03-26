@@ -5,7 +5,7 @@ slug: "prise-en-charge-de-wmts-dans-le-plugin-de-localisation-suisse-de-qgis"
 url: "/fr/2023/06/20/prise-en-charge-de-wmts-dans-le-plugin-de-localisation-suisse-de-qgis/"
 source: "www.opengis.ch/fr/2023/06/20/prise-en-charge-de-wmts-dans-le-plugin-de-localisation-suisse-de-qgis/index.html"
 ---
-![](./unnamede29a.png)
+![QGIS Swiss Locator plugin showing WMTS background layer support](./unnamede29a.png)
 Le plugin QGIS Swiss Locator facilite la vie de nombreux utilisateurs en Suisse en rendant accessibles les nombreuses géodonnées de swisstopo et opendata.swiss. Cela inclut un large éventail de couches de données, mais également des informations sur les objets et une recherche de noms de lieux.
 Grâce à un projet financé par le groupe d’utilisateurs suisse, OPENGIS.ch a pu ajouter des fonctionnalités supplémentaires à son plugin. Cette fois avec l’intégration de WMTS comme source de données. Mais quelle est la différence entre WMS et WMTS ?
 Tout d’abord, les similitudes : les deux protocoles – WMS et WMTS – conviennent au transfert d’images cartographiques d’un serveur vers un client. Cela signifie que ce ne sont pas des données brutes mais bien des données raster qui sont transmises qui conviennent donc pour des présentations dans le navigateur, dans le SIG de bureau ou pour une exportation PDF.

@@ -36,13 +36,13 @@ Ebenso wird aber auch davon ausgegangen, dass das die Datenbankstruktur in der S
 Erstellen wir nun ein Schema für das Übersetzungsmodell `PlansDAffectation_V1_2` mit dem Model Baker, wird im Hintergrund der Parameter `--createNlsTabs` dem ili2db übergeben.
 > Technisch gesehen heisst das, dass ili2db eine Mapping-Tabelle erstellt und sich Model Baker die übersetzten Werte daraus lesen kann.
 Beim erstellen des QGIS Projektes kannst du nun auswählen, ob du das GUI auf Deutsch oder Französisch haben möchtest.
-![](./image15bf.jpg)
+![Model Baker project-generation dialog offering the QGIS GUI language for a translated INTERLIS model](./image15bf.jpg)
 Et voilà!
-![](./image-15df2.jpg)
+![Generated QGIS project with translated French layer and field names from the PlansDAffectation model](./image-15df2.jpg)
 Wenn du nun glücklich bist, kannst du eigentlich auch aufhören mit lesen. Doch vielleicht möchtest du ja noch mehr wissen…
 ### Übersetzung der Datenbankstruktur
 [](<https://gist.github.com/signedav/4d7105fd084cec818f3771e236c15d0b#beides>)Denn es könnte natürlich auch sein, dass du auch die Datenbankstruktur übersetzt haben möchtest. Das ist zwar (noch) nicht in Model Baker vollintegriert, aber du kannst es erreichen indem du den Parameter manuell setzst.
-![](./image-210df.jpg)
+![Model Baker import parameter field using nameLang to translate the database structure](./image-210df.jpg)
 Mit dem ili2db Parameter `--nameLang fr` kannst du beim Import des `PlansDAffectation_V1_2` erreichen, dass die Datenbankstruktur auf französisch ist. Die Übersetzung des GUIs steht dir nach wie vor in Französisch oder Deutsch offen.
 ### Und was steht im XTF?[](<https://gist.github.com/signedav/4d7105fd084cec818f3771e236c15d0b#und-was-steht-im-xtf>)
 Die Transferdaten könnten ebenfalls in der übersetzten Sprache sein. Sie können problemlos auch in eine Datenbankschema importiert werden, das in der Originalsprache steht. Und auch umgekehrt: Eine Transferdatei in Originalsprache kann auch in eine Datenbankschema importiert werden, dessen Struktur übersetzt ist.
@@ -57,7 +57,7 @@ Die Transferdaten könnten ebenfalls in der übersetzten Sprache sein. Sie könn
     
 Standardmässig werden die Daten immer in Originalsprache exportiert. Das heisst bei der `Nutzungsplanung_V1_2` findest du die Elemente im XTF auf Deutsch vor.
 Es wäre aber auch möglich in der Übersetzung zu Exportieren. Egal in welcher Sprache das Schema oder das QGIS Projekt erstellt wurde. Du musst beim Export nur das Übersetzungsmodell angeben: `--exportModels PlansDAffectation_V1_2`
-![](./image-3a5ee.jpg)
+![Export dialog specifying the translated INTERLIS model for XTF export](./image-3a5ee.jpg)
 Die Übersetzungsmodelle stehen in der Auswahl beim Export noch nicht zur Verfügung. Aber auch das wäre etwas, dass bei Bedarf in Model Baker Sinn machen könnte.
 ## Also dann
 Bien divertiment / Buon divertimento / Amuse-toi bien / Viel Spass!

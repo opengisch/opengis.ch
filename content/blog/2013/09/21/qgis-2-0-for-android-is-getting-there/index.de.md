@@ -11,7 +11,7 @@ There are two known issues that I’m still working on (beside python support):
 – There is no styling UI, but if you load an already styled project all works nice.  
 – When digitizing, don’t use the enter button in the android keyboard to confirm the attributes form but just close the keyboard and use QGIS ok button.  
 So, enjoy it, let me know how it goes, remember it’s alpha and maybe [buy me a glass of wine](<https://mobile.paypal.com/ch/cgi-bin/webscr?cmd=_express-checkout-mobile&useraction=commit&token=EC-19J240533K830045G#m>) 🙂  
-[![image](./wpid-Screenshot_2013-09-20-14-30-156451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/09/wpid-Screenshot_2013-09-20-14-30-15eb45.jpg?ssl=1>)  
-[![image](./wpid-Screenshot_2013-09-19-01-19-316451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/09/wpid-Screenshot_2013-09-19-01-19-31eb45.jpg?ssl=1>)  
-[![image](./wpid-Screenshot_2013-09-17-23-31-396451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/09/wpid-Screenshot_2013-09-17-23-31-39eb45.jpg?ssl=1>)
+[![QGIS for Android 2.0 map view running on an early mobile device nightly build](./wpid-Screenshot_2013-09-20-14-30-156451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/09/wpid-Screenshot_2013-09-20-14-30-15eb45.jpg?ssl=1>)  
+[![QGIS for Android 2.0 attribute or layer interface from the early nightly build](./wpid-Screenshot_2013-09-19-01-19-316451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/09/wpid-Screenshot_2013-09-19-01-19-31eb45.jpg?ssl=1>)  
+[![QGIS for Android 2.0 project view showing core functionality from the nightly release](./wpid-Screenshot_2013-09-17-23-31-396451.jpg)](</i0.wp.com/www.opengis.ch/wp-content/uploads/2013/09/wpid-Screenshot_2013-09-17-23-31-39eb45.jpg?ssl=1>)
 ### _Related_

@@ -9,7 +9,7 @@ source: "www.opengis.ch/fr/2020/05/07/marco-becomes-qgis-org-chair/index.html"
 > Marco Bernasocchi · QGIS.org Chair 
 OPENGIS.ch has always been dedicated to sustaining QGIS’ [technological](</qgis-sustainability-initiative/index.html>) and [economical](<https://qgis.org/en/site/about/sustaining_members.html>) well-being, supporting it with endless hours of internally funded QA, infrastructure works and developments.
 Today we are very proud to announce that our commitment has grown even more as one of our founders and CEO Marco Bernasocchi was elected Chair of the QGIS.org association.
-![](./casual_marco_500px-300x300-1fe95.jpg)
+![Portrait of Marco Bernasocchi after becoming QGIS.org chair](./casual_marco_500px-300x300-1fe95.jpg)
 With over 15 years of involvement with QGIS (he started working with QGIS 0.6) and two years serving as vice-chair, Marco will serve for the next two years as Chairperson of the QGIS.org association.
 Understanding the importance of the role trusted him, Marco would like to thank the QGIS community for the trust and appreciation. Marco is looking forward to intensifying work with the PSC and the fantastic QGIS community to push QGIS even further.
 We wish Marco and the rest of the elected PSC two very successful years full of QGIS awesomeness.

@@ -1,3 +1,23 @@
+{{/*
+  Page Card Image Partial
+
+  Usage:
+    partial "page-card-image.html" (dict "page" .)
+
+  Parameters:
+    - "page" page, required: the Hugo page whose card image should be resolved
+
+  Returns:
+    - dict with "resource" for a matched page resource image when available
+    - dict with "url" for a resolved fallback image URL when no resource was found
+
+  Resolution order:
+    1. `cover.image`
+    2. `image`
+    3. `images` front matter / matching page resources
+    4. first bundled image resource
+    5. first raw-content image reference
+*/}}
 {{- $page := .page -}}
 {{- $resource := false -}}
 {{- $url := "" -}}

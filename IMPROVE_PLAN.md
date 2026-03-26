@@ -3,12 +3,15 @@
 > Based on comprehensive analysis completed on March 13, 2026  
 > See [HUGO_BOOTSTRAP_ANALYSIS.md](HUGO_BOOTSTRAP_ANALYSIS.md) for detailed findings
 
+Status last synced with branch state: March 25, 2026.
+
 ## Progress Overview
 
-- **Status:** 0/17 items completed
-- **High Priority:** 0/3 completed
-- **Medium Priority:** 0/6 completed  
-- **Low Priority:** 0/8 completed
+- **Status:** 17/21 items completed
+- **High Priority:** 3/3 completed
+- **Medium Priority:** 4/6 completed
+- **Low Priority:** 6/8 completed
+- **Optional Enhancements:** 4/4 completed
 
 ---
 
@@ -16,36 +19,36 @@
 
 ### Performance & Optimization
 
-- [ ] **Enable PostCSS with Autoprefixer**
+- [x] **Enable PostCSS with Autoprefixer**
   - Location: `themes/qfield-theme-v3/layouts/partials/head/stylesheet.html`
   - Action: Uncomment and configure PostCSS options
   - Expected Impact: Better browser compatibility, automated vendor prefixing
   - Effort: Low (1-2 hours)
 
-- [ ] **Optimize Bootstrap Bundle (CSS)**
+- [x] **Optimize Bootstrap Bundle (CSS)**
   - Location: `themes/qfield-theme-v3/assets/sass/main.scss`
   - Action: Import only needed Bootstrap components instead of full bundle
   - Expected Impact: 30-50% reduction in CSS bundle size
   - Effort: Medium (3-4 hours)
   - Components to evaluate:
-    - [ ] Functions (required)
-    - [ ] Variables (required)
-    - [ ] Mixins (required)
-    - [ ] Utilities (required)
-    - [ ] Root (required)
-    - [ ] Reboot (required)
-    - [ ] Grid system (required)
-    - [ ] Buttons (required)
-    - [ ] Navbar (required)
-    - [ ] Dropdown (required)
-    - [ ] Cards (required)
-    - [ ] Alerts (evaluate if needed)
-    - [ ] Carousel (evaluate if needed)
-    - [ ] Other components (audit usage)
+    - [x] Functions (required)
+    - [x] Variables (required)
+    - [x] Mixins (required)
+    - [x] Utilities (required)
+    - [x] Root (required)
+    - [x] Reboot (required)
+    - [x] Grid system (required)
+    - [x] Buttons (required)
+    - [x] Navbar (required)
+    - [x] Dropdown (required)
+    - [x] Cards (required)
+    - [x] Alerts (evaluate if needed)
+    - [x] Carousel (evaluate if needed)
+    - [x] Other components (audit usage)
 
 ### Accessibility
 
-- [ ] **Add Skip Navigation Link**
+- [x] **Add Skip Navigation Link**
   - Location: `themes/qfield-theme-v3/layouts/_default/baseof.html`
   - Action: Add skip link before header for keyboard users
   - Expected Impact: Critical accessibility improvement
@@ -60,13 +63,13 @@
 
 ### Performance
 
-- [ ] **Improve Font Loading Strategy**
+- [x] **Improve Font Loading Strategy**
   - Location: `assets/sass/styles.scss`
   - Current: Google Fonts loaded via CSS @import
   - Actions:
-    - [ ] Add preconnect links to `<head>`
+    - [x] Add preconnect links to `<head>`
     - [ ] Consider self-hosting fonts for better control
-    - [ ] Use font-display: swap for better perceived performance
+    - [x] Use font-display: swap for better perceived performance
   - Expected Impact: Improved LCP (Largest Contentful Paint)
   - Effort: Medium (2-3 hours)
 
@@ -76,7 +79,7 @@
   - Expected Impact: Faster FCP (First Contentful Paint)
   - Effort: Medium (4-6 hours)
 
-- [ ] **Optimize Bootstrap JavaScript Bundle**
+- [x] **Optimize Bootstrap JavaScript Bundle**
   - Location: `themes/qfield-theme-v3/assets/js/`
   - Action: Import only needed Bootstrap JS modules
   - Expected Impact: Reduced JavaScript bundle size
@@ -94,7 +97,7 @@
   - Expected Impact: Enhanced XSS protection
   - Effort: Medium (3-4 hours)
 
-- [ ] **Add SRI Hashes for Font Awesome**
+- [x] **Add SRI Hashes for Font Awesome**
   - Location: `themes/qfield-theme-v3/layouts/partials/head/stylesheet.html`
   - Current: Loading from static folder without integrity hashes
   - Action: Add fingerprinting and integrity attributes
@@ -103,12 +106,13 @@
 
 ### SEO & Content
 
-- [ ] **Audit All Images for Alt Text**
+- [x] **Audit All Images for Alt Text**
   - Action: Review all images across the site
-  - Tools: Use automated accessibility scanner
+  - Tools: Use the rendered-site audit in `scripts/image_alt_audit.py`
   - Expected Impact: Better SEO and accessibility
   - Effort: High (depends on image count)
-  - Deliverable: Create spreadsheet of images needing alt text
+  - Deliverable: `reports/image_alt_audit_report.csv`
+  - Current Baseline (March 25, 2026): `0` review findings remain (`0` empty-alt reviews, `0` generic-alt reviews). Keep the audit script and reports as an ongoing regression check for new or translated content.
 
 ---
 
@@ -116,7 +120,7 @@
 
 ### Code Quality & Maintainability
 
-- [ ] **Add Partial Documentation**
+- [x] **Add Partial Documentation**
   - Location: All files in `themes/qfield-theme-v3/layouts/partials/`
   - Action: Add JSDoc-style comments explaining parameters and usage
   - Expected Impact: Better maintainability and team onboarding
@@ -145,20 +149,20 @@
   - Expected Impact: Smaller, more optimized JavaScript
   - Effort: High (6-8 hours)
 
-- [ ] **Remove Console Logs in Production**
+- [x] **Remove Console Logs in Production**
   - Location: `themes/qfield-theme-v3/assets/js/main.js`
   - Action: Strip console.log statements in production build
   - Expected Impact: Cleaner production code, slightly smaller file size
   - Effort: Low (1 hour if using build process)
 
-- [ ] **Convert Configuration to TOML**
-  - Location: `config/_default/hugo.yaml` and environment configs
+- [x] **Convert Configuration to TOML**
+  - Location: `config/_default/hugo.toml` and environment configs
   - Action: Convert YAML files to TOML format
   - Expected Impact: Minor performance improvement in Hugo
   - Effort: Low (1-2 hours)
   - Note: This is subjective; YAML is also fine
 
-- [ ] **Enhance Image Processing with Hugo's Page Resources**
+- [x] **Enhance Image Processing with Hugo's Page Resources**
   - Location: `themes/qfield-theme-v3/layouts/partials/image.html`
   - Action: Refactor to use `.Page.Resources` for better integration
   - Expected Impact: Better integration with Hugo's asset pipeline
@@ -166,22 +170,22 @@
 
 ### Testing & Quality Assurance
 
-- [ ] **Integrate Tests into CI/CD Pipeline**
+- [x] **Integrate Tests into CI/CD Pipeline**
   - Location: Create `.github/workflows/` or similar
   - Action: Set up automated testing on pull requests
   - Tests to run:
-    - [ ] Python tests (existing test files)
-    - [ ] HTML validation
-    - [ ] Accessibility audit (axe-core, pa11y)
-    - [ ] Lighthouse CI
+    - [x] Python tests (existing test files)
+    - [x] HTML validation
+    - [x] Accessibility audit (axe-core, pa11y)
+    - [x] Lighthouse CI
   - Expected Impact: Catch regressions early
   - Effort: Medium (4-6 hours)
 
-- [ ] **Set Up Automated Accessibility Testing**
+- [x] **Set Up Automated Accessibility Testing**
   - Tools to consider:
-    - [ ] axe-core (automated)
-    - [ ] pa11y (automated)
-    - [ ] Lighthouse (automated)
+    - [x] axe-core (automated)
+    - [x] pa11y (automated)
+    - [x] Lighthouse (automated)
     - [ ] Manual WCAG 2.1 AA audit (comprehensive)
   - Expected Impact: Ensure ongoing accessibility compliance
   - Effort: Medium (3-4 hours setup + ongoing)
@@ -201,19 +205,19 @@
 
 ### Nice to Have
 
-- [ ] **Implement Service Worker for Offline Support**
+- [x] **Implement Service Worker for Offline Support**
   - Action: Add PWA capabilities
   - Effort: High (8-10 hours)
 
-- [ ] **Add WebP/AVIF Image Format Support**
+- [x] **Add WebP/AVIF Image Format Support**
   - Action: Generate modern image formats with fallbacks
   - Effort: Medium (2-3 hours)
 
-- [ ] **Implement Resource Hints**
+- [x] **Implement Resource Hints**
   - Action: Add dns-prefetch, preconnect, preload where appropriate
   - Effort: Low (1-2 hours)
 
-- [ ] **Set Up Automated Dependency Updates**
+- [x] **Set Up Automated Dependency Updates**
   - Tool: Dependabot or Renovate
   - Effort: Low (1 hour)
 
@@ -221,7 +225,23 @@
 
 ## Completed Items ✅
 
-_Items will be moved here as they are completed_
+- Enable PostCSS with Autoprefixer
+- Optimize Bootstrap Bundle (CSS)
+- Add Skip Navigation Link
+- Improve Font Loading Strategy
+- Optimize Bootstrap JavaScript Bundle
+- Add SRI Hashes for Font Awesome
+- Add Partial Documentation
+- Remove Console Logs in Production
+- Convert Configuration to TOML
+- Enhance Image Processing with Hugo's Page Resources
+- Audit All Images for Alt Text
+- Add WebP/AVIF Image Format Support
+- Implement Resource Hints
+- Set Up Automated Dependency Updates
+- Implement Service Worker for Offline Support
+- Integrate Tests into CI/CD Pipeline
+- Set Up Automated Accessibility Testing
 
 ---
 
@@ -231,6 +251,7 @@ _Items will be moved here as they are completed_
 - **Testing Required:** All changes should be tested locally before deployment
 - **Dark Mode:** Ensure all improvements maintain dark mode functionality
 - **Multilingual:** All changes must work across all 4 languages (en, de, fr, it)
+- **Mirror Cleanup:** `scripts/wordpress_mirror_audit.py` now reports which mirrored static roots are still referenced from source content before any further pruning of `static/i0.wp.com`, `static/wp-content`, `static/slides.opengis.ch`, or `static/usabilityhub.opengis.ch`.
 
 ---
 
@@ -254,5 +275,5 @@ _Items will be moved here as they are completed_
 
 ---
 
-**Last Updated:** March 13, 2026  
-**Status:** Ready for implementation
+**Last Updated:** March 25, 2026  
+**Status:** In progress

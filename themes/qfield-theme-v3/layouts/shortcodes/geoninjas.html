@@ -2,7 +2,7 @@
 <section class="team-grid" id="{{ .section_id | default `team` }}">
   <div class="team-grid__items">
     {{ range $index, $card := .cards }}
-      <article class="team-card" data-reveal="fade-left" data-reveal-delay="{{ mul $index 70 }}">
+      <article class="team-card" data-reveal="fade-left" data-reveal-delay="{{ mul $index 36 }}">
         <div class="team-card__media">
           <img src="{{ $card.image | safeURL }}" alt="{{ $card.alt }}">
         </div>

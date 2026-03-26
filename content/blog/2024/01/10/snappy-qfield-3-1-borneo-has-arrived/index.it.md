@@ -7,7 +7,7 @@ source: "www.opengis.ch/it/2024/01/10/snappy-qfield-3-1-borneo-has-arrived/index
 ---
 The launch of QField 3.0 was a big deal, but now we’re back to focusing on smaller, more frequent updates. Don’t let the shorter change log for 3.1 trick you – there are lots of cool new features in this update!
 ## Main highlights
-![](./287987844-8d7c6540-c32c-4d62-bf6e-1636a011567f2334.png)
+![QField 3.1 digitizing drawer and snapping to common angles interface](./287987844-8d7c6540-c32c-4d62-bf6e-1636a011567f2334.png)
 One of the main improvements in this release is the brand-new functionality to enable **snapping to common angles** while digitizing. When enabled, the coordinate cursor will snap to configured angles alongside a visual guideline. This comes in handy when adding new geometries while surveying features with regular angles (e.g. buildings, parking lots, etc.). As QField gets more digitizing functionalities, we’ve taken the time to implement a nifty UI that collapses digitizing toggle buttons into a drawer,**leaving extra space for the map canvas** to shine through.
 In addition, the vertex editor – one of QField’s most advanced geometry tools – received tons of love during this development cycle, focusing on improving its usability. Changes worth mentioning include:
   - A **new undo button allows users to revert individual vertex manipulations** in case of mistaken adjustment, which can save you from having to cancel a large set of ongoing manipulations;

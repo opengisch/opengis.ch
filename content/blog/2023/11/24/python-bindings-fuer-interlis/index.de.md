@@ -48,7 +48,7 @@ Nach eingehender Auseinandersetzung mit dem Thema kann der Weg via ili2c XSD aus
 Die Entwicklung einer auf IOX/ili2c basierten Java-Komponente um damit Python Code und damit die erwünschten Bindings erstellen zu können, erscheint möglich aber nicht erstrebenswert. 
 Die Entwicklung eines eigenen Compilers sehen wir als kritisch. Es bestehen bereits 2 Projekte und wir sehen nicht ein, warum ein Werkzeug mit identischem Funktionsumfang und Lösungsansatz (ANTLR als Parser/Lexer) nur in einer anderen Programmiersprache einen Mehrwert bieten sollte.
 Den grössten Mehrwert sehen wir bei der Nutzung des Metamodells. Einem XML, welches eigens zu dem angestrebten Zwecke geschaffen wurde. So verfolgen wir bisher den Ansatz, über ili2c (oder alternativem Compiler) das Metamodell (IMD16) zu erstellen und daraus die Python-Bindings zu erzeugen. Die logische Konsequenz ist dann aus diesen Bindings auch generisch Reader abzuleiten welche in der Lage sind die zum Modell gehörenden XTF zu lesen.
-![image](https://i0.wp.com/user-images.githubusercontent.com/28384354/285478925-d75356fc-ce90-4d64-b607-f06e591d061a.png?w=750&ssl=1)
+![Diagram showing a workflow from INTERLIS models to generated Python bindings and readers](https://i0.wp.com/user-images.githubusercontent.com/28384354/285478925-d75356fc-ce90-4d64-b607-f06e591d061a.png?w=750&ssl=1)
 ## Vorgehen
 Erarbeiten eines Proof of Concepts, um die technologischen Grundlageentscheide zu validieren.
 ### Ziele des PoCs

@@ -7,7 +7,7 @@ source: "www.opengis.ch/2023/01/26/qfield-2-6-perfecting-high-accuracy-positioni
 ---
 It’s only been a few weeks into the new year, but we’ve got great news for you: a brand new QField 2.6 “Geeky Gecko ?” has been released with a focus on positioning improvements, including Bluetooth support for Windows. And with that, we are delighted to remove the ‘beta’ status from QField for Windows.
 ## New positioning features
-![](./26_coverc72c.png)
+![QField 2.6 interface highlighting high-accuracy positioning improvements](./26_coverc72c.png)
 **Let’s open with a bang: QField 2.6 now supports NMEA streaming from external GNSS devices over TCP, UDP, and serial ports, in addition to preexisting Bluetooth connectivity.** This new functionality means that QField is now compatible with a much larger range of GNSS devices out there.
 These new receivers unlock NTRIP-driven centimetre accuracy for devices that use the Bluetooth connection to a manufacturer’s application to connect to NTRIP servers. In this scenario, QField could not initiate a Bluetooth connection since it was already taken. With the new TCP and UDP receivers – provided the manufacturer’s application offers NMEA streaming over either of those Internet protocols – QField can connect and consume high-accuracy positioning.
 The presence of a serial port receiver provides support for external GNSS devices using Bluetooth on Windows via the virtual serial port created by the operating system. The lack of Bluetooth support on Windows was a long-wanted enhancement from QField users on that platform and was the last blocker for the ‘beta’ status to go away.

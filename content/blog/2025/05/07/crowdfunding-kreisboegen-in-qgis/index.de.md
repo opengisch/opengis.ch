@@ -6,7 +6,7 @@ url: "/de/2025/05/07/crowdfunding-kreisboegen-in-qgis/"
 source: "www.opengis.ch/de/2025/05/07/crowdfunding-kreisboegen-in-qgis/index.html"
 ---
 **Warum sie wichtig sind und wie du helfen kannst**.
-![](./pb6001.png)
+![Diagram illustrating true circular arcs in GIS geometry](./pb6001.png)
 In der Welt der Geodatenverarbeitung sind **Kreisbögen** (engl. _circular arcs_) ein häufig übersehenes, aber enorm wichtiges Element. In **QGIS** , der führenden Open-Source-GIS-Anwendungen, sind sie bislang nur eingeschränkt unterstützt – und genau das wollen wir ändern.
 ## **Was sind Kreisbögen – und warum sind sie wichtig**
 Kreisbögen sind geometrische Elemente, die nicht aus geraden Liniensegmenten bestehen, sondern echte **Rundungen** darstellen. Sie sind definiert über drei Punkte: Anfangs- und Endpunkt sowie Scheitelpunkt (oder Zentrum des Kreises).
@@ -41,12 +41,12 @@ Im April haben wir dafür ein **Crowdfunding** gestartet. Unser Ziel:
   - und darauf aufbauend die Handhabung in QGIS massiv verbessern.  
 
 
-![](./pb-sol65b5.png)
+![Crowdfunding progress graphic for circular arc support in QGIS](./pb-sol65b5.png)
 * * *
 **Die gute Nachricht:** wir haben bereits die Hälfte der Finanzierung zusammen! Jetzt brauchen wir **deine Hilfe** , um den Durchbruch zu schaffen.
 Jede Unterstützung – ob finanziell, durch Teilen der Kampagne oder einfach durch Weitererzählen – bringt uns **einen Schritt näher** an ein besseres QGIS für alle.
 🔗 **Hier geht’s zum Crowdfunding** 👇
-[![](./arcs_crowdfunding_link-24d80.png)](</crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/index.html>)
+[![Crowdfunding call-to-action banner for better circular arc handling in QGIS](./arcs_crowdfunding_link-24d80.png)](</crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/index.html>)
 * * *
 ## **Zusammen können wir es schaffen**
 Die Open-Source-Welt lebt davon, dass Menschen zusammen an etwas Grossem arbeiten. Mit echter Unterstützung für Kreisbögen wird QGIS nicht nur präziser und schneller, sondern auch ein noch stärkeres Werkzeug für die Praxis.

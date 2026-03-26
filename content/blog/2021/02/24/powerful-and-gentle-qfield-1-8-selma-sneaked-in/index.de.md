@@ -10,11 +10,11 @@ This year started off hi-speed for us. There’s been already a lot of coding, d
 Let’s have a look.
 ## Freehand drawing
 This might be a feature that brings a lot of fun and professionalism to your work. The freehand digitizing mode allows the user to „draw“ lines and polygons with the stylus pen. The mode is available for adding line/polygon features as well as for the ring tool of the geometry editor.
-![](./freehand2aca.png)
+![QField freehand digitizing mode drawing a polygon directly on the map with a stylus](./freehand2aca.png)
 Together with the powerful options in the topological editing where you can snap to existing features and avoid overlaps, it’s very convenient to digitize complex shapes.
 ## Zoom in and out
 Speaking of fun. One day, a guy from the QGIS community asked us if we could implement the functionality to zoom in and zoom out like he is able to do with an app called Maps from a company named Google. I didn’t know what he meant, but he explained: Single finger double tap-and-hold zoom gesture (which allows you to zoom smoothly from anywhere on the screen). Wow! Didn’t know it before, but it’s super neat! So we made it available in QField as well.
-![](./zoom2-16b84.gif)
+![Animated single-finger double-tap-and-hold zoom gesture in QField](./zoom2-16b84.gif)
 If you are used to it, it’s quite easy. But for beginners it can be a bit difficult. So for people who are not that deft – and to keep the UX self-explanatory and simple – we also added two buttons + / – to zoom in and zoom out with just one finger. So now even a clumsy pirate with a hook instead of a hand can collect data with QField 🙂
 ## Powerful Relation Reference Widget
 Let’s be a little bit more serious and talk about how powerful the relation reference widget has become.
@@ -49,9 +49,9 @@ Also, keep an eye on the [@QFieldForQgis](<https://twitter.com/qfieldforqgis>) a
 ## We ♥ our Beta Testers
 The Beta Testers are our secret heroes. They report bugs and inconveniences before the normal users are bothered with them. Thanks to the Beta Testers QField is so stable. And at this point we would like to say: Thank you, test heroes!
 And what do the beta testers get in return? Well, they can be the very first to try out the great new features. This is exciting and fun. So don’t hesitate. Join the beta.
-![](./WhatsApp-Image-2021-02-21-at-21.54.31b0e1.jpg)
+![Google Play beta testing section for the QField app](./WhatsApp-Image-2021-02-21-at-21.54.31b0e1.jpg)
 In the Play Store you should find this section under the „QField for QGIS“ app listing. Enjoy the feature frenzy and report the problems at [qfield.org/issues](<https://qfield.org/issues>)
 ## And if you wondered…
 … why this release is called „Selma“. It’s of course because of the Mount Selma in Australia… And because it’s the name of my beloved cat. That’s her – Selma Eulenkopf – staring at me while I’m coding QField.
-![](./selm_officebd89.jpg)
+![Selma the cat watching from an office chair while QField is being coded](./selm_officebd89.jpg)
 ### _Related_

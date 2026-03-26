@@ -13,7 +13,7 @@ Weitere Informationen und die Anmeldung findest du auf unserer Kurs-Plattform:
 
 
 (Anmeldungslink ist ganz unten)
-![](./modelbaker_coursef4e5.png)
+![Poster for the 2024 QGIS Model Baker and INTERLIS courses](./modelbaker_coursef4e5.png)
 Wir freuen uns auf tolle und interessierte Teilnehmer:innen 🙋
 [](<https://emojipedia.org/person-raising-hand-light-skin-tone>)[](<https://emojipedia.org/person-raising-hand-medium-light-skin-tone>)[](<https://emojipedia.org/person-raising-hand-medium-skin-tone>)[](<https://emojipedia.org/person-raising-hand-medium-dark-skin-tone>)
 ### _Related_

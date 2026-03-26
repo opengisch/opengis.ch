@@ -15,11 +15,11 @@ If you like QField, now is the time to show some love and **[support our crowdfu
 ## New features
 This new release comes with exciting new features and also contains some first usability enhancements. More of that later.
 ### Value relation widget
-![](./value-relation873e.gif)
+![QField 1.2 value relation widget with multiple selectable values](./value-relation873e.gif)
 If you need to choose the type of a material of the manhole you are inspecting or to select the owner of the parcel which you are drawing, that’s when you want a **combo box with available values**. This has been possible in QField for a long time, but was hard to set up. Since this release it’s much easier thanks to the integration of value relation widgets.
 Not only do they make configuration easier, they also allow for a completely new functionality: managing **multiple selections**. This will offer a checkbox for every possible value from the list and you are free to save any combination of values.
 ### Authentication dialog for protected services
-![](./logine787.gif)
+![Authentication dialog for protected services in QField 1.2](./logine787.gif)
 Just as well as we love open source, we love open data. But not all data are meant for public and some deserve protection. Even more you don’t want to allow everyone to edit your data.
 QField will now **show an authentication dialog** , whenever one of your**WMS, WFS, WFS-T or Postgres layers** requires a login.
 ### Improved snapping support in expressions

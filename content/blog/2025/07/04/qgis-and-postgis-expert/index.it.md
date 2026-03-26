@@ -14,7 +14,7 @@ source: "www.opengis.ch/it/2025/07/04/qgis-and-postgis-expert/index.html"
 [OPENGIS.ch](</index.html>) ist ein engagiertes Team von GeoNinjas für Entwicklung und Beratung. Wir setzen auf massgeschneiderte Open-Source-Geodatenlösungen für Schweizer und internationale Kundschaft. Unsere Leidenschaft gilt offenen Technologien – wir entwickeln sie weiter, setzen sie wirkungsvoll ein und engagieren uns aktiv in der Open-Source-Community. Unser verteiltes, agiles Team lebt von Zusammenarbeit, Vielfalt und gegenseitigem Support.
 * * *
 ### Deine Rolle
-![](./ChatGPT-Image-Jul-4-2025-09_22_43-PMfe95.jpg)
+![Illustration of a geospatial expert working with QGIS and PostGIS](./ChatGPT-Image-Jul-4-2025-09_22_43-PMfe95.jpg)
 Zur Verstärkung unseres Beratungsteams suchen wir eine erfahrene, motivierte Fachperson im Bereich GIS. Du unterstützt unsere Kundinnen und Kunden bei der Erstellung und Pflege von PostGIS-Datenbanken, QGIS-Projekten und QField-Einsätzen. Du arbeitest selbstständig, aber eingebettet in ein kollegiales und kundenorientiertes Umfeld. Wenn du fürs QGIS-Ökosystem brennst, möchten wir dich unbedingt kennenlernen!
 * * *
 ### Deine Aufgaben

@@ -30,5 +30,5 @@ Nyall Dawson (North Road) led through his [Youtube video](<https://www.youtube.c
 Finally Marco Bernasocchi closed the presentations with a collection of incredibly creative QGIS results including Xmas wishes, sports statistics and human facial topology
 ## Workshops
 After a tasty lunch including a delicious cheese selection and fruitful conversations the lucky subscribers where asked to take action themselves in the four afternoon workshops. Among other interesting topics the users could get hands on working with [QField](<https://qfield.org/>) and [QFieldCloud](<https://app.qfield.cloud/>) or could get started with QGIS Model Baker and data validation, all tought by the experts and developers of OPENGIS.ch. 
-![](./P6153916ef34.jpg)Learn ![](./P6153946ef34.jpg)Discuss ![](./P6153911ef34.jpg)Present ![](./P6153928ef34.jpg)MEET
+![Learn](./P6153916ef34.jpg) ![Discuss](./P6153946ef34.jpg) ![Present](./P6153911ef34.jpg) ![MEET](./P6153928ef34.jpg)
 ### _Related_

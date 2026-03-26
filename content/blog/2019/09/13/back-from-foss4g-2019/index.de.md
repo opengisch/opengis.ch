@@ -6,7 +6,7 @@ url: "/de/2019/09/13/back-from-foss4g-2019/"
 source: "www.opengis.ch/de/2019/09/13/back-from-foss4g-2019/index.html"
 ---
 It’s been almost 2 weeks since FOSS4G 2019 has crossed the finishing line. And it was a truly inspiring event with many participants from all cultures and interests.
-![](./370px-Logo_bucharest20197b06.png)
+![FOSS4G 2019 Bucharest conference logo](./370px-Logo_bucharest20197b06.png)
 We do not need to repeat that the local organizers did a great job. That we had an awesome night in a truly impressive parliament building. That there have been so many wonderful people with brilliant ideas.  
 And also that there were [too many good presentations in parallel](<https://talks.2019.foss4g.org/bucharest/schedule/>) to go and see them all live.
 So we will just repeat that thanks to a quiet but highly efficient group of people of the [CCC Video Operation Center](<https://c3voc.de/>) all talks were not only streamed live but are also available online now. For example ours which are listed below.
@@ -29,7 +29,7 @@ _Do you wonder if it’s worth going open source with your business? Here are al
 _Including open source components in GIS, environments is super trendy. If you want to migrate your GIS system to open source, here you have some questions to consider and get a number of lessons learnt for free._
 ## Sponsoring FOSS4G
 We have [supported FOSS4G 2019 as a silver sponsor](<https://2019.foss4g.org/sponsors-2/our-sponsors/>). For us, the whole FOSS4G stack and environment is the basic building block of what we work and live for every day. We couldn’t do what we do if there were not all the other people, organizations and projects out there who make the whole FOSS4G ecosystem what it is: _a possibility to build a future in which we benefit all from one another and collaboratively tackle the big challenges of our time_. And ultimately, the FOSS4G conference is the place where this vision takes shape.
-![](./20190830_185956a93d.jpg)
+![OPENGIS.ch team and community at FOSS4G 2019 in Bucharest](./20190830_185956a93d.jpg)
   
   
 

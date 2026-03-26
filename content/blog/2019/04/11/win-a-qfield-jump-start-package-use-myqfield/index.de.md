@@ -16,10 +16,10 @@ We are launching the [#**MyQField**](<https://twitter.com/hashtag/MyQField?src=h
   - The prize is a [half day jump-start package](</qfield-jump-start-packages/index.html>) worth 550€
 
 
-  - ![](./zombie-1024x768.jpg)Risk assessment
-  - ![](https://i0.wp.com/opengis.ch/wp-content/uploads/2019/04/20190409_193629-1024x768.jpg?resize=750%2C563&ssl=1)Location tracking
-  - ![](./gnss-1024x576.jpg)Cadastral surveying
-  - ![](https://i0.wp.com/opengis.ch/wp-content/uploads/2019/04/20190403_164731-1024x768.jpg?resize=750%2C563&ssl=1)Assets management
+  - ![Risk assessment](./zombie-1024x768.jpg)
+  - ![Location tracking](https://i0.wp.com/opengis.ch/wp-content/uploads/2019/04/20190409_193629-1024x768.jpg?resize=750%2C563&ssl=1)
+  - ![Cadastral surveying](./gnss-1024x576.jpg)
+  - ![Assets management](https://i0.wp.com/opengis.ch/wp-content/uploads/2019/04/20190403_164731-1024x768.jpg?resize=750%2C563&ssl=1)
 
 
 Fine boring prints: 
