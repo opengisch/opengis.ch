@@ -1,6 +1,7 @@
 ---
 title: "Consulting – OPENGIS.ch"
 source: "www.opengis.ch/training-consulting/index.html"
+layout: "training-consulting"
 aliases:
   - "/training-consulting/"
 ---
@@ -10,7 +11,6 @@ aliases:
 
 ### Geospatial Consulting
 
-![Geospatial consulting illustration](/images/geospatial_consulting.png)
 
   - Are you planning a new geodata infrastructure?
   - Would you like to improve your QGIS workflows?

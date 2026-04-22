@@ -1,6 +1,7 @@
 ---
 title: "PostGIS Courses - OPENGIS.ch"
 url: "/category/courses/postgis-courses/"
+layout: "course-calendar"
 aliases:
   - "/category/courses/postgis-courses/"
 source: "www.opengis.ch/category/courses/postgis-courses/index.html"

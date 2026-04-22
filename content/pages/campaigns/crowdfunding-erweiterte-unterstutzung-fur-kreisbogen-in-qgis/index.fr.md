@@ -3,9 +3,17 @@ title: "Crowdfunding: un soutien fiable pour les arcs de cercle dans QGIS – OP
 source: "www.opengis.ch/fr/crowdfunding-un-soutien-fiable-pour-les-arcs-de-cercle-dans-qgis/index.html"
 aliases:
   - "/fr/crowdfunding-un-soutien-fiable-pour-les-arcs-de-cercle-dans-qgis/"
+lead_image:
+  src: "/wp-content/uploads/2025/04/image87f2b.png"
+  alt: "Banner for the QGIS circular arc support crowdfunding campaign"
+embed:
+  wrapper_class: "page-inline-embed crowdfunding-progress-embed"
+  iframe_class: "page-inline-embed__iframe crowdfunding-progress-iframe"
+  url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQUZgZV6MYLKxjYwshhudga3VP-mIT_9sTyGfaNQ7PUcywszPXC9VmCIV9BOZGKEQ5QN1FEsSVsXNa/pubchart?oid=1555133790&format=interactive"
+  title: "Crowdfunding progress"
+  frameborder: "0"
+  scrolling: "no"
 ---
-
-![Banner for the QGIS circular arc support crowdfunding campaign](../../../i0.wp.com/www.opengis.ch/wp-content/uploads/2025/04/image87f2b.png?resize=750%2C360&ssl=1)
 #### La vision: un traitement optimal des jeux de données avec des arcs de cercle
 Les arcs de cercle sont un élément central dans le domaine de la géomatique. Une gestion précise et fiable de ces éléments est une condition essentielle pour travailler avec les données de la mensuration officielle.
 Une prise en charge complète des arcs de cercle dans le logiciel QGIS permettra d’exploiter cette application pour de nombreux nouveaux cas d’utilisation, tant pour la mise à jour des données de la mensuration officielle que pour le travail sur des jeux de données connexes, tels que la planification de l’utilisation du sol.

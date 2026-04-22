@@ -9,14 +9,15 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 class HeaderAccessibilityContractTests(unittest.TestCase):
     def test_header_template_uses_accessible_controls(self) -> None:
-        template = (REPO_ROOT / "themes/qfield-theme-v3/layouts/partials/header/header.html").read_text(encoding="utf-8")
-        dark_mode = (REPO_ROOT / "themes/qfield-theme-v3/assets/js/dark-mode.js").read_text(encoding="utf-8")
+        template = (REPO_ROOT / "layouts/partials/header/header.html").read_text(encoding="utf-8")
+        dark_mode = (REPO_ROOT / "themes/opengis-hugo-theme/assets/js/dark-mode.js").read_text(encoding="utf-8")
 
         self.assertIn('class="navbar-brand d-flex align-items-center"', template)
         self.assertIn('aria-label="{{ .Site.Title }} home"', template)
         self.assertIn('href="{{ .URL | relLangURL }}"{{ if $active }} aria-current="page"{{ end }}', template)
         self.assertIn('href="{{ .URL | relLangURL }}"{{ if $grandActive }} aria-current="page"{{ end }}', template)
         self.assertIn('href="{{ .URL | relLangURL }}"{{ if $childActive }} aria-current="page"{{ end }}', template)
+        self.assertIn('class="dropdown-submenu"', template)
         self.assertIn('class="nav-link dropdown-toggle btn btn-link"', template)
         self.assertIn('id="navbarLanguageDropdown"', template)
         self.assertIn('aria-label="Change language"', template)

@@ -1,0 +1,110 @@
+{{ define "main" }}
+
+{{ $raw := .RawContent }}
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $quoteLines := findRE `(?m)^>\s*(.+)$` $raw }}
+{{ $quoteText := "" }}
+{{ $quoteAuthor := "" }}
+{{ if gt (len $quoteLines) 0 }}
+  {{ $quoteText = trim (replaceRE `(?m)^>\s*` "" (index $quoteLines 0)) " " }}
+  {{ $quoteText = replace $quoteText "\n" " " }}
+{{ end }}
+{{ if gt (len $quoteLines) 1 }}
+  {{ $quoteAuthor = trim (replaceRE `(?m)^>\s*` "" (index $quoteLines 1)) " " }}
+  {{ $quoteAuthor = replace $quoteAuthor "\n" " " }}
+{{ end }}
+{{ $contentWithoutQuote := replaceRE `(?m)^>.*\n(^>.*\n)*` "" $raw }}
+{{ $ctaText := "" }}
+{{ $ctaLink := "" }}
+{{ $ctaPrompt := "" }}
+{{ $ctaMatches := findRE `(?ms)\n([^\n\[]+)\n\[(.+?)\]\(<([^>]+)>\)\s*$` $raw 1 }}
+{{ if gt (len $ctaMatches) 0 }}
+  {{ $ctaBlock := index $ctaMatches 0 }}
+  {{ $ctaPrompt = trim (replaceRE `(?ms)\n([^\n\[]+)\n\[(.+?)\]\(<([^>]+)>\)\s*$` "$1" $ctaBlock) " " }}
+  {{ $ctaText = trim (replaceRE `(?ms)\n([^\n\[]+)\n\[(.+?)\]\(<([^>]+)>\)\s*$` "$2" $ctaBlock) " " }}
+  {{ $ctaLink = trim (replaceRE `(?ms)\n([^\n\[]+)\n\[(.+?)\]\(<([^>]+)>\)\s*$` "$3" $ctaBlock) " " }}
+  {{ $ctaLink = replaceRE `^(\.\./)+index\.html#contact$` "/#contact" $ctaLink }}
+{{ end }}
+{{ if and $ctaText $ctaLink }}
+  {{ $contentWithoutQuote = trim (replaceRE `(?ms)\n[^\n\[]+\n\[[^\]]+\]\(<[^>]+>\)\s*$` "" $contentWithoutQuote) " \n\t" }}
+{{ end }}
+{{ $normalizedContent := printf "\n%s" $contentWithoutQuote }}
+{{ $cardSections := split $normalizedContent "\n### " }}
+{{ $iconPaths := slice
+  "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/postgis465b.png?resize=150%2C150&ssl=1"
+  "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/QField_Final465b.png?resize=150%2C150&ssl=1"
+  "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/qgis-icon150465b.png?resize=150%2C150&ssl=1"
+  "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/django-python-logo465b.png?resize=150%2C150&ssl=1"
+  "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/Interlis-1465b.png?resize=150%2C150&ssl=1"
+  "/i0.wp.com/www.opengis.ch/wp-content/uploads/2020/04/Moby-logo300465b.png?resize=150%2C150&ssl=1"
+}}
+
+<article class="custom-dev-page service-page">
+  <header class="custom-dev-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    {{ if $quoteText }}
+      <blockquote class="custom-dev-quote">
+        <p>{{ $quoteText }}</p>
+        {{ if $quoteAuthor }}<cite>{{ $quoteAuthor }}</cite>{{ end }}
+      </blockquote>
+    {{ end }}
+
+    {{ if gt (len $cardSections) 1 }}
+      <div class="row g-5 custom-dev-grid">
+        {{ range $idx, $section := $cardSections }}
+          {{ if gt $idx 0 }}
+            {{ $icon := "" }}
+            {{ if ge (len $iconPaths) $idx }}
+              {{ $icon = index $iconPaths (sub $idx 1) }}
+            {{ end }}
+            {{ $sectionBody := trim $section " \n\t" }}
+            {{ $sectionBody = replaceRE `(?m)^\*\s*\*\s*\*\s*$` "@@SEP@@" $sectionBody }}
+            {{ $parts := split $sectionBody "@@SEP@@" }}
+            {{ $head := "" }}
+            {{ $body := "" }}
+            {{ if gt (len $parts) 0 }}
+              {{ $head = index $parts 0 }}
+            {{ end }}
+            {{ if gt (len $parts) 1 }}
+              {{ $body = index $parts 1 }}
+            {{ end }}
+            {{ $title := trim (replaceRE `(?s)^([^\n]+).*` "$1" $head) " " }}
+            {{ $subtitle := trim (replaceRE `(?s).*?######\s*([^\n]+).*` "$1" $head) " " }}
+            {{ $intro := trim (replaceRE `(?s).*?######\s*[^\n]+\s*` "" $head) " \n\t" }}
+            {{ $body = trim $body " \n\t" }}
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="custom-dev-card">
+                {{ if $icon }}
+                  <img src="{{ $icon | safeURL }}" alt="{{ $title }}" class="custom-dev-card-icon" loading="lazy">
+                {{ end }}
+                <h2 class="custom-dev-card-title">{{ $title }}</h2>
+                <h3 class="custom-dev-card-subtitle">{{ $subtitle }}</h3>
+                {{ if $intro }}
+                  <div class="custom-dev-card-intro">{{ $intro | markdownify }}</div>
+                {{ end }}
+                <hr>
+                {{ if $body }}
+                  <div class="custom-dev-card-body">{{ $body | markdownify }}</div>
+                {{ end }}
+              </article>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ if and $ctaText $ctaLink }}
+      <div class="custom-dev-cta text-center">
+        <p>{{ if $ctaPrompt }}{{ $ctaPrompt }}{{ else }}Let’s discuss and find the optimal solution for your needs.{{ end }}</p>
+        <a class="btn btn-primary" href="{{ $ctaLink | relURL }}">{{ $ctaText }}</a>
+      </div>
+    {{ end }}
+  </div>
+</article>
+
+{{ end }}

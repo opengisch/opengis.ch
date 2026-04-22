@@ -1,6 +1,7 @@
 ---
 title: "Order support contract – OPENGIS.ch"
 source: "www.opengis.ch/order-support-contract/index.html"
+layout: "clickup-form"
 aliases:
   - "/order-support-contract/"
   - "/order-support-contract/index58b3.html"

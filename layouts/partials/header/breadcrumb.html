@@ -1,0 +1,27 @@
+<nav class="header-breadcrumb" aria-label="breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb my-0">
+      {{ define "breadcrumb-trail" }}
+        {{ with .Parent }}
+          {{ template "breadcrumb-trail" . }}
+          {{ $label := .LinkTitle | default .Title }}
+          {{ $label = replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" $label }}
+          {{ if and (not .IsHome) $label }}
+            <li class="breadcrumb-item">
+              <a href="{{ .RelPermalink }}">{{ $label }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if not .IsHome }}
+        <li class="breadcrumb-item">
+          <a href="{{ .Site.Home.RelPermalink }}">{{ i18n "home" | default "Home" }}</a>
+        </li>
+        {{ template "breadcrumb-trail" . }}
+        {{ $currentLabel := .LinkTitle | default .Title }}
+        {{ $currentLabel = replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" $currentLabel }}
+        <li class="breadcrumb-item active" aria-current="page">{{ $currentLabel }}</li>
+      {{ end }}
+    </ol>
+  </div>
+</nav>

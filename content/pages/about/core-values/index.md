@@ -1,22 +1,20 @@
 ---
 title: "Our core values – OPENGIS.ch"
 source: "www.opengis.ch/core-values/index.html"
+layout: "core-values"
 aliases:
   - "/core-values/"
 ---
 
 ## Vision
-<img src="/images/vision.png" alt="Binoculars focused on a map pin" width="220">
 
 > Make open-source GIS the de-facto industry standard by continuously pushing its high-quality products and bleeding-edge technologies.
 ## Mission
-<img src="/images/mission.png" alt="Rocket launching from a laptop over a map" width="220">
 
 > We develop, deploy and maintain visionary solutions to create value for our customers.
 > Through efficient practices and iterative feedback loops, we make sure to exceed customer expectations and win them as open-source GIS ambassadors.
 > Your project, our passion
 ## Values
-<img src="/images/values.png" alt="Mountain landscape inside a heart with leaves" width="220">
 
 > **Give back:** We live from open-source projects and are deeply committed to sustaining their technological and economic well-being.
 > **Love nature** : We are outdoors enthusiasts and care about our playground. By working 100% remotely, we avoid useless commuting, whenever possible we travel by public transportation to our clients, when we have to fly we compensate our flights, and we are moving all our servers to CO2 neutral hosters.

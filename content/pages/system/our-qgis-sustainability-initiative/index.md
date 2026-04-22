@@ -17,10 +17,10 @@ Search for:
 * * *
   - [GitHub](<https://github.com/opengisch>)
   - [Twitter](<https://twitter.com/OPENGISch>)
-  - [![Mastodon logo](/wp-content/uploads/2023/09/mastodon-logo-white.png)](<https://fosstodon.org/@opengisch>)
+  - [Mastodon](<https://fosstodon.org/@opengisch>)
   - [Vimeo](<https://vimeo.com/user36168865>)
   - [Linkedin](<https://www.linkedin.com/company/opengisch>)
-  - [![Swissmadesoftware.org logo](/wp-content/uploads/2020/04/SMS-Logo-1h-72dpi_RGB.png)](<https://www.swissmadesoftware.org/en/home/about/companies~O~.html>)
+  - [Swissmadesoftware.org](<https://www.swissmadesoftware.org/en/home/about/companies~O~.html>)
 
 
 OPENGIS.ch 2022

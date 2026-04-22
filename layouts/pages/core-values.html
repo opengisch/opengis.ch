@@ -1,0 +1,54 @@
+{{ define "main" }}
+
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $sections := split (printf "\n%s" .RawContent) "\n## " }}
+{{ $contentSections := slice }}
+{{ if gt (len $sections) 1 }}
+  {{ $contentSections = after 1 $sections }}
+{{ end }}
+{{ $sectionImages := slice
+  "/images/vision.png"
+  "/images/mission.png"
+  "/images/values.png"
+}}
+
+<article class="custom-dev-page generic-single-page">
+  <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container py-4">
+    {{ range $idx, $section := $contentSections }}
+      {{ $sectionBlock := trim $section " \n\t" }}
+      {{ $sectionTitle := trim (replaceRE `(?s)^([^\n]+).*` "$1" $sectionBlock) " " }}
+      {{ $sectionBody := trim (replaceRE `(?s)^[^\n]+\n` "" $sectionBlock) " \n\t" }}
+      {{ $sectionImage := "" }}
+      {{ if gt (len $sectionImages) $idx }}
+        {{ $sectionImage = index $sectionImages $idx }}
+      {{ end }}
+      <section class="row align-items-center g-4 py-4{{ if ne $idx 0 }} border-top{{ end }}">
+        <div class="col-12 col-lg-4{{ if eq (mod $idx 2) 1 }} order-lg-2{{ end }}">
+          {{ if $sectionImage }}
+            <div class="text-center">
+              <img
+                src="{{ $sectionImage | relURL }}"
+                alt="{{ $sectionTitle }}"
+                class="img-fluid"
+                loading="lazy"
+                width="220"
+              >
+            </div>
+          {{ end }}
+        </div>
+        <div class="col-12 col-lg-8{{ if eq (mod $idx 2) 1 }} order-lg-1{{ end }}">
+          <h2>{{ $sectionTitle }}</h2>
+          {{ $sectionBody | markdownify }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+</article>
+
+{{ end }}

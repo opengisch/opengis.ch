@@ -1,9 +1,9 @@
 {{ define "main" }}
-{{ $home := index site.Data.homepage .Site.Language.Lang }}
+{{ $home := index hugo.Data.homepage .Site.Language.Lang }}
 {{ if not $home }}
-  {{ $home = site.Data.homepage.en }}
+  {{ $home = hugo.Data.homepage.en }}
 {{ end }}
-{{ $shared := site.Data.homepage.shared }}
+{{ $shared := hugo.Data.homepage.shared }}
 <main class="opg-home">
   <section class="opg-hero" style="--opg-hero-image: url('{{ .Params.hero.image | default "https://opengis.ch/wp-content/uploads/2020/04/theteam_2.png" }}');">
     <div class="container">
@@ -23,7 +23,7 @@
     <div class="container">
       <h2 id="what-makes-us-special">{{ $shared.features_heading | default "What makes us special?" }}</h2>
       {{ $featureLang := .Site.Language.Lang }}
-      {{ with site.Data.home_features }}
+      {{ with hugo.Data.home_features }}
       <section class="opg-features" id="features">
         <div class="row g-4">
           {{ range .items }}
@@ -101,7 +101,7 @@
 
       <h2 id="our-geoninjas">{{ $shared.geoninjas_heading | default "Our GeoNinjas" }}</h2>
       <p class="team-lead">{{ $shared.geoninjas_lead }}</p>
-      {{ with site.Data.geoninjas }}
+      {{ with hugo.Data.geoninjas }}
       {{ $fallbackTeam := "Team 42" }}
       {{ $teamFilterScratch := newScratch }}
       {{ $teamFilterScratch.Set "filters" (slice) }}

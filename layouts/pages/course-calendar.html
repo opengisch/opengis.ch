@@ -1,0 +1,90 @@
+{{ define "main" }}
+
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $courseArchivePages := slice }}
+{{ with .Params.course_posts }}
+  {{ range . }}
+    {{ $targetURL := . }}
+    {{ $matches := where $.Site.RegularPages "RelPermalink" "eq" $targetURL }}
+    {{ if eq (len $matches) 0 }}
+      {{ $matches = where $.Site.RegularPages "Params.url" "eq" $targetURL }}
+    {{ end }}
+    {{ if gt (len $matches) 0 }}
+      {{ $courseArchivePages = $courseArchivePages | append (index $matches 0) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<article class="custom-dev-page generic-single-page service-page courses-calendar-page">
+  <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    {{ if .Content }}
+      <div class="generic-single-content">
+        {{ .Content }}
+      </div>
+    {{ end }}
+    {{ if gt (len $courseArchivePages) 0 }}
+      <div class="row g-4">
+        {{ range $courseArchivePages }}
+          {{ $post := . }}
+          {{ $imageData := partial "page-card-image.html" (dict "page" $post) }}
+          {{ $postImage := index $imageData "resource" }}
+          {{ $postImageURL := index $imageData "url" }}
+          {{ $summary := $post.Params.description | default $post.Summary }}
+          <div class="col-12">
+            <article class="card border-0 shadow-sm overflow-hidden h-100">
+              <div class="row g-0">
+                <div class="col-12 col-md-4">
+                  <div class="ratio ratio-16x9 h-100 bg-light">
+                    {{ if $postImage }}
+                      {{ partial "image.html" (dict
+                        "resource" $postImage
+                        "alt" $post.Title
+                        "class" "w-100 h-100 object-fit-cover"
+                        "sizes" "(max-width: 767px) 100vw, 33vw"
+                        "widths" (slice 400 720 960 1280)
+                      ) }}
+                    {{ else if $postImageURL }}
+                      <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ $postImageURL | safeURL }}" loading="lazy" alt="{{ $post.Title }}">
+                    {{ else }}
+                      <img class="img-fluid w-100 h-100 object-fit-cover" src="{{ "/images/opengis-logo.png" | relURL }}" loading="lazy" alt="{{ $post.Title }}">
+                    {{ end }}
+                  </div>
+                </div>
+                <div class="col-12 col-md-8">
+                  <div class="card-body d-flex flex-column h-100">
+                    <div class="small text-uppercase text-muted mb-2">
+                      <time datetime="{{ $post.Lastmod.Format `2006-01-02T15:04:05Z0700` | safeHTML }}">{{ $post.Lastmod | time.Format ":date_long" }}</time>
+                    </div>
+                    <h2 class="h5 card-title text-primary mb-3">{{ $post.Title }}</h2>
+                    <div class="text-muted mb-2">{{ $summary | plainify | truncate 240 }}</div>
+                    <a class="stretched-link" href="{{ $post.RelPermalink }}"></a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        {{ end }}
+      </div>
+    {{ else if .Params.embed_url }}
+      <div class="courses-calendar-embed">
+        <iframe
+          class="clickup-embed courses-calendar-iframe"
+          src="{{ .Params.embed_url | safeURL }}"
+          onwheel=""
+          width="100%"
+          height="100%"
+          loading="lazy"
+          title="{{ $displayTitle }}"
+        ></iframe>
+      </div>
+    {{ end }}
+  </div>
+</article>
+
+{{ end }}

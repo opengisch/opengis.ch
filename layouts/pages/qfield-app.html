@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+
+<article class="custom-dev-page generic-single-page">
+  <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="generic-single-content">
+      <p class="text-center">
+        <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=ch.opengis.qfield" target="_blank" rel="noopener">QField on Google Play</a>
+      </p>
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+
+{{ end }}

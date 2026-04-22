@@ -1,6 +1,7 @@
 ---
 title: "QField Jump-start packages – OPENGIS.ch"
 source: "www.opengis.ch/qfield-training/index.html"
+layout: "qfield-training"
 aliases:
   - "/qfield-training/"
 ---

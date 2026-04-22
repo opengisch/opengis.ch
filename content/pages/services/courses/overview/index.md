@@ -1,6 +1,7 @@
 ---
 title: "Courses - OPENGIS.ch"
 url: "/category/courses/"
+layout: "course-calendar"
 aliases:
   - "/category/courses/"
 source: "www.opengis.ch/category/courses/index.html"

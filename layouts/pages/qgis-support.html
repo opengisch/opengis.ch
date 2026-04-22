@@ -1,0 +1,250 @@
+{{ define "main" }}
+
+{{ $raw := .RawContent }}
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $quoteLines := findRE `(?m)^>\s*(.+)$` $raw }}
+{{ $quoteAuthor := "" }}
+{{ $quoteContentLines := $quoteLines }}
+{{ if gt (len $quoteLines) 0 }}
+  {{ $candidateAuthor := trim (replaceRE `(?m)^>\s*` "" (index $quoteLines (sub (len $quoteLines) 1))) " " }}
+  {{ if gt (len (findRE `(?i)\bCEO\b` $candidateAuthor)) 0 }}
+    {{ $splitCandidate := replaceRE `(?s)^(.*?)([A-ZÀ-ÖØ-Ý][\pL\pM .'\-]+,\s*CEO)\s*$` "$1@@AUTHOR@@$2" $candidateAuthor }}
+    {{ if and (eq (len $quoteLines) 1) (in $splitCandidate "@@AUTHOR@@") }}
+      {{ $parts := split $splitCandidate "@@AUTHOR@@" }}
+      {{ $inlineQuote := trim (index $parts 0) " " }}
+      {{ $quoteAuthor = trim (index $parts 1) " " }}
+      {{ if $inlineQuote }}
+        {{ $quoteContentLines = slice (printf "> %s" $inlineQuote) }}
+      {{ else }}
+        {{ $quoteContentLines = slice }}
+      {{ end }}
+    {{ else }}
+      {{ $quoteAuthor = $candidateAuthor }}
+      {{ if gt (len $quoteLines) 1 }}
+        {{ $quoteContentLines = first (sub (len $quoteLines) 1) $quoteLines }}
+      {{ else }}
+        {{ $quoteContentLines = slice }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $sections := split (printf "\n%s" $raw) "\n## " }}
+{{ $plansSection := "" }}
+{{ $slaSection := "" }}
+{{ if gt (len $sections) 1 }}
+  {{ $plansSection = index $sections 1 }}
+{{ end }}
+{{ if gt (len $sections) 2 }}
+  {{ $slaSection = index $sections 2 }}
+{{ end }}
+
+{{ $plansHeading := trim (replaceRE `(?s)^([^\n]+).*` "$1" $plansSection) " " }}
+{{ $plansBody := trim (replaceRE `(?s)^[^\n]+\n` "" $plansSection) " \n\t" }}
+{{ $plansIntro := trim (replaceRE `(?s)\n###\s*[^\n]+\n.*` "" $plansBody) " \n\t" }}
+{{ $coverageHeading := "" }}
+{{ $coverageMatches := findRE `(?m)^###\s*([^\n]+)$` $plansBody 1 }}
+{{ if gt (len $coverageMatches) 0 }}
+  {{ $coverageHeading = trim (replaceRE `(?m)^###\s*([^\n]+)$` "$1" (index $coverageMatches 0)) " " }}
+{{ end }}
+{{ $coverageAndCards := trim (replaceRE `(?s)^.*?\n###\s*[^\n]+\n` "" $plansBody) " \n\t" }}
+{{ $coverageParts := split (printf "\n%s" $coverageAndCards) "\n##### " }}
+{{ $coverageListRaw := "" }}
+{{ if gt (len $coverageParts) 0 }}
+  {{ $coverageListRaw = trim (index $coverageParts 0) " \n\t" }}
+{{ end }}
+{{ $planCardBlocks := slice }}
+{{ if gt (len $coverageParts) 1 }}
+  {{ $planCardBlocks = after 1 $coverageParts }}
+{{ end }}
+
+{{ $slaHeading := trim (replaceRE `(?s)^([^\n]+).*` "$1" $slaSection) " " }}
+{{ $slaBody := trim (replaceRE `(?s)^[^\n]+\n` "" $slaSection) " \n\t" }}
+{{ $slaParts := split (printf "\n%s" $slaBody) "\n##### " }}
+{{ $slaIntro := "" }}
+{{ if gt (len $slaParts) 0 }}
+  {{ $slaIntro = trim (index $slaParts 0) " \n\t" }}
+{{ end }}
+{{ $slaCardBlocks := slice }}
+{{ if gt (len $slaParts) 1 }}
+  {{ $slaCardBlocks = after 1 $slaParts }}
+{{ end }}
+
+{{ $footnote := "" }}
+{{ $footnoteMatches := findRE `(?m)^\*\s+.+$` $raw }}
+{{ if gt (len $footnoteMatches) 0 }}
+  {{ $footnote = trim (replaceRE `(?m)^\*\s+` "" (index $footnoteMatches (sub (len $footnoteMatches) 1))) " " }}
+{{ end }}
+
+<article class="support-page service-page">
+  <header class="support-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title support-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    {{ if gt (len $quoteContentLines) 0 }}
+      <blockquote class="support-quote">
+        <p>
+        {{ range $quoteContentLines }}
+          {{ $line := trim (replaceRE `(?m)^>\s*` "" .) " " }}
+          {{ if $line }}
+            {{ $line | markdownify }}
+          {{ end }}
+        {{ end }}
+        </p>
+        {{ if $quoteAuthor }}<cite>{{ $quoteAuthor }}</cite>{{ end }}
+      </blockquote>
+    {{ end }}
+
+    <section class="support-section support-section--plans">
+      <div class="support-grid">
+        <div class="support-copy">
+          {{ if $plansHeading }}<h2>{{ $plansHeading }}</h2>{{ end }}
+          {{ if $plansIntro }}<div class="support-intro">{{ $plansIntro | markdownify }}</div>{{ end }}
+          {{ if $coverageHeading }}<h3>{{ $coverageHeading }}</h3>{{ end }}
+          {{ if $coverageListRaw }}
+            <ul>
+              {{ range split $coverageListRaw "\n" }}
+                {{ $item := trim . " \t\r" }}
+                {{ if hasPrefix $item "-" }}
+                  {{ $itemText := trim (replaceRE `^-\s*` "" $item) " " }}
+                  {{ if $itemText }}
+                    {{ $itemHtml := $itemText | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+                    <li>{{ $itemHtml | safeHTML }}</li>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            </ul>
+          {{ end }}
+        </div>
+
+        <div class="support-tier-grid support-tier-grid--plans">
+          {{ range $planCardBlocks }}
+            {{ $cardBlock := trim . " \n\t" }}
+            {{ $cardTitle := trim (replaceRE `(?s)^([^\n]+).*` "$1" $cardBlock) " " }}
+            {{ $cardBody := trim (replaceRE `(?s)^[^\n]+\n` "" $cardBlock) " \n\t" }}
+            {{ $cardBody = replaceRE `(?m)^\*\s*\*\s*\*\s*$` "" $cardBody }}
+            {{ $headline := "" }}
+            {{ $headlineMatch := findRE `(?m)^###\s*([^\n]+)$` $cardBody 1 }}
+            {{ if gt (len $headlineMatch) 0 }}
+              {{ $headline = trim (replaceRE `(?m)^###\s*([^\n]+)$` "$1" (index $headlineMatch 0)) " " }}
+            {{ end }}
+            {{ $buttonText := "" }}
+            {{ $buttonHref := "" }}
+            {{ $buttonMatch := findRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` $cardBody 1 }}
+            {{ if gt (len $buttonMatch) 0 }}
+              {{ $buttonText = trim (replaceRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` "$1" (index $buttonMatch 0)) " " }}
+              {{ $buttonHref = trim (replaceRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` "$2" (index $buttonMatch 0)) " " }}
+              {{ $buttonHref = replaceRE `^(\.\./)+` "/" $buttonHref }}
+            {{ end }}
+            {{ $detailSource := trim (replaceRE `(?m)^###\s*[^\n]+\n?` "" $cardBody) " \n\t" }}
+            {{ if $buttonText }}
+              {{ $detailSource = trim (replaceRE `(?m)^\[[^\]]+\]\(<[^>]+>\)\s*$` "" $detailSource) " \n\t" }}
+            {{ end }}
+            {{ $detailScratch := newScratch }}
+            {{ $detailScratch.Set "lines" (slice) }}
+            {{ range split $detailSource "\n" }}
+              {{ $line := trim . " \t\r" }}
+              {{ if and $line (not (hasPrefix $line "[")) (not (hasPrefix $line "* ")) }}
+                {{ $detailScratch.Add "lines" (slice $line) }}
+              {{ end }}
+            {{ end }}
+            {{ $detailLines := $detailScratch.Get "lines" }}
+            {{ $priceLine := "" }}
+            {{ $metaLines := slice }}
+            {{ if gt (len $detailLines) 0 }}
+              {{ $priceLine = index $detailLines 0 }}
+            {{ end }}
+            {{ if gt (len $detailLines) 1 }}
+              {{ $metaLines = after 1 $detailLines }}
+            {{ end }}
+            <article class="support-tier-card{{ if eq (lower $cardTitle) "business" }} support-tier-card--featured{{ end }}">
+              <h4 class="support-tier-name">{{ $cardTitle }}</h4>
+              <hr>
+              {{ if $headline }}
+                {{ $headlineHtml := $headline | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+                <p class="support-tier-headline">{{ $headlineHtml | safeHTML }}</p>
+              {{ end }}
+              {{ if $priceLine }}
+                {{ $priceHtml := $priceLine | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+                <p class="support-tier-price">{{ $priceHtml | safeHTML }}</p>
+              {{ end }}
+              {{ range $metaLines }}
+                {{ $metaHtml := . | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+                <p class="support-tier-detail">{{ $metaHtml | safeHTML }}</p>
+              {{ end }}
+              {{ if and $buttonText $buttonHref }}
+                <a class="btn btn-outline-primary support-tier-cta" href="{{ $buttonHref }}">{{ $buttonText }}</a>
+              {{ end }}
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="support-section support-section--sla">
+      <div class="support-grid">
+        <div class="support-copy">
+          {{ if $slaHeading }}<h2>{{ $slaHeading }}</h2>{{ end }}
+          {{ if $slaIntro }}<div class="support-intro">{{ $slaIntro | markdownify }}</div>{{ end }}
+        </div>
+
+        <div class="support-tier-grid support-tier-grid--sla">
+          {{ range $slaCardBlocks }}
+            {{ $cardBlock := trim . " \n\t" }}
+            {{ $cardTitle := trim (replaceRE `(?s)^([^\n]+).*` "$1" $cardBlock) " " }}
+            {{ $cardBody := trim (replaceRE `(?s)^[^\n]+\n` "" $cardBlock) " \n\t" }}
+            {{ $cardBody = replaceRE `(?m)^\*\s*\*\s*\*\s*$` "" $cardBody }}
+            {{ $headline := "" }}
+            {{ $headlineMatch := findRE `(?m)^###\s*([^\n]+)$` $cardBody 1 }}
+            {{ if gt (len $headlineMatch) 0 }}
+              {{ $headline = trim (replaceRE `(?m)^###\s*([^\n]+)$` "$1" (index $headlineMatch 0)) " " }}
+            {{ end }}
+            {{ $detailSource := trim (replaceRE `(?m)^###\s*[^\n]+\n?` "" $cardBody) " \n\t" }}
+            {{ $detailScratch := newScratch }}
+            {{ $detailScratch.Set "lines" (slice) }}
+            {{ range split $detailSource "\n" }}
+              {{ $line := trim . " \t\r" }}
+              {{ if and $line (not (hasPrefix $line "[")) (not (hasPrefix $line "* ")) }}
+                {{ $detailScratch.Add "lines" (slice $line) }}
+              {{ end }}
+            {{ end }}
+            {{ $detailLines := $detailScratch.Get "lines" }}
+            {{ $priceLine := "" }}
+            {{ $metaLines := slice }}
+            {{ if gt (len $detailLines) 0 }}
+              {{ $priceLine = index $detailLines 0 }}
+            {{ end }}
+            {{ if gt (len $detailLines) 1 }}
+              {{ $metaLines = after 1 $detailLines }}
+            {{ end }}
+            <article class="support-tier-card{{ if eq (lower $cardTitle) "enterprise" }} support-tier-card--featured{{ end }}">
+              <h4 class="support-tier-name">{{ $cardTitle }}</h4>
+              <hr>
+              {{ if $headline }}
+                {{ $headlineHtml := $headline | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+                <p class="support-tier-headline">{{ $headlineHtml | safeHTML }}</p>
+              {{ end }}
+              {{ if $priceLine }}
+                {{ $priceHtml := $priceLine | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+                <p class="support-tier-price">{{ $priceHtml | safeHTML }}</p>
+              {{ end }}
+              {{ range $metaLines }}
+                {{ $metaHtml := . | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+                <p class="support-tier-detail">{{ $metaHtml | safeHTML }}</p>
+              {{ end }}
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    {{ if $footnote }}
+      <p class="support-footnote">{{ $footnote }}</p>
+    {{ end }}
+  </div>
+</article>
+
+{{ end }}

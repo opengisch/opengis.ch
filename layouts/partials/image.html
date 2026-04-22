@@ -1,0 +1,97 @@
+{{/*
+  Image Partial
+
+  Usage:
+    partial "image.html" (dict "src" "images/example.jpg" "alt" "Example")
+
+  Parameters:
+    - "resource" resource, optional: already-resolved Hugo image resource to render
+    - "page" page, optional: page context used to resolve bundle-local images via `.Page.Resources`
+    - "src" string, required: asset path or remote image URL
+    - "alt" string, optional: image alternative text
+    - "class" string, optional: extra classes appended after `img-fluid`
+    - "style" string, optional: inline style string applied to the rendered `<img>`
+    - "loading" string, optional: loading strategy (default "lazy")
+    - "decoding" string, optional: decoding strategy (default "async")
+    - "sizes" string, optional: responsive sizes hint used for local-resource srcset output
+    - "widths" slice, optional: responsive width ladder used for generated variants
+*/}}
+{{- $page := .page -}}
+{{- $resource := .resource | default nil -}}
+{{- $src := .src | default "" -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $style := .style | default "" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $decoding := .decoding | default "async" -}}
+{{- $sizes := .sizes | default "(max-width: 400px) 400px, (max-width: 640px) 640px, (max-width: 960px) 960px, (max-width: 1280px) 1280px, 1600px" -}}
+{{- $widths := .widths | default (slice 400 640 960 1280 1600) -}}
+{{- $isRemote := and (not $resource) (hasPrefix $src "http") -}}
+
+{{- if and (not $resource) $page (ne $src "") -}}
+  {{- with $page.Resources.GetMatch $src -}}
+    {{- $resource = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if and (not $resource) (not $isRemote) (ne $src "") -}}
+  {{- with resources.Get $src -}}
+    {{- $resource = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $isRemote }}
+  <img
+    src="{{ $src }}"
+    alt="{{ $alt }}"
+    class="img-fluid {{ $class }}"
+    {{- with $style }} style="{{ . }}"{{ end }}
+    loading="{{ $loading }}"
+    decoding="{{ $decoding }}"
+  >
+{{- else }}
+  {{- if not $resource }}
+    <img
+      src="{{ $src | relURL }}"
+      alt="{{ $alt }}"
+      class="img-fluid {{ $class }}"
+      {{- with $style }} style="{{ . }}"{{ end }}
+      loading="{{ $loading }}"
+      decoding="{{ $decoding }}"
+    >
+  {{- else }}
+    {{- $processedDefault := slice -}}
+    {{- $processedWebP := slice -}}
+    {{/* AVIF conversion is disabled: palette PNGs and progressive JPEGs (which are
+         common in this content library) cause Hugo 0.159.1 + libvips to error with
+         "format not supported" when attempting AVIF encoding. WebP remains enabled
+         as a modern format alternative. */}}
+    {{- $supportsWebP := in (slice "jpg" "jpeg" "png" "tif" "tiff" "webp") (lower $resource.MediaType.SubType) -}}
+    {{- range $widths }}
+      {{- $processedDefault = $processedDefault | append ($resource.Resize (printf "%dx" .)) -}}
+      {{- if $supportsWebP -}}
+        {{- $processedWebP = $processedWebP | append ($resource.Resize (printf "%dx webp" .)) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $fallback := index $processedDefault 0 | default $resource -}}
+    <picture>
+      {{- if gt (len $processedWebP) 0 }}
+        <source
+          type="image/webp"
+          srcset="{{ range $processedWebP }}{{ .RelPermalink }} {{ .Width }}w, {{ end }}"
+          sizes="{{ $sizes }}"
+        >
+      {{- end }}
+      <img
+        src="{{ $fallback.RelPermalink }}"
+        srcset="{{ range $processedDefault }}{{ .RelPermalink }} {{ .Width }}w, {{ end }}"
+        sizes="{{ $sizes }}"
+        alt="{{ $alt }}"
+        class="img-fluid {{ $class }}"
+        {{- with $style }} style="{{ . | safeCSS }}"{{ end }}
+        loading="{{ $loading }}"
+        decoding="{{ $decoding }}"
+      >
+    </picture>
+  {{- end }}
+{{- end }}

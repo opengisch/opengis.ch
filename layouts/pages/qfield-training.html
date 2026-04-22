@@ -1,0 +1,118 @@
+{{ define "main" }}
+
+{{ $raw := .RawContent }}
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $sections := split (printf "\n%s" $raw) "\n## " }}
+{{ $mainSection := "" }}
+{{ if gt (len $sections) 1 }}
+  {{ $mainSection = trim (index $sections 1) " \n\t" }}
+{{ else }}
+  {{ $mainSection = trim $raw " \n\t" }}
+{{ end }}
+{{ $sectionTitle := trim (replaceRE `(?s)^([^\n]+).*` "$1" $mainSection) " " }}
+{{ $sectionBody := trim (replaceRE `(?s)^[^\n]+\n` "" $mainSection) " \n\t" }}
+{{ $cardParts := split (printf "\n%s" $sectionBody) "\n##### " }}
+{{ $introText := "" }}
+{{ if gt (len $cardParts) 0 }}
+  {{ $introText = trim (index $cardParts 0) " \n\t" }}
+{{ end }}
+{{ $cardBlocks := slice }}
+{{ if gt (len $cardParts) 1 }}
+  {{ $cardBlocks = after 1 $cardParts }}
+{{ end }}
+
+<article class="jumpstart-page service-page">
+  <header class="custom-dev-hero jumpstart-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title jumpstart-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="jumpstart-grid">
+      <div class="jumpstart-copy">
+        {{ if $sectionTitle }}<h2 class="jumpstart-heading">{{ $sectionTitle }}</h2>{{ end }}
+        {{ if $introText }}<div class="jumpstart-intro">{{ $introText | markdownify }}</div>{{ end }}
+        <div class="jumpstart-visual">
+          <img
+            src="{{ "/images/qfield_jumpstart.png" | relURL }}"
+            alt="QField jump-start illustration"
+            class="img-fluid"
+            loading="lazy"
+          >
+        </div>
+      </div>
+
+      <div class="jumpstart-cards">
+        {{ range $idx, $card := $cardBlocks }}
+          {{ $cardBlock := trim $card " \n\t" }}
+          {{ $cardTitle := trim (replaceRE `(?s)^([^\n]+).*` "$1" $cardBlock) " " }}
+          {{ $cardBody := trim (replaceRE `(?s)^[^\n]+\n` "" $cardBlock) " \n\t" }}
+          {{ $cardBody = replaceRE `(?m)^\*\s*\*\s*\*\s*$` "" $cardBody }}
+          {{ $priceLine := "" }}
+          {{ $priceMatches := findRE `(?m)^###\s*([^\n]+)$` $cardBody 1 }}
+          {{ if gt (len $priceMatches) 0 }}
+            {{ $priceLine = trim (replaceRE `(?m)^###\s*([^\n]+)$` "$1" (index $priceMatches 0)) " " }}
+          {{ end }}
+          {{ $buttonText := "" }}
+          {{ $buttonHref := "" }}
+          {{ $buttonMatches := findRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` $cardBody 1 }}
+          {{ if gt (len $buttonMatches) 0 }}
+            {{ $buttonText = trim (replaceRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` "$1" (index $buttonMatches 0)) " " }}
+            {{ $buttonHref = trim (replaceRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` "$2" (index $buttonMatches 0)) " " }}
+            {{ $buttonHref = replaceRE `^(\.\./)+` "/" $buttonHref }}
+          {{ end }}
+          {{ $noteLine := "" }}
+          {{ $noteMatches := findRE `(?m)^_\*.+$` $cardBody 1 }}
+          {{ if gt (len $noteMatches) 0 }}
+            {{ $noteLine = trim (index $noteMatches 0) " " }}
+          {{ end }}
+          {{ $detailsRaw := trim (replaceRE `(?m)^###\s*[^\n]+\n?` "" $cardBody) " \n\t" }}
+          {{ $detailsRaw = trim (replaceRE `(?m)^_\*.+$` "" $detailsRaw) " \n\t" }}
+          {{ $detailsRaw = trim (replaceRE `(?m)^\[[^\]]+\]\(<[^>]+>\)\s*$` "" $detailsRaw) " \n\t" }}
+          {{ $detailScratch := newScratch }}
+          {{ $detailScratch.Set "lines" (slice) }}
+          {{ range split $detailsRaw "\n" }}
+            {{ $line := trim . " \t\r" }}
+            {{ if $line }}
+              {{ $detailScratch.Add "lines" (slice $line) }}
+            {{ end }}
+          {{ end }}
+          {{ $detailLines := $detailScratch.Get "lines" }}
+          {{ $compareLine := "" }}
+          {{ $featureLines := slice }}
+          {{ if gt (len $detailLines) 0 }}
+            {{ $compareLine = index $detailLines 0 }}
+          {{ end }}
+          {{ if gt (len $detailLines) 1 }}
+            {{ $featureLines = after 1 $detailLines }}
+          {{ end }}
+          <article class="jumpstart-card{{ if eq $idx 1 }} jumpstart-card--featured{{ end }}">
+            <h3 class="jumpstart-card__title">{{ $cardTitle }}</h3>
+            <hr>
+            {{ if $priceLine }}
+              {{ $priceHtml := $priceLine | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+              <p class="jumpstart-card__price">{{ $priceHtml | safeHTML }}</p>
+            {{ end }}
+            {{ if $compareLine }}
+              {{ $compareHtml := $compareLine | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+              <p class="jumpstart-card__compare">{{ $compareHtml | safeHTML }}</p>
+            {{ end }}
+            {{ range $featureLines }}
+              {{ $featureHtml := . | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" }}
+              <p class="jumpstart-card__detail">{{ $featureHtml | safeHTML }}</p>
+            {{ end }}
+            {{ if $noteLine }}
+              <p class="jumpstart-card__note">{{ $noteLine | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" | safeHTML }}</p>
+            {{ end }}
+            {{ if and $buttonText $buttonHref }}
+              <a class="btn btn-outline-primary jumpstart-card__cta" href="{{ $buttonHref }}">{{ $buttonText }}</a>
+            {{ end }}
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  </div>
+</article>
+
+{{ end }}

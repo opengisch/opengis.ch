@@ -1,0 +1,3 @@
+/* Project-level CSS override — intentionally empty.
+   All site styles are compiled from assets/sass/main.scss (via the theme)
+   which imports variable-overrides.scss, Bootstrap, custom.scss, and styles.scss. */

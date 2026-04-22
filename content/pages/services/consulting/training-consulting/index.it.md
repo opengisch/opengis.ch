@@ -9,7 +9,6 @@ aliases:
 > Marco Bernasocchi, CEO
 ### Consulenza geospaziale
 
-![Illustrazione della consulenza geospaziale](/images/geospatial_consulting.png)
 
   - Stai pianificando una nuova infrastruttura di geodati?
   - Vuoi migliorare i tuoi flussi di lavoro con QGIS?

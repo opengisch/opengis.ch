@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $pageContent := .Content }}
+{{ $pageContent = replaceRE `(?is)<iframe[^>]*src=["']([^"']*clickup[^"']*)["'][^>]*>\s*</iframe>` `<p><a href="$1" target="_blank" rel="noopener">Open this form in a new tab</a></p>` $pageContent }}
+{{ $pageContent = replaceRE `(?is)<script[^>]*src=["'][^"']*app-cdn\.clickup\.com[^"']*["'][^>]*>\s*</script>` `` $pageContent }}
+
+<article class="custom-dev-page generic-single-page">
+  <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="generic-single-content">
+      {{ $pageContent | safeHTML }}
+    </div>
+  </div>
+</article>
+
+{{ end }}

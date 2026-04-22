@@ -1,0 +1,151 @@
+{{ if .Site.Params.alert -}}
+{{ partial "header/alert.html" . }}
+{{ end -}}
+
+<header class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-default{{ if .IsHome }} navbar-color-on-scroll navbar-transparent hestia_left shadow-sm fixed-top og-navbar og-navbar-home{{ else }} og-navbar sticky-top{{ end }}"{{ if .IsHome }} data-home-hero-nav="true" data-scroll-threshold="32"{{ end }}>
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} home">
+        {{ if isset .Site.Params "mainmenulogo" }}
+        <img src="{{ .Site.Params.mainMenuLogo | relURL }}" alt="{{ .Site.Title }}" height="40" class="navbar-logo main-header-logo logo-light d-inline-block align-text-top">
+        <span class="visually-hidden">{{ .Site.Title }}</span>
+        {{ else }}
+        <span class="fw-semibold">{{ .Site.Title }}</span>
+        {{ end }}
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="d-flex order-lg-2 ms-auto align-items-center gap-2 header-actions">
+        {{ if .Site.Params.enableSearch -}}
+        <a class="btn header-icon-button" href="{{ `search/` | relLangURL }}" aria-label="Search the site">
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </a>
+        {{ end -}}
+
+        {{ if not .IsHome -}}
+        {{ with .Site.Home.OutputFormats.Get "RSS" -}}
+        <a class="btn header-icon-button d-none d-md-inline-flex" href="{{ .RelPermalink }}" aria-label="RSS feed">
+          <i class="bi bi-rss" aria-hidden="true"></i>
+        </a>
+        {{- end }}
+        {{ end -}}
+
+        {{ if eq .Site.Params.enableDarkMode true -}}
+        <button id="themeToggle" class="btn header-icon-button theme-toggle-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <i id="themeIcon" class="bi"></i>
+        </button>
+        {{ end -}}
+
+        {{ if and (not .IsHome) .Site.Params.cta_link .Site.Params.cta_text -}}
+        <a class="btn themeColor d-none d-lg-inline" href="{{ .Site.Params.cta_link }}">{{ .Site.Params.cta_text }}</a>
+        {{ end -}}
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="menu-main navbar-nav me-auto mb-2 mb-lg-0">
+          {{- $current := . -}}
+          {{- $section := $current.Section -}}
+          {{ range .Site.Menus.main -}}
+          {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
+          {{- $active = or $active (eq .Name $current.LinkTitle) -}}
+          {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
+          {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "contributors")) -}}
+          {{ if .HasChildren }}
+          {{ $dropdownId := printf "navbarDropdown-%s" (.Identifier | default (.Name | urlize)) }}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle{{ if $active }} active{{ end }}" id="{{ $dropdownId }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ .Name }}
+            </a>
+            <ul class="dropdown-menu" aria-label="{{ .Name }}">
+              {{ range .Children -}}
+              {{- $childActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
+              {{- $childActive = or $childActive (eq .Name $current.LinkTitle) -}}
+              {{- $icon := .Params.icon | default "" -}}
+              {{- $iconClass := cond (or (hasPrefix $icon "obfx-menu-icon") (eq $icon "")) $icon (printf "%s dropdown-item-icon" $icon) -}}
+              {{ if .HasChildren }}
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle{{ if $childActive }} active{{ end }}" href="{{ .URL | relLangURL }}" {{ if $childActive }}aria-current="page"{{ end }}>
+                  {{ with $icon }}<i class="{{ $iconClass }}" aria-hidden="true"></i>{{ end }}
+                  <span>{{ .Name }}</span>
+                </a>
+                <ul class="dropdown-menu">
+                  {{ range .Children -}}
+                  {{- $grandActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
+                  {{- $grandActive = or $grandActive (eq .Name $current.LinkTitle) -}}
+                  {{- $grandIcon := .Params.icon | default "" -}}
+                  {{- $grandIconClass := cond (or (hasPrefix $grandIcon "obfx-menu-icon") (eq $grandIcon "")) $grandIcon (printf "%s dropdown-item-icon" $grandIcon) -}}
+                  <li>
+                    <a class="dropdown-item{{ if $grandActive }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $grandActive }} aria-current="page"{{ end }}>
+                      {{ with $grandIcon }}<i class="{{ $grandIconClass }}" aria-hidden="true"></i>{{ end }}
+                      <span>{{ .Name }}</span>
+                    </a>
+                  </li>
+                  {{ end -}}
+                </ul>
+              </li>
+              {{ else }}
+              <li>
+                <a class="dropdown-item{{ if $childActive }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $childActive }} aria-current="page"{{ end }}>
+                  {{ with $icon }}<i class="{{ $iconClass }}" aria-hidden="true"></i>{{ end }}
+                  <span>{{ .Name }}</span>
+                </a>
+              </li>
+              {{ end }}
+              {{ end -}}
+            </ul>
+          </li>
+          {{ else }}
+          <li class="nav-item">
+            <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $active }} aria-current="page"{{ end }}{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>{{ .Name }}</a>
+          </li>
+          {{ end }}
+          {{ end -}}
+        </ul>
+
+        {{ if hugo.IsMultilingual -}}
+        <div class="menu-language order-md-2">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="nav-link dropdown-toggle btn btn-link" id="navbarLanguageDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
+                {{ .Site.Params.languageISO }}
+              </button>
+              <ul class="dropdown-menu" aria-label="Language selector">
+                <li>
+                  <a class="dropdown-item active" aria-current="page" href="{{ .RelPermalink }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                    {{ .Site.Language.Label }}
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                {{ if .IsTranslated -}}
+                {{ range .Translations }}
+                <li>
+                  <a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                    {{ .Language.Label }}
+                  </a>
+                </li>
+                {{ end -}}
+                {{ else -}}
+                {{ range .Site.Home.AllTranslations -}}
+                {{ if ne $.Site.Language.Name .Language.Name }}
+                <li>
+                  <a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                    {{ .Language.Label }}
+                  </a>
+                </li>
+                {{ end -}}
+                {{ end -}}
+                {{ end -}}
+              </ul>
+            </li>
+          </ul>
+        </div>
+        {{ end -}}
+      </div>
+    </div>
+  </nav>
+</header>

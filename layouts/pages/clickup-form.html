@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $formURL := .Params.form_url }}
+{{ $iframeID := .Params.iframe_id | default "clickup-form" }}
+{{ $iframeClass := .Params.iframe_class | default "clickup-embed clickup-dynamic-height" }}
+{{ $iframeStyle := .Params.iframe_style | default "background: transparent; border: 1px solid #ccc;" }}
+{{ $containerClass := .Params.form_container_class | default "generic-single-content" }}
+{{ $fallbackClass := .Params.fallback_class | default "generic-single-fallback" }}
+{{ $fallbackText := .Params.fallback_text | default "If the embedded form does not load, open it in a new tab:" }}
+{{ $fallbackLabel := .Params.fallback_label | default "Open form" }}
+{{ $fallbackDataAttr := .Params.fallback_data_attr }}
+{{ $pageClass := .Params.page_class }}
+
+<article class="custom-dev-page generic-single-page service-page{{ if $pageClass }} {{ $pageClass }}{{ end }}">
+  <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    {{ if .Content }}
+      <div class="generic-single-content">
+        {{ .Content }}
+      </div>
+    {{ end }}
+
+    <div class="{{ $containerClass }}">
+      <iframe
+        id="{{ $iframeID }}"
+        class="{{ $iframeClass }}"
+        src="about:blank"
+        data-clickup-src="{{ $formURL | safeURL }}"
+        onwheel=""
+        width="100%"
+        height="100%"
+        style="{{ $iframeStyle }}"
+        loading="lazy"
+        title="{{ $displayTitle }}"
+      ></iframe>
+      <p class="{{ $fallbackClass }}">
+        {{ $fallbackText }}
+        <a{{ with $fallbackDataAttr }} {{ printf "%s" . | safeHTMLAttr }}{{ end }} href="{{ $formURL | safeURL }}" target="_blank" rel="noopener">{{ $fallbackLabel }}</a>
+      </p>
+    </div>
+  </div>
+</article>
+
+{{ end }}

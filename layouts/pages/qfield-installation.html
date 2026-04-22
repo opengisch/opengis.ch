@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+
+<article class="custom-dev-page generic-single-page">
+  <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="generic-single-content">
+      <div class="d-flex flex-column flex-md-row gap-3 justify-content-center mb-4">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=ch.opengis.qfield" target="_blank" rel="noopener">QField app</a>
+        <a class="btn btn-outline-primary" href="https://play.google.com/store/apps/details?id=ch.opengis.qfieldkarmaedition" target="_blank" rel="noopener">QField Karma edition app</a>
+      </div>
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+
+{{ end }}

@@ -1,6 +1,7 @@
 ---
 title: "QGIS Support & maintenance – OPENGIS.ch"
 source: "www.opengis.ch/qgis-support/index.html"
+layout: "qgis-support"
 aliases:
   - "/qgis-support/"
 ---

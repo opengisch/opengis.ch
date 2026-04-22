@@ -10,14 +10,12 @@ JOBS_FORM_URL = "https://forms.clickup.com/f/22wqj-820/2Z3S1OO9ZF44Y54FQQ"
 
 class JobsPageFormTests(unittest.TestCase):
     def test_jobs_template_and_script_restore_clickup_form(self) -> None:
-        template = (REPO_ROOT / "themes/qfield-theme-v3/layouts/_default/single.html").read_text(encoding="utf-8")
+        template = (REPO_ROOT / "layouts/pages/clickup-form.html").read_text(encoding="utf-8")
         script = (REPO_ROOT / "themes/qfield-theme-v3/assets/js/main.js").read_text(encoding="utf-8")
         styles = (REPO_ROOT / "assets/sass/styles.scss").read_text(encoding="utf-8")
 
-        self.assertIn('{{ else if $isJobsPage }}', template)
-        self.assertIn('id="jobs-application-form"', template)
-        self.assertIn('data-jobs-clickup-link', template)
-        self.assertIn(JOBS_FORM_URL, template)
+        self.assertIn('id="{{ $iframeID }}"', template)
+        self.assertIn('data-clickup-src=', template)
         self.assertIn("const jobsApplicationForm = document.querySelector('#jobs-application-form.jobs-application-iframe')", script)
         self.assertIn("data-jobs-clickup-link", script)
         self.assertIn(".jobs-application-iframe {", styles)

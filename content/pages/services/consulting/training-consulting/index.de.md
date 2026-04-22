@@ -9,7 +9,6 @@ aliases:
 > Marco Bernasocchi, CEO
 ### Räumliche Beratung
 
-![Illustration zur Geodatenberatung](/images/geospatial_consulting.png)
 
   - Planen Sie eine neue Geodateninfrastruktur?
   - Möchten Sie Ihre QGIS-Workflows verbessern?

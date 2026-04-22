@@ -1,6 +1,7 @@
 ---
 title: "INTERLIS Model Baker Courses - OPENGIS.ch"
 url: "/category/courses/interlis-model-baker-courses/"
+layout: "course-calendar"
 aliases:
   - "/category/courses/interlis-model-baker-courses/"
 source: "www.opengis.ch/category/courses/interlis-model-baker-courses/index.html"

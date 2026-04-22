@@ -6,25 +6,25 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 class ConfigFormatContractTests(unittest.TestCase):
-    def test_hugo_config_uses_toml_across_default_and_environment_overrides(self) -> None:
+    def test_hugo_config_uses_yaml_across_default_and_environment_overrides(self) -> None:
         config_files = {
-            "config/_default/hugo.toml": [
-                'baseURL = "https://www.opengis.ch/"',
-                'defaultContentLanguage = "en"',
-                '[params.options]',
+            "config/_default/hugo.yaml": [
+                "baseURL: https://www.opengis.ch/",
+                "defaultContentLanguage: en",
+                "  options:",
             ],
-            "config/development/hugo.toml": [
-                'baseURL = "http://localhost:1313/"',
-                '[params]',
-                'environment = "development"',
+            "config/development/hugo.yaml": [
+                "baseURL: http://localhost:1313/",
+                "params:",
+                "  environment: development",
             ],
-            "config/staging/hugo.toml": [
-                '[params]',
-                'environment = "staging"',
+            "config/staging/hugo.yaml": [
+                "params:",
+                "  environment: staging",
             ],
-            "config/production/hugo.toml": [
-                '[params]',
-                'environment = "production"',
+            "config/production/hugo.yaml": [
+                "params:",
+                "  environment: production",
             ],
         }
 
@@ -34,10 +34,10 @@ class ConfigFormatContractTests(unittest.TestCase):
                 for snippet in snippets:
                     self.assertIn(snippet, content)
 
-        self.assertFalse((REPO_ROOT / "config/_default/hugo.yaml").exists())
-        self.assertFalse((REPO_ROOT / "config/development/hugo.yaml").exists())
-        self.assertFalse((REPO_ROOT / "config/staging/hugo.yaml").exists())
-        self.assertFalse((REPO_ROOT / "config/production/hugo.yaml").exists())
+        self.assertFalse((REPO_ROOT / "config/_default/hugo.toml").exists())
+        self.assertFalse((REPO_ROOT / "config/development/hugo.toml").exists())
+        self.assertFalse((REPO_ROOT / "config/staging/hugo.toml").exists())
+        self.assertFalse((REPO_ROOT / "config/production/hugo.toml").exists())
 
 
 if __name__ == "__main__":

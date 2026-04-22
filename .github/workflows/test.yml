@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          ssh-key: ${{ secrets.OPENGIS_HUGO_THEME_SSH_KEY }}
 
       - name: Set up Python
         uses: actions/setup-python@v5

@@ -5,8 +5,6 @@ aliases:
   - "/de/android-gis/qfield/"
 ---
 
-[![QField app on Google Play](https://i0.wp.com/developer.android.com/images/brand/en_app_rgb_wo_45.png?resize=129%2C45&ssl=1)](<https://play.google.com/store/apps/details?id=ch.opengis.qfield>)
-QField app
 **Page moved to[qfield.org](<https://qfield.org/>)**
 QField (for much more information refer to [QField.org](<https://qfield.org/>)) allows you to take your QGIS projects out of the office for effective field work. By maintaining QGIS‘ styling and edit widgets QField greatly reduces preparation time.  
 QField is an Open Source project led by OPENGIS.ch LLC and the [source code](<../../../../qfield.opengis.ch/repo>) is on github. A possibility to donate to the project can be found on the [donate page](<../../../android-gis/qfield/donate-and-sponsor/index.html>) (preferred) or by buying the QField for [QGIS Karma edition app](<../../../../qfield.opengis.ch/karma>).  

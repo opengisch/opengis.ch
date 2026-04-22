@@ -1,0 +1,18 @@
+baseURL: http://localhost:1313/
+
+build:
+  writeStats: true
+  useResourceCacheWhen: fallback
+
+minify:
+  disableCSS: true
+  disableHTML: true
+  disableJS: true
+  disableJSON: true
+  disableSVG: true
+  disableXML: true
+
+params:
+  environment: development
+  debug: true
+  analytics: false

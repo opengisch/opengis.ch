@@ -13,11 +13,11 @@ The March 25, 2026 tracker sync reflects the completed TOML config migration, mo
 
 ## Hugo Config
 
-- Main config: `config/_default/hugo.toml`
+- Main config: `config/_default/hugo.yaml`
 - Environment overrides:
-  - `config/development/hugo.toml`
-  - `config/staging/hugo.toml`
-  - `config/production/hugo.toml`
+  - `config/development/hugo.yaml`
+  - `config/staging/hugo.yaml`
+  - `config/production/hugo.yaml`
 
 ## Content Layout
 
@@ -45,7 +45,8 @@ For blog layout checks, inspect the generated output under `public/blog/`.
 Theme shortcodes such as `gallery` and `blog-video` are rendered as part of a normal Hugo build.
 Imported blog posts may start with their own markdown heading; the blog single template strips only the first leading rendered heading so the page title is not duplicated.
 The landing page header now renders transparently over the hero image on first load and switches to the fixed solid navbar style after scrolling, so homepage checks should be verified at both scroll positions.
-The active typography now follows the live OPENGIS stack again: `Roboto` for body copy, `Didact Gothic` for headings/titles, and the site’s custom title components now use the same heading-style weight/scale treatment instead of a separate local mix.
+The active header override now renders nested dropdown submenus again for deeper navigation branches, and the breadcrumb override intentionally skips empty structural ancestors such as `/pages/` while keeping the visible label free of the trailing `– OPENGIS.ch` suffix.
+The active typography now uses the restored local/system stack again: `Avenir Next` for body copy with `Segoe UI`/`Helvetica Neue` fallbacks, and `Trebuchet MS` for headings, navbar text, and emphasized title components.
 Service-page quote components now use the full content width instead of a narrower 80% inset, so support/custom-development/sustainability quotes align with the rest of the body copy in both light and dark mode.
 Every `content/pages/index*.md` file now keeps its normalized `source:` route in `aliases`, and a regression test checks that content-page front matter stays valid and those source paths remain covered.
 The jobs page now uses a dedicated ClickUp application embed again, matching the live legacy `/jobs/` page and keeping a direct fallback link in the markup.
@@ -53,18 +54,18 @@ Non-blog content pages that depended on legacy inline embeds now keep them in ma
 GeoNinjas card reveals now trigger a bit earlier and complete faster, with a shorter translate distance and tighter stagger so the section feels more responsive without disabling motion entirely.
 Blog list cards and the homepage blog teaser cards now use the shared page-image resolver again, so post-bundle `images`, `cover.image`, `image`, and first-content-image fallbacks all feed the card thumbnails consistently.
 The base shell now exposes a keyboard skip link and a `data-hugo-environment` marker, Google Fonts are loaded from the document head with `dns-prefetch`, `preconnect`, and stylesheet `preload` hints instead of SCSS `@import`, analytics-enabled builds now warm the Google Tag Manager origin too, and the main site script now gates its debug logging to development/local runs.
-The header controls are now more semantically correct as well: the language switcher is a real button, active top-level and dropdown nav links consistently emit `aria-current="page"`, the brand link has an explicit home label, and the theme toggle keeps its `aria-pressed` and label in sync with the current theme.
+The header controls are now more semantically correct as well: the language switcher is a real button with `aria-label="Change language"`, active top-level and dropdown nav links consistently emit `aria-current="page"`, the brand link has an explicit home label, and the theme toggle keeps its `aria-pressed` and label in sync with the current theme. The homepage navbar includes the full scroll-aware class list (`navbar-color-on-scroll navbar-transparent hestia_left shadow-sm fixed-top og-navbar og-navbar-home`) so the hero transparency transition works on page load.
 The theme Sass entrypoint now tree-shakes Bootstrap by importing only the components used by the live templates instead of the full `bootstrap.scss` bundle, and a regression test guards that curated import list.
 The footer asset pipeline now also builds a site-specific Bootstrap JavaScript bundle from only the components the current templates use (`alert`, `carousel`, `collapse`, `dropdown`, `tooltip`) instead of shipping the full prebuilt Bootstrap bundle.
 The head/footer asset partials now fingerprint the tracked Font Awesome CSS with SHA512 integrity attributes and use deferred SHA512-hashed scripts in development too, so local runs exercise the same non-blocking script contract as production.
 The stylesheet pipeline now also runs PostCSS with Autoprefixer via `themes/qfield-theme-v3/postcss.config.js`, so the root-level Node dependencies in `package.json` need to be installed before Hugo builds in clean environments and CI.
 Automated dependency updates are now configured in `.github/dependabot.yml` for the repository GitHub Actions workflow plus both npm manifests (`/package.json` and `/themes/qfield-theme-v3/package.json`), so build-tooling drift gets surfaced in small weekly PRs instead of large manual catch-up updates.
-The active Hugo configuration now uses TOML again, with `config/_default/hugo.toml` plus TOML environment overrides under `config/{development,staging,production}/`, and a regression test keeps the old `hugo.yaml` files from creeping back in.
+The active Hugo configuration now uses YAML again, with `config/_default/hugo.yaml` plus YAML environment overrides under `config/{development,staging,production}/`, and a regression test keeps the old `hugo.toml` files from creeping back in.
 The site now also exposes a `manifest.webmanifest` and registers a minimal same-origin service worker outside development, caching static same-origin CSS, JavaScript, font, and image responses for repeat visits without taking over page navigations.
 WordPress/static mirror cleanup is now measured by `scripts/wordpress_mirror_audit.py`, which scans source references before pruning mirrored roots; this branch already removed the dead `static/i1.wp.com/**` and `static/wp-json/otter/**` leftovers while leaving still-linked mirror content in place.
 The shared image partial now emits a valid default `sizes` descriptor that matches its generated `400/640/960/1280/1600` width ladder, resolves bundle-local images through `.Page.Resources`, and emits responsive AVIF/WebP `<picture>` sources for processed page-resource images. The reusable carousel helper now follows the same AVIF/WebP-plus-fallback pattern, and the main site script now waits for delayed success-story cards with a `MutationObserver` instead of the old polling retry loop.
 The main parameterized partials now carry explicit header docs for their accepted dict keys and return values, which makes the shared image/card/carousel helpers easier to reuse without reopening each file to rediscover the contract.
-The current CSP remains on `'unsafe-inline'` for styles because the templates still emit inline style attributes, but the allowlist has been tightened to the providers the site actually uses now: only Google Fonts remains, while stale Typekit and jsDelivr entries were removed from both the meta CSP and the Netlify-style headers file.
+The current CSP remains on `'unsafe-inline'` for styles because the templates still emit inline style attributes, but the font policy is back to same-origin/data-only because the site no longer depends on external Google Fonts.
 Homepage client-logo metadata now includes descriptive alt text, and the curated `htmltest` smoke script validates those rendered key pages instead of only checking the workflow file.
 The GeoNinjas section now uses a split profile-card layout closer to the live OPENGIS site and reveals cards with a fade-in-from-left scroll animation.
 Navbar dropdowns now switch to collapsed-menu-safe static submenu layout for the full `navbar-expand-lg` range, avoiding broken absolute-position panels between tablet and desktop widths.
@@ -112,6 +113,7 @@ python -m unittest discover -s tests -p "test_*.py"
 
 Some regression tests invoke `hugo` directly to validate rendered HTML output, so keep the `hugo` binary available when running the test suite.
 The same three local validation commands are now mirrored in `.github/workflows/test.yml` so pushes and pull requests run the Python tests, compile check, and a development Hugo build automatically.
+That workflow checks out submodules recursively via SSH, so GitHub Actions needs a repository secret named `OPENGIS_HUGO_THEME_SSH_KEY` with read access to the private theme submodule.
 The CI workflow now also runs a curated Lighthouse CI smoke pass via `scripts/run_lighthouse_ci.sh` and `.lighthouserc.js`, serving the built `public/` output on `127.0.0.1` and collecting desktop audits for the homepage, localized homepages, and key service/product landing pages.
 The workflow also runs a curated browser-based accessibility smoke check via `scripts/run_pa11y_ci.sh`, which serves `public/` locally and checks a focused set of key first-party pages with `pa11y-ci` using the `axe` runner against WCAG 2 AA. The external-embed jobs page stays under the HTML smoke check instead of the `pa11y` set because the third-party form iframe makes browser navigation timing too unstable for CI.
 The CI workflow now also runs a curated `htmltest` smoke check via `scripts/run_htmltest_ci.sh` against key rendered pages in `public/`, which keeps HTML/link validation active without immediately failing on the current backlog of legacy blog issues.

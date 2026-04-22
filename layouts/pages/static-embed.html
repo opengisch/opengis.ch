@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $embed := .Params.embed }}
+{{ $pageClass := .Params.page_class }}
+{{ $leadImage := .Params.lead_image }}
+
+<article class="custom-dev-page generic-single-page{{ if $pageClass }} {{ $pageClass }}{{ end }}">
+  <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    {{ if .Content }}
+      <div class="generic-single-content">
+        {{ with $leadImage }}
+          <p class="text-center">
+            <img
+              src="{{ .src | safeURL }}"
+              alt="{{ .alt }}"
+              class="img-fluid"
+              loading="lazy"
+            >
+          </p>
+        {{ end }}
+        {{ .Content }}
+      </div>
+    {{ end }}
+
+    {{ with $embed }}
+      <div class="{{ .wrapper_class }}">
+        <iframe
+          class="{{ .iframe_class }}"
+          src="{{ .url | safeURL }}"
+          title="{{ .title }}"
+          loading="lazy"
+          frameborder="{{ .frameborder | default "0" }}"
+          scrolling="{{ .scrolling | default "auto" }}"
+          {{ if .allowfullscreen }}allowfullscreen="allowfullscreen"{{ end }}
+        ></iframe>
+      </div>
+    {{ end }}
+  </div>
+</article>
+
+{{ end }}

@@ -1,25 +1,24 @@
 ---
 title: "Crowdfunding: Erweiterte Unterstützung für Kreisbögen in QGIS – OPENGIS.ch"
 source: "www.opengis.ch/crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/index.html"
+layout: "static-embed"
 aliases:
   - "/crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/"
+lead_image:
+  src: "/wp-content/uploads/2025/04/image87f2b.png"
+  alt: "Banner for the QGIS circular arc support crowdfunding campaign"
+embed:
+  wrapper_class: "page-inline-embed crowdfunding-progress-embed"
+  iframe_class: "page-inline-embed__iframe crowdfunding-progress-iframe"
+  url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQUZgZV6MYLKxjYwshhudga3VP-mIT_9sTyGfaNQ7PUcywszPXC9VmCIV9BOZGKEQ5QN1FEsSVsXNa/pubchart?oid=1555133790&format=interactive"
+  title: "Crowdfunding progress"
+  frameborder: "0"
+  scrolling: "no"
 ---
 
-![Banner for the QGIS circular arc support crowdfunding campaign](../../i0.wp.com/www.opengis.ch/wp-content/uploads/2025/04/image87f2b.png?resize=750%2C360&ssl=1)
 #### Die Vision: Datensätze mit Kreisbögen sauber bearbeiten
 Kreisbögen sind ein zentrales Element im Vermessungswesen, der saubere Umgang damit ist eine zwingende Voraussetzung für das Arbeiten an und mit Daten der Amtlichen Vermessung. Eine komplette Unterstützung von Kreisbögen in der Standardsoftware QGIS wird es ermöglichen, diese Applikation für eine ganze Palette von neuen Anwendungsfällen einzusetzen, sowohl für die Nachführung der Amtlichen Vermessung, als auch für das Arbeiten mit darauf aufsetzenden Datensätzen wie der Nutzungsplanung. QGIS unterstützt bereits das Erfassen und Speichern von Kreisbögen, diese gehen jedoch oft verloren, wenn Geometrien verschnitten oder zusammengeführt werden. Dies führt zu einer aufwändigen Nachbearbeitung, wir möchten gerne erreichen, dass QGIS das für uns übernimmt: zuverlässig, sauber und fehlerfrei.
 **Finanzierung erfolgreich abgeschlossen!**  
-
-<div class="page-inline-embed crowdfunding-progress-embed">
-  <iframe
-    class="page-inline-embed__iframe crowdfunding-progress-iframe"
-    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSQUZgZV6MYLKxjYwshhudga3VP-mIT_9sTyGfaNQ7PUcywszPXC9VmCIV9BOZGKEQ5QN1FEsSVsXNa/pubchart?oid=1555133790&amp;format=interactive"
-    title="Crowdfunding progress"
-    loading="lazy"
-    frameborder="0"
-    scrolling="no"
-  ></iframe>
-</div>
 
 #### Was bisher geschah: Basisimplementierung in GEOS
 GEOS ist die Bibliothek, welche in QGIS und anderen Open-Source Applikationen wie PostGIS eingesetzt wird für Geometrieoperationen. Sie erlaubt es, Datensätze miteinander zu verschneiden und sonstige geometrische Operationen durchzuführen. Im Jahr 2024 haben wir dank den Kantonen Basel-Landschaft und Zug sowie der Anwendergruppe Deutschland eine Basisintegration von Kreisbögen. Seit der GEOS Version 3.13 kennt das Geometriemodell von GEOS Kreisbögen und kann diese abbilden, sowie in sehr einfachen Berechnungsfunktionen damit umgehen. Damit steht der Weg nun frei, Kreisbögen auch in fortgeschrittenen Funktionen zu berücksichtigen.

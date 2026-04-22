@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $contentBody := trim (replaceRE `(?m)^!\[[^\]]*\]\([^\n]+\)\s*$` "" .RawContent) " \n\t" }}
+{{ $ctaText := "" }}
+{{ $ctaLink := "" }}
+{{ $ctaMatches := findRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` $contentBody }}
+{{ if gt (len $ctaMatches) 0 }}
+  {{ $lastLink := index $ctaMatches (sub (len $ctaMatches) 1) }}
+  {{ $ctaText = trim (replaceRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` "$1" $lastLink) " " }}
+  {{ $ctaLink = trim (replaceRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` "$2" $lastLink) " " }}
+  {{ $contentBody = trim (replaceRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` "" $contentBody) " \n\t" }}
+{{ end }}
+
+<article class="custom-dev-page generic-single-page">
+  <header class="custom-dev-hero generic-single-hero" style="--custom-dev-hero: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="custom-dev-title generic-single-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="generic-single-content">
+      <p class="text-center">
+        <img
+          src="/i0.wp.com/www.opengis.ch/wp-content/uploads/2024/07/qfield-rapidmappera86e.jpg"
+          alt="QField Rapid Mapper flood response illustration"
+          class="img-fluid"
+          loading="lazy"
+        >
+      </p>
+      {{ $contentBody | .RenderString }}
+      {{ if and $ctaText $ctaLink }}
+        <p class="text-center mt-4">
+          <a class="btn btn-primary" href="{{ $ctaLink | safeURL }}">{{ $ctaText }}</a>
+        </p>
+      {{ end }}
+    </div>
+  </div>
+</article>
+
+{{ end }}

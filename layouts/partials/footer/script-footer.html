@@ -1,0 +1,50 @@
+<!-- JavaScript and dependencies -->
+
+{{ $bootstrap := resources.Get "js/bootstrap/bootstrap.bundle.min.js" }}
+
+{{/* Build the app bundle: always include main.js, conditionally add others */}}
+{{ $appScripts := slice }}
+{{ with resources.Get "js/main.js" }}{{ $appScripts = $appScripts | append . }}{{ end }}
+{{ if ne .Site.Params.options.bootStrapJs false }}
+  {{ with resources.Get "js/carousel-init.js" }}{{ $appScripts = $appScripts | append . }}{{ end }}
+{{ end }}
+{{ if eq .Site.Params.enableDarkMode true }}
+  {{ with resources.Get "js/dark-mode.js" }}{{ $appScripts = $appScripts | append . }}{{ end }}
+{{ end }}
+{{ if eq .Site.Params.enableScrollToTop true }}
+  {{ with resources.Get "js/scroll-to-top.js" }}{{ $appScripts = $appScripts | append . }}{{ end }}
+{{ end }}
+{{ $appBundle := $appScripts | resources.Concat "js/app.js" }}
+
+{{ if eq hugo.Environment "development" -}}
+  {{ if ne .Site.Params.options.bootStrapJs false -}}
+    <script src="{{ $bootstrap.RelPermalink }}" defer></script>
+  {{ end -}}
+  <script src="{{ $appBundle.RelPermalink }}" defer></script>
+{{ else -}}
+  {{ if ne .Site.Params.options.bootStrapJs false -}}
+    {{ $bootstrap = $bootstrap | fingerprint "sha512" -}}
+    <script src="{{ $bootstrap.RelPermalink }}" integrity="{{ $bootstrap.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end -}}
+  {{ $appBundle = $appBundle | minify | fingerprint "sha512" -}}
+  <script src="{{ $appBundle.RelPermalink }}" integrity="{{ $appBundle.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ partial "footer/facebook-pixel-light.html" . }}
+{{ end -}}
+
+{{ if fileExists "static/vendor/fontawesome/js/all.min.js" -}}
+<script src="{{ "vendor/fontawesome/js/all.min.js" | relURL }}" defer></script>
+{{ end -}}
+
+{{/* Service Worker registration */}}
+{{ $serviceWorkerUrl := "sw.js" | relURL }}
+<script>
+if ('serviceWorker' in navigator && window.isSecureContext) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('{{ $serviceWorkerUrl }}').catch(function(err) {
+      if (document.documentElement.dataset.hugoEnvironment === 'development') {
+        console.warn('Service worker registration failed', err);
+      }
+    });
+  });
+}
+</script>

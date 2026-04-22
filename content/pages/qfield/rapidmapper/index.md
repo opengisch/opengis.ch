@@ -1,12 +1,12 @@
 ---
 title: "QField Rapid Mapper – OPENGIS.ch"
 source: "www.opengis.ch/qfield-rapidmapper/index.html"
+layout: "rapidmapper"
 aliases:
   - "/qfield-rapidmapper/"
 ---
 
 **QField Rapid Mapper** is a project for the [QField mobile app](<https://qfield.app/>), designed to empower emergency responders, civil protection teams, military personnel, and citizens to assess and report damages from natural disasters quickly. This powerful tool integrates seamlessly with QGIS, providing an efficient and user-friendly solution for field mapping, data collection, and web publication.
-![QField Rapid Mapper flood response illustration](/i0.wp.com/www.opengis.ch/wp-content/uploads/2024/07/qfield-rapidmappera86e.jpg)
 #### Key Features
   - **Real-Time Data Collection** : Capture and visualize data on the spot, ensuring timely and accurate information is available for disaster response and coordination.
   - **Seamless QGIS Integration** : Easily transfer data between QField and QGIS, maintaining consistency and accuracy in your mapping projects.

@@ -9,7 +9,6 @@ aliases:
 > Marco Bernasocchi, CEO
 ### Conseil géospatial
 
-![Illustration du conseil géospatial](/images/geospatial_consulting.png)
 
   - Planifiez-vous une nouvelle infrastructure de géodonnées ?
   - Souhaitez-vous améliorer vos flux de travail sur QGIS ?

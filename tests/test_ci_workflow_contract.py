@@ -13,6 +13,8 @@ class CiWorkflowContractTests(unittest.TestCase):
         self.assertIn("push:", workflow)
         self.assertIn("pull_request:", workflow)
         self.assertIn("uses: actions/checkout@v4", workflow)
+        self.assertIn("submodules: recursive", workflow)
+        self.assertIn("ssh-key: ${{ secrets.OPENGIS_HUGO_THEME_SSH_KEY }}", workflow)
         self.assertIn("uses: actions/setup-python@v5", workflow)
         self.assertIn('python-version: "3.12"', workflow)
         self.assertIn("uses: actions/setup-node@v4", workflow)

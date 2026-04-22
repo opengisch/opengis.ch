@@ -1,0 +1,134 @@
+{{ define "main" }}
+
+{{ $raw := .RawContent }}
+{{ $displayTitle := replaceRE `\s+[–-]\s+OPENGIS\.ch$` "" .Title }}
+{{ $sections := split (printf "\n%s" $raw) "\n## " }}
+{{ $introBlock := trim (index $sections 0) " \n\t" }}
+{{ $contentSections := slice }}
+{{ if gt (len $sections) 1 }}
+  {{ $contentSections = after 1 $sections }}
+{{ end }}
+
+{{ $quoteLines := findRE `(?m)^>\s*(.+)$` $introBlock }}
+{{ $quoteScratch := newScratch }}
+{{ $quoteScratch.Set "lines" (slice) }}
+{{ range $quoteLines }}
+  {{ $line := trim (replaceRE `(?m)^>\s*` "" .) " " }}
+  {{ if $line }}
+    {{ $quoteScratch.Add "lines" (slice $line) }}
+  {{ end }}
+{{ end }}
+{{ $quoteText := delimit ($quoteScratch.Get "lines") " " }}
+
+{{ $introScratch := newScratch }}
+{{ $introScratch.Set "lines" (slice) }}
+{{ range split $introBlock "\n" }}
+  {{ $line := trim . " \t\r" }}
+  {{ if and $line (not (hasPrefix $line ">")) }}
+    {{ $introScratch.Add "lines" (slice $line) }}
+  {{ end }}
+{{ end }}
+{{ $introMarkdown := delimit ($introScratch.Get "lines") "\n\n" }}
+
+{{ $credit := "" }}
+{{ $creditMatches := findRE `(?m)^_Icons by.+$` $raw 1 }}
+{{ if gt (len $creditMatches) 0 }}
+  {{ $credit = index $creditMatches 0 }}
+{{ end }}
+
+{{ $ctaText := "" }}
+{{ $ctaLink := "" }}
+{{ $standaloneLinks := findRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` $raw }}
+{{ if gt (len $standaloneLinks) 0 }}
+  {{ $lastLink := index $standaloneLinks (sub (len $standaloneLinks) 1) }}
+  {{ $ctaText = trim (replaceRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` "$1" $lastLink) " " }}
+  {{ $ctaLink = trim (replaceRE `(?m)^\[(.+?)\]\(<([^>]+)>\)\s*$` "$2" $lastLink) " " }}
+  {{ $ctaLink = replaceRE `^(\.\./)+` "/" $ctaLink }}
+{{ end }}
+{{ $sectionImages := slice
+  "https://i0.wp.com/opengis.ch/wp-content/uploads/2019/04/idea.resized-e1556274573876.png?resize=128%2C128&ssl=1"
+  "https://i0.wp.com/opengis.ch/wp-content/uploads/2019/04/bug.resized-e1556274436537.png?resize=128%2C128&ssl=1"
+  "https://i0.wp.com/opengis.ch/wp-content/uploads/2019/04/ok.resized-e1556274495670.png?resize=128%2C128&ssl=1"
+  "https://i0.wp.com/opengis.ch/wp-content/uploads/2019/04/shield.resized-e1556274515877.png?resize=128%2C128&ssl=1"
+}}
+
+<article class="sustain-page service-page">
+  <header class="sustain-hero" style="--sustain-hero-image: url('{{ "/wp-content/uploads/2020/04/social_distancing.png" | relURL }}');">
+    <div class="container">
+      <h1 class="sustain-title">{{ $displayTitle }}</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    {{ if $introMarkdown }}
+      <div class="sustain-intro">
+        {{ $introMarkdown | markdownify }}
+      </div>
+    {{ end }}
+
+    {{ if $quoteText }}
+      <blockquote class="sustain-quote">
+        <p>{{ $quoteText }}</p>
+      </blockquote>
+    {{ end }}
+
+    <div class="sustain-sections">
+      {{ range $idx, $section := $contentSections }}
+        {{ $sectionBlock := trim $section " \n\t" }}
+        {{ $sectionTitle := trim (replaceRE `(?s)^([^\n]+).*` "$1" $sectionBlock) " " }}
+        {{ $sectionBody := trim (replaceRE `(?s)^[^\n]+\n` "" $sectionBlock) " \n\t" }}
+        {{ $imageURL := "" }}
+        {{ if gt (len $sectionImages) $idx }}
+          {{ $imageURL = index $sectionImages $idx }}
+        {{ end }}
+        {{ $cleanBody := trim (replaceRE `(?m)^!\[[^\]]*\]\([^\n]+\)\s*$` "" $sectionBody) " \n\t" }}
+        {{ $cleanBody = trim (replaceRE `(?m)^_Icons by.+$` "" $cleanBody) " \n\t" }}
+        {{ $cleanBody = trim (replaceRE `(?m)^\[[^\]]+\]\(<[^>]+>\)\s*$` "" $cleanBody) " \n\t" }}
+        {{ $cleanBody = replace $cleanBody "\n" "\n\n" }}
+        {{ $cleanBody = replaceRE `\n{3,}` "\n\n" $cleanBody }}
+
+        {{ if eq $idx 0 }}
+          <section class="sustain-section sustain-section--initiative" id="initiative">
+            <div class="sustain-section__text">
+              {{ $cleanBody | markdownify }}
+            </div>
+            <div class="sustain-section__visual">
+              <h2 class="sustain-section__title">{{ $sectionTitle }}</h2>
+              {{ if $imageURL }}
+                <img src="{{ $imageURL | safeURL }}" alt="{{ $sectionTitle }}" class="sustain-section__icon" loading="lazy">
+              {{ end }}
+            </div>
+          </section>
+        {{ else }}
+          {{ $sectionClasses := "sustain-section" }}
+          {{ if eq $idx 2 }}
+            {{ $sectionClasses = printf "%s sustain-section--reverse" $sectionClasses }}
+          {{ end }}
+          <section class="{{ $sectionClasses }}">
+            <div class="sustain-section__visual">
+              {{ if $imageURL }}
+                <img src="{{ $imageURL | safeURL }}" alt="{{ $sectionTitle }}" class="sustain-section__icon" loading="lazy">
+              {{ end }}
+            </div>
+            <div class="sustain-section__text">
+              <h2 class="sustain-section__title">{{ $sectionTitle }}</h2>
+              {{ $cleanBody | markdownify }}
+            </div>
+          </section>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    {{ if and $ctaText $ctaLink }}
+      <div class="sustain-cta text-center">
+        <a class="btn btn-primary" href="{{ $ctaLink }}">{{ $ctaText }}</a>
+      </div>
+    {{ end }}
+
+    {{ if $credit }}
+      <p class="sustain-credit">{{ $credit | markdownify | replaceRE `(?s)^<p>|</p>\s*$` "" | safeHTML }}</p>
+    {{ end }}
+  </div>
+</article>
+
+{{ end }}

@@ -1,6 +1,7 @@
 ---
 title: "QField Courses - OPENGIS.ch"
 url: "/category/courses/qfield-courses/"
+layout: "course-calendar"
 aliases:
   - "/category/courses/qfield-courses/"
 source: "www.opengis.ch/category/courses/qfield-courses/index.html"
