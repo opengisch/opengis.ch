@@ -10,7 +10,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 class HeaderAccessibilityContractTests(unittest.TestCase):
     def test_header_template_uses_accessible_controls(self) -> None:
         template = (REPO_ROOT / "layouts/partials/header/header.html").read_text(encoding="utf-8")
-        dark_mode = (REPO_ROOT / "themes/opengis-hugo-theme/assets/js/dark-mode.js").read_text(encoding="utf-8")
+        dark_mode = (REPO_ROOT / "assets/js/dark-mode.js").read_text(encoding="utf-8")
 
         self.assertIn('class="navbar-brand d-flex align-items-center"', template)
         self.assertIn('aria-label="{{ .Site.Title }} home"', template)
@@ -29,7 +29,7 @@ class HeaderAccessibilityContractTests(unittest.TestCase):
         self.assertIn("btn.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');", dark_mode)
 
     def test_homepage_renders_accessible_header_controls(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             destination = Path(tmp_dir) / "public"
 
             subprocess.run(

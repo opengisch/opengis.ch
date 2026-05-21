@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased] - 2026-04-22
+- Moved the OPENGIS theme-local dark-mode/CSP changes into root overrides (`assets/js/dark-mode.js`, `layouts/partials/head/content-security-policy.html`, and `layouts/home.headers`) so the site owns those customizations without dirtying the `opengis-hugo-theme` submodule.
+- Updated the header accessibility and CSP regression tests to assert the root overrides, and refreshed README documentation for the new override locations.
 - Updated `.github/workflows/test.yml` so GitHub Actions checks out submodules recursively with `actions/checkout@v4` using the `OPENGIS_HUGO_THEME_SSH_KEY` repository secret, ensuring the Hugo theme submodule can be fetched over SSH in CI.
 - Extended `tests/test_ci_workflow_contract.py` to lock in the recursive-submodule and SSH-key checkout requirements, and documented the required CI secret in `README.md`.
 
@@ -8,9 +10,9 @@
 - Restored the previous local/system typography stack by removing the Google Fonts override from `layouts/partials/head/stylesheet.html`, switching site styles in `assets/sass/styles.scss` back to `Avenir Next` body copy plus `Trebuchet MS` headings/nav emphasis, and tightening the CSP font/style allowlist to same-origin/data-only sources again.
 - Converted the active Hugo config set from TOML back to YAML by replacing `config/_default/hugo.toml` and `config/{development,staging,production}/hugo.toml` with `hugo.yaml` equivalents, and updated `tests/test_config_format_contract.py` plus README references to enforce the YAML layout again.
 - Fixed Hugo v0.156.0 deprecation warnings: replaced all `site.Data` / `.Site.Data` references with `hugo.Data` in `layouts/index.html`, `layouts/shortcodes/home-features.html`, `layouts/shortcodes/geoninjas.html`, `layouts/assistance/single.html`, and `layouts/partials/assistance/customize-section.html`. Hugo build now emits zero deprecation warnings.
-- Restored the multi-level header navigation in `layouts/partials/header/header.html`, so nested service/course/support items render as dropdown submenus again, kept the theme toggle ARIA state synchronized in `themes/opengis-hugo-theme/assets/js/dark-mode.js`, and retuned the local navbar/breadcrumb styling in `assets/sass/styles.scss` for closer parity with the earlier layout in both light and dark mode.
+- Restored the multi-level header navigation in `layouts/partials/header/header.html`, so nested service/course/support items render as dropdown submenus again, kept the theme toggle ARIA state synchronized in `assets/js/dark-mode.js`, and retuned the local navbar/breadcrumb styling in `assets/sass/styles.scss` for closer parity with the earlier layout in both light and dark mode.
 - Fixed the breadcrumb trail by overriding `header/breadcrumb.html` locally so content pages no longer emit the empty `/pages/` ancestor and the current page label strips the `– OPENGIS.ch` suffix.
-- Resolved the Google Fonts CSP console errors by aligning `themes/opengis-hugo-theme/layouts/_partials/head/content-security-policy.html` and `themes/opengis-hugo-theme/layouts/home.headers` with the active font loading path, and refreshed the targeted header/CSP/breadcrumb regression tests.
+- Resolved the Google Fonts CSP console errors by aligning `layouts/partials/head/content-security-policy.html` and `layouts/home.headers` with the active font loading path, and refreshed the targeted header/CSP/breadcrumb regression tests.
 - Verified the change set with `hugo --environment development`, targeted `unittest` coverage for CSP/navbar/header/font/breadcrumb contracts, and `python -m compileall tests`.
 
 ## [Unreleased] - 2026-04-15

@@ -1,0 +1,7 @@
+<!-- https://report-uri.com/home/generate -->
+<!-- 'unsafe-inline' in style-src is required because Bootstrap applies inline styles
+     at runtime (e.g. carousel transforms, collapse height, tooltip positioning).
+     'unsafe-inline' in script-src is required for the dark-mode anti-FOUC inline
+     snippet in head.html. To harden both, generate a per-request nonce in Hugo,
+     inject it into the inline <script> tag, and add nonce-{value} here instead. -->
+<meta http-equiv='Content-Security-Policy' content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; object-src 'none'; base-uri 'none'; connect-src 'self'">

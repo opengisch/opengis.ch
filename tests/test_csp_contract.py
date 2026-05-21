@@ -7,10 +7,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 class CspContractTests(unittest.TestCase):
     def test_csp_only_allows_current_font_providers(self) -> None:
-        meta_csp = (
-            REPO_ROOT / "themes/opengis-hugo-theme/layouts/_partials/head/content-security-policy.html"
-        ).read_text(encoding="utf-8")
-        header_csp = (REPO_ROOT / "themes/opengis-hugo-theme/layouts/home.headers").read_text(encoding="utf-8")
+        meta_csp = (REPO_ROOT / "layouts/partials/head/content-security-policy.html").read_text(encoding="utf-8")
+        header_csp = (REPO_ROOT / "layouts/home.headers").read_text(encoding="utf-8")
 
         for content in (meta_csp, header_csp):
             self.assertIn("script-src 'self'", content)
