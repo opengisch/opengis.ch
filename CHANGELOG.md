@@ -1,6 +1,10 @@
 # Changelog
 
 ## [Unreleased] - 2026-04-22
+- Switched the active stylesheet pipeline to load the checked-in `assets/css/main.css` directly, removed Sass/PostCSS/Bootstrap CSS build dependencies from the root npm manifest, and removed Node/npm setup from the Pages deployment workflow.
+- Added `.github/workflows/pages.yml`, modeled on the QField Hugo deployment flow, so `main` publishes production to `gh-pages`, pull requests publish previews under `/pr-preview/pr-<number>/`, preview URLs are commented back on PRs, and closed PR previews are removed; added `CNAME` and `static/CNAME` to keep the GitHub Pages custom domain set to `www.opengis.ch`.
+- Added a root `layouts/robots.txt` override that blocks `/pr-preview/` in production and emits `Disallow: /` for non-production builds, with regression coverage for the preview workflow and robot directives.
+- Replaced deprecated Hugo language config keys (`languageName`/`languageCode`) with `label`/`locale` in `config/_default/hugo.yaml`, and added regression coverage so those build warnings do not return.
 - Moved the OPENGIS theme-local dark-mode/CSP changes into root overrides (`assets/js/dark-mode.js`, `layouts/partials/head/content-security-policy.html`, and `layouts/home.headers`) so the site owns those customizations without dirtying the `opengis-hugo-theme` submodule.
 - Updated the header accessibility and CSP regression tests to assert the root overrides, and refreshed README documentation for the new override locations.
 - Updated `.github/workflows/test.yml` so GitHub Actions checks out submodules recursively with `actions/checkout@v4` using the `OPENGIS_HUGO_THEME_SSH_KEY` repository secret, ensuring the Hugo theme submodule can be fetched over SSH in CI.

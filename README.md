@@ -9,7 +9,7 @@ The March 25, 2026 tracker sync reflects the completed TOML config migration, mo
 
 - Hugo extended
 - Python 3
-- Node.js and npm
+- Node.js and npm only for the Lighthouse and pa11y smoke scripts
 
 ## Hugo Config
 
@@ -30,14 +30,12 @@ The March 25, 2026 tracker sync reflects the completed TOML config migration, mo
 Start the local dev server:
 
 ```bash
-npm ci
 hugo server
 ```
 
 Build the site into `public/`:
 
 ```bash
-npm ci
 hugo
 ```
 
@@ -55,12 +53,12 @@ GeoNinjas card reveals now trigger a bit earlier and complete faster, with a sho
 Blog list cards and the homepage blog teaser cards now use the shared page-image resolver again, so post-bundle `images`, `cover.image`, `image`, and first-content-image fallbacks all feed the card thumbnails consistently.
 The base shell now exposes a keyboard skip link and a `data-hugo-environment` marker, Google Fonts are loaded from the document head with `dns-prefetch`, `preconnect`, and stylesheet `preload` hints instead of SCSS `@import`, analytics-enabled builds now warm the Google Tag Manager origin too, and the main site script now gates its debug logging to development/local runs.
 The header controls are now more semantically correct as well: the language switcher is a real button with `aria-label="Change language"`, active top-level and dropdown nav links consistently emit `aria-current="page"`, the brand link has an explicit home label, and the root `assets/js/dark-mode.js` override keeps the theme toggle `aria-pressed` and label in sync with the current theme. The homepage navbar includes the full scroll-aware class list (`navbar-color-on-scroll navbar-transparent hestia_left shadow-sm fixed-top og-navbar og-navbar-home`) so the hero transparency transition works on page load.
-The theme Sass entrypoint now tree-shakes Bootstrap by importing only the components used by the live templates instead of the full `bootstrap.scss` bundle, and a regression test guards that curated import list.
-The footer asset pipeline now also builds a site-specific Bootstrap JavaScript bundle from only the components the current templates use (`alert`, `carousel`, `collapse`, `dropdown`, `tooltip`) instead of shipping the full prebuilt Bootstrap bundle.
+The site stylesheet is checked in at `assets/css/main.css` and loaded directly by `layouts/partials/head/stylesheet.html`, so Hugo builds do not require npm, PostCSS, or Sass compilation for CSS.
+The footer uses the prebuilt Bootstrap JavaScript bundle shipped with the theme.
 The head/footer asset partials now fingerprint the tracked Font Awesome CSS with SHA512 integrity attributes and use deferred SHA512-hashed scripts in development too, so local runs exercise the same non-blocking script contract as production.
-The stylesheet pipeline now also runs PostCSS with Autoprefixer via `themes/qfield-theme-v3/postcss.config.js`, so the root-level Node dependencies in `package.json` need to be installed before Hugo builds in clean environments and CI.
-Automated dependency updates are now configured in `.github/dependabot.yml` for the repository GitHub Actions workflow plus both npm manifests (`/package.json` and `/themes/qfield-theme-v3/package.json`), so build-tooling drift gets surfaced in small weekly PRs instead of large manual catch-up updates.
+Automated dependency updates are now configured in `.github/dependabot.yml` for the repository GitHub Actions workflow plus the root npm manifest used by browser-audit tooling, so build-tooling drift gets surfaced in small weekly PRs instead of large manual catch-up updates.
 The active Hugo configuration now uses YAML again, with `config/_default/hugo.yaml` plus YAML environment overrides under `config/{development,staging,production}/`, and a regression test keeps the old `hugo.toml` files from creeping back in.
+Language entries in the Hugo YAML config use Hugo's current `label` and `locale` keys instead of the deprecated `languageName` and `languageCode` keys, so local and CI builds should stay free of those deprecation warnings.
 The site now also exposes a `manifest.webmanifest` and registers a minimal same-origin service worker outside development, caching static same-origin CSS, JavaScript, font, and image responses for repeat visits without taking over page navigations.
 WordPress/static mirror cleanup is now measured by `scripts/wordpress_mirror_audit.py`, which scans source references before pruning mirrored roots; this branch already removed the dead `static/i1.wp.com/**` and `static/wp-json/otter/**` leftovers while leaving still-linked mirror content in place.
 The shared image partial now emits a valid default `sizes` descriptor that matches its generated `400/640/960/1280/1600` width ladder, resolves bundle-local images through `.Page.Resources`, and emits responsive AVIF/WebP `<picture>` sources for processed page-resource images. The reusable carousel helper now follows the same AVIF/WebP-plus-fallback pattern, and the main site script now waits for delayed success-story cards with a `MutationObserver` instead of the old polling retry loop.
@@ -114,6 +112,8 @@ python -m unittest discover -s tests -p "test_*.py"
 Some regression tests invoke `hugo` directly to validate rendered HTML output, so keep the `hugo` binary available when running the test suite.
 The same three local validation commands are now mirrored in `.github/workflows/test.yml` so pushes and pull requests run the Python tests, compile check, and a development Hugo build automatically.
 That workflow checks out submodules recursively via SSH, so GitHub Actions needs a repository secret named `OPENGIS_HUGO_THEME_SSH_KEY` with read access to the private theme submodule.
+The `.github/workflows/pages.yml` deployment workflow publishes production builds from `main` to the `gh-pages` branch and publishes pull-request previews under `https://www.opengis.ch/pr-preview/pr-<number>/`, preserving the preview tree during production deploys and removing each preview when its pull request closes. It uses the same private theme submodule secret plus the repository `GITHUB_TOKEN` for pushing and PR comments, and the `CNAME` plus `static/CNAME` files keep the GitHub Pages custom domain set to `www.opengis.ch`. This deployment workflow intentionally does not run `npm ci`; CSS is already checked in.
+The root `layouts/robots.txt` template allows production indexing while disallowing `/pr-preview/`; staging, development, and PR-preview builds emit `Disallow: /` so preview artifacts are not indexable even when served publicly.
 The CI workflow now also runs a curated Lighthouse CI smoke pass via `scripts/run_lighthouse_ci.sh` and `.lighthouserc.js`, serving the built `public/` output on `127.0.0.1` and collecting desktop audits for the homepage, localized homepages, and key service/product landing pages.
 The workflow also runs a curated browser-based accessibility smoke check via `scripts/run_pa11y_ci.sh`, which serves `public/` locally and checks a focused set of key first-party pages with `pa11y-ci` using the `axe` runner against WCAG 2 AA. The external-embed jobs page stays under the HTML smoke check instead of the `pa11y` set because the third-party form iframe makes browser navigation timing too unstable for CI.
 The CI workflow now also runs a curated `htmltest` smoke check via `scripts/run_htmltest_ci.sh` against key rendered pages in `public/`, which keeps HTML/link validation active without immediately failing on the current backlog of legacy blog issues.

@@ -11,6 +11,8 @@ class ConfigFormatContractTests(unittest.TestCase):
             "config/_default/hugo.yaml": [
                 "baseURL: https://www.opengis.ch/",
                 "defaultContentLanguage: en",
+                "    label: English",
+                "    locale: en-US",
                 "  options:",
             ],
             "config/development/hugo.yaml": [
@@ -38,6 +40,21 @@ class ConfigFormatContractTests(unittest.TestCase):
         self.assertFalse((REPO_ROOT / "config/development/hugo.toml").exists())
         self.assertFalse((REPO_ROOT / "config/staging/hugo.toml").exists())
         self.assertFalse((REPO_ROOT / "config/production/hugo.toml").exists())
+
+    def test_hugo_language_config_uses_current_keys(self) -> None:
+        config = (REPO_ROOT / "config/_default/hugo.yaml").read_text(encoding="utf-8")
+
+        self.assertNotIn("languageName:", config)
+        self.assertNotIn("languageCode:", config)
+        for label, locale in (
+            ("English", "en-US"),
+            ("German", "de-CH"),
+            ("French", "fr-CH"),
+            ("Italian", "it-CH"),
+        ):
+            with self.subTest(language=label):
+                self.assertIn(f"label: {label}", config)
+                self.assertIn(f"locale: {locale}", config)
 
 
 if __name__ == "__main__":
