@@ -6,6 +6,13 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 class CiWorkflowContractTests(unittest.TestCase):
+    def test_private_theme_submodule_is_declared_for_actions_checkout(self) -> None:
+        gitmodules = (REPO_ROOT / ".gitmodules").read_text(encoding="utf-8")
+
+        self.assertIn('[submodule "themes/opengis-hugo-theme"]', gitmodules)
+        self.assertIn("path = themes/opengis-hugo-theme", gitmodules)
+        self.assertIn("url = git@github.com:opengisch/opengis-hugo-theme.git", gitmodules)
+
     def test_repo_has_github_actions_workflow_for_local_validation_commands(self) -> None:
         workflow = (REPO_ROOT / ".github/workflows/test.yml").read_text(encoding="utf-8")
 

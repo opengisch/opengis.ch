@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased] - 2026-04-22
+- Restored the missing `.gitmodules` mapping for `themes/opengis-hugo-theme`, and extended the CI workflow contract test plus README notes so GitHub Actions can fetch the private theme submodule recursively over SSH.
 - Switched the active stylesheet pipeline to load the checked-in `assets/css/main.css` directly, removed Sass/PostCSS/Bootstrap CSS build dependencies from the root npm manifest, and removed Node/npm setup from the Pages deployment workflow.
 - Added `.github/workflows/pages.yml`, modeled on the QField Hugo deployment flow, so `main` publishes production to `gh-pages`, pull requests publish previews under `/pr-preview/pr-<number>/`, preview URLs are commented back on PRs, and closed PR previews are removed; added `CNAME` and `static/CNAME` to keep the GitHub Pages custom domain set to `www.opengis.ch`.
 - Added a root `layouts/robots.txt` override that blocks `/pr-preview/` in production and emits `Disallow: /` for non-production builds, with regression coverage for the preview workflow and robot directives.
