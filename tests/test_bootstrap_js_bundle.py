@@ -11,7 +11,7 @@ class BootstrapJsBundleTests(unittest.TestCase):
         package_json = (REPO_ROOT / "package.json").read_text(encoding="utf-8")
 
         self.assertIn('{{ $bootstrap := resources.Get "js/bootstrap/bootstrap.bundle.min.js" }}', template)
-        self.assertNotIn("js.Build", template)
+        self.assertNotIn("bootstrap := resources.Get \"js/bootstrap/bootstrap.bundle.min.js\" | js.Build", template)
         self.assertNotIn("bootstrap.entry.js", template)
         self.assertNotIn('"bootstrap":', package_json)
         self.assertNotIn('"@popperjs/core":', package_json)

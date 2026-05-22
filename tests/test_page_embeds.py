@@ -17,8 +17,9 @@ CROWDFUNDING_CHART_URL = (
 
 class PageEmbedTests(unittest.TestCase):
     def test_newsletter_pages_render_legacy_signup_form(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             destination = Path(tmp_dir) / "public"
+            destination_arg = str(destination.relative_to(REPO_ROOT))
 
             subprocess.run(
                 [
@@ -26,7 +27,7 @@ class PageEmbedTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,
@@ -45,8 +46,9 @@ class PageEmbedTests(unittest.TestCase):
                 self.assertIn(NEWSLETTER_FORM_URL, html)
 
     def test_crowdfunding_pages_render_legacy_progress_chart(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             destination = Path(tmp_dir) / "public"
+            destination_arg = str(destination.relative_to(REPO_ROOT))
 
             subprocess.run(
                 [
@@ -54,7 +56,7 @@ class PageEmbedTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,

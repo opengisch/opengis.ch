@@ -8,7 +8,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 class GeoNinjasCardTests(unittest.TestCase):
     def test_homepage_and_shortcode_use_reveal_enabled_card_markup(self) -> None:
         homepage = (REPO_ROOT / "layouts/index.html").read_text(encoding="utf-8")
-        shortcode = (REPO_ROOT / "themes/qfield-theme-v3/layouts/shortcodes/geoninjas.html").read_text(encoding="utf-8")
+        shortcode = (REPO_ROOT / "layouts/shortcodes/geoninjas.html").read_text(encoding="utf-8")
 
         self.assertIn('data-reveal="fade-left"', homepage)
         self.assertIn('data-reveal-delay="{{ mul $index 36 }}"', homepage)
@@ -18,7 +18,7 @@ class GeoNinjasCardTests(unittest.TestCase):
         self.assertIn('class="team-card__media"', shortcode)
 
     def test_scroll_reveal_logic_and_card_styles_exist(self) -> None:
-        script = (REPO_ROOT / "themes/qfield-theme-v3/assets/js/main.js").read_text(encoding="utf-8")
+        script = (REPO_ROOT / "assets/js/main.js").read_text(encoding="utf-8")
         styles = (REPO_ROOT / "assets/sass/styles.scss").read_text(encoding="utf-8")
 
         self.assertIn('querySelectorAll(\'[data-reveal="fade-left"]\')', script)

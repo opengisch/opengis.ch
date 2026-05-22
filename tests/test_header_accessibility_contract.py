@@ -31,6 +31,7 @@ class HeaderAccessibilityContractTests(unittest.TestCase):
     def test_homepage_renders_accessible_header_controls(self) -> None:
         with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             destination = Path(tmp_dir) / "public"
+            destination_arg = str(destination.relative_to(REPO_ROOT))
 
             subprocess.run(
                 [
@@ -38,7 +39,7 @@ class HeaderAccessibilityContractTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,

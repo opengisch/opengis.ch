@@ -8,28 +8,28 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 class PartialParameterDocsTests(unittest.TestCase):
     def test_shared_parameterized_partials_document_their_contracts(self) -> None:
         documented_partials = {
-            "themes/qfield-theme-v3/layouts/partials/image.html": [
+            "layouts/partials/image.html": [
                 "Image Partial",
                 'partial "image.html"',
                 'Parameters:',
                 '- "src" string, required',
                 '- "sizes" string, optional',
             ],
-            "themes/qfield-theme-v3/layouts/partials/page-card-image.html": [
+            "layouts/partials/page-card-image.html": [
                 "Page Card Image Partial",
                 'partial "page-card-image.html"',
                 'Parameters:',
                 '- "page" page, required',
                 'Returns:',
             ],
-            "themes/qfield-theme-v3/layouts/partials/content/carousel.html": [
-                "Carousel Partial",
-                'partial "content/carousel.html"',
+            "themes/opengis-hugo-theme/layouts/_partials/content/carousel.html": [
+                "Bootstrap Carousel",
+                'partial "carousel.html"',
                 'Parameters:',
-                '- "imagesPattern" string, required',
-                '- "withControls" bool, optional',
+                '- "imagesPattern" to pass to resources.Match',
+                '- "withControls" boolean',
             ],
-            "themes/qfield-theme-v3/layouts/partials/assistance/service-card.html": [
+            "layouts/partials/assistance/service-card.html": [
                 "Service Card Partial",
                 'partial "assistance/service-card.html"',
                 'Parameters:',

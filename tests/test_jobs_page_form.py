@@ -11,7 +11,7 @@ JOBS_FORM_URL = "https://forms.clickup.com/f/22wqj-820/2Z3S1OO9ZF44Y54FQQ"
 class JobsPageFormTests(unittest.TestCase):
     def test_jobs_template_and_script_restore_clickup_form(self) -> None:
         template = (REPO_ROOT / "layouts/pages/clickup-form.html").read_text(encoding="utf-8")
-        script = (REPO_ROOT / "themes/qfield-theme-v3/assets/js/main.js").read_text(encoding="utf-8")
+        script = (REPO_ROOT / "assets/js/main.js").read_text(encoding="utf-8")
         styles = (REPO_ROOT / "assets/sass/styles.scss").read_text(encoding="utf-8")
 
         self.assertIn('id="{{ $iframeID }}"', template)
@@ -22,8 +22,9 @@ class JobsPageFormTests(unittest.TestCase):
         self.assertIn(".jobs-application-fallback {", styles)
 
     def test_jobs_page_renders_application_iframe(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             destination = Path(tmp_dir) / "public"
+            destination_arg = str(destination.relative_to(REPO_ROOT))
 
             subprocess.run(
                 [
@@ -31,7 +32,7 @@ class JobsPageFormTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,

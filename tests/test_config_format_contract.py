@@ -56,6 +56,13 @@ class ConfigFormatContractTests(unittest.TestCase):
                 self.assertIn(f"label: {label}", config)
                 self.assertIn(f"locale: {locale}", config)
 
+    def test_hugo_config_keeps_default_mounts_available_for_test_builds(self) -> None:
+        config = (REPO_ROOT / "config/_default/hugo.yaml").read_text(encoding="utf-8")
+
+        self.assertNotIn("mounts:", config)
+        self.assertNotIn("target: content", config)
+        self.assertNotIn("target: layouts", config)
+
 
 if __name__ == "__main__":
     unittest.main()

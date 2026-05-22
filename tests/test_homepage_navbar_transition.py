@@ -9,8 +9,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 class HomepageNavbarTransitionTests(unittest.TestCase):
     def test_homepage_renders_scroll_aware_hero_navbar(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             destination = Path(tmp_dir) / "public"
+            destination_arg = str(destination.relative_to(REPO_ROOT))
 
             subprocess.run(
                 [
@@ -18,7 +19,7 @@ class HomepageNavbarTransitionTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,

@@ -7,7 +7,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 class MainJsDebugGatingTests(unittest.TestCase):
     def test_debug_logging_is_gated_by_environment(self) -> None:
-        script = (REPO_ROOT / "themes/qfield-theme-v3/assets/js/main.js").read_text(encoding="utf-8")
+        script = (REPO_ROOT / "assets/js/main.js").read_text(encoding="utf-8")
 
         self.assertIn("const debugEnabled =", script)
         self.assertIn("document.documentElement.dataset.hugoEnvironment === 'development'", script)
