@@ -105,8 +105,8 @@ markup:
 
 languages:
   en:
-    languageName: English
-    languageCode: en-US
+    label: English
+    locale: en-US
     weight: 10
     params:
       languageISO: EN
@@ -269,8 +269,8 @@ languages:
           url: /#contact
           weight: 60
   de:
-    languageName: German
-    languageCode: de-CH
+    label: German
+    locale: de-CH
     weight: 20
     params:
       languageISO: DE
@@ -433,8 +433,8 @@ languages:
           url: blog/
           weight: 60
   fr:
-    languageName: French
-    languageCode: fr-CH
+    label: French
+    locale: fr-CH
     weight: 30
     params:
       languageISO: FR
@@ -591,8 +591,8 @@ languages:
           url: blog/
           weight: 60
   it:
-    languageName: Italian
-    languageCode: it-CH
+    label: Italian
+    locale: it-CH
     weight: 40
     params:
       languageISO: IT

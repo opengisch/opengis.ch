@@ -1,10 +1,4 @@
-{{- $sassOptions := dict "targetPath" "css/theme.css" "enableSourceMap" true "outputStyle" "expanded" "precision" 6 -}}
-
-{{ if ne hugo.Environment "development" -}}
-  {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed" "enableSourceMap" false) -}}
-{{- end -}}
-
-{{ $css := resources.Get "sass/main.scss" | css.Sass $sassOptions -}}
+{{ $css := resources.Get "css/main.css" -}}
 
 {{ if eq hugo.Environment "development" -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink | relURL }}" media="screen">
