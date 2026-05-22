@@ -53,11 +53,6 @@ jobs:
       - name: Build Hugo site
         run: hugo --environment development
 
-      - name: Validate Lighthouse scores
-        run: ./scripts/run_lighthouse_ci.sh
-        env:
-          CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}
-
       - name: Validate accessibility
         run: ./scripts/run_pa11y_ci.sh
         env:

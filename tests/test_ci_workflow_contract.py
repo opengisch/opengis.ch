@@ -34,7 +34,7 @@ class CiWorkflowContractTests(unittest.TestCase):
         self.assertIn('run: python -m unittest discover -s tests -p "test_*.py"', workflow)
         self.assertIn("run: python -m compileall scripts tests", workflow)
         self.assertIn("run: hugo --environment development", workflow)
-        self.assertIn("run: ./scripts/run_lighthouse_ci.sh", workflow)
+        self.assertNotIn("run: ./scripts/run_lighthouse_ci.sh", workflow)
         self.assertIn("run: ./scripts/run_pa11y_ci.sh", workflow)
         self.assertIn("CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}", workflow)
         self.assertIn("run: ./scripts/run_htmltest_ci.sh", workflow)

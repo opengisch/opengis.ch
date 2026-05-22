@@ -9,7 +9,7 @@ The March 25, 2026 tracker sync reflects the completed TOML config migration, mo
 
 - Hugo extended 0.161.1
 - Python 3
-- Node.js and npm only for the Lighthouse and pa11y smoke scripts
+- Node.js and npm only for the manual Lighthouse smoke script and the CI pa11y smoke script
 
 ## Hugo Config
 
@@ -115,7 +115,7 @@ The same three local validation commands are now mirrored in `.github/workflows/
 That workflow checks out the `.gitmodules` entry for `themes/opengis-hugo-theme` recursively via SSH (`git@github.com:opengisch/opengis-hugo-theme.git`), so GitHub Actions needs a repository secret named `OPENGIS_HUGO_THEME_SSH_KEY` with read access to the private theme submodule.
 The `.github/workflows/pages.yml` deployment workflow publishes production builds from `main` to the `gh-pages` branch and publishes pull-request previews under `https://www.opengis.ch/pr-preview/pr-<number>/`, preserving the preview tree during production deploys and removing each preview when its pull request closes. It uses the same private theme submodule secret plus the repository `GITHUB_TOKEN` for pushing and PR comments, and the `CNAME` plus `static/CNAME` files keep the GitHub Pages custom domain set to `www.opengis.ch`. This deployment workflow intentionally does not run `npm ci`; CSS is already checked in.
 The root `layouts/robots.txt` template allows production indexing while disallowing `/pr-preview/`; staging, development, and PR-preview builds emit `Disallow: /` so preview artifacts are not indexable even when served publicly.
-The CI workflow now also runs a curated Lighthouse CI smoke pass via `scripts/run_lighthouse_ci.sh` and `.lighthouserc.js`, serving the built `public/` output on `127.0.0.1` and collecting desktop audits for the homepage, localized homepages, and key service/product landing pages.
+The curated Lighthouse CI smoke pass remains available manually via `scripts/run_lighthouse_ci.sh` and `.lighthouserc.js`, serving the built `public/` output on `127.0.0.1` and collecting desktop audits for the homepage, localized homepages, and key service/product landing pages. It is currently excluded from the GitHub Actions test workflow.
 The workflow also runs a curated browser-based accessibility smoke check via `scripts/run_pa11y_ci.sh`, which serves `public/` locally and checks a focused set of key first-party pages with `pa11y-ci` using the `axe` runner against WCAG 2 AA. The external-embed jobs page stays under the HTML smoke check instead of the `pa11y` set because the third-party form iframe makes browser navigation timing too unstable for CI.
 The CI workflow now also runs a curated `htmltest` smoke check via `scripts/run_htmltest_ci.sh` against key rendered pages in `public/`, which keeps HTML/link validation active without immediately failing on the current backlog of legacy blog issues.
 
