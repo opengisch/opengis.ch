@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  HUGO_VERSION: "0.147.9"
+  HUGO_VERSION: "0.161.1"
   PRODUCTION_URL: "https://www.opengis.ch/"
   PREVIEW_ROOT: "https://www.opengis.ch/pr-preview"
   DEPLOY_BRANCH: "gh-pages"

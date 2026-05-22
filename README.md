@@ -7,7 +7,7 @@ The March 25, 2026 tracker sync reflects the completed TOML config migration, mo
 
 ## Requirements
 
-- Hugo extended
+- Hugo extended 0.161.1
 - Python 3
 - Node.js and npm only for the Lighthouse and pa11y smoke scripts
 
@@ -109,7 +109,7 @@ Run Python tests:
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
-Some regression tests invoke `hugo` directly to validate rendered HTML output, so keep the `hugo` binary available when running the test suite.
+Some regression tests invoke `hugo` directly to validate rendered HTML output, so keep the `hugo` binary available when running the test suite. CI and deployment currently pin Hugo extended 0.161.1.
 The Hugo config intentionally relies on Hugo's default module mounts; do not add a partial `module.mounts` list for only `assets` or `static`, because that disables default content/layout/data mounts and breaks isolated test builds that use `--contentDir` and temporary destinations.
 The same three local validation commands are now mirrored in `.github/workflows/test.yml` so pushes and pull requests run the Python tests, compile check, and a development Hugo build automatically.
 That workflow checks out the `.gitmodules` entry for `themes/opengis-hugo-theme` recursively via SSH (`git@github.com:opengisch/opengis-hugo-theme.git`), so GitHub Actions needs a repository secret named `OPENGIS_HUGO_THEME_SSH_KEY` with read access to the private theme submodule.

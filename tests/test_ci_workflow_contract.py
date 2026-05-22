@@ -30,7 +30,7 @@ class CiWorkflowContractTests(unittest.TestCase):
         self.assertIn("id: setup-chrome", workflow)
         self.assertIn("run: npm ci", workflow)
         self.assertIn("uses: peaceiris/actions-hugo@v3", workflow)
-        self.assertIn('hugo-version: "0.147.9"', workflow)
+        self.assertIn('hugo-version: "0.161.1"', workflow)
         self.assertIn('run: python -m unittest discover -s tests -p "test_*.py"', workflow)
         self.assertIn("run: python -m compileall scripts tests", workflow)
         self.assertIn("run: hugo --environment development", workflow)

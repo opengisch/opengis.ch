@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased] - 2026-04-22
+- Updated the GitHub Actions test and Pages deployment workflows to pin Hugo extended 0.161.1, and refreshed the workflow contract test plus README notes to match the CI runtime.
 - Removed the partial Hugo module mount configuration so default content/layout/data mounts and isolated `--contentDir` test builds work again, and updated rendered tests to use repo-relative temporary destinations that Hugo writes reliably.
 - Added a root favicon partial that links `manifest.webmanifest`, restored service-worker registration through the built `assets/js/service-worker-register.js` asset, and refreshed stale tests from the old `qfield-theme-v3` paths to the active root overrides and `opengis-hugo-theme` paths.
 - Restored the missing `.gitmodules` mapping for `themes/opengis-hugo-theme`, and extended the CI workflow contract test plus README notes so GitHub Actions can fetch the private theme submodule recursively over SSH.
