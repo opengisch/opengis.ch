@@ -38,7 +38,7 @@ class Pa11yCiContractTests(unittest.TestCase):
     def test_ci_workflow_installs_chrome_and_runs_pa11y(self) -> None:
         workflow = (REPO_ROOT / ".github/workflows/test.yml").read_text(encoding="utf-8")
 
-        self.assertIn("uses: browser-actions/setup-chrome@v1", workflow)
+        self.assertRegex(workflow, r"uses:\s+browser-actions/setup-chrome@v\d+\b")
         self.assertIn("id: setup-chrome", workflow)
         self.assertIn("run: ./scripts/run_pa11y_ci.sh", workflow)
         self.assertIn("CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}", workflow)
