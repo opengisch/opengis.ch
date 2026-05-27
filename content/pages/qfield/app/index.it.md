@@ -2,7 +2,7 @@
 title: "QField – OPENGIS.ch"
 source: "www.opengis.ch/it/android-gis/qfield/index.html"
 aliases:
-  - "/it/android-gis/qfield/"
+  - "/android-gis/qfield/"
 ---
 
 **Page moved to[qfield.org](<https://qfield.org/>)**

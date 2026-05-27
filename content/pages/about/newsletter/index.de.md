@@ -3,7 +3,7 @@ title: "Newsletter – OPENGIS.ch"
 source: "www.opengis.ch/de/newsletter/index.html"
 layout: "static-embed"
 aliases:
-  - "/de/newsletter/"
+  - "/newsletter/"
 embed:
   wrapper_class: "page-inline-embed newsletter-signup-embed"
   iframe_class: "page-inline-embed__iframe newsletter-signup-iframe"

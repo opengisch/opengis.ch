@@ -10,7 +10,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 class BlogTemplateParityTests(unittest.TestCase):
     def test_blog_list_uses_qfield_v2_structure(self) -> None:
-        template = (REPO_ROOT / "themes/qfield-theme-v3/layouts/blog/list.html").read_text(encoding="utf-8")
+        template = (REPO_ROOT / "layouts/blog/list.html").read_text(encoding="utf-8")
 
         self.assertIn('<section class="py-5 text-center bg-light mb-3">', template)
         self.assertIn('"/images/qfield_blog_default.png"', template)
@@ -18,7 +18,7 @@ class BlogTemplateParityTests(unittest.TestCase):
         self.assertNotIn("$contentImage", template)
 
     def test_blog_single_uses_qfield_v2_navigation_and_layout(self) -> None:
-        template = (REPO_ROOT / "themes/qfield-theme-v3/layouts/blog/single.html").read_text(encoding="utf-8")
+        template = (REPO_ROOT / "layouts/blog/single.html").read_text(encoding="utf-8")
 
         self.assertEqual(template.count('{{ "/blog/" | relURL }}'), 2)
         self.assertIn('<div class="row justify-content-center">', template)
@@ -30,11 +30,13 @@ class BlogTemplateParityTests(unittest.TestCase):
         self.assertTrue((REPO_ROOT / "static/images/qfield_blog_default.png").is_file())
 
     def test_blog_single_strips_duplicate_leading_heading_from_content(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             tmp_path = Path(tmp_dir)
             content_dir = tmp_path / "content"
             page_dir = content_dir / "blog" / "2026" / "01" / "07" / "duplicate-heading"
             destination = tmp_path / "public"
+            content_dir_arg = str(content_dir.relative_to(REPO_ROOT))
+            destination_arg = str(destination.relative_to(REPO_ROOT))
             page_dir.mkdir(parents=True)
 
             (page_dir / "index.md").write_text(
@@ -61,9 +63,9 @@ class BlogTemplateParityTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--contentDir",
-                    str(content_dir),
+                    content_dir_arg,
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,

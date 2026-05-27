@@ -94,7 +94,7 @@ class ContentPageLayoutContractTests(unittest.TestCase):
     def test_root_page_layouts_live_in_project(self) -> None:
         layout_dir = REPO_ROOT / "layouts/pages"
         self.assertEqual(ROOT_PAGE_LAYOUTS, {path.name for path in layout_dir.glob("*.html")})
-        self.assertFalse(any((REPO_ROOT / "themes/qfield-theme-v3/layouts/pages").glob("*.html")))
+        self.assertFalse(any((REPO_ROOT / "themes/opengis-hugo-theme/layouts/pages").glob("*.html")))
 
     def test_special_pages_use_explicit_root_layouts(self) -> None:
         for relative_path, expected_layout in EXPLICIT_LAYOUT_PAGES.items():
@@ -113,7 +113,7 @@ class ContentPageLayoutContractTests(unittest.TestCase):
                 self.assertNotIn("gravatar", content)
 
     def test_default_single_template_stays_generic(self) -> None:
-        template = (REPO_ROOT / "themes/qfield-theme-v3/layouts/_default/single.html").read_text(encoding="utf-8")
+        template = (REPO_ROOT / "themes/opengis-hugo-theme/layouts/single.html").read_text(encoding="utf-8")
 
         for legacy_marker in (
             "$isJobsPage",

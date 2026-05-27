@@ -9,15 +9,16 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 class CourseCategoryCardImageTests(unittest.TestCase):
     def test_course_cards_do_not_render_post_relative_logo_paths(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             destination = Path(tmp_dir) / "public"
+            destination_arg = str(destination.relative_to(REPO_ROOT))
             subprocess.run(
                 [
                     "hugo",
                     "--environment",
                     "development",
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,

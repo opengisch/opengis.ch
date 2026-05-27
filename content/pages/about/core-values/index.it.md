@@ -2,7 +2,7 @@
 title: "I nostri valori – OPENGIS.ch"
 source: "www.opengis.ch/it/i-nostri-valori/index.html"
 aliases:
-- /it/i-nostri-valori/
+- /i-nostri-valori/
 ---
 
 ## Visione

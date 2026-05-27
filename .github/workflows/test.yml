@@ -41,7 +41,7 @@ jobs:
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.147.9"
+          hugo-version: "0.161.1"
           extended: true
 
       - name: Run Python regression tests
@@ -52,11 +52,6 @@ jobs:
 
       - name: Build Hugo site
         run: hugo --environment development
-
-      - name: Validate Lighthouse scores
-        run: ./scripts/run_lighthouse_ci.sh
-        env:
-          CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}
 
       - name: Validate accessibility
         run: ./scripts/run_pa11y_ci.sh

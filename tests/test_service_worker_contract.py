@@ -8,7 +8,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 class ServiceWorkerContractTests(unittest.TestCase):
     def test_favicons_partial_links_manifest_when_present(self) -> None:
         template = (
-            REPO_ROOT / "themes/qfield-theme-v3/layouts/partials/head/favicons.html"
+            REPO_ROOT / "layouts/partials/head/favicons.html"
         ).read_text(encoding="utf-8")
 
         self.assertIn('os.FileExists "static/manifest.webmanifest"', template)
@@ -17,10 +17,10 @@ class ServiceWorkerContractTests(unittest.TestCase):
 
     def test_footer_registers_service_worker_via_built_asset(self) -> None:
         template = (
-            REPO_ROOT / "themes/qfield-theme-v3/layouts/partials/footer/script-footer.html"
+            REPO_ROOT / "layouts/partials/footer/script-footer.html"
         ).read_text(encoding="utf-8")
 
-        self.assertIn('{{ $serviceWorkerRegister := resources.Get "js/service-worker-register.js" }}', template)
+        self.assertIn('resources.Get "js/service-worker-register.js"', template)
         self.assertIn('"serviceWorkerUrl" ("sw.js" | relURL)', template)
         self.assertIn('"environment" hugo.Environment', template)
         self.assertIn('targetPath" "js/service-worker-register.js"', template)
@@ -28,7 +28,7 @@ class ServiceWorkerContractTests(unittest.TestCase):
 
     def test_service_worker_registration_script_is_environment_gated(self) -> None:
         script = (
-            REPO_ROOT / "themes/qfield-theme-v3/assets/js/service-worker-register.js"
+            REPO_ROOT / "assets/js/service-worker-register.js"
         ).read_text(encoding="utf-8")
 
         self.assertIn('import params from "@params";', script)

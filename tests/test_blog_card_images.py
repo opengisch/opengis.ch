@@ -11,10 +11,12 @@ FIXTURE_IMAGE_BYTES = (REPO_ROOT / "static/images/qfield_blog_default.png").read
 
 class BlogCardImageTests(unittest.TestCase):
     def test_blog_list_and_homepage_cards_use_post_bundle_featured_images(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             tmp_path = Path(tmp_dir)
             content_dir = tmp_path / "content"
             destination = tmp_path / "public"
+            content_dir_arg = str(content_dir.relative_to(REPO_ROOT))
+            destination_arg = str(destination.relative_to(REPO_ROOT))
 
             posts = (
                 ("2026/01/09/bundle-image-post", "Bundle Image Post", "bundle-featured.png"),
@@ -50,9 +52,9 @@ class BlogCardImageTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--contentDir",
-                    str(content_dir),
+                    content_dir_arg,
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,
@@ -73,10 +75,12 @@ class BlogCardImageTests(unittest.TestCase):
         self.assertIn("third-featured_hu_", home_html)
 
     def test_blog_list_and_homepage_cards_emit_modern_picture_sources_for_bundle_images(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             tmp_path = Path(tmp_dir)
             content_dir = tmp_path / "content"
             destination = tmp_path / "public"
+            content_dir_arg = str(content_dir.relative_to(REPO_ROOT))
+            destination_arg = str(destination.relative_to(REPO_ROOT))
 
             post_dir = content_dir / "blog" / "2026" / "01" / "09" / "bundle-image-post"
             post_dir.mkdir(parents=True)
@@ -105,9 +109,9 @@ class BlogCardImageTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--contentDir",
-                    str(content_dir),
+                    content_dir_arg,
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,

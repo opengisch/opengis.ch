@@ -36,15 +36,18 @@
 {{ end -}}
 
 {{/* Service Worker registration */}}
-{{ $serviceWorkerUrl := "sw.js" | relURL }}
-<script>
-if ('serviceWorker' in navigator && window.isSecureContext) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('{{ $serviceWorkerUrl }}').catch(function(err) {
-      if (document.documentElement.dataset.hugoEnvironment === 'development') {
-        console.warn('Service worker registration failed', err);
-      }
-    });
-  });
-}
-</script>
+{{ with resources.Get "js/service-worker-register.js" -}}
+  {{ $serviceWorkerRegister := . | js.Build (dict
+    "targetPath" "js/service-worker-register.js"
+    "params" (dict
+      "serviceWorkerUrl" ("sw.js" | relURL)
+      "environment" hugo.Environment
+    )
+  ) -}}
+  {{ if eq hugo.Environment "development" -}}
+    <script src="{{ $serviceWorkerRegister.RelPermalink }}" defer></script>
+  {{ else -}}
+    {{ $serviceWorkerRegister = $serviceWorkerRegister | minify | fingerprint "sha512" -}}
+    <script src="{{ $serviceWorkerRegister.RelPermalink }}" integrity="{{ $serviceWorkerRegister.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end -}}
+{{ end -}}

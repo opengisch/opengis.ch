@@ -1,6 +1,13 @@
 # Changelog
 
 ## [Unreleased] - 2026-04-22
+- Normalized translated content aliases to be language-relative so Hugo generates `/de/...`, `/fr/...`, and `/it/...` alias pages instead of double-prefixed paths such as `/de/de/...`, fixing localized homepage links in `htmltest`.
+- Hardened the Pages deployment workflow so production deploys explicitly check out `main` and Hugo always builds from `${GITHUB_WORKSPACE}`, preventing scheduled runs from starting outside the checked-out site config or against generated Pages output.
+- Temporarily excluded the Lighthouse CI smoke check from the GitHub Actions test workflow while keeping the local Lighthouse script and contract coverage available.
+- Updated the GitHub Actions test and Pages deployment workflows to pin Hugo extended 0.161.1, and refreshed the workflow contract test plus README notes to match the CI runtime.
+- Removed the partial Hugo module mount configuration so default content/layout/data mounts and isolated `--contentDir` test builds work again, and updated rendered tests to use repo-relative temporary destinations that Hugo writes reliably.
+- Added a root favicon partial that links `manifest.webmanifest`, restored service-worker registration through the built `assets/js/service-worker-register.js` asset, and refreshed stale tests from the old `qfield-theme-v3` paths to the active root overrides and `opengis-hugo-theme` paths.
+- Restored the missing `.gitmodules` mapping for `themes/opengis-hugo-theme`, and extended the CI workflow contract test plus README notes so GitHub Actions can fetch the private theme submodule recursively over SSH.
 - Switched the active stylesheet pipeline to load the checked-in `assets/css/main.css` directly, removed Sass/PostCSS/Bootstrap CSS build dependencies from the root npm manifest, and removed Node/npm setup from the Pages deployment workflow.
 - Added `.github/workflows/pages.yml`, modeled on the QField Hugo deployment flow, so `main` publishes production to `gh-pages`, pull requests publish previews under `/pr-preview/pr-<number>/`, preview URLs are commented back on PRs, and closed PR previews are removed; added `CNAME` and `static/CNAME` to keep the GitHub Pages custom domain set to `www.opengis.ch`.
 - Added a root `layouts/robots.txt` override that blocks `/pr-preview/` in production and emits `Disallow: /` for non-production builds, with regression coverage for the preview workflow and robot directives.

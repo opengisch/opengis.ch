@@ -40,12 +40,12 @@ class LighthouseCiContractTests(unittest.TestCase):
         self.assertIn('"@lhci/cli":', package_json)
         self.assertIn('"test:lighthouse": "./scripts/run_lighthouse_ci.sh"', package_json)
 
-    def test_ci_workflow_runs_lighthouse_with_repo_chrome_setup(self) -> None:
+    def test_ci_workflow_keeps_lighthouse_manual_only_for_now(self) -> None:
         workflow = (REPO_ROOT / ".github/workflows/test.yml").read_text(encoding="utf-8")
 
         self.assertIn("uses: browser-actions/setup-chrome@v1", workflow)
         self.assertIn("id: setup-chrome", workflow)
-        self.assertIn("run: ./scripts/run_lighthouse_ci.sh", workflow)
+        self.assertNotIn("run: ./scripts/run_lighthouse_ci.sh", workflow)
         self.assertIn("CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}", workflow)
 
 

@@ -2,7 +2,7 @@
 title: "QGIS Supportverträge – OPENGIS.ch"
 source: "www.opengis.ch/de/qgis-support-wartung/index.html"
 aliases:
-- /de/qgis-support-wartung/
+- /qgis-support-wartung/
 ---
 
 > Uns liegen Sie und Ihre Installationen am Herzen. Das ist auch der Grund warum uns Support und Wartung enorm wichtig sind. Wir sind stolz darauf, Supportverträge mit SLAs anbieten zu können. Ausserdem unterstützen Sie mit einem OPENGIS.ch Supportvertrag die QGIS [Nachhaltigkeitsinitiative](<../qgis-sustainability-initiative/index.html>). Marco Bernasocchi, CEO

@@ -4,7 +4,7 @@ date: 2023-03-06
 slug: "qgis-model-baker"
 url: "/it/2023/03/06/qgis-model-baker/"
 aliases:
-  - "/it/2023/03/06/qgis-model-baker/"
+  - "/2023/03/06/qgis-model-baker/"
 source: "www.opengis.ch/it/2023/03/06/qgis-model-baker/index.html"
 ---
 ### Description

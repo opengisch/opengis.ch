@@ -10,11 +10,13 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 class GalleryShortcodeTests(unittest.TestCase):
     def test_gallery_shortcode_renders_wrapper_markup(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             tmp_path = Path(tmp_dir)
             content_dir = tmp_path / "content"
             page_dir = content_dir / "pages" / "gallery-shortcode-smoke"
             destination = tmp_path / "public"
+            content_dir_arg = str(content_dir.relative_to(REPO_ROOT))
+            destination_arg = str(destination.relative_to(REPO_ROOT))
             page_dir.mkdir(parents=True)
 
             (page_dir / "index.md").write_text(
@@ -45,9 +47,9 @@ class GalleryShortcodeTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--contentDir",
-                    str(content_dir),
+                    content_dir_arg,
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,
@@ -67,7 +69,7 @@ class GalleryShortcodeTests(unittest.TestCase):
 
     def test_gallery_styles_and_lightbox_selectors_exist(self) -> None:
         styles = (REPO_ROOT / "assets/sass/styles.scss").read_text(encoding="utf-8")
-        script = (REPO_ROOT / "themes/qfield-theme-v3/assets/js/main.js").read_text(encoding="utf-8")
+        script = (REPO_ROOT / "assets/js/main.js").read_text(encoding="utf-8")
 
         self.assertIn(".gallery-carousel", styles)
         self.assertIn(".gallery-lightbox", styles)

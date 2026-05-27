@@ -6,6 +6,13 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 class CiWorkflowContractTests(unittest.TestCase):
+    def test_private_theme_submodule_is_declared_for_actions_checkout(self) -> None:
+        gitmodules = (REPO_ROOT / ".gitmodules").read_text(encoding="utf-8")
+
+        self.assertIn('[submodule "themes/opengis-hugo-theme"]', gitmodules)
+        self.assertIn("path = themes/opengis-hugo-theme", gitmodules)
+        self.assertIn("url = git@github.com:opengisch/opengis-hugo-theme.git", gitmodules)
+
     def test_repo_has_github_actions_workflow_for_local_validation_commands(self) -> None:
         workflow = (REPO_ROOT / ".github/workflows/test.yml").read_text(encoding="utf-8")
 
@@ -23,11 +30,11 @@ class CiWorkflowContractTests(unittest.TestCase):
         self.assertIn("id: setup-chrome", workflow)
         self.assertIn("run: npm ci", workflow)
         self.assertIn("uses: peaceiris/actions-hugo@v3", workflow)
-        self.assertIn('hugo-version: "0.147.9"', workflow)
+        self.assertIn('hugo-version: "0.161.1"', workflow)
         self.assertIn('run: python -m unittest discover -s tests -p "test_*.py"', workflow)
         self.assertIn("run: python -m compileall scripts tests", workflow)
         self.assertIn("run: hugo --environment development", workflow)
-        self.assertIn("run: ./scripts/run_lighthouse_ci.sh", workflow)
+        self.assertNotIn("run: ./scripts/run_lighthouse_ci.sh", workflow)
         self.assertIn("run: ./scripts/run_pa11y_ci.sh", workflow)
         self.assertIn("CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}", workflow)
         self.assertIn("run: ./scripts/run_htmltest_ci.sh", workflow)
@@ -62,13 +69,14 @@ class CiWorkflowContractTests(unittest.TestCase):
         self.assertIn('PREVIEW_ROOT: "https://www.opengis.ch/pr-preview"', workflow)
         self.assertIn('DEPLOY_BRANCH: "gh-pages"', workflow)
         self.assertIn("uses: actions/checkout@v4", workflow)
+        self.assertIn("ref: main", workflow)
         self.assertIn("submodules: recursive", workflow)
         self.assertIn("ssh-key: ${{ secrets.OPENGIS_HUGO_THEME_SSH_KEY }}", workflow)
         self.assertNotIn("uses: actions/setup-node@v4", workflow)
         self.assertNotIn("run: npm ci", workflow)
         self.assertIn("uses: peaceiris/actions-hugo@v3", workflow)
-        self.assertIn("hugo --environment production --gc --minify --baseURL", workflow)
-        self.assertIn("hugo --environment staging -D --baseURL", workflow)
+        self.assertIn('hugo --source "${GITHUB_WORKSPACE}" --environment production --gc --minify --baseURL', workflow)
+        self.assertIn('hugo --source "${GITHUB_WORKSPACE}" --environment staging -D --baseURL', workflow)
         self.assertIn("rsync -a --delete --exclude \".git\" --exclude \"pr-preview/\" public/", workflow)
         self.assertTrue((REPO_ROOT / "static/CNAME").exists())
         self.assertEqual("www.opengis.ch", (REPO_ROOT / "static/CNAME").read_text(encoding="utf-8").strip())

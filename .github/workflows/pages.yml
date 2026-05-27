@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  HUGO_VERSION: "0.147.9"
+  HUGO_VERSION: "0.161.1"
   PRODUCTION_URL: "https://www.opengis.ch/"
   PREVIEW_ROOT: "https://www.opengis.ch/pr-preview"
   DEPLOY_BRANCH: "gh-pages"
@@ -30,6 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           ssh-key: ${{ secrets.OPENGIS_HUGO_THEME_SSH_KEY }}
           submodules: recursive
@@ -41,7 +42,7 @@ jobs:
           extended: true
 
       - name: Build production site
-        run: hugo --environment production --gc --minify --baseURL "${PRODUCTION_URL}"
+        run: hugo --source "${GITHUB_WORKSPACE}" --environment production --gc --minify --baseURL "${PRODUCTION_URL}"
 
       - name: Publish production site
         env:
@@ -101,7 +102,7 @@ jobs:
           extended: true
 
       - name: Build PR preview
-        run: hugo --environment staging -D --baseURL "${PREVIEW_URL}"
+        run: hugo --source "${GITHUB_WORKSPACE}" --environment staging -D --baseURL "${PREVIEW_URL}"
 
       - name: Publish PR preview
         env:

@@ -2,7 +2,7 @@
 title: "QField Starthilfepakete – OPENGIS.ch"
 source: "www.opengis.ch/de/qfield-jump-start-packages/index.html"
 aliases:
-- /de/qfield-jump-start-packages/
+- /qfield-jump-start-packages/
 ---
 
 > Sie möchten mit der Erfassung von Felddaten beginnen, haben aber noch **nie mit einem GIS gearbeitet**?

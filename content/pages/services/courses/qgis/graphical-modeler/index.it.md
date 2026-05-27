@@ -4,7 +4,7 @@ date: 2023-03-06
 slug: "qgis-graphical-modeler"
 url: "/it/2023/03/06/qgis-graphical-modeler/"
 aliases:
-  - "/it/2023/03/06/qgis-graphical-modeler/"
+  - "/2023/03/06/qgis-graphical-modeler/"
 source: "www.opengis.ch/it/2023/03/06/qgis-graphical-modeler/index.html"
 image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2023/03/models_modela86e.png"
 ---

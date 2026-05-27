@@ -38,17 +38,6 @@ permalinks:
   blog: /:year/:month/:day/:slug/
   pages: /:contentbasename/
 
-module:
-  hugoVersion:
-    extended: true
-    min: 0.99.1
-    max: ""
-  mounts:
-    - source: assets
-      target: assets
-    - source: static
-      target: static
-
 mediaTypes:
   text/css:
     suffixes:

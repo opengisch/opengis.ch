@@ -9,8 +9,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 class BreadcrumbContractTests(unittest.TestCase):
     def test_custom_development_breadcrumb_skips_empty_pages_ancestor(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
+        with tempfile.TemporaryDirectory(dir=REPO_ROOT) as tmp_dir:
             destination = Path(tmp_dir) / "public"
+            destination_arg = str(destination.relative_to(REPO_ROOT))
 
             subprocess.run(
                 [
@@ -18,7 +19,7 @@ class BreadcrumbContractTests(unittest.TestCase):
                     "--environment",
                     "development",
                     "--destination",
-                    str(destination),
+                    destination_arg,
                 ],
                 check=True,
                 cwd=REPO_ROOT,

@@ -2,7 +2,7 @@
 title: "Corsi PyQGIS - OPENGIS.ch"
 url: "/it/category/corsi/corsi-pyqgis/"
 aliases:
-  - "/it/category/corsi/corsi-pyqgis/"
+  - "/category/corsi/corsi-pyqgis/"
 source: "www.opengis.ch/it/category/corsi/corsi-pyqgis/index.html"
 ---
 
