@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased] - 2026-04-22
+- Hardened the Pages deployment workflow so production deploys explicitly check out `main` and Hugo always builds from `${GITHUB_WORKSPACE}`, preventing scheduled runs from starting outside the checked-out site config or against generated Pages output.
 - Temporarily excluded the Lighthouse CI smoke check from the GitHub Actions test workflow while keeping the local Lighthouse script and contract coverage available.
 - Updated the GitHub Actions test and Pages deployment workflows to pin Hugo extended 0.161.1, and refreshed the workflow contract test plus README notes to match the CI runtime.
 - Removed the partial Hugo module mount configuration so default content/layout/data mounts and isolated `--contentDir` test builds work again, and updated rendered tests to use repo-relative temporary destinations that Hugo writes reliably.
