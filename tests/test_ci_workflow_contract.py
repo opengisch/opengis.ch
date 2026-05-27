@@ -6,6 +6,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 class CiWorkflowContractTests(unittest.TestCase):
+    def assert_uses_action(self, workflow: str, action: str) -> None:
+        self.assertRegex(workflow, rf"uses:\s+{action}@v\d+\b")
+
     def test_private_theme_submodule_is_declared_for_actions_checkout(self) -> None:
         gitmodules = (REPO_ROOT / ".gitmodules").read_text(encoding="utf-8")
 
@@ -19,17 +22,17 @@ class CiWorkflowContractTests(unittest.TestCase):
         self.assertIn("name: Test", workflow)
         self.assertIn("push:", workflow)
         self.assertIn("pull_request:", workflow)
-        self.assertIn("uses: actions/checkout@v4", workflow)
+        self.assert_uses_action(workflow, "actions/checkout")
         self.assertIn("submodules: recursive", workflow)
         self.assertIn("ssh-key: ${{ secrets.OPENGIS_HUGO_THEME_SSH_KEY }}", workflow)
-        self.assertIn("uses: actions/setup-python@v5", workflow)
+        self.assert_uses_action(workflow, "actions/setup-python")
         self.assertIn('python-version: "3.12"', workflow)
-        self.assertIn("uses: actions/setup-node@v4", workflow)
+        self.assert_uses_action(workflow, "actions/setup-node")
         self.assertIn('node-version: "22"', workflow)
-        self.assertIn("uses: browser-actions/setup-chrome@v1", workflow)
+        self.assert_uses_action(workflow, "browser-actions/setup-chrome")
         self.assertIn("id: setup-chrome", workflow)
         self.assertIn("run: npm ci", workflow)
-        self.assertIn("uses: peaceiris/actions-hugo@v3", workflow)
+        self.assert_uses_action(workflow, "peaceiris/actions-hugo")
         self.assertIn('hugo-version: "0.161.1"', workflow)
         self.assertIn('run: python -m unittest discover -s tests -p "test_*.py"', workflow)
         self.assertIn("run: python -m compileall scripts tests", workflow)
@@ -68,13 +71,13 @@ class CiWorkflowContractTests(unittest.TestCase):
         self.assertIn('PRODUCTION_URL: "https://www.opengis.ch/"', workflow)
         self.assertIn('PREVIEW_ROOT: "https://www.opengis.ch/pr-preview"', workflow)
         self.assertIn('DEPLOY_BRANCH: "gh-pages"', workflow)
-        self.assertIn("uses: actions/checkout@v4", workflow)
+        self.assert_uses_action(workflow, "actions/checkout")
         self.assertIn("ref: main", workflow)
         self.assertIn("submodules: recursive", workflow)
         self.assertIn("ssh-key: ${{ secrets.OPENGIS_HUGO_THEME_SSH_KEY }}", workflow)
-        self.assertNotIn("uses: actions/setup-node@v4", workflow)
+        self.assertNotRegex(workflow, r"uses:\s+actions/setup-node@v\d+\b")
         self.assertNotIn("run: npm ci", workflow)
-        self.assertIn("uses: peaceiris/actions-hugo@v3", workflow)
+        self.assert_uses_action(workflow, "peaceiris/actions-hugo")
         self.assertIn('hugo --source "${GITHUB_WORKSPACE}" --environment production --gc --minify --baseURL', workflow)
         self.assertIn('hugo --source "${GITHUB_WORKSPACE}" --environment staging -D --baseURL', workflow)
         self.assertIn("rsync -a --delete --exclude \".git\" --exclude \"pr-preview/\" public/", workflow)

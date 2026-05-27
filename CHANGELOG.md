@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased] - 2026-04-22
+- Relaxed the GitHub Actions workflow contract tests to assert required CI behavior without pinning exact action major versions, allowing Dependabot action-update PRs to pass when the workflow shape is unchanged.
 - Normalized translated content aliases to be language-relative so Hugo generates `/de/...`, `/fr/...`, and `/it/...` alias pages instead of double-prefixed paths such as `/de/de/...`, fixing localized homepage links in `htmltest`.
 - Hardened the Pages deployment workflow so production deploys explicitly check out `main` and Hugo always builds from `${GITHUB_WORKSPACE}`, preventing scheduled runs from starting outside the checked-out site config or against generated Pages output.
 - Temporarily excluded the Lighthouse CI smoke check from the GitHub Actions test workflow while keeping the local Lighthouse script and contract coverage available.
