@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OPENGIS.ch</title>
+    <link>https://www.opengis.ch/pr-preview/pr-9/pages/</link>
+    <description>Recent content on OPENGIS.ch</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>OPENGIS.ch</copyright>
+    <atom:link href="https://www.opengis.ch/pr-preview/pr-9/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>INTERLIS Crash Course Webinar – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/interlis-crashcourse-webinar/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/interlis-crashcourse-webinar/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;The goal of this crash course is to introduce “complete beginners” to INTERLIS. After the crash course, participants will know what INTERLIS is, how it is used, how to read a model, and how to find their way around it. They will also be able to model a simple example themselves.&#xA;The crash course lasts 3.5 hours (1:30 pm – 5:00 pm) via Google Meet (no Google account required) and costs 150 CHF per person. The course takes place with a minimum of 5 participants.&#xA;&lt;a href=&#34;https://www.opengis.ch/pr-preview/pr-9/courses-calendar/index.html&#34;&gt;Register now&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QField Jump-start – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qfield-jump-start/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qfield-jump-start/</guid>
+      <description>&lt;p&gt;You want to start collecting field data but &lt;strong&gt;never worked with a GIS&lt;/strong&gt; before?&#xA;You are a &lt;strong&gt;passionate QGIS user&lt;/strong&gt; and would like a jump start your fieldwork setup?&#xA;You are a &lt;strong&gt;senior GIS manager&lt;/strong&gt; and would like to optimize your teams’ mobile data collection efficiency?&lt;/p&gt;&#xA;&lt;h2 id=&#34;let-us-you-introduce-the-qfield-jump-start-packages&#34;&gt;Let us you introduce the QField jump-start packages&lt;/h2&gt;&#xA;&lt;p&gt;During a half day or full day private support session, our QFields experts will help you get started with your project as fast as possible.&#xA;The QField jump-start packages are available in &lt;strong&gt;English&lt;/strong&gt; , &lt;strong&gt;German&lt;/strong&gt; , &lt;strong&gt;French&lt;/strong&gt; , &lt;strong&gt;Italian&lt;/strong&gt; and &lt;strong&gt;Spanish&lt;/strong&gt; and can be held remotely or at one of our offices in Switzerland.&#xA;&lt;a href=&#34;https://www.opengis.ch/pr-preview/pr-9/qfield-training/index.html&#34;&gt;See pricing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QField Workshop – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qfield-workshop/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qfield-workshop/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;How to become a superuser in QField&lt;/strong&gt;&#xA;&lt;em&gt;You’ll not only be able to handle the app perfectly but also know how to set up a project to explore all the possibilities that QField offers. Prepare the optimal conditions for your field work and distribute the project to your team with QFieldCloud.&lt;/em&gt;&#xA;The course lasts 1 day (9:00 am – 5:00 pm) and costs 660 CHF per person. Lunch is included.&#xA;Participants bring their own computer and mobile phone or tablet.&#xA;1 instructor for a maximum of 8 people and 2 instructors for up to 14 people. The course takes place with a minimum of 5 participants.&#xA;&lt;a href=&#34;https://www.opengis.ch/pr-preview/pr-9/courses-calendar/index.html&#34;&gt;Register now&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QGIS Advanced – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qgis-advanced/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qgis-advanced/</guid>
+      <description>&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;&#xA;&lt;p&gt;Nach Abschluss dieses Kurses kannst du komplexe Projekte mit QGIS umsetzen. Du kennst Werkzeuge für die effiziente Sichtung, Bearbeitung, Erfassung und Darstellung von geographischen Daten. Du kennst Eigenschaften von verschiedenen Datenformaten wie PostGIS und GeoPackage und weisst, wie man die Daten im Projekt verwaltet. Du bist fähig, Workflows zur Geodatenverarbeitung mit Verarbeitungswerkzeugen zu erstellen, Drucklayouts zu kreieren und INTERLIS-Daten zu importieren. Weiter kannst du Ausdrücke schreiben und kennst deren Einsatzorte in QGIS.&#xA;Der Kurs dauert 2 Tage (9:00 – 17:00 Uhr) und kostet 1190 CHF pro Person. Dieser Preis beinhaltet die Anmeldung, die Schulungsunterlagen, die offizielle Zertifizierung und zwei Mittagessen.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QGIS Basic – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qgis-basic/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qgis-basic/</guid>
+      <description>&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;&#xA;&lt;p&gt;Nach Abschluss des Kurses kennst du die wichtigsten Funktionen von Open Source GIS QGIS Desktop, kannst Daten importieren, analysieren, eine Karte mit professionellem Layout erstellen sowie Objekte mit Attributen und Vektorgeometrien erfassen.&#xA;Der Kurs dauert 2 Tage (9:00 – 17:00 Uhr) und kostet 1190 CHF pro Person. Dieser Preis beinhaltet die Anmeldung, die Schulungsunterlagen, die offizielle Zertifizierung und 2 Mittagessen.&lt;/p&gt;&#xA;&lt;p&gt;Die Teilnehmer:innen bringen ihren eigenen Computer mit.&#xA;Eine Lehrperson für maximal 8 Personen und 2 Lehrpersonen für bis zu 14 Personen. Der Kurs findet ab 5 Teilnehmer:innen statt.&#xA;&lt;a href=&#34;https://www.opengis.ch/pr-preview/pr-9/courses-calendar/index.html&#34;&gt;Register here&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QGIS ModelBaker – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qgis-model-baker/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qgis-model-baker/</guid>
+      <description>&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;&#xA;&lt;p&gt;Nach Abschluss des Kurses kennen die Teilnehmer:innen alle Funktionen vom QGIS Model Baker und können INTERLIS Modelle in der Datenbank abbilden und Transferdateien importieren und exportieren. Ausserdem wird eine Einführung ins Handling mit Behälter und Datasets gegeben und der Live Validator vorgestellt.&#xA;Der Kurs dauert einen Tag und kostet 660 CHF pro Person. Das Mittagessen ist inbegriffen. Eine Lehrperson für maximal 8 Personen und 2 Lehrpersonen für maximal 14 Personen. Der Kurs findet ab 5 Teilnehmer:innen statt.&#xA;&lt;a href=&#34;https://www.opengis.ch/pr-preview/pr-9/courses-calendar/index.html&#34;&gt;Register now&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QGIS Modeling – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qgis-graphical-modeler/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0100</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/2023/03/06/qgis-graphical-modeler/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Mit der graphischen Modellierung in QGIS lassen sich mehrere QGIS-Werkzeuge in einem logischen Ablauf kombinieren. Dank der visuellen Gestaltung können Anwender:innen ohne Programmierkenntnisse Automatisierungen in QGIS realisieren. Wiederkehrende Arbeitsabläufe können so effizient ausgeführt und reproduziert werden.&lt;/p&gt;&#xA;&lt;p&gt;Im Kurs lernst du die Grundlagen und den Aufbau von graphischen Modellen. Wir üben den Aufbau eines solchen Modells inkl. benutzerdefinierten Eingaben, Optionen und Bedingungen.&lt;/p&gt;&#xA;&lt;p&gt;Du lernst, wie du den modellierten Arbeitsablauf testest und ausführst, ihn speicherst und für andere Nutzer im Projekt verfügbar machst. Du wirst im Kurs weiterführende Tipps und Tricks in Zusammenhang mit der graphischen Modellierung erhalten.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PostGIS with QGIS (on request) – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/2023/02/14/postgis-with-qgis/</link>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0100</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/2023/02/14/postgis-with-qgis/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Unlock the power of spatial databases in QGIS.&lt;/strong&gt;&lt;br&gt;&#xA;This hands-on course dives into the integration of PostGIS and QGIS, enabling efficient, scalable, and collaborative geodata management. Ideal for GIS professionals, analysts, and developers, the course is designed to provide practical skills in working with spatial databases directly from QGIS.&#xA;&lt;a href=&#34;mailto:sales@opengis.ch?subject=PostGIS%20Course%20Request&#34;&gt;Request quote&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;📅 Duration:&lt;/strong&gt; On request (typically 2–3 days)&lt;br&gt;&#xA;&lt;strong&gt;🎯 Format:&lt;/strong&gt; In-person or online&lt;br&gt;&#xA;&lt;strong&gt;📦 Customisable:&lt;/strong&gt; Tailored content and focus areas available on request&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PostgreSQL/PostGIS Administrator – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/2022/03/06/postgresql-postgis-administrator-course/</link>
+      <pubDate>Sun, 06 Mar 2022 00:00:00 +0100</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/2022/03/06/postgresql-postgis-administrator-course/</guid>
+      <description>&lt;p&gt;The course is aimed at PostgreSQL users who want to expand their administrator skills.&#xA;Various approaches are explained to optimize database usage and practiced through different examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Book QField Jumpstart – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/book-private-course/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/book-private-course/</guid>
+      <description>&lt;h5 id=&#34;recent-posts&#34;&gt;Recent Posts&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../2026/01/07/qfield-at-foss4g-2025-auckland/index.html&#34;&gt;QField at FOSS4G 2025 Auckland&lt;/a&gt; 2026-01-07&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../2025/12/17/qfield-4-0-aare-unlocking-a-great-spatial-experience-for-a-larger-audience/index.html&#34;&gt;QField 4.0 “Aare”: Unlocking a great spatial experience for a larger audience&lt;/a&gt; 2025-12-17&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../2025/10/09/looking-at-recent-qfieldcloud-storage-handling-improvements/index.html&#34;&gt;Looking at recent QFieldCloud storage handling improvements&lt;/a&gt; 2025-10-09&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;../2025/08/04/qfield-3-7-haida-gawai-polishing-a-great-experience/index.html&#34;&gt;QField 3.7 “Haida Gwaii”: Polishing a great experience&lt;/a&gt; 2025-08-04&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Comments for OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/feed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/feed/</guid>
+      <description>&lt;p&gt;Comments for OPENGIS.ch  &lt;a href=&#34;https://www.opengis.ch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch&lt;/a&gt; OPEN-SOURCE GEONINJAS Wed, 17 Dec 2025 12:40:06 +0000 hourly  1  &lt;a href=&#34;https://wordpress.org/?v=6.9&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://wordpress.org/?v=6.9&lt;/a&gt; Comment on QGIS speaks a lot of languages by QField 4.0 “Aare”: Unlocking a great spatial experience for a larger audience - OPENGIS.ch  &lt;a href=&#34;https://www.opengis.ch/2018/09/11/qgis-speaks-a-lot-of-languages/#comment-7547&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2018/09/11/qgis-speaks-a-lot-of-languages/#comment-7547&lt;/a&gt; Wed, 17 Dec 2025 12:40:06 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=4180#comment-7547&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=4180#comment-7547&lt;/a&gt; Comment on Visualizing Ideas: From circles to planets to story arcs by rattan homels  &lt;a href=&#34;https://www.opengis.ch/2025/01/14/visualizing-ideas-from-circles-to-planets-to-story-arcs/#comment-6941&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2025/01/14/visualizing-ideas-from-circles-to-planets-to-story-arcs/#comment-6941&lt;/a&gt; Wed, 29 Oct 2025 08:25:29 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=15152#comment-6941&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=15152#comment-6941&lt;/a&gt; Comment on QField 3.3 “Darién”: It is just the beginning by Larissa Posch  &lt;a href=&#34;https://www.opengis.ch/2024/06/11/qfield-3-3-darien-it-is-just-the-beginning/#comment-5353&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2024/06/11/qfield-3-3-darien-it-is-just-the-beginning/#comment-5353&lt;/a&gt; Wed, 16 Jul 2025 13:28:36 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=14431#comment-5353&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=14431#comment-5353&lt;/a&gt; Comment on Performance for mass updating features by Matteo Casto  &lt;a href=&#34;https://www.opengis.ch/2015/04/29/performance-for-mass-updating-features-on-layers/#comment-5352&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2015/04/29/performance-for-mass-updating-features-on-layers/#comment-5352&lt;/a&gt; Wed, 16 Jul 2025 11:09:38 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=1577#comment-5352&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=1577#comment-5352&lt;/a&gt; Comment on Celebrating community, innovation, and open-source GIS in Sweden - AKA the QGIS user conference 2025 by jason Beeching  &lt;a href=&#34;https://www.opengis.ch/2025/06/25/celebrating-community-innovation-and-open-source-gis-in-sweden-aka-the-qgis-user-conference-2025/#comment-5268&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2025/06/25/celebrating-community-innovation-and-open-source-gis-in-sweden-aka-the-qgis-user-conference-2025/#comment-5268&lt;/a&gt; Wed, 25 Jun 2025 23:29:17 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=15655#comment-5268&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=15655#comment-5268&lt;/a&gt; Comment on QField 3.5 “Fangorn”: Background tracking a reality! by No Shave FUE  &lt;a href=&#34;https://www.opengis.ch/2025/03/04/qfield-3-5-fangorn-background-tracking-a-reality/#comment-4734&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2025/03/04/qfield-3-5-fangorn-background-tracking-a-reality/#comment-4734&lt;/a&gt; Fri, 25 Apr 2025 14:16:30 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=15180#comment-4734&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=15180#comment-4734&lt;/a&gt; Comment on FOSSGIS 2025 – What a Week! by Ivory Homenick  &lt;a href=&#34;https://www.opengis.ch/2025/04/02/fossgis-2025-what-a-week/#comment-4571&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2025/04/02/fossgis-2025-what-a-week/#comment-4571&lt;/a&gt; Fri, 04 Apr 2025 12:03:18 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=15365#comment-4571&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=15365#comment-4571&lt;/a&gt; Comment on QGIS DXF Export enhancements by Germán Carrillo  &lt;a href=&#34;https://www.opengis.ch/2024/05/13/qgis-dxf-export-enhancements/#comment-4189&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2024/05/13/qgis-dxf-export-enhancements/#comment-4189&lt;/a&gt; Tue, 11 Feb 2025 08:42:48 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=14290#comment-4189&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=14290#comment-4189&lt;/a&gt; Comment on QGIS DXF Export enhancements by Germán Carrillo  &lt;a href=&#34;https://www.opengis.ch/2024/05/13/qgis-dxf-export-enhancements/#comment-4188&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2024/05/13/qgis-dxf-export-enhancements/#comment-4188&lt;/a&gt; Tue, 11 Feb 2025 08:26:53 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=14290#comment-4188&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=14290#comment-4188&lt;/a&gt; Comment on QGIS DXF Export enhancements by Thomas  &lt;a href=&#34;https://www.opengis.ch/2024/05/13/qgis-dxf-export-enhancements/#comment-4186&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/2024/05/13/qgis-dxf-export-enhancements/#comment-4186&lt;/a&gt; Tue, 11 Feb 2025 05:23:32 +0000 &lt;a href=&#34;https://www.opengis.ch/?p=14290#comment-4186&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;https://www.opengis.ch/?p=14290#comment-4186&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Consulting – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/training-consulting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/training-consulting/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Our experienced and multilingual team is always ready to help you plan and improve your workflows, optimise your tools performance and build up your in-house knowledge.&amp;rdquo;&#xA;Marco Bernasocchi, CEO&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;geospatial-consulting&#34;&gt;Geospatial Consulting&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Are you planning a new geodata infrastructure?&lt;/li&gt;&#xA;&lt;li&gt;Would you like to improve your QGIS workflows?&lt;/li&gt;&#xA;&lt;li&gt;Do you need in-house training for developers and analysts?&lt;/li&gt;&#xA;&lt;li&gt;Would you like to move away from a proprietary solution?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s discuss and find the optimal solution for your needs.&#xA;&lt;a href=&#34;../index.html#contact&#34;&gt;Get in touch&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Course registration – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/registration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/registration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Courses - OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/category/courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/category/courses/</guid>
+      <description>&lt;p&gt;Browse our upcoming training courses in the calendar below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Crowdfunding: Erweiterte Unterstützung für Kreisbögen in QGIS – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/</guid>
+      <description>&lt;h4 id=&#34;die-vision-datensätze-mit-kreisbögen-sauber-bearbeiten&#34;&gt;Die Vision: Datensätze mit Kreisbögen sauber bearbeiten&lt;/h4&gt;&#xA;&lt;p&gt;Kreisbögen sind ein zentrales Element im Vermessungswesen, der saubere Umgang damit ist eine zwingende Voraussetzung für das Arbeiten an und mit Daten der Amtlichen Vermessung. Eine komplette Unterstützung von Kreisbögen in der Standardsoftware QGIS wird es ermöglichen, diese Applikation für eine ganze Palette von neuen Anwendungsfällen einzusetzen, sowohl für die Nachführung der Amtlichen Vermessung, als auch für das Arbeiten mit darauf aufsetzenden Datensätzen wie der Nutzungsplanung. QGIS unterstützt bereits das Erfassen und Speichern von Kreisbögen, diese gehen jedoch oft verloren, wenn Geometrien verschnitten oder zusammengeführt werden. Dies führt zu einer aufwändigen Nachbearbeitung, wir möchten gerne erreichen, dass QGIS das für uns übernimmt: zuverlässig, sauber und fehlerfrei.&#xA;&lt;strong&gt;Finanzierung erfolgreich abgeschlossen!&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Custom Development – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/custom-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/custom-development/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;We love discussing requirements and create visionary solutions to problems. We always strive to develop, deploy and maintain solutions that offer exceptional value for our customers.&amp;rdquo;&#xA;Matthias Kuhn, CTO&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;model--store&#34;&gt;Model | Store&lt;/h3&gt;&#xA;&lt;h6 id=&#34;postgis--geopackage&#34;&gt;postGIS | Geopackage&lt;/h6&gt;&#xA;&lt;p&gt;Solid and resilient geodata infrastructures require a well-designed data model and a solid infrastructure.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Either you need a single centralised DB for storing and analysing all your data or a scalable and replicated DB cluster, we’ve done that before and are here to help you make the best decisions and set up the best infrastructure to suit your needs.&lt;br&gt;&#xA;For simpler, file-based solutions, we also have extensive experience in with GeoPackages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>INTERLIS Model Baker Courses - OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/category/courses/interlis-model-baker-courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/category/courses/interlis-model-baker-courses/</guid>
+      <description>&lt;p&gt;Browse upcoming INTERLIS Model Baker courses in the calendar below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Join Us – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/jobs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/jobs/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Are you self-sufficient team-player with a keen eye for creative solutions?&#xA;Do you want to work with a super motivated opensource &lt;a href=&#34;../index.html#team&#34;&gt;geoninjas team&lt;/a&gt; that thrives in helping clients overachieve?&#xA;Check out our &lt;a href=&#34;../core-values/index.html&#34;&gt;core values&lt;/a&gt; and get in touch!&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h4 id=&#34;currently-available-positions&#34;&gt;Currently available positions&lt;/h4&gt;&#xA;&lt;h4 id=&#34;apply-now&#34;&gt;Apply now&lt;/h4&gt;</description>
+    </item>
+    <item>
+      <title>Newsletter – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/newsletter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/newsletter/</guid>
+      <description>&lt;p&gt;💌 &lt;strong&gt;Stay Connected with opengis.ch!&lt;/strong&gt; 💌&#xA;Be the first to hear about our latest projects, open-source GIS insights, and exciting updates from the world of QField, QField Cloud, and beyond!&#xA;🔹 &lt;strong&gt;Explore all our latest news&lt;/strong&gt; in the &lt;a href=&#34;../category/newsletter/index.html&#34;&gt;newsletter list&lt;/a&gt;.&lt;br&gt;&#xA;🔹 &lt;strong&gt;Read past editions&lt;/strong&gt; in our &lt;a href=&#34;https://us3.campaign-archive.com/home/?u=2d414f4d56360dcbf83927721&amp;amp;id=dfa55b9546&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;newsletter archive&lt;/a&gt;.&#xA;Don’t miss a beat—&lt;strong&gt;subscribe now&lt;/strong&gt; and stay in the loop with the opengis.ch community! 🚀&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Order support contract – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/order-support-contract/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/order-support-contract/</guid>
+      <description>&lt;h2 id=&#34;order-your-contract-draft-now&#34;&gt;Order your contract draft now&lt;/h2&gt;&#xA;&lt;p&gt;You are just one step away from having a contract for review and signing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Our core values – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/core-values/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/core-values/</guid>
+      <description>&lt;h2 id=&#34;vision&#34;&gt;Vision&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Make open-source GIS the de-facto industry standard by continuously pushing its high-quality products and bleeding-edge technologies.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;mission&#34;&gt;Mission&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;We develop, deploy and maintain visionary solutions to create value for our customers.&#xA;Through efficient practices and iterative feedback loops, we make sure to exceed customer expectations and win them as open-source GIS ambassadors.&#xA;Your project, our passion&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;values&#34;&gt;Values&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Give back:&lt;/strong&gt; We live from open-source projects and are deeply committed to sustaining their technological and economic well-being.&#xA;&lt;strong&gt;Love nature&lt;/strong&gt; : We are outdoors enthusiasts and care about our playground. By working 100% remotely, we avoid useless commuting, whenever possible we travel by public transportation to our clients, when we have to fly we compensate our flights, and we are moving all our servers to CO2 neutral hosters.&#xA;&lt;strong&gt;Reduce Inequalities:&lt;/strong&gt; we believe everyone should have access to the best possible tools and knowledge. By committing ourselves to develop open-source applications, we give everyone access to powerful tools to plan, review and mitigate geospatial issues.&#xA;&lt;strong&gt;Our team – our heart[h]&lt;/strong&gt; : Since its inception, OPENGIS.ch has been all about allowing its team to strive for their perfect work-life balance by allowing everyone to organise working hours and location in harmony with their lives.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Our QGIS Sustainability initiative #sustainQGIS – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/qgis-sustainability-initiative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/qgis-sustainability-initiative/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://qgis.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QGIS&lt;/a&gt; and QField are very popular because they are extremely powerful, flexible and stable and can be used without having to worry about licenses or vendor lock-in.&#xA;A wide range of service providers offer know-how. Professional support for consulting, system integration and implementation new functionalities is always just around the corner.&#xA;So why should OPENGIS.ch be your first choice for your &lt;a href=&#34;../qgis-support/index.html&#34;&gt;QGIS and QField support contracts&lt;/a&gt;?&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Because besides being absolute QGIS and QField experts and making sure your projects are a success, our support contracts include our QGIS and QField sustainability initiative and thus help the ecosystem to grow sustainably.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Page has moved</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/contact/</guid>
+      <description>&lt;h3 id=&#34;click-here&#34;&gt;&lt;a href=&#34;../index.html#contact&#34;&gt;Click here&amp;hellip;&lt;/a&gt;&lt;/h3&gt;</description>
+    </item>
+    <item>
+      <title>Page has moved</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/qgis-mobile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/qgis-mobile/</guid>
+      <description>&lt;h3 id=&#34;click-here&#34;&gt;&lt;a href=&#34;../../2015/01/11/qgis-mobile-0-2-demo/index.html&#34;&gt;Click here&amp;hellip;&lt;/a&gt;&lt;/h3&gt;</description>
+    </item>
+    <item>
+      <title>Page not found – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/about/</guid>
+      <description>&lt;p&gt;It seems we can’t find what you’re looking for. Perhaps searching can help.&#xA;Search for:&lt;/p&gt;&#xA;&lt;h5 id=&#34;recent-posts&#34;&gt;Recent Posts&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2026/01/07/qfield-at-foss4g-2025-auckland/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField at FOSS4G 2025 Auckland&lt;/a&gt; 2026-01-07&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2025/12/17/qfield-4-0-aare-unlocking-a-great-spatial-experience-for-a-larger-audience/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField 4.0 “Aare”: Unlocking a great spatial experience for a larger audience&lt;/a&gt; 2025-12-17&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2025/10/09/looking-at-recent-qfieldcloud-storage-handling-improvements/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Looking at recent QFieldCloud storage handling improvements&lt;/a&gt; 2025-10-09&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2025/08/04/qfield-3-7-haida-gawai-polishing-a-great-experience/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField 3.7 “Haida Gwaii”: Polishing a great experience&lt;/a&gt; 2025-08-04&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/opengisch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://twitter.com/OPENGISch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://fosstodon.org/@opengisch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Mastodon&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://vimeo.com/user36168865&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Vimeo&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/company/opengisch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.swissmadesoftware.org/en/home/about/companies~O~.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Swissmadesoftware.org&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;OPENGIS.ch 2022&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Page not found – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/our-qgis-sustainability-initiative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/our-qgis-sustainability-initiative/</guid>
+      <description>&lt;p&gt;It seems we can’t find what you’re looking for. Perhaps searching can help.&#xA;Search for:&lt;/p&gt;&#xA;&lt;h5 id=&#34;recent-posts&#34;&gt;Recent Posts&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2026/01/07/qfield-at-foss4g-2025-auckland/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField at FOSS4G 2025 Auckland&lt;/a&gt; 2026-01-07&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2025/12/17/qfield-4-0-aare-unlocking-a-great-spatial-experience-for-a-larger-audience/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField 4.0 “Aare”: Unlocking a great spatial experience for a larger audience&lt;/a&gt; 2025-12-17&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2025/10/09/looking-at-recent-qfieldcloud-storage-handling-improvements/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Looking at recent QFieldCloud storage handling improvements&lt;/a&gt; 2025-10-09&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2025/08/04/qfield-3-7-haida-gawai-polishing-a-great-experience/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField 3.7 “Haida Gwaii”: Polishing a great experience&lt;/a&gt; 2025-08-04&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/opengisch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://twitter.com/OPENGISch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://fosstodon.org/@opengisch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Mastodon&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://vimeo.com/user36168865&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Vimeo&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/company/opengisch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.swissmadesoftware.org/en/home/about/companies~O~.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Swissmadesoftware.org&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;OPENGIS.ch 2022&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Page not found – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/qfield-love/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/qfield-love/</guid>
+      <description>&lt;p&gt;It seems we can’t find what you’re looking for. Perhaps searching can help.&#xA;Search for:&lt;/p&gt;&#xA;&lt;h5 id=&#34;recent-posts&#34;&gt;Recent Posts&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2026/01/07/qfield-at-foss4g-2025-auckland/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField at FOSS4G 2025 Auckland&lt;/a&gt; 2026-01-07&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2025/12/17/qfield-4-0-aare-unlocking-a-great-spatial-experience-for-a-larger-audience/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField 4.0 “Aare”: Unlocking a great spatial experience for a larger audience&lt;/a&gt; 2025-12-17&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2025/10/09/looking-at-recent-qfieldcloud-storage-handling-improvements/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Looking at recent QFieldCloud storage handling improvements&lt;/a&gt; 2025-10-09&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.opengis.ch/2025/08/04/qfield-3-7-haida-gawai-polishing-a-great-experience/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField 3.7 “Haida Gwaii”: Polishing a great experience&lt;/a&gt; 2025-08-04&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/opengisch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://twitter.com/OPENGISch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://fosstodon.org/@opengisch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Mastodon&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://vimeo.com/user36168865&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Vimeo&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/company/opengisch&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.swissmadesoftware.org/en/home/about/companies~O~.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Swissmadesoftware.org&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;OPENGIS.ch 2022&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PostGIS Courses - OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/category/courses/postgis-courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/category/courses/postgis-courses/</guid>
+      <description>&lt;p&gt;Browse upcoming PostGIS courses in the calendar below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PyQGIS Courses - OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/category/courses/pyqgis-courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/category/courses/pyqgis-courses/</guid>
+      <description>&lt;p&gt;Browse upcoming PyQGIS courses in the calendar below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QField – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/app/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Page moved to&lt;a href=&#34;https://qfield.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;qfield.org&lt;/a&gt;&lt;/strong&gt;&#xA;QField (for much more information refer to &lt;a href=&#34;https://qfield.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField.org&lt;/a&gt;) allows you to take your QGIS projects out of the office for effective field work. By maintaining QGIS’ styling and edit widgets QField greatly reduces preparation time.&lt;br&gt;&#xA;QField is an Open Source project led by OPENGIS.ch LLC and the &lt;a href=&#34;../../../qfield.opengis.ch/repo&#34;&gt;source code&lt;/a&gt; is on github. A possibility to donate to the project can be found on the &lt;a href=&#34;donate-and-sponsor/index.html&#34;&gt;donate page&lt;/a&gt; (preferred) or by buying the QField for &lt;a href=&#34;../../../qfield.opengis.ch/karma&#34;&gt;QGIS Karma edition app&lt;/a&gt;.&lt;br&gt;&#xA;Also if you need a specific feature, &lt;a href=&#34;../../contact/index.html&#34;&gt;contact us&lt;/a&gt; to sponsor its development.&lt;br&gt;&#xA;QField is built from ground up to be touch oriented and easy to use outside. and follows the following paradigm:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QField Courses - OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/category/courses/qfield-courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/category/courses/qfield-courses/</guid>
+      <description>&lt;p&gt;Browse upcoming QField courses in the calendar below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QField Highlights – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/category/qfield/highlights/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/category/qfield/highlights/</guid>
+      <description>&lt;p&gt;Stay up to date with the latest QField highlights from the OPENGIS.ch blog.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.opengis.ch/pr-preview/pr-9/blog/&#34;&gt;Browse the blog&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QField Jump-start packages – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/qfield-training/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/qfield-training/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;You want to start collecting field data but &lt;strong&gt;never worked with a GIS&lt;/strong&gt; before?&#xA;You are a &lt;strong&gt;passionate QGIS user&lt;/strong&gt; and would like a jump start your fieldwork setup?&#xA;You are a &lt;strong&gt;senior GIS manager&lt;/strong&gt; and would like to optimize your teams’ mobile data collection efficiency?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;let-us-you-introduce-the-qfield-jump-start-packages&#34;&gt;Let us you introduce the QField jump-start packages&lt;/h2&gt;&#xA;&lt;p&gt;During a half-day or full-day private support session, our QFields experts will help you get started with your project as fast as possible.&lt;br&gt;&#xA;The QField jump-start packages are available in English, German, French, Italian and Spanish and can be held remotely or at one of our offices in Switzerland.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QField Rapid Mapper – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/rapidmapper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/rapidmapper/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;QField Rapid Mapper&lt;/strong&gt; is a project for the &lt;a href=&#34;https://qfield.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;QField mobile app&lt;/a&gt;, designed to empower emergency responders, civil protection teams, military personnel, and citizens to assess and report damages from natural disasters quickly. This powerful tool integrates seamlessly with QGIS, providing an efficient and user-friendly solution for field mapping, data collection, and web publication.&lt;/p&gt;&#xA;&lt;h4 id=&#34;key-features&#34;&gt;Key Features&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real-Time Data Collection&lt;/strong&gt; : Capture and visualize data on the spot, ensuring timely and accurate information is available for disaster response and coordination.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Seamless QGIS Integration&lt;/strong&gt; : Easily transfer data between QField and QGIS, maintaining consistency and accuracy in your mapping projects.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Offline Functionality&lt;/strong&gt; : Work in remote areas without internet connectivity. QField stores data locally and syncs it once you’re back online.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;High Precision GPS&lt;/strong&gt; : Utilize your device’s built-in GPS or connect to external GPS devices for precise data collection, crucial for detailed assessments.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Prebuilt Customizable Forms&lt;/strong&gt; : Tailor the template data entry forms to meet your project’s specific needs, ensuring that all necessary information is captured accurately.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;User-Friendly Interface&lt;/strong&gt; : Designed with simplicity in mind, QField minimizes the learning curve, allowing users to focus on their work rather than figuring out complex software.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Open-Source and Community-Driven&lt;/strong&gt; : QField and QFieldCloud are open-source, benefiting from continuous improvements and support from a global community of users and developers.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;mailto:sales@qfield.cloud&#34;&gt;Contact us&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QGIS Courses - OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/category/courses/qgis-courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/category/courses/qgis-courses/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QGIS Support &amp; maintenance – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/qgis-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/qgis-support/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;We deeply care about you and your deployments and this is why we take support and maintenance very seriously and are proud to offer support contracts with SLAs. Furthermore, by choosing one of our support contracts you help our &lt;a href=&#34;../qgis-sustainability-initiative/index.html&#34;&gt;QGIS sustainability initiative&lt;/a&gt;.&amp;rdquo;&#xA;Marco Bernasocchi, CEO&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;choose-your-plan&#34;&gt;Choose Your Plan&lt;/h2&gt;&#xA;&lt;p&gt;An OPENGIS.ch support contract guarantees you a team of geospatial experts at your fingertips.&#xA;Thanks to a state of the art support platform and dedicated &lt;strong&gt;SLA&lt;/strong&gt; s you will always get your answers on time.&#xA;Furthermore, by choosing an OPENGIS.ch support contract you support our &lt;a href=&#34;../qgis-sustainability-initiative/index.html&#34;&gt;QGIS sustainability initiative&lt;/a&gt; and thus help QGIS to grow sustainably. For every support contract of 10 days or more, we donate additional days to the QGIS sustainability initiative. Instead of being forfeited, all unused hours at the end of the 12 months of each contract are also donated to the QGIS sustainability initiative.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Upcoming Courses – OPENGIS.ch</title>
+      <link>https://www.opengis.ch/pr-preview/pr-9/calendar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.opengis.ch/pr-preview/pr-9/calendar/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
