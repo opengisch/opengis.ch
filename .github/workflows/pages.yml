@@ -28,7 +28,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: main
           fetch-depth: 0
@@ -89,7 +89,7 @@ jobs:
       PREVIEW_URL: ${{ format('{0}/pr-{1}/', 'https://www.opengis.ch/pr-preview', github.event.pull_request.number) }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ssh-key: ${{ secrets.OPENGIS_HUGO_THEME_SSH_KEY }}
