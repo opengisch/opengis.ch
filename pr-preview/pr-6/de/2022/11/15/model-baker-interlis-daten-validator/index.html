@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="de-CH" data-bs-theme="light">
+<head>
+    
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    
+    <script>(function(){var k='theme',r=document.documentElement,m=window.matchMedia('(prefers-color-scheme: dark)');r.setAttribute('data-bs-theme',localStorage.getItem(k)||r.getAttribute('data-bs-theme')||(m.matches?'dark':'light'));})()</script>
+    
+
+<meta http-equiv='Content-Security-Policy' content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; object-src 'none'; base-uri 'none'; connect-src 'self'">
+
+    <link rel="stylesheet" href="/pr-preview/pr-6/css/main.3ad6a3a5e909f30b34626737edd2d761d0a6071c01772e6f48413a587d7c20185f0042e3cc566540f930a66d0544bd2333a578f35ec32c4ad06717e4cab6c3be.css" media="screen" integrity="sha512-OtajpekJ8ws0Ymc37dLXYdCmBxwBdy5vSEE6WH18IBhfAELjzFZlQPkwpm0FRL0jM6V4817DLErQZxfkyrbDvg==" crossorigin="anonymous">
+<link rel="stylesheet" href="/pr-preview/pr-6/bootstrap-icons/bootstrap-icons.bd61eca743ee4f1c1130bb464e76d2ecf0cdb48ef21669a216adb886372aa6ea7f28aee2c7159d5f04667ab1bd82eee979a491215c6915c7c1495ac6cd6705e3.css" integrity="sha512-vWHsp0PuTxwRMLtGTnbS7PDNtI7yFmmiFq24hjcqpup/KK7ixxWdXwRmerG9gu7peaSRIVxpFcfBSVrGzWcF4w==" crossorigin="anonymous">
+  <link rel="stylesheet" href="/pr-preview/pr-6/font-awesome/css/all.min20b9.0d33903bd456087de9a46a9c59a100d41219382eb1c5a97012cc3d73641078021fb65f957a0a2f96779ed5cf505f84dcb6758c9f5dd36727be822326f1ed8bc0.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl&#43;Vegovlnee1c9QX4TctnWMn13TZye&#43;giMm8e2LwA==" crossorigin="anonymous">
+<link rel="stylesheet" href="/pr-preview/pr-6/font-awesome/css/v4-shims.min20b9.7d67ceffb7860e9aefa7bfd40139df8693c3805df77deb63f78b43bfdab4cff58de0f0d88933fdefe41c5754168296e46fead4a7bea0ea09480f999d7ff2be49.css" integrity="sha512-fWfO/7eGDprvp7/UATnfhpPDgF33fetj94tDv9q0z/WN4PDYiTP97&#43;QcV1QWgpbkb&#43;rUp76g6glID5mdf/K&#43;SQ==" crossorigin="anonymous">
+
+    <title>Model Baker INTERLIS Daten Validator – OPENGIS.ch | OPENGIS.ch</title>
+<meta name="description" content="Der voll integrierte Daten Validator, mit dem du deine Daten direkt im QGIS gegen das INTERLIS Modell prüfen kannst, existiert nun seit fast einem Jahr. Nach …">
+<meta name="author" content="OPENGIS.ch">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
+
+
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+
+
+
+
+
+<link rel="canonical" href="https://www.opengis.ch/pr-preview/pr-6/de/2022/11/15/model-baker-interlis-daten-validator/">
+
+
+<link rel="alternate" hreflang="de-CH" href="https://www.opengis.ch/pr-preview/pr-6/de/2022/11/15/model-baker-interlis-daten-validator/">
+
+
+
+<link rel="alternate" hreflang="x-default" href="https://www.opengis.ch/pr-preview/pr-6/de/2022/11/15/model-baker-interlis-daten-validator/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+<meta property="og:title" content="Model Baker INTERLIS Daten Validator – OPENGIS.ch">
+<meta property="og:description" content="Der voll integrierte Daten Validator, mit dem du deine Daten direkt im QGIS gegen das INTERLIS Modell prüfen kannst, existiert nun seit fast einem Jahr. Nach vielen Benutzerfeedbacks und einigen …">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.opengis.ch/pr-preview/pr-6/de/2022/11/15/model-baker-interlis-daten-validator/">
+<meta property="og:locale" content="de-CH">
+    
+    
+  <meta property="article:section" content="blog">
+  
+    <meta property="article:published_time" content="2022-11-15T00:00:00+01:00">
+  
+  
+    <meta property="article:modified_time" content="2026-05-27T10:07:44+00:00">
+  
+  <meta property="og:site_name" content="OPENGIS.ch">
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+    <meta name="twitter:title" content="Model Baker INTERLIS Daten Validator – OPENGIS.ch">
+<meta name="twitter:description" content="Der voll integrierte Daten Validator, mit dem du deine Daten direkt im QGIS gegen das INTERLIS Modell prüfen kannst, existiert nun seit fast einem Jahr. Nach vielen Benutzerfeedbacks und einigen …">
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Model Baker INTERLIS Daten Validator – OPENGIS.ch",
+  "headline": "Model Baker INTERLIS Daten Validator – OPENGIS.ch",
+  "description": "Der voll integrierte Daten Validator, mit dem du deine Daten direkt im QGIS gegen das INTERLIS Modell prüfen kannst, existiert nun seit fast einem Jahr. Nach vielen Benutzerfeedbacks und einigen …",
+  "url": "https://www.opengis.ch/pr-preview/pr-6/de/2022/11/15/model-baker-interlis-daten-validator/",
+  "inLanguage": "de-CH",
+  "datePublished": "2022-11-15T00:00:00+01:00",
+  "dateModified": "2026-05-27T10:07:44+00:00",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "OPENGIS.ch",
+    "url": "https://www.opengis.ch/pr-preview/pr-6/de/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "OPENGIS.ch",
+    "url": "https://www.opengis.ch/pr-preview/pr-6/de/"
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<link rel="icon" type="image/png" href="https://www.opengis.ch/pr-preview/pr-6/favicon.png">
+<link rel="manifest" href="https://www.opengis.ch/pr-preview/pr-6/manifest.webmanifest">
+
+    <style>
+      :root {
+        --main-color: #0d6efd;
+        --main-theme-color: #fff;
+        --bs-primary: var(--main-color);
+        --bs-link-color: var(--main-color);
+      }
+    </style>
+    
+      
+        
+        <link rel="stylesheet" href="/pr-preview/pr-6/css/main.min.64e12eba5acc00a7ad1fc3f6d350ec2ff450bf14e97ab5f0e2028c595b2710336529e1d9a2e2c4787e5f64f5717ac1bc2c61e8571d2e8eb2e18383382be0832c.css" integrity="sha512-ZOEuulrMAKetH8P201DsL/RQvxTperXw4gKMWVsnEDNlKeHZouLEeH5fZPVxesG8LGHoVx0ujrLhg4M4K&#43;CDLA==" crossorigin="anonymous">
+      
+    
+</head>
+
+<body class="d-flex flex-column min-vh-100"><header class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-default og-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="/pr-preview/pr-6/de/" aria-label="OPENGIS.ch home">
+        
+        <img src="/pr-preview/pr-6/images/opengis-logo.png" alt="OPENGIS.ch" height="40" class="navbar-logo main-header-logo logo-light d-inline-block align-text-top">
+        <span class="visually-hidden">OPENGIS.ch</span>
+        
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="d-flex order-lg-2 ms-auto align-items-center gap-2 header-actions">
+        <a class="btn header-icon-button d-none d-md-inline-flex" href="/pr-preview/pr-6/de/index.xml" aria-label="RSS feed">
+          <i class="bi bi-rss" aria-hidden="true"></i>
+        </a>
+        <button id="themeToggle" class="btn header-icon-button theme-toggle-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <i id="themeIcon" class="bi"></i>
+        </button>
+        </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="menu-main navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/pr-preview/pr-6/de/#features">Warum uns?</a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown-angebot" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Angebot
+            </a>
+            <ul class="dropdown-menu" aria-label="Angebot">
+              
+              <li>
+                <a class="dropdown-item" href="/pr-preview/pr-6/de/entwicklung/">
+                  <i class="bi bi-code-slash dropdown-item-icon" aria-hidden="true"></i>
+                  <span>Individuelle Entwicklung</span>
+                </a>
+              </li>
+              
+              
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="/pr-preview/pr-6/de/qgis-support-wartung/" >
+                  <i class="bi bi-tools dropdown-item-icon" aria-hidden="true"></i>
+                  <span>Support &amp; Wartung</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/qgis-support-wartung/">
+                      <i class="bi bi-headset dropdown-item-icon" aria-hidden="true"></i>
+                      <span>QGIS Supportverträge</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/qgis-sustainability-initiative/">
+                      <i class="bi bi-emoji-smile dropdown-item-icon" aria-hidden="true"></i>
+                      <span>Our QGIS Sustainability initiative #sustainQGIS</span>
+                    </a>
+                  </li>
+                  </ul>
+              </li>
+              
+              
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="/pr-preview/pr-6/de/beratung/" >
+                  <i class="bi bi-rocket dropdown-item-icon" aria-hidden="true"></i>
+                  <span>Beratung</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/beratung/">
+                      <i class="obfx-menu-icon fa fa-handshake-o" aria-hidden="true"></i>
+                      <span>Beratungsdienstleistungen</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/qfield-jump-start-packages/">
+                      <i class="bi bi-phone dropdown-item-icon" aria-hidden="true"></i>
+                      <span>QField Starthilfepakete</span>
+                    </a>
+                  </li>
+                  </ul>
+              </li>
+              
+              
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="/pr-preview/pr-6/de/category/kurse/" >
+                  <i class="bi bi-mortarboard dropdown-item-icon" aria-hidden="true"></i>
+                  <span>Kurse</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/kurskalender/">
+                      <i class="bi bi-calendar3 dropdown-item-icon" aria-hidden="true"></i>
+                      <span>Kurskalender</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/kursanmeldung/">
+                      <i class="bi bi-pencil-square dropdown-item-icon" aria-hidden="true"></i>
+                      <span>Kursanmeldung</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/category/kurse/qgis-kurse/">
+                      <i class="bi bi-display dropdown-item-icon" aria-hidden="true"></i>
+                      <span>QGIS Kurse</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/category/kurse/qfield-kurse/">
+                      <i class="bi bi-phone dropdown-item-icon" aria-hidden="true"></i>
+                      <span>QField Kurse</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/category/kurse/interlis-model-baker-kurse/">
+                      <i class="bi bi-diagram-3 dropdown-item-icon" aria-hidden="true"></i>
+                      <span>INTERLIS &amp; Model Baker Kurse</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/category/kurse/postgis-kurse/">
+                      <i class="bi bi-database dropdown-item-icon" aria-hidden="true"></i>
+                      <span>PostGIS Kurse</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/pr-preview/pr-6/de/category/kurse/pyqgis-kurse/">
+                      <i class="bi bi-file-earmark-code dropdown-item-icon" aria-hidden="true"></i>
+                      <span>PyQGIS Kurse</span>
+                    </a>
+                  </li>
+                  </ul>
+              </li>
+              
+              </ul>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown-ueber" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Über uns
+            </a>
+            <ul class="dropdown-menu" aria-label="Über uns">
+              
+              <li>
+                <a class="dropdown-item" href="/pr-preview/pr-6/de/#team">
+                  <i class="bi bi-people dropdown-item-icon" aria-hidden="true"></i>
+                  <span>Team</span>
+                </a>
+              </li>
+              
+              
+              <li>
+                <a class="dropdown-item" href="/pr-preview/pr-6/de/jobs/">
+                  <i class="bi bi-rocket dropdown-item-icon" aria-hidden="true"></i>
+                  <span>Jobs</span>
+                </a>
+              </li>
+              
+              
+              <li>
+                <a class="dropdown-item" href="/pr-preview/pr-6/de/unsere-werte/">
+                  <i class="bi bi-heart dropdown-item-icon" aria-hidden="true"></i>
+                  <span>Unsere Werte</span>
+                </a>
+              </li>
+              
+              </ul>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown-qfield" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              QField
+            </a>
+            <ul class="dropdown-menu" aria-label="QField">
+              
+              <li>
+                <a class="dropdown-item" href="https://qfield.org/">
+                  <i class="bi bi-phone dropdown-item-icon" aria-hidden="true"></i>
+                  <span>qfield.org</span>
+                </a>
+              </li>
+              
+              
+              <li>
+                <a class="dropdown-item" href="https://qfield.cloud/">
+                  <i class="bi bi-cloud dropdown-item-icon" aria-hidden="true"></i>
+                  <span>QFieldCloud</span>
+                </a>
+              </li>
+              
+              
+              <li>
+                <a class="dropdown-item" href="/pr-preview/pr-6/de/category/qfield-de/highlights/">
+                  <i class="bi bi-star-fill dropdown-item-icon" aria-hidden="true"></i>
+                  <span>Highlights</span>
+                </a>
+              </li>
+              
+              </ul>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/de/pr-preview/pr-6/#contact">Kontakt</a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link active" href="/pr-preview/pr-6/de/blog/" aria-current="page">Blog</a>
+          </li>
+          
+          </ul>
+
+        <div class="menu-language order-md-2">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button class="nav-link dropdown-toggle btn btn-link" id="navbarLanguageDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Change language">
+                DE
+              </button>
+              <ul class="dropdown-menu" aria-label="Language selector">
+                <li>
+                  <a class="dropdown-item active" aria-current="page" href="/pr-preview/pr-6/de/2022/11/15/model-baker-interlis-daten-validator/" title='Model Baker INTERLIS Daten Validator – OPENGIS.ch' aria-label='Model Baker INTERLIS Daten Validator – OPENGIS.ch'>
+                    German
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                
+                <li>
+                  <a class="dropdown-item" rel="alternate" href="/pr-preview/pr-6/" hreflang="en" lang="en" title='OPENGIS.ch – OPEN-SOURCE GEONINJAS' aria-label='OPENGIS.ch – OPEN-SOURCE GEONINJAS'>
+                    English
+                  </a>
+                </li>
+                
+                <li>
+                  <a class="dropdown-item" rel="alternate" href="/pr-preview/pr-6/fr/" hreflang="fr" lang="fr" title='OPENGIS.ch – OPEN-SOURCE GEONINJAS' aria-label='OPENGIS.ch – OPEN-SOURCE GEONINJAS'>
+                    French
+                  </a>
+                </li>
+                
+                <li>
+                  <a class="dropdown-item" rel="alternate" href="/pr-preview/pr-6/it/" hreflang="it" lang="it" title='OPENGIS.ch – OPEN-SOURCE GEONINJAS' aria-label='OPENGIS.ch – OPEN-SOURCE GEONINJAS'>
+                    Italian
+                  </a>
+                </li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+        </div>
+    </div>
+  </nav>
+</header>
+<main id="content" class="flex-grow-1">
+        <nav class="header-breadcrumb" aria-label="breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb my-0">
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/pr-preview/pr-6/de/">Home</a>
+        </li>
+        
+        
+          
+        
+          
+        
+      
+          
+          
+          
+        
+      
+          
+          
+          
+            <li class="breadcrumb-item">
+              <a href="/pr-preview/pr-6/de/blog/">Blog</a>
+            </li>
+          
+        
+      
+        
+        
+        <li class="breadcrumb-item active" aria-current="page">Model Baker INTERLIS Daten Validator</li>
+      
+    </ol>
+  </div>
+</nav>
+
+
+
+<section class="py-2">
+  <div class="container">
+    
+    
+    <div class="my-4">
+      <a href="/blog/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-arrow-left me-2"></i>Back to Blog
+      </a>
+    </div>
+
+    
+    <header class="mb-2">
+      <h1 class="display-5 fw-bold mb-3">Model Baker INTERLIS Daten Validator – OPENGIS.ch</h1>
+      
+      <div class="text-muted mb-1">
+        <i class="fas fa-calendar me-1"></i>
+        <span class="me-3">November 15, 2022</span>
+        
+        
+        <i class="fas fa-clock me-1"></i>
+        <span>6 min read</span>
+        
+      </div>
+      <hr>
+    </header>
+
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</section>
+
+
+<article class="py-1 blog-single">
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="content blog-content">
+          <p><strong>Der voll integrierte Daten Validator, mit dem du deine Daten direkt im QGIS gegen das INTERLIS Modell prüfen kannst, existiert nun seit fast einem Jahr. Nach vielen Benutzerfeedbacks und einigen Investitionen ist er nun toller denn je. Zeit für ein Update und eine kleine Schritt-für-Schritt Anleitung.</strong></p>
+<h2 id="why-is-it-so-awesome">Why is it so awesome?</h2>
+<p>Der Model Baker Daten Validator hat zwei grosse Vorteile.
+Erstens <strong>musst du deine Daten nicht exportieren, bevor du sie validierst</strong>. Dank der Option <code>--validate</code> kann Model Baker die Daten mit <a href="https://github.com/claeis/ili2db" target="_blank" rel="noopener noreferrer">ili2db</a> direkt in der Datenbank prüfen.
+Zweitens kannst du die Ergebnisliste interaktiv nutzen und <strong>auf die Koordinaten des Fehlers zoomen oder den Kartenausschnitt darauf schieben</strong>. Ebenso kannst du <strong>das betreffende Feature direkt öffnen oder selektieren</strong>. So ist es viel einfacher, die Fehler zu beheben.
+<img src="./menu18ce.png" alt="Menu entry for the Model Baker Data Validator"></p>
+<h2 id="schritt-für-schritt-anleitung">Schritt-für-Schritt Anleitung</h2>
+<p>Obwohl die Validierung auf der Datenbank durchgeführt wird, beginnen wir mit dem Import eines ungültigen Transferfiles. Damit haben wir die komplette End-to-End Demo ?‍?.</p>
+<h3 id="import-invalider-daten">Import invalider Daten</h3>
+<p>Je nach Qualität der Daten musst du das Schema bereits mit weniger strickten Constraints in der Datenbank erstellen. Wenn zum Beispiel einige Mandatory Constraints (NOT NULL) verletzt werden, musst du die Datenbank so erstellen, dass diese Constraints nicht aktiviert sind.
+Um in dieser Anleitung unnötige Komplexität zu vermeiden, verwenden wir ein <a href="/models.opengis.ch/demo_data/ModernCity_V1.ili">Beispielmodell</a> und ein <a href="/models.opengis.ch/demo_data/invalid_data.xtf">invalider Demo-Datensatz</a>.
+In <em>Datenbank &gt; Model Baker &gt; Import/Export Wizard</em> wähle in der Import Session: <em>Ausführen ohne Constraints</em>
+<img src="./runwithoutconstraints14dd.png" alt="Import wizard option to run without constraints">
+Und beim Import der Transferdaten wähle <em>Ausführen ohne Validierung</em>.
+Die Datenbank ist erstellt und die invaliden Daten vom Transferfile sind importiert.
+<img src="./importedproject695f.png" alt="Imported invalid project in QGIS"></p>
+<blockquote>
+<p>Mehr Informationen wie man Modelle und Transferfiles im Allgemeinen importiert findest du in der <a href="https://opengisch.github.io/QgisModelBaker/user_guide/import_workflow/" target="_blank" rel="noopener noreferrer">offiziellen Model Baker Dokumentation</a> oder in diesem <a href="/2021/12/07/model-baker-6-7-noch-nie-wars-so-einfach/index.html">Blog-Post.</a></p>
+</blockquote>
+<h3 id="lasst-uns-validieren">Lasst uns validieren</h3>
+<p>Öffne nun das Daten Validator Panel mit <em>Datenbank &gt; Model Baker &gt; Daten Validator</em>.
+Dort wurde die aktuelle Datenbank gemäss dem aktiven Layer gefunden. In unserem Beispiel haben wir nur eine Datenbank. Falls du aber mehr als eine Datenquelle im gleichen QGIS Projekt verwendest, wird der Daten Validator sie immer anhand des aktuellen Layers erkennen.
+<img src="./15dfd.png" alt="Data Validator panel with the detected database">
+Nach dem Ausführen der Validierung erhalten wir 14 Fehler. Geometrieüberschneidungen (Intersections), falsch formatierte TIDs, Werte ausserhalb des zugelassenen Bereiches und andere. Tatsächlich sind dies nicht so viele Fehler. Trotzdem möchte man manchmal die Fehlerarten separieren, um die Übersicht zu behalten.</p>
+<h3 id="datenfilterung">Datenfilterung</h3>
+<p>Beginnen wir nun mit dem Separieren der Daten und erst später separieren wir nach Fehlerarten. Dies kannst du mit der Filterung gemäss <em>Modelle</em> oder <em>Datasets</em> oder <em>Behälter</em>. Du kannst mehrere anwählen, aber nur eine Art des Filters. Lasst uns mal die Daten für den Behälter ausführen, der das TOPIC <code>nature</code> abdeckt.
+<img src="./25dfd.png" alt="Data Validator results filtered to the nature basket">
+Wer haben drei Überschneidungen und ein Typenfehler.</p>
+<h3 id="geometriefehler-überspringen">Geometriefehler überspringen</h3>
+<p>Wenn die Checkbox aktiviert ist, werden Geometriefehler ignoriert und die Validierung der Topologie ist deaktiviert. Folgende Fehler werden nicht aufgelistet:</p>
+<ul>
+<li>Geometrieüberschneidungen</li>
+<li>Doppelte Koordinaten</li>
+<li>Überlagernde Geometrien</li>
+</ul>
+<blockquote>
+<p>Im Backend werden die Parameter <code>--skipGeometryErrors</code> und <code>--disableAreaValidation</code> ili2db übergeben.
+Nach dem Ausführen der Validierung ist nur noch der Fehler mit der TID übrig.
+<img src="./35dfd.png" alt="Validation results after skipping geometry errors"></p>
+</blockquote>
+<h3 id="analyse-der-fehler">Analyse der Fehler</h3>
+<p>Bevor wir die Fehlermeldungen weiter Eingrenzen indem wir einzelne Constraints deaktivieren, werfen wir einen Blick auf die Behebung der Fehler. Der Fehler, den wir oben sehen, sagt uns, dass die TID eine UUID sein soll, währenddem sie ein Text-String „velopark_id“ ist.
+Die TID ist die OID, die im Model folgendermassen definiert ist:</p>
+<pre><code>OID AS INTERLIS.UUIDOID;
+</code></pre>
+<p>Im physischen Modell wird sie in der Spalte <code>t_ili_tid</code> repräsentiert.
+Mit  <em>Rechtsklick</em> im Daten Validator auf die Fehlermeldung wird ein Menu geöffnet mit den folgenden Optionen:
+– Auf Koordinaten zoomen (falls Koordinaten verfügbar sind) mit einem Extent von 10 Karteneinheiten – Öffne im Feature-Formular (falls eine stabile <code>t_ili_tid</code> verfügbar ist) – Selektieren in der Attributtabelle (falls eine stabile <code>t_ili_tid</code> verfügbar ist) – Setze auf fixed (markiert den Eintrag grün, um den Fehlerbehebungs-Prozess zu organisieren) – Kopieren (kopiert den Meldungstext)
+<img src="./45dfd.png" alt="Context menu for a validation error in the Data Validator">
+Nach öffnen des Formulars sehen wir, dass wir hier keine Möglichkeit haben, die <code>t_ili_tid</code> zu ändern. Da der Wert automatisch generiert wird, hat Model Baker das Feld nicht im Formular berücksichtigt.Wir könnten es sichtbar setzen mit  <em>Layer &gt; Eigenschaften… &gt; Attributformular</em> oder wir nutzen die andere Option um es in der <em>Attributtabelle zu selektieren</em>.
+<img src="./55dfd.png" alt="Feature form without the t_ili_tid field visible">
+Nun können wir den QGIS Feldrechner nutzen, um eine gültige UUID als <code>t_ili_tid</code> vom aktuell selektierten Feature (dem Feature mit dem Fehler) zu setzen.
+<img src="./6bebf.png" alt="QGIS field calculator setting a UUID for t_ili_tid">
+Nach erneuter Validierung verschwindet der Fehler.
+<img src="./72cd1.png" alt="Validation results after fixing the TID error">
+Valid. Aber natürlich sind da noch alle Geometriefehler und diese des anderen TOPIC <code>living</code>.</p>
+<h3 id="geometriefehler-beheben">Geometriefehler beheben</h3>
+<p>Lasst uns einen Blick auf die Geometriefehler werfen.
+<img src="./82cd1.png" alt="Geometry validation errors with the zoom-to-coordinates option">Mit <em>Rechtsklick &gt; Zoom auf Koordinate</em> wird in der Karte auf die Koordinaten gezoomt und die Koordinate leuchtet auf.
+Um Überschneidungen und Duplikate zu beheben kann das QGIS <em>Stützpunkwerkzeug</em> verwendet werden. <img src="./Screenshot-from-2022-11-08-14-14-5630db.png" alt="Ebenso ist der Stützpunkteditor sehr hilfreich.">
+<img src="./Screenshot-from-2022-11-07-17-14-022cd1.png" alt="Geometry error highlighted in the QGIS map canvas"></p>
+<h3 id="durch-die-fehler-navigieren">Durch die Fehler navigieren</h3>
+<p>Mit den drei Symbolen unten rechts, lässt es sich durch die Features und Koordinaten navigieren, wie du es dir schon von der Attributtabelle in der Formularansicht gewohnt bist. <img src="./grafikfc12.png" alt="Navigation controls for moving through validation errors">
+Die meisten Fehler, die einen Wert betreffen, können komfortabel mit den zur Verfügung stehenden Tools behoben werden. Mit <em>Rechtsklick</em> <em>&gt; Öffne im Featureformular / Selektiere in der Attributtabelle</em>.</p>
+<h3 id="nutzen-des-config-files-mit-metaattributen">Nutzen des Config Files mit Metaattributen</h3>
+<p>Die Option um Geometriefehler zu ignorieren ist sehr präsent. Aber es gibt auch noch weitere Möglichkeiten die Fehler einzugrenzen indem man spezifische Checks deaktiviert.
+Um alle Funktionalitäten zur Verfügung zu haben, kannst du ein Config File (INI) im Daten Validator laden, der dieses dann ili2db übergibt. Im Config File können Metaattribute definiert werden um spezifische Checks zu aktivieren / deaktivieren. Ebenso können Constraints benannt und beschrieben werden. Die Basics sind <a href="https://opengisch.github.io/QgisModelBaker/user_guide/validation/#using-of-meta-attributes-in-the-validation" target="_blank" rel="noopener noreferrer">hier</a> beschrieben. Lasst uns in diesem Post hier mit einem Beispiel fortfahren.
+<img src="./Screenshot-from-2022-11-07-17-41-33f09e.png" alt="Config file loaded in the Data Validator"></p>
+<h4 id="globale-parameter">Globale Parameter</h4>
+<pre><code>[&quot;PARAMETER&quot;]
+multiplicity=&quot;off&quot;
+constraintValidation=&quot;off&quot;
+</code></pre>
+<p>Über <code>multiplicity</code> deaktivieren wir Mandatory Constraints (NOT NULL) und Prüfungen der Kardinalität von ASSOCIATIONS (Beziehungen). Mit <code>constraintValidation</code> können wir alle logischen (benutzerdefinierten) Constraints ausschalten.</p>
+<blockquote>
+<p>Für alle möglichen Metaattribute, schau in der offiziellen <a href="https://github.com/claeis/ilivalidator/blob/master/docs/ilivalidator.rst#interlis-metaattribute" target="_blank" rel="noopener noreferrer">Dokumentation des ilivalidators</a> nach.</p>
+</blockquote>
+<h4 id="spezifische-attribut-parameter">Spezifische Attribut-Parameter</h4>
+<p>Die übrigen Fehler sind Typenfehler. Ein Wert in <code>Levels</code>, der zu hoch ist (siehe im Modell: <code>Levels: 0 .. 200;</code>), dann ein Fehler mit einem Kontrollzeichen (meistens wegen eines Absatzes in einem <code>TEXT</code>) im Attribut <code>Description</code> und die Werte in <code>Email</code>, die nicht im verlangten <code>INTERLIS.URI</code> Format sind.
+<img src="./Screenshot-from-2022-11-07-17-53-3671ea.png" alt="Type validation errors for attributes in the Data Validator">
+Wir können die betreffenden Attribute ansteuern mit <code>Model.Topic.Attribute</code>:</p>
+<pre><code>[&quot;ModernCity_V1.Living.Building.Levels&quot;]
+type=&quot;off&quot;
+[&quot;ModernCity_V1.Living.Building.Description&quot;]
+type=&quot;off&quot;
+[&quot;ModernCity_V1.Living.Resident.Email&quot;]
+type=&quot;off&quot;
+</code></pre>
+<blockquote>
+<p>Siehe alle möglichen Konfigurationen in der offiziellen <a href="https://github.com/claeis/ilivalidator/blob/master/docs/ilivalidator.rst#ini-globale-konfigurationen" target="_blank" rel="noopener noreferrer">Dokumentation des ilivalidators</a> nach.</p>
+</blockquote>
+<h4 id="setzen-von-beschreibungen-und-namen-von-constraints-mit-metaattributen">Setzen von Beschreibungen und Namen von Constraints mit Metaattributen</h4>
+<p>Zum Schluss schauen wir uns noch etwas speziell schönes an.
+Dieser Constraint hier im Modell ist ein logischer Constraint. Er ist weder im physischen Datenmodell implementiert, noch kann der Validator beschreiben, was er bedeutet:</p>
+<pre><code>          Name: TEXT;
+          IsHuman: BOOLEAN;
+          SET CONSTRAINT WHERE IsHuman:
+            DEFINED(Name);
+</code></pre>
+<p>Es bedeutet, dass wenn der Boolean <code>IsHuman</code> wahr ist, darf <code>Name</code> nicht leer sein. Trotzdem gibt uns der Validator den folgenden Output:
+<code>Set Constraint ModernCity_V1.Living.Resident.Constraint1 is not true.</code>
+Da wir in unserem Beispiel bereits im Modell ein Metaattribut für den Namen definiert haben, sagt es nicht Constraint1, sondern:
+<code>Set Constraint ModernCity_V1.Living.Resident.MandatoryHumanName is not true.</code>
+Die Definition im Model sieht so aus:</p>
+<pre><code>      !!@ name = MandatoryHumanName
+      SET CONSTRAINT WHERE IsHuman:
+        DEFINED(Name);
+</code></pre>
+<p>Um eine verständlichere Meldung auszugeben, kann <code>!!@ ilivalid.msg</code> verwendet werden.
+Da aber meistens die Personen, welche die Daten Validieren, nicht dieselben sind wie die, welche das Modell schreiben, sind diese Meldungen nicht im Modell. Damit aber jeder selbst diese Meldungen definieren kann, geht das im Meta Config File so:</p>
+<pre><code>[&quot;ModernCity_V1.Living.Resident.Constraint1&quot;]
+msg = &quot;When the resident with the id {ID} is human, then it needs a name.&quot;
+</code></pre>
+<p>Werte anderer Attribute kannst du in geschweiften Klammern hinzufügen.
+<img src="./Screenshot-from-2022-11-08-13-54-17-1c767.png" alt="Validation message with a custom meta-attribute description"></p>
+<h2 id="also-das-wars">Also. Das war’s.</h2>
+<p>Für mehr Informationen, schau in der <a href="https://opengisch.github.io/QgisModelBaker/" target="_blank" rel="noopener noreferrer">Model Baker Dokumentation.</a>
+Und mittlerweilen wünschen wir frohes Backen. Und: Frohes Validieren! ?‍?</p>
+<h3 id="related"><em>Related</em></h3>
+
+        </div>
+    </div>
+  </div>
+</article>
+
+
+<section class="py-5 border-top">
+  <div class="container">
+    <div class="row justify-content-center">
+        
+        
+        <div class="mb-5 text-center">
+          <h6 class="fw-bold mb-3">Share this post</h6>
+          
+          
+          
+          <ul class="share-buttons">
+            <li>
+              <a target="_blank" rel="noopener noreferrer" 
+                 aria-label="Share Model Baker INTERLIS Daten Validator – OPENGIS.ch on X" 
+                 title="Share on X (Twitter)"
+                 href="https://x.com/intent/tweet/?text=Model&#43;Baker&#43;INTERLIS&#43;Daten&#43;Validator&#43;%E2%80%93&#43;OPENGIS.ch&url=https%3A%2F%2Fwww.opengis.ch%2Fpr-preview%2Fpr-6%2Fde%2F2022%2F11%2F15%2Fmodel-baker-interlis-daten-validator%2F&hashtags=qgis">
+                <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" fill="currentColor">
+                  <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" 
+                 aria-label="Share Model Baker INTERLIS Daten Validator – OPENGIS.ch on LinkedIn" 
+                 title="Share on LinkedIn"
+                 href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.opengis.ch%2Fpr-preview%2Fpr-6%2Fde%2F2022%2F11%2F15%2Fmodel-baker-interlis-daten-validator%2F&title=Model&#43;Baker&#43;INTERLIS&#43;Daten&#43;Validator&#43;%E2%80%93&#43;OPENGIS.ch&summary=%3Cp%3E%3Cstrong%3EDer&#43;voll&#43;integrierte&#43;Daten&#43;Validator%2C&#43;mit&#43;dem&#43;du&#43;deine&#43;Daten&#43;direkt&#43;im&#43;QGIS&#43;gegen&#43;das&#43;INTERLIS&#43;Modell&#43;pr%C3%BCfen&#43;kannst%2C&#43;existiert&#43;nun&#43;seit&#43;fast&#43;einem&#43;Jahr.&#43;Nach&#43;vielen&#43;Benutzerfeedbacks&#43;und&#43;einigen&#43;Investitionen&#43;ist&#43;er&#43;nun&#43;toller&#43;denn&#43;je.&#43;Zeit&#43;f%C3%BCr&#43;ein&#43;Update&#43;und&#43;eine&#43;kleine&#43;Schritt-f%C3%BCr-Schritt&#43;Anleitung.%3C%2Fstrong%3E%3C%2Fp%3E%0A%3Ch2&#43;id%3D%22why-is-it-so-awesome%22%3EWhy&#43;is&#43;it&#43;so&#43;awesome%3F%3C%2Fh2%3E%0A%3Cp%3EDer&#43;Model&#43;Baker&#43;Daten&#43;Validator&#43;hat&#43;zwei&#43;grosse&#43;Vorteile.%0AErstens&#43;%3Cstrong%3Emusst&#43;du&#43;deine&#43;Daten&#43;nicht&#43;exportieren%2C&#43;bevor&#43;du&#43;sie&#43;validierst%3C%2Fstrong%3E.&#43;Dank&#43;der&#43;Option&#43;%3Ccode%3E--validate%3C%2Fcode%3E&#43;kann&#43;Model&#43;Baker&#43;die&#43;Daten&#43;mit&#43;%3Ca&#43;href%3D%22https%3A%2F%2Fgithub.com%2Fclaeis%2Fili2db%22&#43;target%3D%22_blank%22&#43;rel%3D%22noopener&#43;noreferrer%22%3Eili2db%3C%2Fa%3E&#43;direkt&#43;in&#43;der&#43;Datenbank&#43;pr%C3%BCfen.%0AZweitens&#43;kannst&#43;du&#43;die&#43;Ergebnisliste&#43;interaktiv&#43;nutzen&#43;und&#43;%3Cstrong%3Eauf&#43;die&#43;Koordinaten&#43;des&#43;Fehlers&#43;zoomen&#43;oder&#43;den&#43;Kartenausschnitt&#43;darauf&#43;schieben%3C%2Fstrong%3E.&#43;Ebenso&#43;kannst&#43;du&#43;%3Cstrong%3Edas&#43;betreffende&#43;Feature&#43;direkt&#43;%C3%B6ffnen&#43;oder&#43;selektieren%3C%2Fstrong%3E.&#43;So&#43;ist&#43;es&#43;viel&#43;einfacher%2C&#43;die&#43;Fehler&#43;zu&#43;beheben.%0A%3Cimg&#43;src%3D%22.%2Fmenu18ce.png%22&#43;alt%3D%22Menu&#43;entry&#43;for&#43;the&#43;Model&#43;Baker&#43;Data&#43;Validator%22%3E%3C%2Fp%3E&source=https%3A%2F%2Fwww.opengis.ch%2Fpr-preview%2Fpr-6%2Fde%2F2022%2F11%2F15%2Fmodel-baker-interlis-daten-validator%2F">
+                <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" fill="currentColor">
+                  <path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" 
+                 aria-label="Share Model Baker INTERLIS Daten Validator – OPENGIS.ch on Reddit" 
+                 title="Share on Reddit"
+                 href="https://reddit.com/submit?url=https%3A%2F%2Fwww.opengis.ch%2Fpr-preview%2Fpr-6%2Fde%2F2022%2F11%2F15%2Fmodel-baker-interlis-daten-validator%2F&title=Model&#43;Baker&#43;INTERLIS&#43;Daten&#43;Validator&#43;%E2%80%93&#43;OPENGIS.ch">
+                <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" fill="currentColor">
+                  <path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" 
+                 aria-label="Share Model Baker INTERLIS Daten Validator – OPENGIS.ch on Facebook" 
+                 title="Share on Facebook"
+                 href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.opengis.ch%2Fpr-preview%2Fpr-6%2Fde%2F2022%2F11%2F15%2Fmodel-baker-interlis-daten-validator%2F">
+                <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" fill="currentColor">
+                  <path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" 
+                 aria-label="Share Model Baker INTERLIS Daten Validator – OPENGIS.ch on WhatsApp" 
+                 title="Share on WhatsApp"
+                 href="https://api.whatsapp.com/send?text=Model&#43;Baker&#43;INTERLIS&#43;Daten&#43;Validator&#43;%E2%80%93&#43;OPENGIS.ch%20-%20https%3A%2F%2Fwww.opengis.ch%2Fpr-preview%2Fpr-6%2Fde%2F2022%2F11%2F15%2Fmodel-baker-interlis-daten-validator%2F">
+                <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" fill="currentColor">
+                  <path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" 
+                 aria-label="Share Model Baker INTERLIS Daten Validator – OPENGIS.ch on Telegram" 
+                 title="Share on Telegram"
+                 href="https://telegram.me/share/url?text=Model&#43;Baker&#43;INTERLIS&#43;Daten&#43;Validator&#43;%E2%80%93&#43;OPENGIS.ch&url=https%3A%2F%2Fwww.opengis.ch%2Fpr-preview%2Fpr-6%2Fde%2F2022%2F11%2F15%2Fmodel-baker-interlis-daten-validator%2F">
+                <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" fill="currentColor">
+                  <path d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" 
+                 aria-label="Share Model Baker INTERLIS Daten Validator – OPENGIS.ch on Hacker News" 
+                 title="Share on Hacker News"
+                 href="https://news.ycombinator.com/submitlink?t=Model&#43;Baker&#43;INTERLIS&#43;Daten&#43;Validator&#43;%E2%80%93&#43;OPENGIS.ch&u=https%3A%2F%2Fwww.opengis.ch%2Fpr-preview%2Fpr-6%2Fde%2F2022%2F11%2F15%2Fmodel-baker-interlis-daten-validator%2F">
+                <svg version="1.1" xml:space="preserve" viewBox="0 0 512 512" fill="currentColor">
+                  <path d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+        
+
+        
+        <div class="mb-4">
+          <div class="row g-3">
+            
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Previous Post</h6>
+                  <a href="/pr-preview/pr-6/de/2022/11/14/qfield-2-5-is-here-reaching-new-heights/" class="card-title h6 text-decoration-none stretched-link">
+                    <i class="fas fa-arrow-left me-2"></i>QField 2.5 is here, reaching new heights – OPENGIS.ch
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body text-end">
+                  <h6 class="card-subtitle mb-2 text-muted">Next Post</h6>
+                  <a href="/pr-preview/pr-6/de/2022/11/29/qgis-relations-their-widgets-and-the-plugins-of-them/" class="card-title h6 text-decoration-none stretched-link">
+                    QGIS Relations, their Widgets and the Plugins of them – OPENGIS.ch<i class="fas fa-arrow-right ms-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        
+        <div class="text-center">
+          <a href="/blog/" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i>Back to All Posts
+          </a>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+    </main>
+    <footer class="py-4 mt-auto border-top bg-body-tertiary">
+  <div class="container">
+    <div class="d-flex flex-column flex-lg-row gap-3 justify-content-between align-items-lg-center">
+      <p class="mb-0 text-body-secondary">
+        
+          OPENGIS.ch
+        
+      </p>
+      
+    </div>
+
+    
+  </div>
+</footer>
+
+    
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+<script src="/pr-preview/pr-6/js/bootstrap/bootstrap.bundle.min.ecf8bfa2d7656db091f8b9d6f85ecfc057120c93ae5090773b1b441db838bd232fcef26375ee0fa35bf8051f4675cf5a5cd50d155518f922b9d70593f161741a.js" integrity="sha512-7Pi/otdlbbCR&#43;LnW&#43;F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY&#43;SK51wWT8WF0Gg==" crossorigin="anonymous" defer></script>
+  <script src="/pr-preview/pr-6/js/app.min.d0c88914acb02857d22736295e502a46fca36244e1ce4747b84756fdb4ff9ec0d64b8d3ce607e9cc8bad85e8fcab736913d6a5336237084c37f0c93acdfe6a8f.js" integrity="sha512-0MiJFKywKFfSJzYpXlAqRvyjYkThzkdHuEdW/bT/nsDWS4085gfpzIuthej8q3NpE9alM2I3CEw38Mk6zf5qjw==" crossorigin="anonymous" defer></script>
+  
+
+
+<script src="/pr-preview/pr-6/js/service-worker-register.min.1bb4b1a5e04487349c8f459f467951ed1c5da9d596dad6012937c4ccd5f926a8bfe0d5472173439af5a8961c0c21dc81e919e4c9349a529bd65d6e2f5f773f30.js" integrity="sha512-G7SxpeBEhzScj0WfRnlR7RxdqdWW2tYBKTfEzNX5Jqi/4NVHIXNDmvWolhwMIdyB6RnkyTSaUpvWXW4vX3c/MA==" crossorigin="anonymous" defer></script>
+  </body>
+</html>
