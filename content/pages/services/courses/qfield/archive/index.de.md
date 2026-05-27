@@ -2,7 +2,7 @@
 title: "QField-Kurse - OPENGIS.ch"
 url: "/de/category/kurse/qfield-kurse/"
 aliases:
-  - "/de/category/kurse/qfield-kurse/"
+  - "/category/kurse/qfield-kurse/"
 source: "www.opengis.ch/de/category/kurse/qfield-kurse/index.html"
 course_posts:
   - /de/2023/03/06/qfield-jump-start/

@@ -2,10 +2,10 @@
 title: "Book QField Jumpstart – OPENGIS.ch"
 source: "www.opengis.ch/de/book-private-course/index.html"
 aliases:
-  - "/de/book-private-course/"
-  - "/de/book-private-course/index.html"
-  - "/de/book-private-course/index4953.html"
-  - "/de/book-private-course/indexbc77.html"
+  - "/book-private-course/"
+  - "/book-private-course/index.html"
+  - "/book-private-course/index4953.html"
+  - "/book-private-course/indexbc77.html"
 ---
 
 ##### Recent Posts

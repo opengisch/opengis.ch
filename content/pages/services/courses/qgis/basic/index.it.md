@@ -4,7 +4,7 @@ date: 2025-06-18
 slug: "qgis-basic"
 url: "/it/2025/06/18/qgis-basic/"
 aliases:
-  - "/it/2025/06/18/qgis-basic/"
+  - "/2025/06/18/qgis-basic/"
 source: "www.opengis.ch/it/2025/06/18/qgis-basic/index.html"
 image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2024/06/vt_basemapa86e.png"
 ---

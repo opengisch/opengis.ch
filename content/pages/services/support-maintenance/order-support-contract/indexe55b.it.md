@@ -2,7 +2,7 @@
 title: "Order support contract – OPENGIS.ch"
 source: "www.opengis.ch/it/order-support-contract/indexe55b.html"
 aliases:
-  - "/it/order-support-contract/indexe55b.html"
+  - "/order-support-contract/indexe55b.html"
 ---
 
 ## Order your contract draft now

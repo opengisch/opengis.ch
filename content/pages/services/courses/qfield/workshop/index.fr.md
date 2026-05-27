@@ -4,7 +4,7 @@ date: 2023-03-06
 slug: "qfield-workshop"
 url: "/fr/2023/03/06/qfield-workshop/"
 aliases:
-  - "/fr/2023/03/06/qfield-workshop/"
+  - "/2023/03/06/qfield-workshop/"
 source: "www.opengis.ch/fr/2023/03/06/qfield-workshop/index.html"
 image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2023/12/287987844-8d7c6540-c32c-4d62-bf6e-1636a011567fa86e.png"
 ---

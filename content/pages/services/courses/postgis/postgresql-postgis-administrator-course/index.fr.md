@@ -4,7 +4,7 @@ date: 2022-03-06
 slug: "postgresql-postgis-administrator-course"
 url: "/fr/2022/03/06/postgresql-postgis-administrator-course/"
 aliases:
-  - "/fr/2022/03/06/postgresql-postgis-administrator-course/"
+  - "/2022/03/06/postgresql-postgis-administrator-course/"
 source: "www.opengis.ch/fr/2022/03/06/postgresql-postgis-administrator-course/index.html"
 ---
 

@@ -2,7 +2,7 @@
 title: "Crowdfunding: un soutien fiable pour les arcs de cercle dans QGIS – OPENGIS.ch"
 source: "www.opengis.ch/fr/crowdfunding-un-soutien-fiable-pour-les-arcs-de-cercle-dans-qgis/index.html"
 aliases:
-  - "/fr/crowdfunding-un-soutien-fiable-pour-les-arcs-de-cercle-dans-qgis/"
+  - "/crowdfunding-un-soutien-fiable-pour-les-arcs-de-cercle-dans-qgis/"
 lead_image:
   src: "/wp-content/uploads/2025/04/image87f2b.png"
   alt: "Banner for the QGIS circular arc support crowdfunding campaign"

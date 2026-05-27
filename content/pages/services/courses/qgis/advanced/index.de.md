@@ -4,7 +4,7 @@ date: 2023-03-06
 slug: "qgis-fortgeschrittene"
 url: "/de/2023/03/06/qgis-fortgeschrittene/"
 aliases:
-  - "/de/2023/03/06/qgis-fortgeschrittene/"
+  - "/2023/03/06/qgis-fortgeschrittene/"
 source: "www.opengis.ch/de/2023/03/06/qgis-fortgeschrittene/index.html"
 image: "/i0.wp.com/www.opengis.ch/wp-content/uploads/2021/11/modelbaker_baked_project_with_form_wide2a86e.png"
 ---

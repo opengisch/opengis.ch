@@ -2,7 +2,7 @@
 title: "Conseil – OPENGIS.ch"
 source: "www.opengis.ch/fr/conseil/index.html"
 aliases:
-- /fr/conseil/
+- /conseil/
 ---
 
 > « Notre équipe expérimentée et multilingue est toujours prête à vous aider à planifier et à améliorer vos flux de travail, à optimiser les performances de vos outils et à renforcer vos connaissances internes. »

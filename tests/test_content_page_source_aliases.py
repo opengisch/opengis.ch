@@ -7,6 +7,7 @@ from scripts import sitemap_content_audit as audit
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CONTENT_PAGES = REPO_ROOT / "content/pages"
+LANGUAGE_PREFIXES = ("de", "fr", "it")
 
 
 def _extract_aliases(markdown_text: str) -> set[str]:
@@ -73,11 +74,38 @@ class ContentPageSourceAliasTests(unittest.TestCase):
 
             source_path = audit.normalize_source_path(source_value)
             aliases = _extract_aliases(markdown_text)
+            expected_alias = source_path
 
-            if source_path not in aliases:
-                missing_aliases.append(f"{markdown_file.relative_to(REPO_ROOT)} -> missing {source_path}")
+            for language_prefix in LANGUAGE_PREFIXES:
+                prefix = f"/{language_prefix}/"
+                if markdown_file.name.endswith(f".{language_prefix}.md") and source_path.startswith(prefix):
+                    expected_alias = "/" + source_path.removeprefix(prefix)
+                    break
+
+            if expected_alias not in aliases:
+                missing_aliases.append(f"{markdown_file.relative_to(REPO_ROOT)} -> missing {expected_alias}")
 
         self.assertEqual(missing_aliases, [])
+
+    def test_translated_content_aliases_are_language_relative(self) -> None:
+        prefixed_aliases: list[str] = []
+
+        for markdown_file in sorted(CONTENT_PAGES.rglob("index*.md")):
+            language_prefix = next(
+                (prefix for prefix in LANGUAGE_PREFIXES if markdown_file.name.endswith(f".{prefix}.md")),
+                None,
+            )
+            if not language_prefix:
+                continue
+
+            aliases = _extract_aliases(markdown_file.read_text(encoding="utf-8"))
+            prefixed_aliases.extend(
+                f"{markdown_file.relative_to(REPO_ROOT)} -> {alias}"
+                for alias in sorted(aliases)
+                if alias.startswith(f"/{language_prefix}/")
+            )
+
+        self.assertEqual(prefixed_aliases, [])
 
 
 if __name__ == "__main__":

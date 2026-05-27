@@ -2,7 +2,7 @@
 title: "Consulenza – OPENGIS.ch"
 source: "www.opengis.ch/it/consulenza/index.html"
 aliases:
-- /it/consulenza/
+- /consulenza/
 ---
 
 > “Il nostro team esperto e multilingue è sempre pronto ad aiutarti a pianificare e migliorare i tuoi flussi di lavoro, ottimizzare le prestazioni dei tuoi strumenti e sviluppare le tue conoscenze in-house.”

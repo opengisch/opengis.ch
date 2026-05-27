@@ -2,7 +2,7 @@
 title: "Beratung – OPENGIS.ch"
 source: "www.opengis.ch/de/beratung/index.html"
 aliases:
-- /de/beratung/
+- /beratung/
 ---
 
 > „Unser erfahrenes und mehrsprachiges Team ist immer bereit, Ihnen bei der Planung und Verbesserung Ihrer Arbeitsabläufe zu helfen, Ihre Werkzeugleistung zu optimieren und Ihr internes Wissen aufzubauen.“

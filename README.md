@@ -47,6 +47,7 @@ The active header override now renders nested dropdown submenus again for deeper
 The active typography now uses the restored local/system stack again: `Avenir Next` for body copy with `Segoe UI`/`Helvetica Neue` fallbacks, and `Trebuchet MS` for headings, navbar text, and emphasized title components.
 Service-page quote components now use the full content width instead of a narrower 80% inset, so support/custom-development/sustainability quotes align with the rest of the body copy in both light and dark mode.
 Every `content/pages/index*.md` file now keeps its normalized `source:` route in `aliases`, and a regression test checks that content-page front matter stays valid and those source paths remain covered.
+Translated content aliases are language-relative: use `/entwicklung/` in `index.de.md` to generate `/de/entwicklung/`, because Hugo automatically prefixes aliases for non-default languages.
 The jobs page now uses a dedicated ClickUp application embed again, matching the live legacy `/jobs/` page and keeping a direct fallback link in the markup.
 Non-blog content pages that depended on legacy inline embeds now keep them in markdown again, including the Brevo newsletter signup iframe and the crowdfunding progress chart, with shared iframe styling that remains acceptable in dark mode.
 GeoNinjas card reveals now trigger a bit earlier and complete faster, with a shorter translate distance and tighter stagger so the section feels more responsive without disabling motion entirely.

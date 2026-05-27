@@ -2,7 +2,7 @@
 title: "Support et maintenance QGIS – OPENGIS.ch"
 source: "www.opengis.ch/fr/support-qgis/index.html"
 aliases:
-- /fr/support-qgis/
+- /support-qgis/
 ---
 
 > Nous prenons le support et la maintenance de vos déploiements très au sérieux. C’est pourquoi nous sommes fiers de pouvoir proposer des contrats de support avec des accords de niveau de services (SLA). En souscrivant à nos contrats de support, vous participez également à notre [initiative pour l’amélioration de QGIS](<../qgis-sustainability-initiative/index.html>). Marco Bernasocchi, CEO

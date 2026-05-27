@@ -3,7 +3,7 @@ title: "Crowdfunding: Erweiterte Unterstützung für Kreisbögen in QGIS – OPE
 source: "www.opengis.ch/de/crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/index.html"
 layout: "static-embed"
 aliases:
-  - "/de/crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/"
+  - "/crowdfunding-erweiterte-unterstutzung-fur-kreisbogen-in-qgis/"
 lead_image:
   src: "/wp-content/uploads/2025/04/image87f2b.png"
   alt: "Banner for the QGIS circular arc support crowdfunding campaign"

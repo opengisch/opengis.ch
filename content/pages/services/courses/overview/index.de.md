@@ -2,7 +2,7 @@
 title: "Kurse - OPENGIS.ch"
 url: "/de/category/kurse/"
 aliases:
-  - "/de/category/kurse/"
+  - "/category/kurse/"
 source: "www.opengis.ch/de/category/kurse/index.html"
 course_posts:
   - /de/2023/03/06/qgis-einsteiger/

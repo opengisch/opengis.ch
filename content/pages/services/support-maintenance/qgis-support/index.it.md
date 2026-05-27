@@ -2,7 +2,7 @@
 title: "Supporto e manutenzione QGIS – OPENGIS.ch"
 source: "www.opengis.ch/it/supporto-qgis/index.html"
 aliases:
-- /it/supporto-qgis/
+- /supporto-qgis/
 ---
 
 > Abbiamo a cuore voi e le vostre implementazioni: per questo motivo prendiamo molto sul serio l’assistenza e la manutenzione e siamo orgogliosi di offrire contratti di assistenza con SLA.
