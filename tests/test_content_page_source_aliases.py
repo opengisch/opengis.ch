@@ -62,7 +62,7 @@ class ContentPageSourceAliasTests(unittest.TestCase):
 
         self.assertEqual(invalid, [])
 
-    def test_all_content_pages_preserve_source_routes_as_aliases(self) -> None:
+    def test_all_content_pages_preserve_source_routes_as_page_routes_or_aliases(self) -> None:
         missing_aliases: list[str] = []
 
         for markdown_file in sorted(CONTENT_PAGES.rglob("index*.md")):
@@ -74,6 +74,7 @@ class ContentPageSourceAliasTests(unittest.TestCase):
 
             source_path = audit.normalize_source_path(source_value)
             aliases = _extract_aliases(markdown_text)
+            url_path = audit.normalize_route_path(fields["url"]) if fields.get("url") else None
             expected_alias = source_path
 
             for language_prefix in LANGUAGE_PREFIXES:
@@ -82,7 +83,7 @@ class ContentPageSourceAliasTests(unittest.TestCase):
                     expected_alias = "/" + source_path.removeprefix(prefix)
                     break
 
-            if expected_alias not in aliases:
+            if source_path != url_path and expected_alias not in aliases:
                 missing_aliases.append(f"{markdown_file.relative_to(REPO_ROOT)} -> missing {expected_alias}")
 
         self.assertEqual(missing_aliases, [])
