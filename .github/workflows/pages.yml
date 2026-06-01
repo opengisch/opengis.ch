@@ -16,8 +16,8 @@ concurrency:
 
 env:
   HUGO_VERSION: "0.161.1"
-  PRODUCTION_URL: "https://www.opengis.ch/"
-  PREVIEW_ROOT: "https://www.opengis.ch/pr-preview"
+  PRODUCTION_URL: "https://hugo.opengis.ch/"
+  PREVIEW_ROOT: "https://hugo.opengis.ch/pr-preview"
   DEPLOY_BRANCH: "gh-pages"
 
 jobs:
@@ -86,7 +86,7 @@ jobs:
       pull-requests: write
     env:
       PREVIEW_PATH: pr-preview/pr-${{ github.event.pull_request.number }}
-      PREVIEW_URL: ${{ format('{0}/pr-{1}/', 'https://www.opengis.ch/pr-preview', github.event.pull_request.number) }}
+      PREVIEW_URL: ${{ format('{0}/pr-{1}/', 'https://hugo.opengis.ch/pr-preview', github.event.pull_request.number) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6

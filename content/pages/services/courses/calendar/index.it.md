@@ -1,8 +1,7 @@
 ---
 title: "Calendario dei corsi – OPENGIS.ch"
 source: "www.opengis.ch/it/calendario-corsi/index.html"
-aliases:
-  - "/calendario-corsi/"
+url: "/it/calendario-corsi/"
 ---
 
-Puoi trovare i nostri corsi in altre lingue su <https://opengis.ch/courses-calendar>
+Puoi trovare i nostri corsi in altre lingue nel [calendario dei corsi](/courses-calendar/).

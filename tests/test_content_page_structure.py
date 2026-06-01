@@ -46,6 +46,11 @@ class ContentPageStructureTests(unittest.TestCase):
             with self.subTest(relative_path=relative_path):
                 self.assertFalse((CONTENT_PAGES / relative_path).exists())
 
+    def test_content_tree_does_not_include_html_sidecar_files(self) -> None:
+        html_files = sorted(REPO_ROOT.joinpath("content").rglob("*.html"))
+
+        self.assertEqual([], [path.relative_to(REPO_ROOT).as_posix() for path in html_files])
+
 
 if __name__ == "__main__":
     unittest.main()
