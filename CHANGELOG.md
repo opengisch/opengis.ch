@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased] - 2026-04-22
+- Added a production-deploy sweep for `gh-pages` preview folders so stale `/pr-preview/pr-<number>/` output for closed or merged pull requests is removed even if the pull-request close cleanup workflow was missed.
 - Changed the GitHub Pages custom domain from `www.opengis.ch` to `hugo.opengis.ch` across `CNAME`, `static/CNAME`, the Pages deployment workflow URLs, and the default Hugo `baseURL` so deployments no longer reset the Pages setting to the old domain.
 - Removed the stale tracked HTML sidecar from the QGIS Processing Workshop blog bundle and added regression coverage so Hugo 0.162+ builds do not fail on `text/html` content files.
 - Made the multilingual Courses calendar public URLs real page routes instead of Hugo alias redirects, preventing preview builds from sending menu clicks on `/courses-calendar/` and localized equivalents back to the production domain.
